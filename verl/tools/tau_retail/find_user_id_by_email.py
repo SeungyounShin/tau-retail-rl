@@ -78,13 +78,13 @@ class FindUserIdByEmail(BaseTool):
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
         email = parameters.get("email", "")
         data = kwargs.get("data", {})
-        if data is None:
-            return "Error: data is not provided"
-        users = data["users"]
+        if not data or "users" not in data:
+            return "Error: data is not provided", 0.0, {}
+        users = data.get("users", {})
         for user_id, profile in users.items():
             if profile["email"].lower() == email.lower():
-                return user_id
-        return "Error: user not found"
+                return user_id, 0.0, {}
+        return "Error: user not found", 0.0, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
         return tau_retail.compute_score(
