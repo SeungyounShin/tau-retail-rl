@@ -1,0 +1,4 @@
+interaction:
+  - name: "tau_retail"
+    class_name: "verl.interactions.tau_retail_interaction.TauRetailInteraction"
+    config: {}
