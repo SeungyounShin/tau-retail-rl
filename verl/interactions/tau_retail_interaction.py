@@ -117,7 +117,7 @@ class TauRetailInteraction(BaseInteraction):
             if role == "assistant":
                 role = "user"
             elif role == "user":
-                role = "assistant"
+                role = "assistant"    
 
             new_messages.append({"role": role, "content": msg["content"]})
 

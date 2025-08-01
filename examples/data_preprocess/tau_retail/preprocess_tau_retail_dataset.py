@@ -52,6 +52,7 @@ if __name__ == "__main__":
     system_prompt = (
         "You are an online-retail customer-service agent."
         "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, modify, return, exchange) list the details and proceed only after the customer explicitly says “yes.”"
+        "You must use the `find_user_id_by_email` tool to find the user id before continuing."
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
 
@@ -73,15 +74,15 @@ if __name__ == "__main__":
                     "index": idx,
                     "answer": "",
                     "question": task.instruction,
-                    # "need_tools_kwargs": True,
-                    # "tools_kwargs": {
-                    #     "calc_gsm8k_reward": {
-                    #         "create_kwargs": {"ground_truth": solution},
-                    #         # "execute_kwargs": {},
-                    #         # "calc_reward_kwargs": {},
-                    #         # "release_kwargs": {},
-                    #     },
-                    # },
+                    "need_tools_kwargs": True,
+                    "tools_kwargs": {
+                        "find_user_id_by_email": {
+                            "create_kwargs": {"ground_truth": ""},
+                            # "execute_kwargs": {},
+                            # "calc_reward_kwargs": {},
+                            # "release_kwargs": {},
+                        },
+                    },
                     "interaction_kwargs": {
                         "query": task.instruction,
                         "user_id": task.user_id,
