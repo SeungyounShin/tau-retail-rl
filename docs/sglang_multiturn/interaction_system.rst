@@ -266,7 +266,9 @@ Each sample can specify which interaction to use via the ``name`` field. This en
 
 **Backward Compatibility**
 
-If no ``name`` field is provided in ``interaction_kwargs``, the system defaults to ``"gsm8k"`` for backward compatibility.
+If no ``name`` field is provided in ``interaction_kwargs``, the system will use
+the only available interaction if there's exactly one defined. Otherwise it
+defaults to ``"gsm8k"`` for backward compatibility.
 
 Best Practices
 --------------
