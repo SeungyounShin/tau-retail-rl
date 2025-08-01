@@ -100,7 +100,7 @@ if __name__ == "__main__":
     hdfs_dir = args.hdfs_dir
 
     train_dataset = Dataset.from_list(train_dataset_list)
-    test_dataset = Dataset.from_list(test_dataset_list)
+    test_dataset = Dataset.from_list([test_dataset_list[0]])
     print(f"train dataset len : {len(train_dataset)}")
     print(f"test dataset len : {len(test_dataset)}")
     train_dataset.to_parquet(os.path.join(local_dir, "train.parquet"))
