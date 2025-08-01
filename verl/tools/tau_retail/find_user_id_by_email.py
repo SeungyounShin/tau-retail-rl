@@ -78,9 +78,9 @@ class FindUserIdByEmail(BaseTool):
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
         email = parameters.get("email", "")
         data = kwargs.get("data", {})
-        if data is None:
+        if not data or "users" not in data:
             return "Error: data is not provided"
-        users = data["users"]
+        users = data.get("users", {})
         for user_id, profile in users.items():
             if profile["email"].lower() == email.lower():
                 return user_id
