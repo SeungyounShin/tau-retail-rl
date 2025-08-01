@@ -954,9 +954,12 @@ class SGLangRollout(BaseRollout):
                 messages = [{"role": x.role, "content": x.content} for x in _req.messages]
 
                 # Get interaction by name from interaction_kwargs
-                interaction_name = _req.interaction_kwargs.get(
-                    "name", "gsm8k"
-                )  # Default to gsm8k for backward compatibility
+                interaction_name = _req.interaction_kwargs.get("name")
+                if interaction_name is None:
+                    if len(self.interaction_map) == 1:
+                        interaction_name = next(iter(self.interaction_map))
+                    else:
+                        interaction_name = "gsm8k"  # Backward compatibility
                 if interaction_name not in self.interaction_map:
                     raise ValueError(
                         f"Interaction '{interaction_name}' not found in interaction_map. Available interactions: "
@@ -1032,7 +1035,12 @@ class SGLangRollout(BaseRollout):
         if _req.interaction_kwargs and self.interaction_map:
             interaction_kwargs = _req.interaction_kwargs
             # Get interaction by name from interaction_kwargs
-            interaction_name = interaction_kwargs.get("name", "gsm8k")  # Default to gsm8k for backward compatibility
+            interaction_name = interaction_kwargs.get("name")
+            if interaction_name is None:
+                if len(self.interaction_map) == 1:
+                    interaction_name = next(iter(self.interaction_map))
+                else:
+                    interaction_name = "gsm8k"  # Backward compatibility
             if interaction_name not in self.interaction_map:
                 raise ValueError(
                     f"Interaction '{interaction_name}' not found in interaction_map. Available interactions: "
