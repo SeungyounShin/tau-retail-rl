@@ -1045,7 +1045,7 @@ class SGLangRollout(BaseRollout):
             tool_creation_coroutines = []
             for tool_schema in _req.tool_schemas:
                 tool = self._tool_map[tool_schema.function.name]
-                create_kwargs = _req.tools_kwargs[tool.name].get("create_kwargs", {})
+                create_kwargs = (_req.tools_kwargs or {}).get(tool.name, {}).get("create_kwargs", {})
                 tool_creation_coroutines.append(tool.create(_req.request_id, **create_kwargs))
             await asyncio.gather(*tool_creation_coroutines)
         if _req.interaction_kwargs and self.interaction_map:
