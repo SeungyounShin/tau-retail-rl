@@ -82,6 +82,9 @@ if __name__ == "__main__":
                             # "calc_reward_kwargs": {},
                             # "release_kwargs": {},
                         },
+                        "find_user_id_by_name_zip": {
+                            "create_kwargs": {"ground_truth": ""},
+                        },
                     },
                     "interaction_kwargs": {
                         "query": task.instruction,
