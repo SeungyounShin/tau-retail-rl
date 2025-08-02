@@ -847,11 +847,24 @@ class SGLangRollout(BaseRollout):
             elif _req.state == AsyncRolloutRequestStateEnum.TOOL_CALLING:
                 if _req.messages[-1].tool_calls is not None:
                     parsed_tool_calls = _req.messages[-1].tool_calls
+
+                    interaction_name = _req.interaction_kwargs.get("name")
+                    if interaction_name is None:
+                        if len(self.interaction_map) == 1:
+                            interaction_name = next(iter(self.interaction_map))
+                        else:
+                            interaction_name = "gsm8k"
+                    interaction = self.interaction_map.get(interaction_name)
+                    data = None
+                    if interaction is not None and hasattr(interaction, "get_data"):
+                        data = interaction.get_data(_req.request_id)
+
                     tool_call_results = await asyncio.gather(
                         *[
                             self._tool_map[tool_call.function.name].execute(
                                 _req.request_id,
                                 tool_call.function.arguments,
+                                data=data,
                                 **_req.tools_kwargs[tool_call.function.name].get("execute_kwargs", {}),
                             )
                             for tool_call in parsed_tool_calls
