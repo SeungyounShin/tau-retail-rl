@@ -22,7 +22,7 @@ python -m examples.data_preprocess.tau_retail.preprocess_tau_retail_dataset
 import argparse
 import os
 import re
-
+import json
 from datasets import Dataset
 
 from verl.utils.hdfs_io import copy, makedirs
@@ -30,16 +30,11 @@ from .tasks_train import TASKS_TRAIN
 from .tasks_test import TASKS_TEST
 from pydantic import BaseModel
 
-def to_serializable(obj):
-    """Arrow 가 이해할 수 있는 타입으로 변환"""
-    if isinstance(obj, BaseModel):        # Pydantic v1
-        return {k: to_serializable(v) for k, v in obj.dict().items()}
-        # v2 일 땐 obj.model_dump() 써도 됩니다.
-    if isinstance(obj, list):
-        return [to_serializable(v) for v in obj]
-    if isinstance(obj, dict):
-        return {k: to_serializable(v) for k, v in obj.items()}
-    return obj
+def make_action_serializable(a):
+    return {
+        "name": a.name,
+        "kwargs": json.dumps(a.kwargs, ensure_ascii=False)
+    }
 
 
 if __name__ == "__main__":
@@ -66,7 +61,7 @@ if __name__ == "__main__":
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
         for idx, task in enumerate(tasks):
-            gt_actions = [to_serializable(a) for a in task.actions]
+            gt_actions = [make_action_serializable(a) for a in task.actions]
             data = {
                 "data_source": data_source,
                 "agent_name": agent_name,
@@ -124,7 +119,11 @@ if __name__ == "__main__":
     hdfs_dir = args.hdfs_dir
 
     train_dataset = Dataset.from_list(train_dataset_list[:256])
-    test_dataset = Dataset.from_list([test_dataset_list[0]])
+    test_dataset = Dataset.from_list(test_dataset_list[:1])
+    
+    print(test_dataset_list[0]['extra_info']['interaction_kwargs']['ground_truth'])
+    print(test_dataset[0]['extra_info']['interaction_kwargs']['ground_truth'])
+
     print(f"train dataset len : {len(train_dataset)}")
     print(f"test dataset len : {len(test_dataset)}")
     train_dataset.to_parquet(os.path.join(local_dir, "train.parquet"))

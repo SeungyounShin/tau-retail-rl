@@ -869,6 +869,7 @@ class SGLangRollout(BaseRollout):
                         for call in parsed_tool_calls
                     ]
                     tool_call_results = await asyncio.gather(*execute_tasks)
+                    # print(f"\033[93m<debug>: ({parsed_tool_calls})\033[0m")
                     _req.add_tool_response_messages(
                         self.processing_class, [resp for resp, _, _ in tool_call_results]
                     )

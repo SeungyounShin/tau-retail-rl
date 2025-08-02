@@ -1,5 +1,6 @@
 from hashlib import sha256
 import inspect
+import json
 from typing import Any, Callable, Dict, List, Type, Optional, Set, Union, Tuple
 from verl.tools.tau_retail._logic import ACTION_DISPATCH
 
@@ -24,17 +25,23 @@ def consistent_hash(
 ) -> str:
     return sha256(str(value).encode("utf-8")).hexdigest()
 
-def step(action: dict, raw_data: dict) -> None:
+def step(action: dict, raw_data: dict | None) -> None:
+    if not isinstance(raw_data, dict):
+        return
+
     name   = action["name"]
     kwargs = action.get("kwargs", {}) or {}
-    func   = ACTION_DISPATCH.get(name)
+
+    func = ACTION_DISPATCH.get(name)
     if func is None:
         return
 
-    sig = inspect.signature(func)
-    accepted = {k: v for k, v in kwargs.items() if k in sig.parameters}
+    import inspect
+    sig       = inspect.signature(func)
+    accepted  = {k: v for k, v in kwargs.items() if k in sig.parameters}
 
     func(raw_data, **accepted)
+
 
 def compute_score(
     solution_str: str,
@@ -51,14 +58,22 @@ def compute_score(
     
     data_hash = get_data_hash(data)
 
+
     actions = [
         action for action in ground_truth if action['name'] != RESPOND_ACTION_NAME
     ]
 
+    # print gt in green with json dumps
     for action in actions:
         step(action, raw_data)
     gt_data_hash = get_data_hash(raw_data)
-
-    reward = 1.0 if data_hash == gt_data_hash else 0.0
+        
+    # print in red for 0.0 and green for 1.0
+    if data_hash == gt_data_hash:
+        print(f"\033[92m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash} and {gt_data_hash}\033[0m")
+        reward = 1.0
+    else:
+        print(f"\033[91m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash} and {gt_data_hash}\033[0m")
+        reward = 0.0
 
     return reward

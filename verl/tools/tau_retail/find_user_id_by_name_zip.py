@@ -104,13 +104,7 @@ class FindUserIdByNameZip(BaseTool):
         return "Error: user not found", 0.0, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
-        return tau_retail.compute_score(
-            self._instance_dict[instance_id]["response"],
-            self._instance_dict[instance_id]["ground_truth"],
-            method="flexible",
-            format_score=0.0,
-            score=1.0,
-        )
+        return 0.0
 
     async def release(self, instance_id: str, **kwargs) -> None:
         del self._instance_dict[instance_id]

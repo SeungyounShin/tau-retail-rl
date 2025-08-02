@@ -19,6 +19,7 @@ import os
 from typing import Any, Optional
 from uuid import uuid4
 import copy
+import json
 
 from litellm import completion
 
@@ -52,9 +53,17 @@ class TauRetailInteraction(BaseInteraction):
     ) -> str:
         if instance_id is None:
             instance_id = str(uuid4())
+        restored_gt = [
+            {**act, "kwargs": json.loads(act["kwargs"])}
+            if isinstance(act.get("kwargs"), str) else copy.deepcopy(act)
+            for act in ground_truth or []
+        ]
+
+        # print(f"<debug>: restored_gt: {restored_gt}")
+
         self._instance_dict[instance_id] = {
             "response": "",
-            "ground_truth": ground_truth,
+            "ground_truth": restored_gt,
             "reward": 0.0,
             "data": load_data(),
         }
