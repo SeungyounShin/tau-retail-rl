@@ -29,13 +29,12 @@ logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class FindUserIdByEmail(BaseTool):
-    """A demo tool for calculating the reward of gsm8k.
-
-    - `get_openai_tool_schema`: return the tool schema in OpenAI format.
-    - `create`: create a tool instance for a trajectory.
-    - `execute`: execute the tool.
-    - `calc_reward`: calculate the reward respect to tool state.
-    - `release`: release the tool instance.
+    """Tool for retrieving a user's ID from the Tau Retail dataset.
+    - ``get_openai_tool_schema``: return the tool schema in OpenAI format.
+    - ``create``: create a tool instance for a trajectory.
+    - ``execute``: execute the tool and return ``(response, reward, metrics)``.
+    - ``calc_reward``: calculate the reward with respect to tool state.
+    - ``release``: release the tool instance.
     """
 
     def __init__(self, config: dict, tool_schema: OpenAIFunctionToolSchema):
@@ -79,12 +78,12 @@ class FindUserIdByEmail(BaseTool):
         email = parameters.get("email", "")
         data = kwargs.get("data", {})
         if not data or "users" not in data:
-            return "Error: data is not provided"
+            return "Error: data is not provided", 0.0, {}
         users = data.get("users", {})
         for user_id, profile in users.items():
             if profile["email"].lower() == email.lower():
-                return user_id
-        return "Error: user not found"
+                return user_id, 0.0, {}
+        return "Error: user not found", 0.0, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
         return tau_retail.compute_score(

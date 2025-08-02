@@ -61,14 +61,16 @@ class TauRetailInteraction(BaseInteraction):
     ) -> tuple[bool, str, float, dict]:
         content = ""
         messages = self.swap_roles_and_replace_system(messages, instruction = kwargs.get("query", ""))
+        # print in gray
+        print(f"\033[90m{messages}\033[0m")
         res = completion(
             model=self.model, custom_llm_provider=self.provider, messages=messages,
         )
         message = res.choices[0].message
         response = message.model_dump()['content']
         self.total_cost = res._hidden_params["response_cost"]
-        # print in red
-        print(f"\033[91m{messages} -> {response}\033[0m")
+        # print in green
+        print(f"\033[92m -> {response}\033[0m")
         self._instance_dict[instance_id]["response"] = response
 
         reward = await self.calculate_score(instance_id)
@@ -117,8 +119,10 @@ class TauRetailInteraction(BaseInteraction):
             if role == "assistant":
                 role = "user"
             elif role == "user":
-                role = "assistant"    
-
+                role = "assistant" 
+            elif role == "tool":
+                continue
+            
             new_messages.append({"role": role, "content": msg["content"]})
 
         return new_messages
