@@ -13,7 +13,7 @@ python3 -m verl.trainer.main_ppo \
     --config-name='tau_retail_multiturn_grpo' \
     algorithm.adv_estimator=grpo \
     data.train_batch_size=256 \
-    data.max_prompt_length=1024 \
+    data.max_prompt_length=2048 \
     data.max_response_length=4096 \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
@@ -34,15 +34,15 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.tensor_model_parallel_size=2 \
     actor_rollout_ref.rollout.name=sglang \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.6 \
-    actor_rollout_ref.rollout.n=8 \
+    actor_rollout_ref.rollout.n=5 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=32 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
     algorithm.use_kl_in_reward=False \
     trainer.critic_warmup=0 \
     trainer.logger='["console","wandb"]' \
     trainer.project_name='tau_retail_async_rl' \
-    trainer.experiment_name='qwen2.5-3b_function_rm-tau_retail-async-sgl-multi-w-tool-verify-n8-4cards' \
-    trainer.n_gpus_per_node=4 \
+    trainer.experiment_name='qwen2.5-3b_function_rm-tau_retail-async-sgl-multi-w-tool-verify-n8-8cards' \
+    trainer.n_gpus_per_node=8 \
     trainer.nnodes=1 \
     trainer.save_freq=-1 \
     trainer.test_freq=15 \

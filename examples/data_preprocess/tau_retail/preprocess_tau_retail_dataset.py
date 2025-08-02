@@ -28,14 +28,18 @@ from datasets import Dataset
 from verl.utils.hdfs_io import copy, makedirs
 from .tasks_train import TASKS_TRAIN
 from .tasks_test import TASKS_TEST
+from pydantic import BaseModel
 
-
-def extract_solution(solution_str):
-    solution = re.search("#### (\\-?[0-9\\.\\,]+)", solution_str)
-    assert solution is not None
-    final_solution = solution.group(0)
-    final_solution = final_solution.split("#### ")[1].replace(",", "")
-    return final_solution
+def to_serializable(obj):
+    """Arrow 가 이해할 수 있는 타입으로 변환"""
+    if isinstance(obj, BaseModel):        # Pydantic v1
+        return {k: to_serializable(v) for k, v in obj.dict().items()}
+        # v2 일 땐 obj.model_dump() 써도 됩니다.
+    if isinstance(obj, list):
+        return [to_serializable(v) for v in obj]
+    if isinstance(obj, dict):
+        return {k: to_serializable(v) for k, v in obj.items()}
+    return obj
 
 
 if __name__ == "__main__":
@@ -62,6 +66,7 @@ if __name__ == "__main__":
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
         for idx, task in enumerate(tasks):
+            gt_actions = [to_serializable(a) for a in task.actions]
             data = {
                 "data_source": data_source,
                 "agent_name": agent_name,
@@ -72,7 +77,7 @@ if __name__ == "__main__":
                     }
                 ],
                 "ability": "tau_retail",
-                "reward_model": {"style": "rule", "ground_truth": ""},
+                "reward_model": {"style": "rule", "ground_truth": gt_actions},
                 "extra_info": {
                     "split": split,
                     "index": idx,
@@ -81,31 +86,31 @@ if __name__ == "__main__":
                     "need_tools_kwargs": True,
                     "tools_kwargs": {
                         "find_user_id_by_email": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                             # "execute_kwargs": {},
                             # "calc_reward_kwargs": {},
                             # "release_kwargs": {},
                         },
                         "find_user_id_by_name_zip": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "get_order_details": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "get_user_details": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "get_product_details": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "exchange_delivered_order_items": {
-                            "create_kwargs": {"ground_truth": ""},
+                            "create_kwargs": {"ground_truth": gt_actions},
                         },
                     },
                     "interaction_kwargs": {
                         "query": task.instruction,
                         "user_id": task.user_id,
-                        "ground_truth": "",
+                        "ground_truth": gt_actions
                     },
                 },
             }

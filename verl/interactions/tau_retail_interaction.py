@@ -18,10 +18,11 @@ import logging
 import os
 from typing import Any, Optional
 from uuid import uuid4
+import copy
 
 from litellm import completion
 
-from verl.utils.reward_score import gsm8k
+from verl.utils.reward_score import tau_retail
 
 from .base import BaseInteraction
 from .tau_retail_data import load_data
@@ -57,6 +58,7 @@ class TauRetailInteraction(BaseInteraction):
             "reward": 0.0,
             "data": load_data(),
         }
+        self.raw_data = load_data()
         return instance_id
 
     async def generate_response(
@@ -77,13 +79,17 @@ class TauRetailInteraction(BaseInteraction):
 
         reward = await self.calculate_score(instance_id)
         should_terminate_sequence = False
+        if "###STOP###" in response:
+            should_terminate_sequence = True
 
         return should_terminate_sequence, response, reward, {}
 
     async def calculate_score(self, instance_id: str, **kwargs) -> float:
-        return gsm8k.compute_score(
+        return tau_retail.compute_score(
             self._instance_dict[instance_id]["response"],
             self._instance_dict[instance_id]["ground_truth"],
+            data=copy.deepcopy(self._instance_dict[instance_id]["data"]),
+            raw_data=copy.deepcopy(self.raw_data),
             method="strict",
             format_score=0.0,
             score=1.0,
