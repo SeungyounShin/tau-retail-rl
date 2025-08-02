@@ -53,6 +53,10 @@ if __name__ == "__main__":
         "You are an online-retail customer-service agent."
         "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, modify, return, exchange) list the details and proceed only after the customer explicitly says “yes.”"
         "You must use the use tools (find_user_id_by_email or find_user_id_by_name_zip) to find the user id before continuing."
+        "After finding the user id, you must use the get_order_details tool to get the order details to retrieve the user's orders."
+        "Then you can specify the product in interest to the customer and use the get_product_details tool to get the product details."
+        "You can retrieve payment method details from the get_user_details tool."
+        "If the customer wants to exchange the product, you must use the exchange_delivered_order_items tool to exchange the product."
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
 
@@ -85,6 +89,18 @@ if __name__ == "__main__":
                         "find_user_id_by_name_zip": {
                             "create_kwargs": {"ground_truth": ""},
                         },
+                        "get_order_details": {
+                            "create_kwargs": {"ground_truth": ""},
+                        },
+                        "get_user_details": {
+                            "create_kwargs": {"ground_truth": ""},
+                        },
+                        "get_product_details": {
+                            "create_kwargs": {"ground_truth": ""},
+                        },
+                        "exchange_delivered_order_items": {
+                            "create_kwargs": {"ground_truth": ""},
+                        },
                     },
                     "interaction_kwargs": {
                         "query": task.instruction,
@@ -99,11 +115,10 @@ if __name__ == "__main__":
                 test_dataset_list.append(data)
             # import pdb; pdb.set_trace()
 
-
     local_dir = args.local_dir
     hdfs_dir = args.hdfs_dir
 
-    train_dataset = Dataset.from_list(train_dataset_list)
+    train_dataset = Dataset.from_list(train_dataset_list[:256])
     test_dataset = Dataset.from_list([test_dataset_list[0]])
     print(f"train dataset len : {len(train_dataset)}")
     print(f"test dataset len : {len(test_dataset)}")

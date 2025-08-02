@@ -64,7 +64,7 @@ class TauRetailInteraction(BaseInteraction):
     ) -> tuple[bool, str, float, dict]:
         messages = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""))
         # print in gray
-        print(f"\033[90m{messages}\033[0m")
+        # print(f"\033[90m{messages}\033[0m")
         res = completion(
             model=self.model, custom_llm_provider=self.provider, messages=messages,
         )
@@ -72,7 +72,7 @@ class TauRetailInteraction(BaseInteraction):
         response = message.model_dump()['content']
         self.total_cost = res._hidden_params["response_cost"]
         # print in green
-        print(f"\033[92m -> {response}\033[0m")
+        # print(f"\033[92m -> {response}\033[0m")
         self._instance_dict[instance_id]["response"] = response
 
         reward = await self.calculate_score(instance_id)

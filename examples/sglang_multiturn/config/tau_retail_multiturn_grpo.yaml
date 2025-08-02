@@ -7,8 +7,8 @@ defaults:
   - _self_
 
 data:
-  max_prompt_length: 1024
-  max_response_length: 8192
+  max_prompt_length: 2048
+  max_response_length: 4096
   train_batch_size: 256
   return_raw_chat: True
 
@@ -18,4 +18,4 @@ actor_rollout_ref:
     name: sglang
     multi_turn:
       enable: True
-      max_assistant_turns: 7
+      max_assistant_turns: 12
