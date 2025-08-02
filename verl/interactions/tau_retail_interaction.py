@@ -15,14 +15,16 @@
 # limitations under the License.
 
 import logging
-import os, json
-from typing import Any, Optional, List, Dict
+import os
+from typing import Any, Optional
 from uuid import uuid4
-from litellm import completion 
+
+from litellm import completion
 
 from verl.utils.reward_score import gsm8k
 
 from .base import BaseInteraction
+from .tau_retail_data import load_data
 
 logger = logging.getLogger(__name__)
 logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
@@ -53,14 +55,14 @@ class TauRetailInteraction(BaseInteraction):
             "response": "",
             "ground_truth": ground_truth,
             "reward": 0.0,
+            "data": load_data(),
         }
         return instance_id
 
     async def generate_response(
         self, instance_id: str, messages: list[dict[str, Any]], **kwargs
     ) -> tuple[bool, str, float, dict]:
-        content = ""
-        messages = self.swap_roles_and_replace_system(messages, instruction = kwargs.get("query", ""))
+        messages = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""))
         # print in gray
         print(f"\033[90m{messages}\033[0m")
         res = completion(
@@ -88,14 +90,18 @@ class TauRetailInteraction(BaseInteraction):
         )
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:
-        del self._instance_dict[instance_id]
+        if instance_id in self._instance_dict:
+            del self._instance_dict[instance_id]
+
+    def get_data(self, instance_id: str) -> dict[str, Any]:
+        return self._instance_dict.get(instance_id, {}).get("data", {})
 
 
     def swap_roles_and_replace_system(
         self,
-        messages: List[Dict[str, Any]],
+        messages: list[dict[str, Any]],
         instruction: Optional[str] = None,
-    ) -> List[Dict[str, str]]:
+    ) -> list[dict[str, str]]:
         """
         1. Replace the existing system prompt with the output of `self.build_system_prompt`.
         2. Swap `assistant` ↔︎ `user` roles for the rest of the turns.
@@ -103,7 +109,7 @@ class TauRetailInteraction(BaseInteraction):
         """
 
         # Build the new system prompt
-        new_messages: List[Dict[str, str]] = [
+        new_messages: list[dict[str, str]] = [
             {"role": "system", "content": self.build_system_prompt(instruction)}
         ]
 
@@ -134,11 +140,20 @@ class TauRetailInteraction(BaseInteraction):
             if instruction is not None
             else ""
         )
-        return f"""You are a user interacting with an agent.{instruction_display}
-Rules:
-- Just generate one line at a time to simulate the user's message.
-- Do not give away all the instruction at once. Only provide the information that is necessary for the current step.
-- Do not hallucinate information that is not provided in the instruction. For example, if the agent asks for the order id but it is not mentioned in the instruction, do not make up an order id, just say you do not remember or have it.
-- If the instruction goal is satisified, generate '###STOP###' as a standalone message without anything else to end the conversation.
-- Do not repeat the exact instruction in the conversation. Instead, use your own words to convey the same information.
-- Try to make the conversation as natural as possible, and stick to the personalities in the instruction."""
+        return (
+            "You are a user interacting with an agent." f"{instruction_display}"
+            "Rules:\n"
+            "- Just generate one line at a time to simulate the user's message.\n"
+            "- Do not give away all the instruction at once. Only provide the "
+            "information that is necessary for the current step.\n"
+            "- Do not hallucinate information that is not provided in the "
+            "instruction. For example, if the agent asks for the order id but "
+            "it is not mentioned in the instruction, do not make up an order id,"
+            " just say you do not remember or have it.\n"
+            "- If the instruction goal is satisified, generate '###STOP###' as "
+            "a standalone message without anything else to end the conversation.\n"
+            "- Do not repeat the exact instruction in the conversation. Instead,"
+            " use your own words to convey the same information.\n"
+            "- Try to make the conversation as natural as possible, and stick to"
+            " the personalities in the instruction."
+        )
