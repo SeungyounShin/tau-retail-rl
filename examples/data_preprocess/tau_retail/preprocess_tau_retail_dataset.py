@@ -55,7 +55,8 @@ if __name__ == "__main__":
         "After finding the user id, you must use the get_order_details tool to get the order details to retrieve the user's orders."
         "Then you can specify the product in interest to the customer and use the get_product_details tool to get the product details."
         "You can retrieve payment method details from the get_user_details tool."
-        "If the customer wants to exchange the product, you must use the exchange_delivered_order_items tool to exchange the product."
+        "You must use the exchange_delivered_order_items tool to exchange the product at the end of the conversation."
+        "ex) {'kwargs': '{\"order_id\": \"#W2378156\", \"item_ids\": [\"1151293680\", \"4983901480\"], \"new_item_ids\": [\"7706410293\", \"7747408585\"], \"payment_method_id\": \"credit_card_9513926\"}', 'name': 'exchange_delivered_order_items'}"
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
 

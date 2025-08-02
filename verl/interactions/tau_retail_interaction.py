@@ -61,21 +61,21 @@ class TauRetailInteraction(BaseInteraction):
 
         # print(f"<debug>: restored_gt: {restored_gt}")
 
+        raw_data = load_data()
         self._instance_dict[instance_id] = {
             "response": "",
             "ground_truth": restored_gt,
             "reward": 0.0,
-            "data": load_data(),
+            "data": copy.deepcopy(raw_data),
+            "raw_data": raw_data,
+            "actions": [],
         }
-        self.raw_data = load_data()
         return instance_id
 
     async def generate_response(
         self, instance_id: str, messages: list[dict[str, Any]], **kwargs
     ) -> tuple[bool, str, float, dict]:
-        messages = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""))
-        # print in gray
-        # print(f"\033[90m{messages}\033[0m")
+        messages = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""), instance_id=instance_id)
         res = completion(
             model=self.model, custom_llm_provider=self.provider, messages=messages,
         )
@@ -87,22 +87,25 @@ class TauRetailInteraction(BaseInteraction):
         self._instance_dict[instance_id]["response"] = response
 
         reward = await self.calculate_score(instance_id)
+        
         should_terminate_sequence = False
-        if "###STOP###" in response:
+        if "###STOP###" in response or reward >= 1.0:
             should_terminate_sequence = True
 
         return should_terminate_sequence, response, reward, {}
 
     async def calculate_score(self, instance_id: str, **kwargs) -> float:
-        return tau_retail.compute_score(
-            self._instance_dict[instance_id]["response"],
+        turn_level_score = tau_retail.compute_score(
+            self._instance_dict[instance_id]["actions"],
             self._instance_dict[instance_id]["ground_truth"],
             data=copy.deepcopy(self._instance_dict[instance_id]["data"]),
-            raw_data=copy.deepcopy(self.raw_data),
+            raw_data=copy.deepcopy(self._instance_dict[instance_id]["raw_data"]),
             method="strict",
             format_score=0.0,
             score=1.0,
         )
+        print(f"\033[90m<debug : turn_level_score>: {turn_level_score}\033[0m")
+        return turn_level_score
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:
         if instance_id in self._instance_dict:
@@ -115,6 +118,7 @@ class TauRetailInteraction(BaseInteraction):
     def swap_roles_and_replace_system(
         self,
         messages: list[dict[str, Any]],
+        instance_id: str,
         instruction: Optional[str] = None,
     ) -> list[dict[str, str]]:
         """
@@ -139,6 +143,10 @@ class TauRetailInteraction(BaseInteraction):
             # Swap assistant ↔︎ user, keep others as-is
             if role == "assistant":
                 role = "user"
+                if msg.get("tool_calls"):
+                    _actions = [tool_call.get("function") for tool_call in msg.get("tool_calls")]
+                    self._instance_dict[instance_id]["actions"].extend(_actions)
+                    msg.pop("tool_calls")
             elif role == "user":
                 role = "assistant" 
             elif role == "tool":

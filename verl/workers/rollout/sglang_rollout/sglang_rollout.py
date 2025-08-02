@@ -869,7 +869,7 @@ class SGLangRollout(BaseRollout):
                         for call in parsed_tool_calls
                     ]
                     tool_call_results = await asyncio.gather(*execute_tasks)
-                    # print(f"\033[93m<debug>: ({parsed_tool_calls})\033[0m")
+                    print(f"\033[93m<debug>: ({parsed_tool_calls})\033[0m")
                     _req.add_tool_response_messages(
                         self.processing_class, [resp for resp, _, _ in tool_call_results]
                     )
@@ -968,7 +968,12 @@ class SGLangRollout(BaseRollout):
                             break
             elif _req.state == AsyncRolloutRequestStateEnum.INTERACTING:
                 user_turns += 1
-                messages = [{"role": x.role, "content": x.content} for x in _req.messages]
+                messages: list[dict[str, Any]] = []
+                for x in _req.messages:
+                    msg = {"role": x.role, "content": x.content}
+                    if x.tool_calls is not None:
+                        msg["tool_calls"] = [tc.model_dump() for tc in x.tool_calls]
+                    messages.append(msg)
 
                 # Get interaction by name from interaction_kwargs
                 interaction_name = _req.interaction_kwargs.get("name")

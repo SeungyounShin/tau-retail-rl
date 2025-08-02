@@ -1,8 +1,10 @@
 from hashlib import sha256
 import inspect
 import json
+import copy
 from typing import Any, Callable, Dict, List, Type, Optional, Set, Union, Tuple
 from verl.tools.tau_retail._logic import ACTION_DISPATCH
+from verl.interactions.tau_retail_data import load_data
 
 ToHashable = Union[
     str, int, float, Dict[str, "ToHashable"], List["ToHashable"], Set["ToHashable"]
@@ -36,7 +38,6 @@ def step(action: dict, raw_data: dict | None) -> None:
     if func is None:
         return
 
-    import inspect
     sig       = inspect.signature(func)
     accepted  = {k: v for k, v in kwargs.items() if k in sig.parameters}
 
@@ -53,27 +54,40 @@ def compute_score(
     raw_data: dict = None,
 ) -> float:
 
+    if raw_data is None:
+        raw_data = load_data()
+
     def get_data_hash(data: dict) -> str:
         return consistent_hash(to_hashable(data))
     
-    data_hash = get_data_hash(data)
+    data_hash = get_data_hash(copy.deepcopy(data))
+    raw_data_copy = copy.deepcopy(raw_data)
 
+    gt_actions_raw = json.loads(ground_truth) if isinstance(ground_truth, str) else ground_truth
+    gt_actions: list[dict] = []
+    for act in gt_actions_raw:
+        kwargs = act.get("kwargs", {})
+        if isinstance(kwargs, str):
+            try:
+                kwargs = json.loads(kwargs)
+            except json.JSONDecodeError:
+                kwargs = {}
+        gt_actions.append({**act, "kwargs": kwargs})
 
-    actions = [
-        action for action in ground_truth if action['name'] != RESPOND_ACTION_NAME
-    ]
+    actions = [action for action in gt_actions if action.get("name") != RESPOND_ACTION_NAME]
 
-    # print gt in green with json dumps
     for action in actions:
-        step(action, raw_data)
-    gt_data_hash = get_data_hash(raw_data)
+        step(action, raw_data_copy)
+        _tmp_hash = get_data_hash(raw_data_copy)
+        # print(f"\033[90m<debug>: {action} {_tmp_hash} {data_hash}\033[0m")
+    gt_data_hash = get_data_hash(raw_data_copy)
         
     # print in red for 0.0 and green for 1.0
     if data_hash == gt_data_hash:
-        print(f"\033[92m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash} and {gt_data_hash}\033[0m")
+        print(f"\033[92m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash}\033[0m")
         reward = 1.0
     else:
-        print(f"\033[91m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash} and {gt_data_hash}\033[0m")
+        # print(f"\033[91m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash}\033[0m")
         reward = 0.0
 
     return reward
