@@ -79,12 +79,11 @@ def compute_score(
     for action in actions:
         step(action, raw_data_copy)
         _tmp_hash = get_data_hash(raw_data_copy)
-        # print(f"\033[90m<debug>: {action} {_tmp_hash} {data_hash}\033[0m")
     gt_data_hash = get_data_hash(raw_data_copy)
         
     # print in red for 0.0 and green for 1.0
     if data_hash == gt_data_hash:
-        print(f"\033[92m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash}\033[0m")
+        # print(f"\033[92m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash}\033[0m")
         reward = 1.0
     else:
         # print(f"\033[91m<debug>: gt_actions : {actions} | gt_data_hash: {gt_data_hash} | data_hash: {data_hash}\033[0m")

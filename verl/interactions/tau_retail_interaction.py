@@ -59,8 +59,6 @@ class TauRetailInteraction(BaseInteraction):
             for act in ground_truth or []
         ]
 
-        # print(f"<debug>: restored_gt: {restored_gt}")
-
         raw_data = load_data()
         self._instance_dict[instance_id] = {
             "response": "",
@@ -104,7 +102,6 @@ class TauRetailInteraction(BaseInteraction):
             format_score=0.0,
             score=1.0,
         )
-        print(f"\033[90m<debug : turn_level_score>: {turn_level_score}\033[0m")
         return turn_level_score
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:

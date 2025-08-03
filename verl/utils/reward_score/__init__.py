@@ -92,8 +92,6 @@ def default_compute_score(
     elif data_source == "tau_retail":
         from . import tau_retail
 
-        print(f"\033[90m<debug : solution_str>: {solution_str}\033[0m")
-
         res = tau_retail.compute_score(
             solution_str,
             ground_truth,
