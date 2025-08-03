@@ -47,6 +47,7 @@ class TauRetailInteraction(BaseInteraction):
         self.model = config.get("model", "gpt-4o")
         self.provider = config.get("provider", None)
         self.total_cost = 0.0
+        self.last_tool_error = False
 
     async def start_interaction(
         self, instance_id: Optional[str] = None, ground_truth: Optional[str] = None, **kwargs
@@ -102,6 +103,10 @@ class TauRetailInteraction(BaseInteraction):
             format_score=0.0,
             score=1.0,
         )
+        if self.last_tool_error:
+            turn_level_score -= 0.1
+        else:
+            turn_level_score += 0.1
         return turn_level_score
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:
@@ -147,6 +152,11 @@ class TauRetailInteraction(BaseInteraction):
             elif role == "user":
                 role = "assistant" 
             elif role == "tool":
+                tool_response = msg["content"]
+                if "error" in tool_response.lower():
+                    self.last_tool_error = True
+                else:
+                    self.last_tool_error = False
                 continue
             
             new_messages.append({"role": role, "content": msg["content"]})

@@ -85,8 +85,8 @@ class NaiveRewardManager:
                     data_item.non_tensor_batch.get("reward_scores", {})
                     .get("user_turn_rewards", [])
                 )
-                turn_reward = user_turn_rewards[-1] if user_turn_rewards else 0.0
-                score = turn_reward
+                #turn_reward = user_turn_rewards[-1] if user_turn_rewards else 0.0
+                score = sum(user_turn_rewards)
             else:
                 score = self.compute_score(
                     data_source=data_source,

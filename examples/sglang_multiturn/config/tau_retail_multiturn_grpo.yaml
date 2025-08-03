@@ -19,3 +19,6 @@ actor_rollout_ref:
     multi_turn:
       enable: True
       max_assistant_turns: 12
+
+val_reward_manager: tau_retail
+reward_fn: tau_retail
