@@ -3,7 +3,7 @@ hydra:
     - file://verl/trainer/config
 
 defaults:
-  - ppo_trainer
+  - ppo_megatron_trainer
   - _self_
 
 data:
@@ -18,7 +18,7 @@ actor_rollout_ref:
     name: sglang
     multi_turn:
       enable: True
-      max_assistant_turns: 10
+      max_assistant_turns: 5
 
 val_reward_manager: tau_retail
 reward_fn: tau_retail

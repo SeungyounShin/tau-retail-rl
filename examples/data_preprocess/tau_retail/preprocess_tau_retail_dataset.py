@@ -52,11 +52,7 @@ if __name__ == "__main__":
         "You are an online-retail customer-service agent."
         "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, modify, return, exchange) list the details and proceed only after the customer explicitly says “yes.”"
         "You must use the use tools (find_user_id_by_email or find_user_id_by_name_zip) to find the user id before continuing."
-        "After finding the user id, you must use the get_order_details tool to get the order details to retrieve the user's orders."
-        "Then you can specify the product in interest to the customer and use the get_product_details tool to get the product details."
-        "You can retrieve payment method details from the get_user_details tool."
-        "You must use the exchange_delivered_order_items tool to exchange the product at the end of the conversation."
-        "ex) {'kwargs': '{\"order_id\": \"#W2378156\", \"item_ids\": [\"1151293680\", \"4983901480\"], \"new_item_ids\": [\"7706410293\", \"7747408585\"], \"payment_method_id\": \"credit_card_9513926\"}', 'name': 'exchange_delivered_order_items'}"
+        "You must use appropriate combination of tools to handle the customer's request."
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
 
@@ -100,6 +96,9 @@ if __name__ == "__main__":
                             "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "exchange_delivered_order_items": {
+                            "create_kwargs": {"ground_truth": gt_actions},
+                        },
+                        "cancel_pending_order": {
                             "create_kwargs": {"ground_truth": gt_actions},
                         },
                     },

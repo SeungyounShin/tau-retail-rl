@@ -578,6 +578,9 @@ class SGLangRollout(BaseRollout):
             responses:     |<- LLM generation ->|<- tool_calls ->|<- LLM generation ->|<- padding ->|
             response_mask: | 1, 1, 1, ..., 1, 1 | 0, 0, .., 0, 0 | 1, 1, 1, ..., 1, 1 | 0, 0, ..., 0|
         """
+        # if self.is_sleep:
+        #     loop = asyncio.get_event_loop()
+        #     loop.run_until_complete(self.wake_up())
         if self.config.multi_turn.enable:
             return self._req_level_generate_sequences(prompts, **kwargs)
         return self._batch_level_generate_sequences(prompts, **kwargs)

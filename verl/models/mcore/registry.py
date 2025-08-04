@@ -166,7 +166,7 @@ def hf_to_mcore_config(
     Returns:
         The mcore TransformerConfig.
     """
-    assert len(hf_config.architectures) == 1, "Only one architecture is supported for now"
+    assert len(hf_config.architectures) == 1, f"Only one architecture is supported for now. Found {hf_config.architectures}"
     model = get_supported_model(hf_config.architectures[0])
     return MODEL_CONFIG_CONVERTER_REGISTRY[model](hf_config, dtype, **override_transformer_config_kwargs)
 

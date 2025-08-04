@@ -149,6 +149,49 @@ def exchange_delivered_order_items(
     return True, order
 
 
+def cancel_pending_order(
+    data: Dict[str, Any],
+    *,
+    order_id: str,
+    reason: str,
+) -> Tuple[bool, str | Dict[str, Any]]:
+    """Attempt to cancel a pending order."""
+
+    orders = data["orders"]
+    if order_id not in orders:
+        return False, "Error: order not found"
+    order = orders[order_id]
+    if order["status"] != "pending":
+        return False, "Error: non-pending order cannot be cancelled"
+
+    # check reason
+    if reason not in ["no longer needed", "ordered by mistake"]:
+        return False, "Error: invalid reason"
+
+    # handle refund
+    refunds = []
+    for payment in order["payment_history"]:
+        payment_id = payment["payment_method_id"]
+        refund = {
+            "transaction_type": "refund",
+            "amount": payment["amount"],
+            "payment_method_id": payment_id,
+        }
+        refunds.append(refund)
+        if "gift_card" in payment_id:  # refund to gift card immediately
+            payment_method = data["users"][order["user_id"]]["payment_methods"][
+                payment_id
+            ]
+            payment_method["balance"] += payment["amount"]
+            payment_method["balance"] = round(payment_method["balance"], 2)
+
+    # update order status
+    order["status"] = "cancelled"
+    order["cancel_reason"] = reason
+    order["payment_history"].extend(refunds)
+
+    return True, order
+
 ########################
 # Public dispatch table
 ########################
