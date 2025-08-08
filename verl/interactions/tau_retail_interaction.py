@@ -103,10 +103,10 @@ class TauRetailInteraction(BaseInteraction):
             format_score=0.0,
             score=1.0,
         )
-        if self.last_tool_error:
-            turn_level_score -= 0.1
-        else:
-            turn_level_score += 0.1
+        # if self.last_tool_error:
+        #     turn_level_score -= 0.1
+        # else:
+        #     turn_level_score += 0.1
         return turn_level_score
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:

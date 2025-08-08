@@ -96,9 +96,9 @@ class FindUserIdByNameZip(BaseTool):
         users = data.get("users", {})
         for user_id, profile in users.items():
             if (
-                profile["name"]["first_name"].lower() == first_name.lower()
-                and profile["name"]["last_name"].lower() == last_name.lower()
-                and profile["address"]["zip"] == zip
+                profile.get("name", {}).get("first_name", "").lower() == first_name.lower()
+                and profile.get("name", {}).get("last_name", "").lower() == last_name.lower()
+                and profile.get("address", {}).get("zip", "") == zip
             ):
                 return user_id, 0.0, {}
         return "Error: user not found", 0.0, {}

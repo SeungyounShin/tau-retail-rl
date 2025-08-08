@@ -64,6 +64,9 @@ if __name__ == "__main__":
             # pass only exchange_delivered_order_items and cancel_pending_order and not return_delivered_order_items
             if set(gt_actions_fn_name).issubset(ALLOWED_FN):
                 print(f"include: {gt_actions_fn_name}")  # 허용된 액션만 있음
+                if len(gt_actions_fn_name) == 0:
+                    print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+                    continue
             else:
                 print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
                 continue

@@ -56,4 +56,4 @@ python3 -m verl.trainer.main_ppo \
     data.val_files=$HOME/data/tau_retail/test.parquet \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/tool_config/tau_retail_tool_config.yaml" \
     actor_rollout_ref.rollout.multi_turn.interaction_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/interaction_config/tau_retail_interaction_config.yaml" \
-    actor_rollout_ref.rollout.multi_turn.max_user_turns=10 $@
+    actor_rollout_ref.rollout.multi_turn.max_user_turns=7 $@

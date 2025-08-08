@@ -82,6 +82,7 @@ class GetProductDetails(BaseTool):
         if not data or "products" not in data:
             return "Error: data is not provided", 0.0, {}
         products = data.get("products", {})
+        # print(f"products: {products}")
         if product_id in products:
             return json.dumps(products[product_id]), 0.0, {}
         return "Error: product not found", 0.0, {}
