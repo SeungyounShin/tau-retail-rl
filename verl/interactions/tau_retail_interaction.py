@@ -74,21 +74,23 @@ class TauRetailInteraction(BaseInteraction):
     async def generate_response(
         self, instance_id: str, messages: list[dict[str, Any]], **kwargs
     ) -> tuple[bool, str, float, dict]:
-        messages = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""), instance_id=instance_id)
+        messages_swapped = self.swap_roles_and_replace_system(messages, instruction=kwargs.get("query", ""), instance_id=instance_id)
         res = completion(
-            model=self.model, custom_llm_provider=self.provider, messages=messages,
+            model=self.model, custom_llm_provider=self.provider, messages=messages_swapped, request_timeout=60
         )
         message = res.choices[0].message
         response = message.model_dump()['content']
         self.total_cost = res._hidden_params["response_cost"]
         # print in green
-        # print(f"\033[92m -> {response}\033[0m")
+        # print(f"\033[92m <debug> {messages_swapped} -> {response} [len: {len(response)}]\033[0m")
         self._instance_dict[instance_id]["response"] = response
 
         reward = await self.calculate_score(instance_id)
         
         should_terminate_sequence = False
         if "###STOP###" in response or reward >= 1.0:
+            # print in blue 
+            # print(f"\033[94m <debug> TERMINATE {response} | {reward} \033[0m")
             should_terminate_sequence = True
 
         return should_terminate_sequence, response, reward, {}
@@ -106,7 +108,7 @@ class TauRetailInteraction(BaseInteraction):
         # if self.last_tool_error:
         #     turn_level_score -= 0.1
         # else:
-        #     turn_level_score += 0.1
+        #     turn_level_score += 0.0
         return turn_level_score
 
     async def finalize_interaction(self, instance_id: str, **kwargs) -> None:

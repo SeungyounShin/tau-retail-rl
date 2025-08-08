@@ -125,9 +125,12 @@ class ExchangeDeliveredOrderItems(BaseTool):
         
         # check the items to be exchanged exist
         all_item_ids = [item["item_id"] for item in order["items"]]
-        for item_id in item_ids:
-            if item_ids.count(item_id) > all_item_ids.count(item_id):
-                return f"Error: {item_id} not found", 0.0, {}
+        if item_ids:
+            for item_id in item_ids:
+                if item_ids.count(item_id) > all_item_ids.count(item_id):
+                    return f"Error: {item_id} not found", 0.0, {}
+        else:
+            return "Error: no items to be exchanged", 0.0, {}
 
         # check new items exist and match old items and are available
         if len(item_ids) != len(new_item_ids):

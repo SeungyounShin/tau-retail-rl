@@ -50,8 +50,10 @@ if __name__ == "__main__":
     agent_name = "retail_agent"
     system_prompt = (
         "You are an online-retail customer-service agent."
-        "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, modify, return, exchange) list the details and proceed only after the customer explicitly says “yes.”"
-        "You must use the use tools (find_user_id_by_email or find_user_id_by_name_zip) to find the user id before continuing."
+        "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, exchange) list the details and proceed only after the customer explicitly says “yes.”"
+        "You must use the use tools (find_user_id_by_email or find_user_id_by_name_zip) to find the user id before continuing. ask user a email or name + ZIP before using the tools."
+        "[Important] If user provide the email, you should use find_user_id_by_email to find the user id. If user provide the name + ZIP, you should use find_user_id_by_name_zip to find the user id."
+        "You should not fill the parameter for each tool calls with arbitrary value, always ask user to provide the value or search it from the other tools. (for example get user_id from find_user_id_by_email and use it in get_user_details)"
         "You must use appropriate combination of tools to handle the customer's request."
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
@@ -63,12 +65,12 @@ if __name__ == "__main__":
             gt_actions_fn_name = [a.name for a in task.actions]
             # pass only exchange_delivered_order_items and cancel_pending_order and not return_delivered_order_items
             if set(gt_actions_fn_name).issubset(ALLOWED_FN):
-                print(f"include: {gt_actions_fn_name}")  # 허용된 액션만 있음
-                if len(gt_actions_fn_name) == 0:
-                    print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
-                    continue
+                pass  # 허용된 액션만 있음
             else:
-                print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+                # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+                continue
+            if len(gt_actions) == 0:
+                # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
                 continue
 
             data = {

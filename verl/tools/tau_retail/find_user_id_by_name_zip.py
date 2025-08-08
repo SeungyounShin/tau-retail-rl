@@ -27,6 +27,9 @@ from ..schemas import OpenAIFunctionToolSchema
 logger = logging.getLogger(__name__)
 logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
+def _norm(s: Any) -> str:
+    # Treat None / non-strings as empty, strip spaces, case-insensitive
+    return (s or "").strip().casefold()
 
 class FindUserIdByNameZip(BaseTool):
     """Tool for retrieving a user's ID from the Tau Retail dataset.
@@ -87,20 +90,26 @@ class FindUserIdByNameZip(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        first_name = parameters.get("first_name", "")
-        last_name = parameters.get("last_name", "")
-        zip = parameters.get("zip", "")
         data = kwargs.get("data", {})
-        if not data or "users" not in data:
+        if not isinstance(data, dict) or "users" not in data:
             return "Error: data is not provided", 0.0, {}
-        users = data.get("users", {})
+
+        first_name_in = _norm(parameters.get("first_name"))
+        last_name_in  = _norm(parameters.get("last_name"))
+        zip_in        = str(parameters.get("zip") or "").strip()
+
+        users = data.get("users") or {}
         for user_id, profile in users.items():
-            if (
-                profile.get("name", {}).get("first_name", "").lower() == first_name.lower()
-                and profile.get("name", {}).get("last_name", "").lower() == last_name.lower()
-                and profile.get("address", {}).get("zip", "") == zip
-            ):
+            name = (profile.get("name") or {})
+            addr = (profile.get("address") or {})
+
+            p_first = _norm(name.get("first_name"))
+            p_last  = _norm(name.get("last_name"))
+            p_zip   = str(addr.get("zip") or "").strip()  # zip might be int in data
+
+            if p_first == first_name_in and p_last == last_name_in and p_zip == zip_in:
                 return user_id, 0.0, {}
+
         return "Error: user not found", 0.0, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:

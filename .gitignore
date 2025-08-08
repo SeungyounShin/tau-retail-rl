@@ -128,3 +128,4 @@ logs
 log
 outputs
 .history
+val_generations/*.jsonl

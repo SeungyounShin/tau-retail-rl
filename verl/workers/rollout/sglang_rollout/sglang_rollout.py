@@ -1255,6 +1255,7 @@ class SGLangRollout(BaseRollout):
             loop = asyncio.get_event_loop()
             loop.run_until_complete(self._engine.flush_cache())
 
+        # print in red
         non_tensor_batch = {
             "messages": np.array(messages),
             "reward_scores": np.array(reward_scores),

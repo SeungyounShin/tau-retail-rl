@@ -203,4 +203,5 @@ ACTION_DISPATCH = {
     "get_user_details": get_user_details,
     "get_product_details": get_product_details,
     "exchange_delivered_order_items": exchange_delivered_order_items,
+    "cancel_pending_order": cancel_pending_order,
 }

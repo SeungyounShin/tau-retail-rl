@@ -18,7 +18,7 @@ python3 -m verl.trainer.main_ppo \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
     data.return_raw_chat=True \
-    actor_rollout_ref.model.path=Qwen/Qwen2.5-0.5B-Instruct \
+    actor_rollout_ref.model.path=Qwen/Qwen2.5-3B-Instruct \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.actor.ppo_mini_batch_size=8 \
@@ -54,6 +54,7 @@ python3 -m verl.trainer.main_ppo \
     critic.forward_max_token_len_per_gpu=8192 \
     data.train_files=$HOME/data/tau_retail/train.parquet \
     data.val_files=$HOME/data/tau_retail/test.parquet \
+    trainer.validation_data_dir="$PROJECT_DIR/val_generations" \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/tool_config/tau_retail_tool_config.yaml" \
     actor_rollout_ref.rollout.multi_turn.interaction_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/interaction_config/tau_retail_interaction_config.yaml" \
     actor_rollout_ref.rollout.multi_turn.max_user_turns=7 $@
