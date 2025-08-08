@@ -118,6 +118,9 @@ ENV/
 
 # data
 *.parquet
+*.log
+*.whl
+*.whl.1
 
 
 # local logs

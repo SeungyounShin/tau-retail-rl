@@ -55,10 +55,19 @@ if __name__ == "__main__":
         "You must use appropriate combination of tools to handle the customer's request."
         "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
     )
+    ALLOWED_FN = {"exchange_delivered_order_items", "cancel_pending_order"}
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
         for idx, task in enumerate(tasks):
             gt_actions = [make_action_serializable(a) for a in task.actions]
+            gt_actions_fn_name = [a.name for a in task.actions]
+            # pass only exchange_delivered_order_items and cancel_pending_order and not return_delivered_order_items
+            if set(gt_actions_fn_name).issubset(ALLOWED_FN):
+                print(f"include: {gt_actions_fn_name}")  # 허용된 액션만 있음
+            else:
+                print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+                continue
+
             data = {
                 "data_source": data_source,
                 "agent_name": agent_name,
@@ -118,8 +127,8 @@ if __name__ == "__main__":
     local_dir = args.local_dir
     hdfs_dir = args.hdfs_dir
 
-    train_dataset = Dataset.from_list(train_dataset_list[:256])
-    test_dataset = Dataset.from_list(test_dataset_list[:1])
+    train_dataset = Dataset.from_list(train_dataset_list)
+    test_dataset = Dataset.from_list(test_dataset_list)
     
     print(test_dataset_list[0]['extra_info']['interaction_kwargs']['ground_truth'])
     print(test_dataset[0]['extra_info']['interaction_kwargs']['ground_truth'])
