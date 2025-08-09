@@ -31,7 +31,7 @@ The findings suggest that it remains challenging for an RL-based agent to:
 
 ### `τ-retail-exchange-cancel`
 
-| Strategy       | Pass¹  |
+| Strategy       | Pass^1  |
 | -------------- | ------ |
 | [TC (claude-3-5-sonnet-20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use) | ??     |
 | [TC (gpt-4o)](https://platform.openai.com/docs/guides/function-calling) | ??     |
