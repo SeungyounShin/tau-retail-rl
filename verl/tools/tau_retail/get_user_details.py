@@ -76,15 +76,39 @@ class GetUserDetails(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data") or {}
+        if "users" not in data:
+            return "Error: data.users is missing", 0.0, {}
+
         users = data["users"]
-        user_id = parameters.get("user_id", "")
-        if not data or "users" not in data:
-            return "Error: data is not provided", 0.0, {}
-        users = data.get("users", {})
-        if user_id in users:
-            return json.dumps(users[user_id]), 0.0, {}
-        return "Error: order not found", 0.0, {}
+
+        # Extract the user_id from parameters; accept either a string or an object with 'id'/'user_id'
+        raw_user_id = parameters.get("user_id", None)
+        if raw_user_id is None:
+            return "Error: parameter 'user_id' is required", 0.0, {}
+
+        if isinstance(raw_user_id, dict):
+            raw_user_id = raw_user_id.get("id") or raw_user_id.get("user_id")
+            if raw_user_id is None:
+                return "Error: parameter 'user_id' must be a string or an object with 'id'/'user_id'", 0.0, {}
+
+        user_id = str(raw_user_id)
+
+        # Support either a dict mapping {user_id: user_obj} or a list of user objects with an id field
+        if isinstance(users, dict):
+            user = users.get(user_id)
+            if user is None:
+                return "Error: user not found", 0.0, {}
+            return json.dumps(user), 0.0, {}
+
+        if isinstance(users, list):
+            for u in users:
+                if isinstance(u, dict) and str(u.get("id") or u.get("user_id")) == user_id:
+                    return json.dumps(u), 0.0, {}
+            return "Error: user not found", 0.0, {}
+
+        return "Error: data.users must be a dict or a list", 0.0, {}
+
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
         return 0.0

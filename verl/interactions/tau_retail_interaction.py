@@ -88,7 +88,7 @@ class TauRetailInteraction(BaseInteraction):
         reward = await self.calculate_score(instance_id)
         
         should_terminate_sequence = False
-        if "###STOP###" in response or reward >= 1.0:
+        if "###STOP###" in response: #or reward >= 1.0:
             # print in blue 
             # print(f"\033[94m <debug> TERMINATE {response} | {reward} \033[0m")
             should_terminate_sequence = True
