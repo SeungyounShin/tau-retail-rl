@@ -578,6 +578,9 @@ class SGLangRollout(BaseRollout):
             responses:     |<- LLM generation ->|<- tool_calls ->|<- LLM generation ->|<- padding ->|
             response_mask: | 1, 1, 1, ..., 1, 1 | 0, 0, .., 0, 0 | 1, 1, 1, ..., 1, 1 | 0, 0, ..., 0|
         """
+        # if self.is_sleep:
+        #     loop = asyncio.get_event_loop()
+        #     loop.run_until_complete(self.wake_up())
         if self.config.multi_turn.enable:
             return self._req_level_generate_sequences(prompts, **kwargs)
         return self._batch_level_generate_sequences(prompts, **kwargs)
@@ -846,20 +849,36 @@ class SGLangRollout(BaseRollout):
                 _req.state = AsyncRolloutRequestStateEnum.RUNNING
             elif _req.state == AsyncRolloutRequestStateEnum.TOOL_CALLING:
                 if _req.messages[-1].tool_calls is not None:
-                    parsed_tool_calls = _req.messages[-1].tool_calls
-                    tool_call_results = await asyncio.gather(
-                        *[
-                            self._tool_map[tool_call.function.name].execute(
-                                _req.request_id,
-                                tool_call.function.arguments,
-                                **_req.tools_kwargs[tool_call.function.name].get("execute_kwargs", {}),
-                            )
-                            for tool_call in parsed_tool_calls
-                        ]
+                    parsed_tool_calls = list(_req.messages[-1].tool_calls)
+
+                    interaction_name = _req.interaction_kwargs.get("name")
+                    if interaction_name is None:
+                        if len(self.interaction_map) == 1:
+                            interaction_name = next(iter(self.interaction_map))
+                        else:
+                            interaction_name = "gsm8k"
+                    interaction = self.interaction_map.get(interaction_name)
+                    data = None
+                    if interaction is not None and hasattr(interaction, "get_data"):
+                        data = interaction.get_data(_req.request_id)
+
+                    execute_tasks = [
+                        self._tool_map[call.function.name].execute(
+                            _req.request_id,
+                            call.function.arguments,
+                            data=data,
+                            **((_req.tools_kwargs or {}).get(call.function.name, {}).get("execute_kwargs", {})),
+                        )
+                        for call in parsed_tool_calls
+                    ]
+                    tool_call_results = await asyncio.gather(*execute_tasks)
+                    _req.add_tool_response_messages(
+                        self.processing_class, [resp for resp, _, _ in tool_call_results]
                     )
-                    _req.add_tool_response_messages(self.processing_class, [resp for resp, _, _ in tool_call_results])
-                    for tool_call, (resp, reward, metrics) in zip(parsed_tool_calls, tool_call_results, strict=True):
-                        _req.update_metrics(metrics, tool_call.function.name)
+                    for call, (resp, reward, metrics) in zip(
+                        parsed_tool_calls, tool_call_results, strict=True
+                    ):
+                        _req.update_metrics(metrics, call.function.name)
                     if len(_req.input_ids) >= self.config.max_model_len:
                         finish_reason_type = FinishReasonTypeEnum.STOP
                         break
@@ -951,12 +970,20 @@ class SGLangRollout(BaseRollout):
                             break
             elif _req.state == AsyncRolloutRequestStateEnum.INTERACTING:
                 user_turns += 1
-                messages = [{"role": x.role, "content": x.content} for x in _req.messages]
+                messages: list[dict[str, Any]] = []
+                for x in _req.messages:
+                    msg = {"role": x.role, "content": x.content}
+                    if x.tool_calls is not None:
+                        msg["tool_calls"] = [tc.model_dump() for tc in x.tool_calls]
+                    messages.append(msg)
 
                 # Get interaction by name from interaction_kwargs
-                interaction_name = _req.interaction_kwargs.get(
-                    "name", "gsm8k"
-                )  # Default to gsm8k for backward compatibility
+                interaction_name = _req.interaction_kwargs.get("name")
+                if interaction_name is None:
+                    if len(self.interaction_map) == 1:
+                        interaction_name = next(iter(self.interaction_map))
+                    else:
+                        interaction_name = "gsm8k"  # Backward compatibility
                 if interaction_name not in self.interaction_map:
                     raise ValueError(
                         f"Interaction '{interaction_name}' not found in interaction_map. Available interactions: "
@@ -1026,13 +1053,18 @@ class SGLangRollout(BaseRollout):
             tool_creation_coroutines = []
             for tool_schema in _req.tool_schemas:
                 tool = self._tool_map[tool_schema.function.name]
-                create_kwargs = _req.tools_kwargs[tool.name].get("create_kwargs", {})
+                create_kwargs = (_req.tools_kwargs or {}).get(tool.name, {}).get("create_kwargs", {})
                 tool_creation_coroutines.append(tool.create(_req.request_id, **create_kwargs))
             await asyncio.gather(*tool_creation_coroutines)
         if _req.interaction_kwargs and self.interaction_map:
             interaction_kwargs = _req.interaction_kwargs
             # Get interaction by name from interaction_kwargs
-            interaction_name = interaction_kwargs.get("name", "gsm8k")  # Default to gsm8k for backward compatibility
+            interaction_name = interaction_kwargs.get("name")
+            if interaction_name is None:
+                if len(self.interaction_map) == 1:
+                    interaction_name = next(iter(self.interaction_map))
+                else:
+                    interaction_name = "gsm8k"  # Backward compatibility
             if interaction_name not in self.interaction_map:
                 raise ValueError(
                     f"Interaction '{interaction_name}' not found in interaction_map. Available interactions: "
@@ -1223,6 +1255,7 @@ class SGLangRollout(BaseRollout):
             loop = asyncio.get_event_loop()
             loop.run_until_complete(self._engine.flush_cache())
 
+        # print in red
         non_tensor_batch = {
             "messages": np.array(messages),
             "reward_scores": np.array(reward_scores),
