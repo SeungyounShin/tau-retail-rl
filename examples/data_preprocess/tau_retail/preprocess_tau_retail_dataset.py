@@ -23,9 +23,13 @@ import argparse
 import os
 import re
 import json
+import copy as cp
+from tqdm import tqdm
 from datasets import Dataset
 
 from verl.utils.hdfs_io import copy, makedirs
+from verl.utils.reward_score import tau_retail
+from verl.interactions.tau_retail_data import load_data
 from .tasks_train import TASKS_TRAIN
 from .tasks_test import TASKS_TEST
 from pydantic import BaseModel
@@ -48,19 +52,58 @@ if __name__ == "__main__":
     train_dataset_list, test_dataset_list = [], []
     data_source = "tau_retail"
     agent_name = "retail_agent"
-    system_prompt = (
-        "You are an online-retail customer-service agent."
-        "Always authenticate the customer (email or name + ZIP) before continuing, and for any change (cancel, exchange) list the details and proceed only after the customer explicitly says “yes.”"
-        "You must use the use tools (find_user_id_by_email or find_user_id_by_name_zip) to find the user id before continuing. ask user a email or name + ZIP before using the tools."
-        "[Important] If user provide the email, you should use find_user_id_by_email to find the user id. If user provide the name + ZIP, you should use find_user_id_by_name_zip to find the user id."
-        "You should not fill the parameter for each tool calls with arbitrary value, always ask user to provide the value or search it from the other tools. (for example get user_id from find_user_id_by_email and use it in get_user_details)"
-        "You must use appropriate combination of tools to handle the customer's request."
-        "Serve only that customer, follow policy exactly (no hallucination, one tool call at a time, no human transfer unless impossible)."
-    )
+    system_prompt = """# Retail Agent Policy
+
+## General Rules
+
+* At the start of the conversation, always **authenticate the user**: locate user id via email, or via name + zip code.
+* Only one user can be assisted per conversation. Deny requests related to any other user.
+* Before making any database-changing action (cancel/exchange), **list the action details and obtain explicit user confirmation (“yes”)**.
+* Requests outside scope must be **transferred to a human agent**.
+* All times are in **EST, 24-hour format**.
+
+## Order Status
+
+* Possible statuses: `pending`, `processed`, `delivered`, `cancelled`.
+* **Actions allowed:**
+
+  * Cancel → if `pending`
+  * Exchange → if `delivered`
+
+---
+
+## Cancel Pending Order
+
+* Condition: order status must be `pending`.
+* Required confirmation:
+
+  * Order id
+  * Reason: `"no longer needed"` or `"ordered by mistake"`
+* After confirmation:
+
+  * Status → `cancelled`
+  * Refund → immediate if gift card, otherwise within 5–7 business days.
+
+---
+
+## Exchange Delivered Order
+
+* Condition: order status must be `delivered`.
+* Required confirmation:
+
+  * Order id
+  * All items to be exchanged + new options (must stay within the same product, option change only)
+  * Payment method for price difference (gift card must have sufficient balance)
+* After confirmation:
+
+  * Status → `exchange requested`
+  * Customer receives return instructions via email
+  * No need to place a new order"""
+
     ALLOWED_FN = {"exchange_delivered_order_items", "cancel_pending_order"}
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
-        for idx, task in enumerate(tasks):
+        for idx, task in tqdm(enumerate(tasks), total=len(tasks), desc=f"Processing `{split}` dataset"):
             gt_actions = [make_action_serializable(a) for a in task.actions]
             gt_actions_fn_name = [a.name for a in task.actions]
             # pass only exchange_delivered_order_items and cancel_pending_order and not return_delivered_order_items
@@ -71,6 +114,17 @@ if __name__ == "__main__":
                 continue
             if len(gt_actions) == 0:
                 # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+                continue
+
+            raw_data = load_data()
+            turn_level_score = tau_retail.compute_score(
+                [],
+                gt_actions,
+                data=cp.deepcopy(raw_data),
+                raw_data=cp.deepcopy(raw_data),
+                method="strict",
+            )
+            if turn_level_score == 1:
                 continue
 
             data = {
@@ -134,6 +188,9 @@ if __name__ == "__main__":
 
     train_dataset = Dataset.from_list(train_dataset_list)
     test_dataset = Dataset.from_list(test_dataset_list)
+    split = test_dataset.train_test_split(test_size=0.5)
+    train_dataset = split["train"]
+    test_dataset = split["test"]
     
     print(test_dataset_list[0]['extra_info']['interaction_kwargs']['ground_truth'])
     print(test_dataset[0]['extra_info']['interaction_kwargs']['ground_truth'])
