@@ -4,6 +4,7 @@ from .get_order_details import GetOrderDetails
 from .get_user_details import GetUserDetails
 from .get_product_details import GetProductDetails
 from .exchange_delivered_order_items import ExchangeDeliveredOrderItems
+from .return_delivered_order_items import ReturnDeliveredOrderItems
 
 __all__ = [
     "FindUserIdByEmail",
@@ -12,4 +13,5 @@ __all__ = [
     "GetUserDetails",
     "GetProductDetails",
     "ExchangeDeliveredOrderItems",
+    "ReturnDeliveredOrderItems",
 ]

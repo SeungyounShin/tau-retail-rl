@@ -58,49 +58,61 @@ if __name__ == "__main__":
 
 * At the start of the conversation, always **authenticate the user**: locate user id via email, or via name + zip code.
 * Only one user can be assisted per conversation. Deny requests related to any other user.
-* Before making any database-changing action (cancel/exchange), **list the action details and obtain explicit user confirmation (“yes”)**.
+* Before making any database-changing action (**cancel / exchange / return**), **list the action details and obtain explicit user confirmation (“yes”)**.
 * Requests outside scope must be **transferred to a human agent**.
 * All times are in **EST, 24-hour format**.
+* [IMPORTANT] For any **cancel / exchange / return** request, the **order_id** must first be retrieved by calling `get_user_details`.
+* [IMPORTANT] Users usually don’t know the order_id, so use the **user_id** to retrieve the **order_id** via `get_user_details`, then use the **order_id** to list the order contents with **`get_order_details`**.
 
 ## Order Status
 
 * Possible statuses: `pending`, `processed`, `delivered`, `cancelled`.
 * **Actions allowed:**
-
-  * Cancel → if `pending`
-  * Exchange → if `delivered`
+  * **Cancel** → if `pending`
+  * **Exchange** → if `delivered`
+  * **Return** → if `delivered`
 
 ---
 
 ## Cancel Pending Order
 
-* Condition: order status must be `pending`.
-* Required confirmation:
-
+* **Condition:** order status must be `pending`.
+* **Required confirmation:**
   * Order id
   * Reason: `"no longer needed"` or `"ordered by mistake"`
-* After confirmation:
-
+* **After confirmation:**
   * Status → `cancelled`
-  * Refund → immediate if gift card, otherwise within 5–7 business days.
+  * Refund → immediate if gift card, otherwise within **5–7 business days**.
 
 ---
 
 ## Exchange Delivered Order
 
-* Condition: order status must be `delivered`.
-* Required confirmation:
-
+* **Condition:** order status must be `delivered`.
+* **Required confirmation:**
   * Order id
-  * All items to be exchanged + new options (must stay within the same product, option change only)
+  * **All items to be exchanged** + new options (must stay within the same product, option change only)
   * Payment method for price difference (gift card must have sufficient balance)
-* After confirmation:
-
+* **After confirmation:**
   * Status → `exchange requested`
   * Customer receives return instructions via email
-  * No need to place a new order"""
+  * No need to place a new order
 
-    ALLOWED_FN = {"exchange_delivered_order_items", "cancel_pending_order"}
+---
+
+## Return Delivered Order
+
+* **Condition:** order status must be `delivered`.
+* **Required confirmation:**
+  * Order id
+  * **List of items to be returned**
+  * Payment method to receive the refund (must be the **original payment method** or an **existing gift card**)
+* **After confirmation:**
+  * Status → `return requested`
+  * Customer receives an email with instructions on how to return items
+"""
+
+    ALLOWED_FN = {"exchange_delivered_order_items", "cancel_pending_order", "return_delivered_order_items"}
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
         for idx, task in tqdm(enumerate(tasks), total=len(tasks), desc=f"Processing `{split}` dataset"):
@@ -169,6 +181,9 @@ if __name__ == "__main__":
                         "cancel_pending_order": {
                             "create_kwargs": {"ground_truth": gt_actions},
                         },
+                        "return_delivered_order_items": {
+                            "create_kwargs": {"ground_truth": gt_actions},
+                        },
                     },
                     "interaction_kwargs": {
                         "query": task.instruction,
@@ -188,9 +203,9 @@ if __name__ == "__main__":
 
     train_dataset = Dataset.from_list(train_dataset_list)
     test_dataset = Dataset.from_list(test_dataset_list)
-    split = test_dataset.train_test_split(test_size=0.5)
-    train_dataset = split["train"]
-    test_dataset = split["test"]
+    # train_dataset = test_dataset
+    # train_dataset = split["train"]
+    # test_dataset = split["test"]
     
     print(test_dataset_list[0]['extra_info']['interaction_kwargs']['ground_truth'])
     print(test_dataset[0]['extra_info']['interaction_kwargs']['ground_truth'])

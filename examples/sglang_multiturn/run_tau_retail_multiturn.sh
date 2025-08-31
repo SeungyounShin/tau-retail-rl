@@ -8,17 +8,18 @@ ulimit -n 65535
 PROJECT_DIR="$(pwd)"
 CONFIG_PATH="$PROJECT_DIR/examples/sglang_multiturn/config"
 
-max_prompt_length=1500
-max_response_length=2048
+max_prompt_length=4096
+max_response_length=4096
 
 use_dynamic_bsz=True
 ref_offload=True
+
 actor_offload=False
 gen_tp=4
 fsdp_size=4
 
-actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 8 ))
-critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 8 ))
+actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 6))
+critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 6))
 
 python3 -m verl.trainer.main_ppo \
     --config-path="$CONFIG_PATH" \
@@ -32,7 +33,7 @@ python3 -m verl.trainer.main_ppo \
     data.filter_overlong_prompts=True \
     data.truncation='error' \
     data.return_raw_chat=True \
-    actor_rollout_ref.model.path=Qwen/Qwen2.5-7B-Instruct \
+    actor_rollout_ref.model.path=Qwen/Qwen3-4B-Instruct-2507 \
     actor_rollout_ref.actor.loss_agg_mode="seq-mean-token-sum-norm" \
     actor_rollout_ref.actor.optim.lr=1e-6 \
     actor_rollout_ref.actor.strategy=fsdp2 \
@@ -56,6 +57,8 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.ref.fsdp_config.param_offload=${ref_offload} \
     actor_rollout_ref.actor.fsdp_config.fsdp_size=${fsdp_size} \
     algorithm.use_kl_in_reward=False \
+    actor_rollout_ref.rollout.multi_turn.tokenization_sanity_check_mode=ignore_strippable \
+    actor_rollout_ref.rollout.multi_turn.use_inference_chat_template=True \
     trainer.critic_warmup=0 \
     trainer.logger='["console","wandb"]' \
     trainer.project_name='tau_retail_async_rl' \
@@ -64,7 +67,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.nnodes=1 \
     trainer.save_freq=10 \
     trainer.test_freq=10 \
-    trainer.total_epochs=20 \
+    trainer.total_epochs=10 \
     trainer.resume_mode=auto \
     actor_rollout_ref.actor.ppo_max_token_len_per_gpu=${actor_max_token_len_per_gpu} \
     actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu=${actor_max_token_len_per_gpu} \
@@ -78,4 +81,4 @@ python3 -m verl.trainer.main_ppo \
     trainer.validation_data_dir="$PROJECT_DIR/val_generations" \
     actor_rollout_ref.rollout.multi_turn.tool_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/tool_config/tau_retail_tool_config.yaml" \
     actor_rollout_ref.rollout.multi_turn.interaction_config_path="$PROJECT_DIR/examples/sglang_multiturn/config/interaction_config/tau_retail_interaction_config.yaml" \
-    actor_rollout_ref.rollout.multi_turn.max_user_turns=12 $@
+    actor_rollout_ref.rollout.multi_turn.max_user_turns=22 $@

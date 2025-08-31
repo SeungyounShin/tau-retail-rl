@@ -192,6 +192,47 @@ def cancel_pending_order(
 
     return True, order
 
+def return_delivered_order_items(
+    data: Dict[str, Any],
+    *,
+    order_id: str,
+    item_ids: List[str],
+    payment_method_id: str,
+) -> Tuple[bool, str | Dict[str, Any]]:
+    """Attempt to return delivered order items."""
+    # debug in red
+    print(f"\033[91mreturn_delivered_order_items : {order_id}, {item_ids}, {payment_method_id}\033[0m")
+    orders = data["orders"]
+
+    # Check if the order exists and is delivered
+    if order_id not in orders:
+        return False, "Error: order not found"
+    order = orders[order_id]
+    if order["status"] != "delivered":
+        return False, "Error: non-delivered order cannot be returned"
+
+    # Check if the payment method exists and is either the original payment method or a gift card
+    if payment_method_id not in data["users"][order["user_id"]]["payment_methods"]:
+        return False, "Error: payment method not found"
+    if (
+        "gift_card" not in payment_method_id
+        and payment_method_id != order["payment_history"][0]["payment_method_id"]
+    ):
+        return False, "Error: payment method should be either the original payment method or a gift card"
+
+    # Check if the items to be returned exist (there could be duplicate items in either list)
+    all_item_ids = [item["item_id"] for item in order["items"]]
+    for item_id in item_ids:
+        if item_ids.count(item_id) > all_item_ids.count(item_id):
+            return False, "Error: some item not found"
+
+    # update order status
+    order["status"] = "return requested"
+    order["return_items"] = sorted(item_ids)
+    order["return_payment_method_id"] = payment_method_id
+
+    return True, order
+
 ########################
 # Public dispatch table
 ########################
@@ -204,4 +245,5 @@ ACTION_DISPATCH = {
     "get_product_details": get_product_details,
     "exchange_delivered_order_items": exchange_delivered_order_items,
     "cancel_pending_order": cancel_pending_order,
+    "return_delivered_order_items": return_delivered_order_items,
 }
