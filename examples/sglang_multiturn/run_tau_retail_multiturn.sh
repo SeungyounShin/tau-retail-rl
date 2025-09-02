@@ -8,7 +8,7 @@ ulimit -n 65535
 PROJECT_DIR="$(pwd)"
 CONFIG_PATH="$PROJECT_DIR/examples/sglang_multiturn/config"
 
-max_prompt_length=4096
+max_prompt_length=6144
 max_response_length=4096
 
 use_dynamic_bsz=True
@@ -18,8 +18,8 @@ actor_offload=False
 gen_tp=4
 fsdp_size=4
 
-actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 6))
-critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 6))
+actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 5))
+critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 5))
 
 python3 -m verl.trainer.main_ppo \
     --config-path="$CONFIG_PATH" \

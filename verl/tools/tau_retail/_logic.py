@@ -201,7 +201,7 @@ def return_delivered_order_items(
 ) -> Tuple[bool, str | Dict[str, Any]]:
     """Attempt to return delivered order items."""
     # debug in red
-    print(f"\033[91mreturn_delivered_order_items : {order_id}, {item_ids}, {payment_method_id}\033[0m")
+    # print(f"\033[91mreturn_delivered_order_items : {order_id}, {item_ids}, {payment_method_id}\033[0m")
     orders = data["orders"]
 
     # Check if the order exists and is delivered
@@ -233,6 +233,45 @@ def return_delivered_order_items(
 
     return True, order
 
+def list_all_product_types(data: Dict[str, Any]) -> Tuple[bool, str | Dict[str, Any]]:
+    """List all product types."""
+    products = data["products"]
+    product_dict = {
+        product["name"]: product["product_id"] for product in products.values()
+    }
+    product_dict = dict(sorted(product_dict.items()))
+    return True, product_dict
+
+def modify_pending_order_address(
+    data: Dict[str, Any],
+    *,
+    order_id: str,
+    address1: str,
+    address2: str,
+    city: str,
+    state: str,
+    country: str,
+    zip: str,
+) -> Tuple[bool, str | Dict[str, Any]]:
+    """Attempt to modify a pending order address."""
+    orders = data["orders"]
+    if order_id not in orders:
+        return False, "Error: order not found"
+    order = orders[order_id]
+    if order["status"] != "pending":
+        return False, "Error: non-pending order cannot be modified"
+    
+    # update order address
+    order["address"] = {
+        "address1": address1,
+        "address2": address2,
+        "city": city,
+        "state": state,
+        "country": country,
+        "zip": zip,
+    }
+    return True, order
+
 ########################
 # Public dispatch table
 ########################
@@ -246,4 +285,6 @@ ACTION_DISPATCH = {
     "exchange_delivered_order_items": exchange_delivered_order_items,
     "cancel_pending_order": cancel_pending_order,
     "return_delivered_order_items": return_delivered_order_items,
+    "list_all_product_types": list_all_product_types,
+    "modify_pending_order_address": modify_pending_order_address,
 }

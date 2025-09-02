@@ -5,6 +5,7 @@ from .get_user_details import GetUserDetails
 from .get_product_details import GetProductDetails
 from .exchange_delivered_order_items import ExchangeDeliveredOrderItems
 from .return_delivered_order_items import ReturnDeliveredOrderItems
+from .modify_pending_order_address import ModifyPendingOrderAddress
 
 __all__ = [
     "FindUserIdByEmail",
@@ -14,4 +15,6 @@ __all__ = [
     "GetProductDetails",
     "ExchangeDeliveredOrderItems",
     "ReturnDeliveredOrderItems",
+    "ListAllProductTypes",
+    "ModifyPendingOrderAddress",
 ]
