@@ -98,6 +98,22 @@ As a retail agent, you can help users cancel or modify pending orders, return or
 
 - For a pending order, you can take actions to modify its shipping address, payment method, or product item options, but nothing else.
 
+### Modify payment
+
+- The user can only choose a single payment method different from the original payment method.
+
+- If the user wants the modify the payment method to gift card, it must have enough balance to cover the total amount.
+
+- After user confirmation, the order status will be kept 'pending'. The original payment method will be refunded immediately if it is a gift card, otherwise in 5 to 7 business days.
+
+### Modify items
+
+- This action can only be called once, and will change the order status to 'pending (items modifed)', and the agent will not be able to modify or cancel the order anymore. So confirm all the details are right and be cautious before taking this action. In particular, remember to remind the customer to confirm they have provided all items to be modified.
+
+- For a pending order, each item can be modified to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe.
+
+- The user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference.
+
 ## Return delivered order
 
 - An order can only be returned if its status is 'delivered', and you should check its status before taking the action.
@@ -119,32 +135,41 @@ As a retail agent, you can help users cancel or modify pending orders, return or
 - After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order.
 """
 
-    ALLOWED_FN = {"exchange_delivered_order_items", "cancel_pending_order", "return_delivered_order_items", "modify_pending_order_address"}
+    ALLOWED_FN = {
+        "exchange_delivered_order_items",
+        "cancel_pending_order",
+        "return_delivered_order_items",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "modify_user_address",
+    }
 
     for split, tasks in [("train", TASKS_TRAIN), ("test", TASKS_TEST)]:
         for idx, task in tqdm(enumerate(tasks), total=len(tasks), desc=f"Processing `{split}` dataset"):
             gt_actions = [make_action_serializable(a) for a in task.actions]
             gt_actions_fn_name = [a.name for a in task.actions]
             # pass only exchange_delivered_order_items and cancel_pending_order and not return_delivered_order_items
-            if set(gt_actions_fn_name).issubset(ALLOWED_FN):
-                pass  # 허용된 액션만 있음
-            else:
-                # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
-                continue
-            if len(gt_actions) == 0:
-                # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
-                continue
+            # if set(gt_actions_fn_name).issubset(ALLOWED_FN):
+            #     pass  # 허용된 액션만 있음
+            # else:
+            #     # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+            #     continue
+            # if len(gt_actions) == 0:
+            #     # print(f"skip: {gt_actions_fn_name}")     # 다른 액션이 섞여 있음
+            #     continue
 
-            raw_data = load_data()
-            turn_level_score = tau_retail.compute_score(
-                [],
-                gt_actions,
-                data=cp.deepcopy(raw_data),
-                raw_data=cp.deepcopy(raw_data),
-                method="strict",
-            )
-            if turn_level_score == 1:
-                continue
+            # raw_data = load_data()
+            # turn_level_score = tau_retail.compute_score(
+            #     [],
+            #     gt_actions,
+            #     data=cp.deepcopy(raw_data),
+            #     raw_data=cp.deepcopy(raw_data),
+            #     method="strict",
+            # )
+            # if turn_level_score == 1:
+            #     print(f"skip: {gt_actions_fn_name}")
+            #     continue
 
             data = {
                 "data_source": data_source,
@@ -195,6 +220,15 @@ As a retail agent, you can help users cancel or modify pending orders, return or
                             "create_kwargs": {"ground_truth": gt_actions},
                         },
                         "modify_pending_order_address": {
+                            "create_kwargs": {"ground_truth": gt_actions},
+                        },
+                        "modify_pending_order_items": {
+                            "create_kwargs": {"ground_truth": gt_actions},
+                        },
+                        "modify_pending_order_payment": {
+                            "create_kwargs": {"ground_truth": gt_actions},
+                        },
+                        "modify_user_address": {
                             "create_kwargs": {"ground_truth": gt_actions},
                         },
                     },
