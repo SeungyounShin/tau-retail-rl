@@ -7,7 +7,7 @@ defaults:
   - _self_
 
 data:
-  max_prompt_length: 2048
+  max_prompt_length: 4096
   max_response_length: 4096
   train_batch_size: 256
   return_raw_chat: True
@@ -18,7 +18,7 @@ actor_rollout_ref:
     name: sglang
     multi_turn:
       enable: True
-      max_assistant_turns: 10
+      max_assistant_turns: 22
 
 val_reward_manager: tau_retail
 reward_fn: tau_retail

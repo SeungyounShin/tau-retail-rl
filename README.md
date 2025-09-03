@@ -4,14 +4,10 @@
 
 </div>
 
-This repository presents a **reinforcement learning (RL) recipe** designed to enhance *end-to-end agentic capabilities*, inspired by the [τ-bench](https://github.com/sierra-research/tau-bench) framework.
+This repository presents a **reinforcement learning (RL) recipe** designed to enhance *end-to-end agentic capabilities*, inspired by the perspective in [**The Second Half**](https://ysymyth.github.io/The-Second-Half/) that realistic progress now hinges on **defining problems & evaluations**.  
+We provide a **full τ-bench retail (`τ-retail`) environment** to train and evaluate agents on **policy-following**, **strategic clarification**, and **multi-hop tool use** in realistic, rule-bound workflows.
 
-For this study, a **retail domain** was selected as the experimental testbed (personal preference).  
-The environment was deliberately restricted to only two action types—`exchange` and `cancel`—to narrow the agent’s operational scope and focus exclusively on these tasks.  
-This specialized setup, referred to as **`τ-retail-exchange-cancel`**, was motivated by the observation that excessively long input prompts often leave insufficient space for meaningful responses.
-
-Despite this controlled setting, initial results are **not highly encouraging**.  
-The findings suggest that it remains challenging for an RL-based agent to:
+Despite the controlled setup, initial results highlight that it remains challenging for an RL-based agent to:
 
 1. **Strategically query** the user for missing or clarifying information  
 2. **Perform effective multi-hop tool calls** to achieve the intended outcome
@@ -19,24 +15,25 @@ The findings suggest that it remains challenging for an RL-based agent to:
 ---
 
 <div align="center">
-<img src="assets/rewards.png" width="800" alt="Rewards">
+<img src="assets/reward.png" width="800" alt="Tau Retail Performance (non-thinking)">
 </div>
 
-> **Note:** Both reported rewards correspond to *pass¹*.  
-> The training dataset contains **208 samples**, and the test dataset contains **18 samples**.
+> **Key takeaway:** RL-tuned model improves the Tau Retail score **0.478 → 0.496** (**+0.018 abs., +3.8% rel.**) in the non-thinking setting.
+
+> **Note:** Reported rewards correspond to *pass^1*.  
+> The training dataset contains **500 samples**, and the test dataset contains **115 samples**.
 
 ---
 
 ## Main Results
 
-### `τ-retail-exchange-cancel`
+### `τ-retail` (full tools)
 
-| Strategy       | Pass^1  |
-| -------------- | ------ |
-| [TC (claude-3-5-sonnet-20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use) | ??     |
-| [TC (gpt-4o)](https://platform.openai.com/docs/guides/function-calling) | ??     |
-| Qwen2.5-3B-Instruct-finetuned | 0.167 |
-| Qwen2.5-3B-Instruct | 0.066 |
+| Strategy                                  | Pass^1 |
+|-------------------------------------------|-------:|
+| [TC (claude-3-5-sonnet-20241022)](https://www.anthropic.com/news/3-5-models-and-computer-use) | TBD    |
+| [TC (gpt-4o)](https://platform.openai.com/docs/guides/function-calling) | TBD    |
+| Baselines                                  | TBD    |
 
 *TC = `tool-calling` strategy (as described in the τ-bench paper)
 
@@ -50,8 +47,6 @@ Refer to the [VERL installation guide](https://verl.readthedocs.io/en/latest/sta
 
 ### 2. Dataset Preprocessing
 
-Run the preprocessing script:
-
 ```bash
 python -m examples.data_preprocess.tau_retail.preprocess_tau_retail_dataset
 ````
@@ -59,10 +54,8 @@ python -m examples.data_preprocess.tau_retail.preprocess_tau_retail_dataset
 You should see output similar to:
 
 ```bash
-[{'name': 'exchange_delivered_order_items', 'kwargs': '{"order_id": "#W3947049", "item_ids": ["3358616356"], "new_item_ids": ["9013366374"], "payment_method_id": "credit_card_7901829"}'}]
-[{'kwargs': '{"order_id": "#W3947049", "item_ids": ["3358616356"], "new_item_ids": ["9013366374"], "payment_method_id": "credit_card_7901829"}', 'name': 'exchange_delivered_order_items'}]
-train dataset len : 208
-test dataset len : 18
+train dataset len : 500
+test dataset len  : 115
 ```
 
 ### 3. Training
@@ -71,7 +64,7 @@ test dataset len : 18
 
 ```bash
 export OPENAI_API_KEY=<YOUR-API-KEY>
-nohup bash examples/sglang_multiturn/run_qwen2.5-3b_tau_retail_multiturn.sh > train.log 2>&1 &
+nohup bash examples/sglang_multiturn/run_tau_retail_multiturn.sh > train.log 2>&1 &
 ```
 
 ---
