@@ -64,7 +64,7 @@ test dataset len  : 115
 
 ```bash
 export OPENAI_API_KEY=<YOUR-API-KEY>
-nohup bash examples/sglang_multiturn/run_qwen2.5-3b_tau_retail_multiturn.sh > train.log 2>&1 &
+nohup bash examples/sglang_multiturn/run_tau_retail_multiturn.sh > train.log 2>&1 &
 ```
 
 ---
