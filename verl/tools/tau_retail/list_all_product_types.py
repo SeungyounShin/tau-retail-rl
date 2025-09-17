@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -70,7 +71,10 @@ class ListAllProductTypes(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         products = data["products"]
         product_dict = {
             product["name"]: product["product_id"] for product in products.values()

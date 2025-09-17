@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -109,7 +110,10 @@ class ExchangeDeliveredOrderItems(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         products, orders, users = data["products"], data["orders"], data["users"]
         order_id : str = parameters.get("order_id", "")
         item_ids : list[str] = parameters.get("item_ids", [])
@@ -118,23 +122,23 @@ class ExchangeDeliveredOrderItems(BaseTool):
 
         # check order exists and is delivered
         if order_id not in orders:
-            return "Error: order not found", 0.0, {}
+            return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
         order = orders[order_id]
         if order["status"] != "delivered":
-            return "Error: non-delivered order cannot be exchanged", 0.0, {}
+            return "Error: non-delivered order cannot be exchanged", 0.0 + TOOL_ERROR_REWARD, {}
         
         # check the items to be exchanged exist
         all_item_ids = [item["item_id"] for item in order["items"]]
         if item_ids:
             for item_id in item_ids:
                 if item_ids.count(item_id) > all_item_ids.count(item_id):
-                    return f"Error: {item_id} not found", 0.0, {}
+                    return f"Error: {item_id} not found", 0.0 + TOOL_ERROR_REWARD, {}
         else:
-            return "Error: no items to be exchanged", 0.0, {}
+            return "Error: no items to be exchanged", 0.0 + TOOL_ERROR_REWARD, {}
 
         # check new items exist and match old items and are available
         if len(item_ids) != len(new_item_ids):
-            return "Error: the number of items to be exchanged should match", 0.0, {}
+            return "Error: the number of items to be exchanged should match", 0.0 + TOOL_ERROR_REWARD, {}
 
         diff_price = 0
         for item_id, new_item_id in zip(item_ids, new_item_ids):
@@ -144,7 +148,7 @@ class ExchangeDeliveredOrderItems(BaseTool):
                 new_item_id in products[product_id]["variants"]
                 and products[product_id]["variants"][new_item_id]["available"]
             ):
-                return f"Error: new item {new_item_id} not found or available", 0.0, {}
+                return f"Error: new item {new_item_id} not found or available", 0.0 + TOOL_ERROR_REWARD, {}
 
             old_price = item["price"]
             new_price = products[product_id]["variants"][new_item_id]["price"]
@@ -154,7 +158,7 @@ class ExchangeDeliveredOrderItems(BaseTool):
 
         # check payment method exists and can cover the price difference if gift card
         if payment_method_id not in users[order["user_id"]]["payment_methods"]:
-            return "Error: payment method not found", 0.0, {}
+            return "Error: payment method not found", 0.0 + TOOL_ERROR_REWARD, {}
 
         payment_method = users[order["user_id"]]["payment_methods"][payment_method_id]
         if (
@@ -163,7 +167,7 @@ class ExchangeDeliveredOrderItems(BaseTool):
         ):
             return (
                 "Error: insufficient gift card balance to pay for the price difference"
-            ), 0.0, {}
+            ), 0.0 + TOOL_ERROR_REWARD, {}
 
         # modify the order
         order["status"] = "exchange requested"

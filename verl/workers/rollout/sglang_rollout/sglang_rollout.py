@@ -810,6 +810,8 @@ class SGLangRollout(BaseRollout):
         current_turns = 0
         user_turns = 0
         user_turn_rewards = []
+        tool_step_rewards = []
+        agent_actions = []
 
         # Create request-level sampling parameters
         request_sampling_params = self.sampling_params.copy()
@@ -871,6 +873,12 @@ class SGLangRollout(BaseRollout):
                         )
                         for call in parsed_tool_calls
                     ]
+                    # collect agent actions for later GT reward computation (no user interaction case)
+                    for call in parsed_tool_calls:
+                        agent_actions.append({
+                            "name": call.function.name,
+                            "arguments": call.function.arguments,
+                        })
                     tool_call_results = await asyncio.gather(*execute_tasks)
                     _req.add_tool_response_messages(
                         self.processing_class, [resp for resp, _, _ in tool_call_results]
@@ -878,6 +886,7 @@ class SGLangRollout(BaseRollout):
                     for call, (resp, reward, metrics) in zip(
                         parsed_tool_calls, tool_call_results, strict=True
                     ):
+                        tool_step_rewards.append(reward)
                         _req.update_metrics(metrics, call.function.name)
                     if len(_req.input_ids) >= self.config.max_model_len:
                         finish_reason_type = FinishReasonTypeEnum.STOP
@@ -1022,7 +1031,7 @@ class SGLangRollout(BaseRollout):
             tool_reward_tasks.append(calc_reward_and_release_fn(name, tool))
         tool_reward_scores = await asyncio.gather(*tool_reward_tasks)
         tool_reward_scores = dict(tool_reward_scores)
-        all_rewards = {**tool_reward_scores, **{"user_turn_rewards": user_turn_rewards}}
+        all_rewards = {**tool_reward_scores, **{"user_turn_rewards": user_turn_rewards, "tool_step_rewards": tool_step_rewards, "agent_actions": agent_actions}}
         _req.finalize(self.processing_class, all_rewards, finish_reason_type)
 
         return _req
@@ -1102,11 +1111,33 @@ class SGLangRollout(BaseRollout):
                 prompts,
             )
             loop = asyncio.get_event_loop()
-            output_req_list = loop.run_until_complete(
-                asyncio.gather(
-                    *[self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
+            # Optional tqdm progress bar for rollout
+            use_tqdm = True
+            if use_tqdm:
+                from tqdm import tqdm
+
+                async def _gather_with_tqdm(coros, pbar):
+                    results = []
+                    for fut in asyncio.as_completed(coros):
+                        res = await fut
+                        results.append(res)
+                        pbar.update(1)
+                    return results
+
+                pbar = tqdm(total=len(req_list), desc="Rollout (multi-turn)")
+                output_req_list = loop.run_until_complete(
+                    _gather_with_tqdm(
+                        [self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
+                        pbar,
+                    )
                 )
-            )
+                pbar.close()
+            else:
+                output_req_list = loop.run_until_complete(
+                    asyncio.gather(
+                        *[self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
+                    )
+                )
             sorted_output_req_list = sorted(output_req_list, key=lambda x: (x.batch_data_id, x.rollout_offset))
         else:
             sorted_output_req_list = None
@@ -1238,6 +1269,7 @@ class SGLangRollout(BaseRollout):
         position_ids = torch.cat((prompt_position_ids, response_position_ids), dim=-1)
 
         # Construct the batch data
+        print(f"\033[92midx: {prompt_ids.shape}, response: {response_ids.shape}, seq: {input_ids.shape}, attention_mask: {attention_mask.shape}, position_ids: {position_ids.shape}\033[0m")
         batch = TensorDict(
             {
                 "prompts": prompt_ids,

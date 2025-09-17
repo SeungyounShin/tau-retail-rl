@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -83,34 +84,37 @@ class ModifyPendingOrderPayment(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         orders = data["orders"]
 
         order_id : str = parameters.get("order_id", "")
         payment_method_id : str = parameters.get("payment_method_id", "")
 
         if order_id not in orders:
-            return "Error: order not found", 0.0, {}
+            return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
         order = orders[order_id]
         if order["status"] != "pending":
-            return "Error: non-pending order cannot be modified", 0.0, {}
+            return "Error: non-pending order cannot be modified", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Check if the payment method exists
         if payment_method_id not in data["users"][order["user_id"]]["payment_methods"]:
-            return "Error: payment method not found", 0.0, {}
+            return "Error: payment method not found", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Check that the payment history should only have one payment
         if (
             len(order["payment_history"]) > 1
             or order["payment_history"][0]["transaction_type"] != "payment"
         ):
-            return "Error: there should be exactly one payment for a pending order", 0.0, {}
+            return "Error: there should be exactly one payment for a pending order", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Check that the payment method is different
         if order["payment_history"][0]["payment_method_id"] == payment_method_id:
             return (
                 "Error: the new payment method should be different from the current one"
-            ), 0.0, {}
+            ), 0.0 + TOOL_ERROR_REWARD, {}
         
         amount = order["payment_history"][0]["amount"]
         payment_method = data["users"][order["user_id"]]["payment_methods"][
@@ -122,7 +126,7 @@ class ModifyPendingOrderPayment(BaseTool):
             payment_method["source"] == "gift_card"
             and payment_method["balance"] < amount
         ):
-            return "Error: insufficient gift card balance to pay for the order", 0.0, {}
+            return "Error: insufficient gift card balance to pay for the order", 0.0 + TOOL_ERROR_REWARD, {}
 
         # Modify the payment method
         order["payment_history"].extend(

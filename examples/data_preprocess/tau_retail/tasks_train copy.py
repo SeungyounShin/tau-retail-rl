@@ -5,7 +5,7 @@ TASKS_TRAIN = [
         annotator="synthetic",
         user_id="omar_anderson_3203",
         instruction="Your name is Omar Anderson and your zip code is 19031. You are logical, independent, relaxing, polite. Return #W6067464 via credit_card_4190576: Electric Kettle; Wall Clock; ",
-        prompt="Hi, I'm Omar Anderson from zip code 19031. I'd like to return order #W6067464, which includes an electric kettle and a wall clock. Could you assist me with this?",
+        prompt="Hi my name is Omar Anderson and my zip code is 19031. Return #W6067464 via credit_card_4190576: Electric Kettle; Wall Clock;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -18,11 +18,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_nguyen_2370",
         instruction="Your name is Sophia Nguyen and your zip code is 20171. You are confident, organized. Return #W6619432 via paypal_3738584: Dumbbell Set; Yoga Mat; ",
-        prompt="Hi, I'm Sophia Nguyen, zip code 20171. I'd like to return order #W6619432, which includes the Dumbbell Set and Yoga Mat, via PayPal account paypal_3738584. Thank you!",
+        prompt="Hi my name is Sophia Nguyen and my zip code is 20171. Return #W6619432 via paypal_3738584: Dumbbell Set; Yoga Mat;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -35,11 +35,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_li_5688",
         instruction="Your name is James Li and your email is james.li4495@example.com. You are rigid, confident, happy, curious, pessimistic. Return #W4435622 via gift_card_1725971: Water Bottle; ",
-        prompt="Hi, I'm James Li. I'd like to return order #W4435622, which is a water bottle, using gift card #1725971. My email is james.li4495@example.com.",
+        prompt="Hi my name is James Li and my email is james.li4495@example.com.  Return #W4435622 via gift_card_1725971: Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -52,11 +52,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_kovacs_7075",
         instruction="Your name is Sofia Kovacs and your zip code is 19049. You are patient, confident. For #W7736983, exchange Coffee Maker {'color': 'black', 'capacity': '4 cups', 'type': 'espresso', 'features': 'timer'} to {'color': 'stainless steel', 'type': 'drip', 'features': 'built-in grinder'}; via paypal_6840891. Cancel order #W5765741 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Kovacs, zip code 19049. Could you please help me exchange the coffee maker from order #W7736983 to the stainless steel drip model with a built-in grinder? Also, I need to cancel order #W5765741 as it was placed by mistake. Thank you!",
+        prompt="Hi, my name is Sofia Kovacs and my zip code is 19049. I'd like to exchange my Coffee Maker for a stainless steel drip model with a built-in grinder, via paypal_6840891. Also, please cancel order #W5765741 (ordered by mistake).",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -74,11 +74,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_rossi_6696",
         instruction="Your name is Juan Rossi and your zip code is 77209. You are cautious, logical, organized, flexible, shy. Cancel order #W7602708 because no longer needed. ",
-        prompt="Hi, I'm Juan Rossi, zip code 77209. Could you please cancel order #W7602708 as I no longer need it? Thank you.",
+        prompt="Hi my name is Juan Rossi and my zip code is 77209. Cancel order #W7602708 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -87,11 +87,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_thomas_9402",
         instruction="Your name is Harper Thomas and your email is harper.thomas1454@example.com. You are logical, dependent, impatient, busy. For #W7425646, change payment to credit_card_1199336. For #W7425646, modify Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'black'} to {}; via credit_card_1283450. ",
-        prompt="Hi, I'm Harper Thomas (harper.thomas1454@example.com). Could you please change the payment method for order #W7425646 to credit_card_1199336 and modify the Smart Thermostat to the specified details using credit_card_1283450? Thank you.",
+        prompt="Hi, I'm Harper Thomas (harper.thomas1454@example.com). I'd like to change the payment method for order #W7425646 to credit_card_1199336. Also, please update the Smart Thermostat to a black Apple HomeKit–compatible model, billed to credit_card_1283450.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -112,11 +112,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_2175",
         instruction="Your name is Ava Nguyen and your email is ava.nguyen3664@example.com. You are outgoing, flexible, pessimistic, cautious, messy. For #W1504875, exchange Notebook {'size': 'A6', 'cover type': 'soft cover'} to {'size': 'A5'}; via paypal_6262583. ",
-        prompt="Hi, I'm Ava Nguyen (ava.nguyen3664@example.com). I'd like to exchange my A6 soft cover notebook (Order #W1504875) for an A5 size, and I used PayPal for the purchase. Thank you!",
+        prompt="Hello, I'm Ava Nguyen (ava.nguyen3664@example.com). I'd like to exchange my A6 soft-cover notebook for an A5 version, using paypal_6262583.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -130,11 +130,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_martin_4549",
         instruction="Your name is Lucas Martin and your email is lucas.martin5733@example.com. You are patient, cautious, organized. For #W9318778, change payment to credit_card_7862034. For #W9318778, modify Bicycle {'frame size': 'medium', 'color': 'black', 'type': 'mountain'} to {'frame size': 'large', 'color': 'red'}; Air Purifier {'room size': 'medium', 'filter type': 'HEPA', 'features': 'quiet operation'} to {}; via credit_card_7862034. ",
-        prompt="Hi, I'm Lucas Martin (lucas.martin5733@example.com). Could you please change the payment method for order #W9318778 to credit_card_7862034 and update the Bicycle to a large frame size and red color, and remove the Air Purifier from the order? Thank you!",
+        prompt="Hi, I'm Lucas Martin (lucas.martin5733@example.com). Please change the payment for order #W9318778 to credit_card_7862034. Also, update the Bicycle to a red, large, mountain model and remove the extra configuration for the Air Purifier. Charge to credit_card_7862034.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -155,11 +155,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_muller_4380",
         instruction="Your name is Lucas Muller and your email is lucas.muller7899@example.com. You are patient, cautious. For #W3206099, modify Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {}; via gift_card_2748512. Return #W1523776 via gift_card_2748512: Smart Thermostat; ",
-        prompt="Hi, I'm Lucas Muller (lucas.muller7899@example.com). Could you please modify the Gaming Mouse in order #W3206099 and process a return for the Smart Thermostat in order #W1523776 using gift card #2748512? Thank you.",
+        prompt="Hi my name is Lucas Muller and my email is lucas.muller7899@example.com.  For #W3206099, modify Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {}; via gift_card_2748512. Return #W1523776 via gift_card_2748512: Smart Thermostat;",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -181,11 +181,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_brown_3744",
         instruction="Your name is Aarav Brown and your email is aarav.brown3708@example.com. You are busy, patient. For #W5065081, modify Water Bottle {'capacity': '750ml', 'material': 'glass', 'color': 'black'} to {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'}; via credit_card_3627996. ",
-        prompt="Hi, I'm Aarav Brown. Could you please modify my order #W5065081 to change the water bottle to a 500ml stainless steel one in green? My email is aarav.brown3708@example.com. Thank you!",
+        prompt="Hi, I'm Aarav Brown (aarav.brown3708@example.com). I'd like to change my Water Bottle to a 500ml stainless-steel green model on order #W5065081, billed to credit_card_3627996.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -199,11 +199,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_martin_4260",
         instruction="Your name is Mei Martin and your zip code is 32124. You are messy, creative, outgoing, rigid, cautious. For #W5564375, exchange LED Light Bulb {'brightness': '60W equivalent', 'color temperature': 'daylight', 'connectivity': 'none'} to {'brightness': '75W equivalent', 'connectivity': 'Wi-Fi'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'none', 'backrest height': 'high-back'} to {}; via paypal_2299608. ",
-        prompt="Hi, I'm Mei Martin. I'd like to exchange the LED Light Bulb on order #W5564375 for the 75W equivalent with Wi-Fi connectivity, and the Office Chair for a different model. My zip is 32124, and I used PayPal for the purchase.",
+        prompt="Hi my name is Mei Martin and my zip code is 32124. For #W5564375, exchange LED Light Bulb {'brightness': '60W equivalent', 'color temperature': 'daylight', 'connectivity': 'none'} to {'brightness': '75W equivalent', 'connectivity': 'Wi-Fi'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'none', 'backrest height': 'high-back'} to {}; via paypal_2299608.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -217,11 +217,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_ito_8499",
         instruction="Your name is Yara Ito and your email is yara.ito7353@example.com. You are cautious, flexible, patient, happy. For #W8353027, exchange Grill {'type': 'electric', 'size': 'medium', 'features': 'rotisserie'} to {'type': 'charcoal', 'features': 'side burner'}; via paypal_1679017. ",
-        prompt="Hi, I'm Yara Ito. Could you please help me exchange my electric grill (Order #W8353027) for a charcoal one with a side burner? My email is yara.ito7353@example.com. Thank you!",
+        prompt="Hi my name is Yara Ito and my email is yara. ito7353@example.com.  For #W8353027, exchange Grill {'type': 'electric', 'size': 'medium', 'features': 'rotisserie'} to {'type': 'charcoal', 'features': 'side burner'}; via paypal_1679017.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -235,11 +235,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_johansson_2663",
         instruction="Your name is Harper Johansson and your zip code is 80281. You are happy, direct, confident, optimistic. Cancel order #W3525030 because no longer needed. Cancel order #W3282177 because ordered by mistake. For #W2912646, change address to {'order_id': '#W2912646', 'address1': '953 Park Avenue', 'address2': 'Suite 613', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10064'} (same as #W1780552). For #W2912646, modify Sunglasses {'frame color': 'brown', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'black'}; Luggage Set {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'} to {'piece count': '4-piece'}; via paypal_4820484. ",
-        prompt="Hi, I'm Harper Johansson. Please cancel order #W3525030 as it's no longer needed and #W3282177 as it was ordered by mistake. For order #W2912646, update the address to 953 Park Avenue, Suite 613, New York, NY 10064, and change the sunglasses frame color to black and the luggage set to a 4-piece. Thank you!",
+        prompt="Hi my name is Harper Johansson and my zip code is 80281. Cancel order #W3525030 because no longer needed. Cancel order #W3282177 because ordered by mistake. For #W2912646, change address to {'order_id': '#W2912646', 'address1': '953 Park Avenue', 'address2': 'Suite 613', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10064'} (same as #W1780552). For #W2912646, modify Sunglasses {'frame color': 'brown', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'black'}; Luggage Set {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'} to {'piece count': '4-piece'}; via paypal_4820484.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -273,11 +273,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_5477",
         instruction="Your name is Emma Kovacs and your email is emma.kovacs5723@example.com. You are direct, sad. Cancel order #W7109609 because ordered by mistake. Cancel order #W6554908 because ordered by mistake. ",
-        prompt="Hi, I'm Emma Kovacs (emma.kovacs5723@example.com). I'm feeling a bit down because I mistakenly ordered items #W7109609 and #W6554908. Could you please cancel both orders for me? Thank you.",
+        prompt="Hi my name is Emma Kovacs and my email is emma. kovacs5723@example.com.  Cancel order #W7109609 because ordered by mistake. Cancel order #W6554908 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -290,11 +290,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_hernandez_1356",
         instruction="Your name is Daiki Hernandez and your zip code is 91203. You are sad, outgoing, messy, polite. For #W1166549, exchange Electric Kettle {'capacity': '1L', 'material': 'glass', 'color': 'white'} to {'material': 'stainless steel', 'color': 'black'}; via credit_card_1289579. ",
-        prompt="Hi, I'm Daiki Hernandez from zip code 91203. Could you please help me exchange my Electric Kettle from the glass, white version to the stainless steel, black one for order #W1166549? Thank you!",
+        prompt="Hi my name is Daiki Hernandez and my zip code is 91203. For #W1166549, exchange Electric Kettle {'capacity': '1L', 'material': 'glass', 'color': 'white'} to {'material': 'stainless steel', 'color': 'black'}; via credit_card_1289579.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -308,11 +308,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_gonzalez_8900",
         instruction="Your name is Yusuf Gonzalez and your zip code is 91455. You are logical, busy, outgoing, independent, pessimistic. For #W1679211, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'fantasy', 'difficulty level': 'beginner'} to {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'}; T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'red', 'size': 'L', 'style': 'v-neck'}; via paypal_3022415. ",
-        prompt="Hi, I'm Yusuf Gonzalez. Could you please help me exchange the Jigsaw Puzzle and T-Shirt from order #W1679211 as specified? My zip code is 91455, and I used PayPal for the purchase. Thank you!",
+        prompt="Hi my name is Yusuf Gonzalez and my zip code is 91455. For #W1679211, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'fantasy', 'difficulty level': 'beginner'} to {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'}; T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'red', 'size': 'L', 'style': 'v-neck'}; via paypal_3022415.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -326,11 +326,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_silva_7273",
         instruction="Your name is Olivia Silva and your zip code is 32240. You are creative, optimistic. Cancel order #W7613749 because ordered by mistake. ",
-        prompt="Hi, I'm Olivia Silva, zip code 32240. Could you please cancel order #W7613749? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Olivia Silva and my zip code is 32240. Cancel order #W7613749 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -339,11 +339,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_moore_9003",
         instruction="Your name is Ethan Moore and your email is ethan.moore4109@example.com. You are logical, independent, direct, curious, impatient. For #W6026015, exchange Luggage Set {'piece count': '2-piece', 'color': 'red', 'material': 'hardshell'} to {'material': 'softshell'}; Dumbbell Set {'weight range': '55-75 lbs', 'material': 'urethane', 'set type': 'adjustable'} to {'weight range': '30-50 lbs', 'material': 'iron', 'set type': 'fixed'}; via credit_card_6361025. ",
-        prompt="Hi, I'm Ethan Moore. Please help me exchange my order #W6026015: the luggage set to a softshell and the dumbbell set to a 30-50 lbs iron fixed set. My email is ethan.moore4109@example.com.",
+        prompt="Hi, I'm Ethan Moore (ethan.moore4109@example.com). I'd like to exchange my red 2‑piece hardshell luggage set to a softshell, and change the dumbbell set from 55–75 lbs adjustable urethane to 30–50 lbs fixed iron. Please charge credit_card_6361025.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -357,11 +357,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_silva_4504",
         instruction="Your name is Mia Silva and your zip code is 95173. You are dependent, flexible. For #W6319233, exchange Bookshelf {'material': 'glass', 'color': 'black', 'height': '3 ft'} to {'color': 'brown', 'height': '5 ft'}; via credit_card_9308469. ",
-        prompt="Hi, I'm Mia Silva from zip code 95173. I'd like to exchange my bookshelf from order #W6319233 to the brown, 5 ft version using my credit card ending in 9308469. My email is miasilva@example.com. Thank you!",
+        prompt="Hello, I'm Mia Silva (zip 95173). I'd like to exchange my black 3‑ft glass bookshelf to a brown 5‑ft version. Please use credit_card_9308469.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -375,11 +375,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_sanchez_7289",
         instruction="Your name is Ethan Sanchez and your email is ethan.sanchez3299@example.com. You are pessimistic, shy, curious, relaxing. For #W7147989, modify Grill {'type': 'electric', 'size': 'portable', 'features': 'none'} to {'features': 'rotisserie'}; via gift_card_5917510. ",
-        prompt="Hi, I'm Ethan Sanchez (ethan.sanchez3299@example.com). Could you please modify my order #W7147989 to include a rotisserie feature for the electric portable grill using gift card 5917510? Thank you.",
+        prompt="Hi, I'm Ethan Sanchez (ethan.sanchez3299@example.com). I'd like to add a rotisserie feature to my portable electric grill on order #W7147989. Please use gift_card_5917510.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -393,11 +393,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_lopez_6291",
         instruction="Your name is Ethan Lopez and your email is ethan.lopez8943@example.com. You are pessimistic, patient, confident, organized. For #W6426438, modify Wristwatch {'strap material': 'silicone', 'dial color': 'blue'} to {'strap material': 'leather', 'dial color': 'black'}; via gift_card_7219486. For #W6779827, modify Espresso Machine {'pressure': '19 bar', 'capacity': '2L', 'type': 'manual'} to {'pressure': '9 bar', 'capacity': '1.5L'}; via credit_card_9789590. For #W8632528, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '12', 'material': 'synthetic'}; via gift_card_7219486. ",
-        prompt="Hi, I'm Ethan Lopez. Could you please update order #W6426438 to change the wristwatch to a leather strap and black dial, order #W6779827 to adjust the espresso machine's pressure to 9 bar and capacity to 1.5L, and exchange the hiking boots in order #W8632528 to size 12 and synthetic material? My email is ethan.lopez8943@example.com. Thank you!",
+        prompt="Hello, I'm Ethan Lopez (ethan.lopez8943@example.com). Please change the wristwatch from blue silicone to black leather (order #W6426438; pay with gift_card_7219486). Also, change the espresso machine from a 19‑bar 2L manual to a 9‑bar 1.5L model (credit_card_9789590), and exchange the hiking boots from size 10 leather non‑waterproof to size 12 synthetic (gift_card_7219486).",  
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -429,11 +429,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_santos_4279",
         instruction="Your name is Aarav Santos and your email is aarav.santos2789@example.com. You are patient, pessimistic, insecure. For #W6111820, modify Wireless Earbuds {'color': 'blue', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'battery life': '8 hours', 'water resistance': 'IPX4'}; via credit_card_3816099. ",
-        prompt="Hi, I'm Aarav Santos (aarav.santos2789@example.com). Could you please update my order #W6111820 to change the Wireless Earbuds to have a battery life of 8 hours and water resistance of IPX4? Thank you.",
+        prompt="Hi, my name is Aarav Santos and my email is aarav.santos2789@example.com. For order #W6111820, I’d like to update the wireless earbuds from blue, 4-hour battery life, IPX7 to the version with 8-hour battery life and IPX4 water resistance. Please process this through credit card ending in 3816099.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -447,11 +447,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_santos_2259",
         instruction="Your name is Aarav Santos and your email is aarav.santos8320@example.com. You are insecure, polite, happy. For #W9672333, modify Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'cordless'} to {}; via paypal_7664977. ",
-        prompt="Hi, I'm Aarav Santos (aarav.santos8320@example.com). Could you please help me modify my order #W9672333 to change the vacuum cleaner details? Thank you!",
+        prompt="Hi my name is Aarav Santos and my email is aarav. santos8320@example.com.  For #W9672333, modify Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'cordless'} to {}; via paypal_7664977.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -465,11 +465,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_taylor_8533",
         instruction="Your name is Noah Taylor and your zip code is 85010. You are relaxing, impatient, insecure, direct. For #W2286993, modify Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'plain'} to {'deck material': 'plastic', 'design': 'custom'}; via gift_card_5354170. ",
-        prompt="Hi, I'm Noah Taylor from zip code 85010. Could you please modify my order #W2286993 to change the skateboard's deck material to plastic and the design to custom, using gift card 5354170? Thank you!",
+        prompt="Hi my name is Noah Taylor and my zip code is 85010. For #W2286993, modify Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'plain'} to {'deck material': 'plastic', 'design': 'custom'}; via gift_card_5354170.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -483,11 +483,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_rossi_6696",
         instruction="Your name is Juan Rossi and your zip code is 77209. You are independent, shy, curious, relaxing. For #W7602708, change payment to gift_card_8893815. For #W7602708, modify Garden Hose {'length': '25ft', 'material': 'vinyl', 'color': 'green'} to {'color': 'blue'}; via gift_card_8893815. ",
-        prompt="Hi, I'm Juan Rossi from zip code 77209. Could you please change the payment method for order #W7602708 to gift_card_8893815 and modify the Garden Hose color from green to blue? Thank you!",
+        prompt="Hi my name is Juan Rossi and my zip code is 77209. For #W7602708, change payment to gift_card_8893815. For #W7602708, modify Garden Hose {'length': '25ft', 'material': 'vinyl', 'color': 'green'} to {'color': 'blue'}; via gift_card_8893815.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -508,11 +508,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_jackson_7119",
         instruction="Your name is Sophia Jackson and your email is sophia.jackson9875@example.com. You are pessimistic, outgoing, sad. For #W3977493, exchange Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'material': 'glass'}; via credit_card_6748580. ",
-        prompt="Hi, I'm Sophia Jackson. Could you please help me exchange my green stainless steel water bottle (Order #W3977493) for a glass one? My email is sophia.jackson9875@example.com. Thank you.",
+        prompt="Hi my name is Sophia Jackson and my email is sophia. jackson9875@example.com.  For #W3977493, exchange Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'material': 'glass'}; via credit_card_6748580.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -526,11 +526,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_lopez_5820",
         instruction="Your name is Juan Lopez and your zip code is 85060. You are organized, direct, sad, optimistic, curious. For #W3386832, change address to {'order_id': '#W3386832', 'address1': '411 Park Avenue', 'address2': 'Suite 987', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85060'} (same as #W3700848). For #W3386832, modify Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'ventilation': 'high'}; Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'capacity': '1L', 'type': 'manual'}; Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'green'} to {'material': 'latex', 'color': 'black'}; via paypal_6729210. ",
-        prompt="Hi, I'm Juan Lopez. Could you please update the address for order #W3386832 to 411 Park Avenue, Suite 987, Phoenix, AZ 85060? Also, modify the Cycling Helmet to have high ventilation, change the Espresso Machine to a 1L manual type, and update the Garden Hose to be made of latex and black in color. Thank you!",
+        prompt="Hi my name is Juan Lopez and my zip code is 85060. For #W3386832, change address to {'order_id': '#W3386832', 'address1': '411 Park Avenue', 'address2': 'Suite 987', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85060'} (same as #W3700848). For #W3386832, modify Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'ventilation': 'high'}; Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'capacity': '1L', 'type': 'manual'}; Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'green'} to {'material': 'latex', 'color': 'black'}; via paypal_6729210.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -556,11 +556,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_johnson_7581",
         instruction="Your name is Fatima Johnson and your email is fatima.johnson2300@example.com. You are creative, happy, curious, polite, impatient. For #W5199551, change payment to gift_card_1675628. For #W5199551, modify Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'color': 'red', 'ventilation': 'low'}; Wristwatch {'strap material': 'silicone', 'dial color': 'black'} to {'strap material': 'metal', 'dial color': 'white'}; via paypal_5364164. ",
-        prompt="Hi, I'm Fatima Johnson. Could you please change the payment for order #W5199551 to gift_card_1675628 and update the Cycling Helmet to red with low ventilation and the Wristwatch to a metal strap with a white dial? My email is fatima.johnson2300@example.com. Thank you!",
+        prompt="Hi my name is Fatima Johnson and my email is fatima. johnson2300@example.com.  For #W5199551, change payment to gift_card_1675628. For #W5199551, modify Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'color': 'red', 'ventilation': 'low'}; Wristwatch {'strap material': 'silicone', 'dial color': 'black'} to {'strap material': 'metal', 'dial color': 'white'}; via paypal_5364164.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -581,11 +581,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_kovacs_7590",
         instruction="Your name is Mason Kovacs and your zip code is 98137. You are direct, logical. For #W6030855, modify Bluetooth Speaker {'color': 'black', 'battery life': '20 hours', 'water resistance': 'no'} to {'color': 'red'}; via credit_card_4314033. ",
-        prompt="Hi, I'm Mason Kovacs, zip code 98137. Could you please change the color of the Bluetooth Speaker in order #W6030855 from black to red? Thank you.",
+        prompt="Hi my name is Mason Kovacs and my zip code is 98137. For #W6030855, modify Bluetooth Speaker {'color': 'black', 'battery life': '20 hours', 'water resistance': 'no'} to {'color': 'red'}; via credit_card_4314033.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -599,11 +599,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_6646",
         instruction="Your name is Ava Nguyen and your zip code is 94128. You are logical, confident, busy. Cancel order #W1242543 because no longer needed. Cancel order #W9232383 because no longer needed. Cancel order #W8367380 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Nguyen, zip code 94128. Please cancel order #W1242543 and #W9232383 as they're no longer needed, and order #W8367380 as it was ordered by mistake. Thank you.",
+        prompt="Hi my name is Ava Nguyen and my zip code is 94128. Cancel order #W1242543 because no longer needed. Cancel order #W9232383 because no longer needed. Cancel order #W8367380 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -620,11 +620,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_santos_1643",
         instruction="Your name is Isabella Santos and your email is isabella.santos9317@example.com. You are optimistic, confident, flexible. For #W9667707, change address to {'order_id': '#W9667707', 'address1': '967 Sunset Drive', 'address2': 'Suite 613', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76176'} (same as #W1654332). For #W9667707, modify Running Shoes {'size': '9', 'color': 'white', 'material': 'mesh', 'sole': 'rubber'} to {'color': 'black', 'material': 'synthetic'}; E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '32GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular'}; via credit_card_4056740. ",
-        prompt="My zip code is 76176. Hi, I'm Isabella Santos (isabella.santos9317@example.com). Could you please update the address for order #W9667707 to match #W1654332 and modify the Running Shoes to black synthetic and the E-Reader to a 7-inch Wi-Fi + Cellular model? Thank you!",
+        prompt="Hi my name is Isabella Santos and my email is isabella. santos9317@example.com.  For #W9667707, change address to {'order_id': '#W9667707', 'address1': '967 Sunset Drive', 'address2': 'Suite 613', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76176'} (same as #W1654332). For #W9667707, modify Running Shoes {'size': '9', 'color': 'white', 'material': 'mesh', 'sole': 'rubber'} to {'color': 'black', 'material': 'synthetic'}; E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '32GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular'}; via credit_card_4056740.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -650,11 +650,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_lopez_3865",
         instruction="Your name is Olivia Lopez and your zip code is 76171. You are dependent, happy, confident, optimistic, cautious. For #W9373487, modify Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'blue'} to {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'}; via gift_card_7711863. For #W2692684, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '8-inch', 'color': 'gold'}; via gift_card_7711863. ",
-        prompt="Hi, I'm Olivia Lopez. Could you please modify order #W9373487 to a Portable Charger with 5000mAh capacity, USB-C output, and white color? Also, for order #W2692684, I'd like to exchange the Tablet to an 8-inch screen in gold. Both changes should be covered by gift card 7711863. Thank you!",
+        prompt="Hi my name is Olivia Lopez and my zip code is 76171. For #W9373487, modify Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'blue'} to {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'}; via gift_card_7711863. For #W2692684, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '8-inch', 'color': 'gold'}; via gift_card_7711863.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -677,11 +677,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_taylor_3452",
         instruction="Your name is Fatima Taylor and your zip code is 32169. You are rigid, curious, sad. Return #W5285031 via credit_card_7952624: Tablet; ",
-        prompt="Hi, I'm Fatima Taylor. I'd like to return order #W5285031 for the tablet I purchased. My zip code is 32169. Can you assist me with the process?",
+        prompt="Hi my name is Fatima Taylor and my zip code is 32169. Return #W5285031 via credit_card_7952624: Tablet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -694,11 +694,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_santos_7021",
         instruction="Your name is Ivan Santos and your email is ivan.santos5925@example.com. You are happy, independent, polite, patient, busy. For #W5801125, modify Tea Kettle {'material': 'glass', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'ceramic', 'stovetop compatibility': 'induction'}; via paypal_5543657. ",
-        prompt="Hi, I'm Ivan Santos (ivan.santos5925@example.com). Could you please update my order #W5801125 to change the tea kettle to a ceramic one with induction stovetop compatibility? Thank you!",
+        prompt="Hi my name is Ivan Santos and my email is ivan. santos5925@example.com.  For #W5801125, modify Tea Kettle {'material': 'glass', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'ceramic', 'stovetop compatibility': 'induction'}; via paypal_5543657.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -712,11 +712,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_silva_6882",
         instruction="Your name is Mei Silva and your zip code is 91147. You are curious, outgoing. For #W2640384, exchange Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {}; via paypal_6619428. ",
-        prompt="Hi, I'm Mei Silva from zip code 91147. I'd like to exchange my Gaming Mouse (Order #W2640384) for a different model. Can you assist me with this through PayPal?",
+        prompt="Hi my name is Mei Silva and my zip code is 91147. For #W2640384, exchange Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {}; via paypal_6619428.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -730,11 +730,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_johansson_2152",
         instruction="Your name is Isabella Johansson and your email is isabella.johansson9391@example.com. You are polite, pessimistic, organized, rigid. For #W2575533, change address to {'order_id': '#W2575533', 'address1': '812 Cedar Avenue', 'address2': 'Suite 500', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77129'} (same as #W5565470). For #W2575533, modify E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'}; Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'} to {}; Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'black'} to {'length': '25ft', 'color': 'green'}; via paypal_3024827. Return #W5565470 via paypal_3024827: Electric Kettle; Mechanical Keyboard; Pet Bed; For #W3792453, exchange Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'plain'} to {'deck material': 'plastic'}; via paypal_3024827. ",
-        prompt="My zip code is 77129. Hi, I'm Isabella Johansson. Could you please update the address for order #W2575533 to match #W5565470 and modify the E-Reader, Portable Charger, and Garden Hose details as specified? Also, I'd like to return order #W5565470 and exchange the Skateboard in order #W3792453. My email is isabella.johansson9391@example.com. Thank you!",
+        prompt="Hi my name is Isabella Johansson and my email is isabella. johansson9391@example.com.  For #W2575533, change address to {'order_id': '#W2575533', 'address1': '812 Cedar Avenue', 'address2': 'Suite 500', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77129'} (same as #W5565470). For #W2575533, modify E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'}; Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'} to {}; Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'black'} to {'length': '25ft', 'color': 'green'}; via paypal_3024827. Return #W5565470 via paypal_3024827: Electric Kettle; Mechanical Keyboard; Pet Bed; For #W3792453, exchange Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'plain'} to {'deck material': 'plastic'}; via paypal_3024827.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -777,11 +777,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_ahmed_4909",
         instruction="Your name is Mei Ahmed and your email is mei.ahmed4901@example.com. You are busy, impatient, organized, rigid, optimistic. For #W2598324, modify Espresso Machine {'pressure': '19 bar', 'capacity': '2L', 'type': 'manual'} to {'capacity': '1L', 'type': 'capsule'}; via credit_card_5902940. For #W3239882, exchange Tablet {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'} to {'screen size': '7-inch', 'storage': '128GB', 'color': 'black'}; via credit_card_5902940. ",
-        prompt="Hi, I'm Mei Ahmed (mei.ahmed4901@example.com). Please modify my order #W2598324 to change the Espresso Machine to a 1L capsule type and exchange the Tablet in order #W3239882 to a 7-inch, 128GB, black model. Thank you.",
+        prompt="Hi my name is Mei Ahmed and my email is mei. ahmed4901@example.com.  For #W2598324, modify Espresso Machine {'pressure': '19 bar', 'capacity': '2L', 'type': 'manual'} to {'capacity': '1L', 'type': 'capsule'}; via credit_card_5902940. For #W3239882, exchange Tablet {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'} to {'screen size': '7-inch', 'storage': '128GB', 'color': 'black'}; via credit_card_5902940.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -804,11 +804,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_johnson_7053",
         instruction="Your name is Ethan Johnson and your zip code is 80298. You are logical, confident, shy, organized, dependent. For #W7450915, exchange Bookshelf {'material': 'metal', 'color': 'brown', 'height': '6 ft'} to {'material': 'wood', 'height': '5 ft'}; via gift_card_6892585. ",
-        prompt="Hi, I'm Ethan Johnson. I'd like to exchange my metal, brown, 6 ft bookshelf (Order #W7450915) for a wood, 5 ft one using gift card 6892585. My zip code is 80298. Thank you!",
+        prompt="Hi my name is Ethan Johnson and my zip code is 80298. For #W7450915, exchange Bookshelf {'material': 'metal', 'color': 'brown', 'height': '6 ft'} to {'material': 'wood', 'height': '5 ft'}; via gift_card_6892585.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -822,11 +822,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lee_3061",
         instruction="Your name is Raj Lee and your zip code is 75368. You are rigid, busy, logical, confident, happy. For #W9933266, modify Pet Bed {'size': 'small', 'material': 'fleece', 'color': 'brown'} to {'size': 'medium', 'color': 'grey'}; Yoga Mat {'thickness': '4mm', 'material': 'PVC', 'color': 'blue'} to {'thickness': '6mm', 'color': 'green'}; via paypal_4133936. ",
-        prompt="Hi, I'm Raj Lee. Could you please update my order #W9933266 to change the pet bed to a medium size in grey and the yoga mat to 6mm thickness in green? Thank you.",
+        prompt="Hi my name is Raj Lee and my zip code is 75368. For #W9933266, modify Pet Bed {'size': 'small', 'material': 'fleece', 'color': 'brown'} to {'size': 'medium', 'color': 'grey'}; Yoga Mat {'thickness': '4mm', 'material': 'PVC', 'color': 'blue'} to {'thickness': '6mm', 'color': 'green'}; via paypal_4133936.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -840,11 +840,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mohamed_santos_2427",
         instruction="Your name is Mohamed Santos and your zip code is 76188. You are pessimistic, creative. For #W4840405, exchange Backpack {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large'}; via gift_card_4710915. ",
-        prompt="Hi, I'm Mohamed Santos. I'd like to exchange my green, small polyester laptop backpack (Order #W4840405) for a large black one using gift card 4710915. My zip code is 76188.",
+        prompt="Hi my name is Mohamed Santos and my zip code is 76188. For #W4840405, exchange Backpack {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large'}; via gift_card_4710915.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -858,11 +858,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_sanchez_2914",
         instruction="Your name is Olivia Sanchez and your email is olivia.sanchez1894@example.com. You are busy, sad. Cancel order #W5101035 because no longer needed. ",
-        prompt="Hi, I'm Olivia Sanchez. Could you please cancel order #W5101035 as I no longer need it? My email is olivia.sanchez1894@example.com. Thank you.",
+        prompt="Hi my name is Olivia Sanchez and my email is olivia. sanchez1894@example.com.  Cancel order #W5101035 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -871,11 +871,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_wilson_6873",
         instruction="Your name is Fatima Wilson and your email is fatima.wilson5906@example.com. You are happy, impatient, messy, confident. For #W4556683, exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to {'battery life': '6 hours'}; Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours'}; via credit_card_9557278. ",
-        prompt="Hi, I'm Fatima Wilson. Could you please help me exchange my Wireless Earbuds (Order #W4556683) for the version with 6 hours of battery life and my Bluetooth Speaker for the red one with 20 hours of battery life? My email is fatima.wilson5906@example.com. Thank you!",
+        prompt="Hi my name is Fatima Wilson and my email is fatima. wilson5906@example.com.  For #W4556683, exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to {'battery life': '6 hours'}; Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours'}; via credit_card_9557278.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -889,11 +889,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_taylor_7478",
         instruction="Your name is Isabella Taylor and your email is isabella.taylor7762@example.com. You are outgoing, organized, patient. For #W6717215, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {}; T-Shirt {'color': 'purple', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'red', 'size': 'L', 'style': 'v-neck'}; via gift_card_5501047. ",
-        prompt="Hi, I'm Isabella Taylor (isabella.taylor7762@example.com). I'd like to exchange order #W6717215: the Portable Charger for a different item and the T-Shirt from a purple XL crew neck to a red L v-neck, using gift card 5501047. Thank you!",
+        prompt="Hi my name is Isabella Taylor and my email is isabella. taylor7762@example.com.  For #W6717215, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {}; T-Shirt {'color': 'purple', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'red', 'size': 'L', 'style': 'v-neck'}; via gift_card_5501047.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -907,11 +907,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_ahmed_1705",
         instruction="Your name is Lei Ahmed and your email is lei.ahmed1696@example.com. You are relaxing, independent. Cancel order #W9132840 because ordered by mistake. For #W6724985, change address to {'order_id': '#W6724985', 'address1': '558 Cedar Street', 'address2': 'Suite 298', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77158'} (same as #W9015076). For #W6724985, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '1000ml', 'color': 'red'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'color': 'black', 'height': '3 ft'}; via credit_card_3593714. ",
-        prompt="Hi, I'm Lei Ahmed. Could you please cancel order #W9132840 as it was made by mistake? Also, for order #W6724985, update the shipping address to 558 Cedar Street, Suite 298, Houston, TX 77158, and modify the Water Bottle to 1000ml in red and the Bookshelf to black and 3 ft tall? My email is lei.ahmed1696@example.com. Thank you!",
+        prompt="Hi my name is Lei Ahmed and my email is lei. ahmed1696@example.com.  Cancel order #W9132840 because ordered by mistake. For #W6724985, change address to {'order_id': '#W6724985', 'address1': '558 Cedar Street', 'address2': 'Suite 298', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77158'} (same as #W9015076). For #W6724985, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '1000ml', 'color': 'red'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'color': 'black', 'height': '3 ft'}; via credit_card_3593714.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -941,11 +941,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_rossi_8776",
         instruction="Your name is Sofia Rossi and your email is sofia.rossi2645@example.com. You are dependent, rigid, creative, confident, relaxing. For #W2818151, modify Luggage Set {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'} to {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'}; via credit_card_5051208. Cancel order #W5500815 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Rossi (sofia.rossi2645@example.com). Could you please change my order #W2818151 to a 3-piece blue softshell luggage set and cancel order #W5500815 as it was placed by mistake? Thank you!",
+        prompt="Hi my name is Sofia Rossi and my email is sofia. rossi2645@example.com.  For #W2818151, modify Luggage Set {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'} to {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'}; via credit_card_5051208. Cancel order #W5500815 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -963,11 +963,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_johansson_1629",
         instruction="Your name is Yara Johansson and your zip code is 76114. You are relaxing, optimistic, rigid, outgoing, happy. For #W9994227, exchange Cycling Helmet {'size': 'S', 'color': 'blue', 'ventilation': 'low'} to {'size': 'M', 'color': 'red', 'ventilation': 'high'}; via credit_card_4582364. ",
-        prompt="Hi, I'm Yara Johansson, zip code 76114. I'd like to exchange my Cycling Helmet from size S, blue, low ventilation to size M, red, high ventilation for order #W9994227.",
+        prompt="Hi my name is Yara Johansson and my zip code is 76114. For #W9994227, exchange Cycling Helmet {'size': 'S', 'color': 'blue', 'ventilation': 'low'} to {'size': 'M', 'color': 'red', 'ventilation': 'high'}; via credit_card_4582364.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -981,11 +981,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are impatient, confident, dependent. Return #W7242815 via paypal_1808675: Tablet; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'} to {'size': 'S'}; via paypal_1808675. ",
-        prompt="Hi, I'm Lei Anderson. Please process a return for order #W7242815 via PayPal_1808675. Also, update the address for order #W6002467 to 544 Sunset Drive, Suite 337, Jacksonville, FL 32205, and change the Cycling Helmet size to 'S'. My zip is 76192, and my email is on file.",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Return #W7242815 via paypal_1808675: Tablet; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'} to {'size': 'S'}; via paypal_1808675.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1019,11 +1019,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kovacs_8020",
         instruction="Your name is Mei Kovacs and your email is mei.kovacs8232@example.com. You are dependent, busy, outgoing, impatient, sad. Cancel order #W7800651 because ordered by mistake. Return #W6390527 via paypal_7644869: Hiking Boots; Desk Lamp; Water Bottle; ",
-        prompt="Hi, I'm Mei Kovacs. Could you please cancel order #W7800651 as it was placed by mistake, and help me return items from order #W6390527 via PayPal? My email is mei.kovacs8232@example.com. Thank you!",
+        prompt="Hi my name is Mei Kovacs and my email is mei. kovacs8232@example.com.  Cancel order #W7800651 because ordered by mistake. Return #W6390527 via paypal_7644869: Hiking Boots; Desk Lamp; Water Bottle;",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1040,11 +1040,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_martin_8570",
         instruction="Your name is Sophia Martin and your email is sophia.martin4832@example.com. You are optimistic, messy, creative. For #W1092119, change address to {'order_id': '#W1092119', 'address1': '760 Elm Avenue', 'address2': 'Suite 564', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77034'} (same as #W1603792). For #W1092119, modify Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'blue'}; via credit_card_5694100. ",
-        prompt="My zip code is 77034. Hi, I'm Sophia Martin (sophia.martin4832@example.com). Could you please update the address for order #W1092119 to match the one on #W1603792? Also, I'd like to change the Luggage Set on #W1092119 to a 4-piece set in blue. Thank you!",
+        prompt="Hi my name is Sophia Martin and my email is sophia. martin4832@example.com.  For #W1092119, change address to {'order_id': '#W1092119', 'address1': '760 Elm Avenue', 'address2': 'Suite 564', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77034'} (same as #W1603792). For #W1092119, modify Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'blue'}; via credit_card_5694100.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -1070,11 +1070,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_5477",
         instruction="Your name is Emma Kovacs and your email is emma.kovacs5723@example.com. You are shy, patient, rigid, independent. Cancel order #W6554908 because ordered by mistake. Cancel order #W7109609 because no longer needed. ",
-        prompt="Hi, I'm Emma Kovacs (emma.kovacs5723@example.com). Could you please cancel order #W6554908 as it was ordered by mistake and order #W7109609 as it's no longer needed? Thank you.",
+        prompt="Hi my name is Emma Kovacs and my email is emma. kovacs5723@example.com.  Cancel order #W6554908 because ordered by mistake. Cancel order #W7109609 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1087,11 +1087,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_brown_8075",
         instruction="Your name is Chen Brown and your zip code is 95190. You are impatient, logical. Cancel order #W4296426 because no longer needed. ",
-        prompt="Hi, I'm Chen Brown, zip code 95190. Please cancel order #W4296426 as I no longer need it.",
+        prompt="Hi my name is Chen Brown and my zip code is 95190. Cancel order #W4296426 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1100,11 +1100,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_anderson_5973",
         instruction="Your name is Liam Anderson and your email is liam.anderson5932@example.com. You are patient, polite, sad. For #W1544028, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'pieces': '1500', 'theme': 'art'}; Wristwatch {'strap material': 'silicone', 'dial color': 'blue'} to {'dial color': 'black'}; via credit_card_9185943. ",
-        prompt="Hi, I'm Liam Anderson, and my email is liam.anderson5932@example.com. I'm feeling a bit down and would like to exchange my order #W1544028: the 2000-piece animal-themed jigsaw puzzle for the 1500-piece art-themed one, and the silicone strap wristwatch with a blue dial for one with a black dial. Thank you.",
+        prompt="Hi my name is Liam Anderson and my email is liam. anderson5932@example.com.  For #W1544028, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'pieces': '1500', 'theme': 'art'}; Wristwatch {'strap material': 'silicone', 'dial color': 'blue'} to {'dial color': 'black'}; via credit_card_9185943.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1118,11 +1118,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_smith_8953",
         instruction="Your name is Olivia Smith and your email is olivia.smith9157@example.com. You are organized, happy. Return #W3794101 via paypal_2076152: Cycling Helmet; ",
-        prompt="Hi, I'm Olivia Smith (olivia.smith9157@example.com). I'd like to return order #W3794101 for the cycling helmet via PayPal.",
+        prompt="Hi my name is Olivia Smith and my email is olivia. smith9157@example.com.  Return #W3794101 via paypal_2076152: Cycling Helmet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1135,11 +1135,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_brown_2024",
         instruction="Your name is Anya Brown and your email is anya.brown8893@example.com. You are insecure, shy. Cancel order #W1430028 because no longer needed. Cancel order #W1170711 because no longer needed. For #W8883368, modify Smart Watch {'color': 'black', 'band material': 'leather', 'display': 'AMOLED'} to {'color': 'silver', 'display': 'LCD'}; E-Reader {'screen size': '6-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {}; via credit_card_3414703. ",
-        prompt="Hi, I'm Anya Brown. Could you please cancel orders #W1430028 and #W1170711 as I no longer need them? Also, for order #W8883368, I'd like to change the Smart Watch to silver with an LCD display and remove the E-Reader. My email is anya.brown8893@example.com. Thank you.",
+        prompt="Hi my name is Anya Brown and my email is anya. brown8893@example.com.  Cancel order #W1430028 because no longer needed. Cancel order #W1170711 because no longer needed. For #W8883368, modify Smart Watch {'color': 'black', 'band material': 'leather', 'display': 'AMOLED'} to {'color': 'silver', 'display': 'LCD'}; E-Reader {'screen size': '6-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {}; via credit_card_3414703.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1161,11 +1161,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_moore_7909",
         instruction="Your name is Raj Moore and your zip code is 20566. You are happy, outgoing, rigid, optimistic. Return #W3467101 via gift_card_6009199: LED Light Bulb; Headphones; Smart Watch; ",
-        prompt="Hi, I'm Raj Moore, zip code 20566. I'd like to return order #W3467101 using gift card #6009199. The items are an LED Light Bulb, Headphones, and a Smart Watch. Thank you!",
+        prompt="Hi my name is Raj Moore and my zip code is 20566. Return #W3467101 via gift_card_6009199: LED Light Bulb; Headphones; Smart Watch;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1178,11 +1178,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lopez_5873",
         instruction="Your name is Raj Lopez and your email is raj.lopez2997@example.com. You are polite, logical, dependent. Cancel order #W7162915 because ordered by mistake. For #W5107138, modify Hiking Boots {'size': '7', 'material': 'synthetic', 'waterproof': 'no'} to {}; via paypal_7007375. ",
-        prompt="Hi, I'm Raj Lopez (raj.lopez2997@example.com). Could you please cancel order #W7162915 as it was placed by mistake and modify the Hiking Boots in order #W5107138 to size 7, synthetic material, and non-waterproof? Thank you!",
+        prompt="Hi my name is Raj Lopez and my email is raj. lopez2997@example.com.  Cancel order #W7162915 because ordered by mistake. For #W5107138, modify Hiking Boots {'size': '7', 'material': 'synthetic', 'waterproof': 'no'} to {}; via paypal_7007375.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1200,11 +1200,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_lee_1982",
         instruction="Your name is Aarav Lee and your email is aarav.lee6460@example.com. You are optimistic, happy, independent, patient. For #W3586556, modify Tablet {'screen size': '8-inch', 'storage': '128GB', 'color': 'gold'} to {'screen size': '7-inch', 'color': 'black'}; via credit_card_1640996. ",
-        prompt="Hi, I'm Aarav Lee. Could you please modify my order #W3586556 to change the tablet to a 7-inch screen and black color? My email is aarav.lee6460@example.com. Thank you!",
+        prompt="Hi my name is Aarav Lee and my email is aarav. lee6460@example.com.  For #W3586556, modify Tablet {'screen size': '8-inch', 'storage': '128GB', 'color': 'gold'} to {'screen size': '7-inch', 'color': 'black'}; via credit_card_1640996.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1218,11 +1218,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_silva_7726",
         instruction="Your name is Amelia Silva and your zip code is 19117. You are cautious, independent, patient. Cancel order #W4836353 because no longer needed. For #W7773202, exchange Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '7'}; via gift_card_3491931. ",
-        prompt="Hi, I'm Amelia Silva, zip code 19117. Could you please cancel order #W4836353 and exchange the Hiking Boots in order #W7773202 to size 7 using gift card 3491931? Thank you!",
+        prompt="Hi my name is Amelia Silva and my zip code is 19117. Cancel order #W4836353 because no longer needed. For #W7773202, exchange Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '7'}; via gift_card_3491931.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1240,11 +1240,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_6971",
         instruction="Your name is Ava Nguyen and your email is ava.nguyen1860@example.com. You are confident, cautious, direct, messy. Return #W7597893 via gift_card_8640626: Smart Thermostat; Mechanical Keyboard; ",
-        prompt="Hi, I'm Ava Nguyen (ava.nguyen1860@example.com). I'd like to return order #W7597893 using gift card #8640626 for the Smart Thermostat and Mechanical Keyboard.",
+        prompt="Hi my name is Ava Nguyen and my email is ava. nguyen1860@example.com.  Return #W7597893 via gift_card_8640626: Smart Thermostat; Mechanical Keyboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1257,11 +1257,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_patel_3710",
         instruction="Your name is Anya Patel and your email is anya.patel9309@example.com. You are direct, sad, curious, logical, patient. For #W6131421, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand B'}; via credit_card_4142574. Return #W6174054 via gift_card_6566420: Fleece Jacket; Vacuum Cleaner; Dumbbell Set; ",
-        prompt="Hi, I'm Anya Patel. I'd like to exchange the Makeup Kit from #W6131421 for one with a dark skin tone from Brand B. Also, I need to return the Fleece Jacket, Vacuum Cleaner, and Dumbbell Set from #W6174054. My email is anya.patel9309@example.com.",
+        prompt="Hi my name is Anya Patel and my email is anya. patel9309@example.com.  For #W6131421, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand B'}; via credit_card_4142574. Return #W6174054 via gift_card_6566420: Fleece Jacket; Vacuum Cleaner; Dumbbell Set;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1283,11 +1283,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_li_9474",
         instruction="Your name is Raj Li and your zip code is 76184. You are direct, impatient, insecure, busy. Cancel order #W8967935 because no longer needed. ",
-        prompt="Hi, I'm Raj Li. Please cancel order #W8967935 as I no longer need it. My zip code is 76184.",
+        prompt="Hi my name is Raj Li and my zip code is 76184. Cancel order #W8967935 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1296,11 +1296,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_1101",
         instruction="Your name is Sophia Garcia and your email is sophia.garcia9791@example.com. You are patient, messy. Return #W8727985 via gift_card_9450778: Jigsaw Puzzle; ",
-        prompt="Hi, I'm Sophia Garcia. I'd like to return order #W8727985, the Jigsaw Puzzle, using gift card #9450778. My email is sophia.garcia9791@example.com.",
+        prompt="Hi my name is Sophia Garcia and my email is sophia. garcia9791@example.com.  Return #W8727985 via gift_card_9450778: Jigsaw Puzzle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1313,11 +1313,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_thomas_1791",
         instruction="Your name is Ethan Thomas and your email is ethan.thomas7730@example.com. You are patient, relaxing, rigid, logical, messy. For #W8465042, modify Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'RAM': '8GB'}; Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'AMOLED'} to {'color': 'gold'}; via paypal_6982172. ",
-        prompt="Hi, I'm Ethan Thomas (ethan.thomas7730@example.com). Could you please update my order #W8465042 to change the smartphone to black with 8GB RAM and the smartwatch to gold? Thank you!",
+        prompt="Hi my name is Ethan Thomas and my email is ethan. thomas7730@example.com.  For #W8465042, modify Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'RAM': '8GB'}; Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'AMOLED'} to {'color': 'gold'}; via paypal_6982172.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1331,11 +1331,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kovacs_8020",
         instruction="Your name is Mei Kovacs and your zip code is 28236. You are dependent, rigid, relaxing. For #W7800651, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'black', 'sensor type': 'laser'}; via paypal_7644869. ",
-        prompt="Hi, I'm Mei Kovacs from zip code 28236. Could you please update my order #W7800651 to change the Gaming Mouse to have a black color and a laser sensor? Thank you!",
+        prompt="Hi my name is Mei Kovacs and my zip code is 28236. For #W7800651, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'black', 'sensor type': 'laser'}; via paypal_7644869.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1349,11 +1349,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_3261",
         instruction="Your name is Sofia Li and your zip code is 10199. You are flexible, outgoing, dependent, impatient, messy. For #W6874763, exchange Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {}; Digital Camera {'resolution': '20MP', 'zoom': '10x', 'storage': 'CF card'} to {'zoom': '5x'}; via credit_card_4046723. ",
-        prompt="Hi, I'm Sofia Li. I'd like to exchange the Fleece Jacket from order #W6874763 for a different item and change the Digital Camera to a 5x zoom model. My zip is 10199, and you can reach me at my email for any updates.",
+        prompt="Hi my name is Sofia Li and my zip code is 10199. For #W6874763, exchange Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {}; Digital Camera {'resolution': '20MP', 'zoom': '10x', 'storage': 'CF card'} to {'zoom': '5x'}; via credit_card_4046723.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1367,11 +1367,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_4072",
         instruction="Your name is Ava Nguyen and your zip code is 28251. You are patient, curious, messy, confident, polite. Cancel order #W8732376 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Nguyen, and I accidentally placed order #W8732376. Could you please cancel it for me? My zip code is 28251. Thank you!",
+        prompt="Hi my name is Ava Nguyen and my zip code is 28251. Cancel order #W8732376 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1380,11 +1380,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_garcia_1208",
         instruction="Your name is Olivia Garcia and your email is olivia.garcia2695@example.com. You are pessimistic, messy, outgoing. For #W1075114, exchange Wireless Earbuds {'color': 'blue', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'battery life': '8 hours', 'water resistance': 'IPX4'}; via gift_card_5115976. ",
-        prompt="Hi, I'm Olivia Garcia (olivia.garcia2695@example.com). I'd like to exchange my blue Wireless Earbuds from order #W1075114 for the version with 8-hour battery life and IPX4 water resistance using gift card #5115976. Thanks!",
+        prompt="Hi my name is Olivia Garcia and my email is olivia. garcia2695@example.com.  For #W1075114, exchange Wireless Earbuds {'color': 'blue', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'battery life': '8 hours', 'water resistance': 'IPX4'}; via gift_card_5115976.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1398,11 +1398,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_ito_5484",
         instruction="Your name is Sofia Ito and your zip code is 19169. You are relaxing, confident, rigid. Return #W5257743 via paypal_6882355: T-Shirt; ",
-        prompt="Hi, I'm Sofia Ito. I'd like to return order #W5257743 for the T-Shirt via PayPal. My zip code is 19169. Thank you!",
+        prompt="Hi my name is Sofia Ito and my zip code is 19169. Return #W5257743 via paypal_6882355: T-Shirt;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1415,11 +1415,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_jackson_2250",
         instruction="Your name is Mia Jackson and your email is mia.jackson5798@example.com. You are patient, insecure, shy, curious, logical. Cancel order #W6236251 because ordered by mistake. Cancel order #W2618034 because ordered by mistake. For #W1205816, change address to {'order_id': '#W1205816', 'address1': '629 Sunset Drive', 'address2': 'Suite 581', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92159'} (same as #W6236251). For #W1205816, change payment to gift_card_5715854. For #W1205816, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass', 'capacity': '2 liters'}; via gift_card_5715854. ",
-        prompt="Hi, I'm Mia Jackson (mia.jackson5798@example.com). Could you please cancel orders #W6236251 and #W2618034 as they were made by mistake? Also, for order #W1205816, update the address to 629 Sunset Drive, Suite 581, San Diego, CA 92159, change the payment to gift_card_5715854, and modify the Tea Kettle to a glass material with a 2-liter capacity. Thank you!",
+        prompt="Hi my name is Mia Jackson and my email is mia. jackson5798@example.com.  Cancel order #W6236251 because ordered by mistake. Cancel order #W2618034 because ordered by mistake. For #W1205816, change address to {'order_id': '#W1205816', 'address1': '629 Sunset Drive', 'address2': 'Suite 581', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92159'} (same as #W6236251). For #W1205816, change payment to gift_card_5715854. For #W1205816, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass', 'capacity': '2 liters'}; via gift_card_5715854.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1460,11 +1460,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_brown_6720",
         instruction="Your name is Lucas Brown and your email is lucas.brown9344@example.com. You are creative, cautious, happy. Cancel order #W4860251 because ordered by mistake. For #W6239298, exchange Bookshelf {'material': 'glass', 'color': 'black', 'height': '5 ft'} to {'material': 'wood', 'color': 'brown', 'height': '6 ft'}; Water Bottle {'capacity': '1000ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '750ml', 'material': 'plastic', 'color': 'black'}; E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'}; via credit_card_2112420. For #W9218746, exchange Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'grey', 'size': 'large', 'material': 'polyester', 'compartment': 'hydration'}; Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'features': 'cordless'}; via credit_card_2112420. ",
-        prompt="Hi, I'm Lucas Brown (lucas.brown9344@example.com, zip: [your zip code]). Please cancel order #W4860251 as it was placed by mistake. For order #W6239298, I'd like to exchange the bookshelf, water bottle, and e-reader as specified. Also, for order #W9218746, please exchange the backpack and vacuum cleaner as detailed. Thank you!",
+        prompt="Hi my name is Lucas Brown and my email is lucas. brown9344@example.com.  Cancel order #W4860251 because ordered by mistake. For #W6239298, exchange Bookshelf {'material': 'glass', 'color': 'black', 'height': '5 ft'} to {'material': 'wood', 'color': 'brown', 'height': '6 ft'}; Water Bottle {'capacity': '1000ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '750ml', 'material': 'plastic', 'color': 'black'}; E-Reader {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'}; via credit_card_2112420. For #W9218746, exchange Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'grey', 'size': 'large', 'material': 'polyester', 'compartment': 'hydration'}; Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'features': 'cordless'}; via credit_card_2112420.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1491,11 +1491,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_kim_3528",
         instruction="Your name is Omar Kim and your zip code is 32214. You are sad, relaxing, curious, creative, polite. Cancel order #W7111824 because no longer needed. For #W8557584, change payment to credit_card_3577130. For #W8557584, modify Tea Kettle {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'electric'} to {'capacity': '2 liters', 'stovetop compatibility': 'induction'}; Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'} to {}; via credit_card_3577130. ",
-        prompt="Hi, I'm Omar Kim. Could you please cancel order #W7111824 as it's no longer needed? Also, for order #W8557584, I'd like to change the payment method to credit_card_3577130 and modify the Tea Kettle to a 2-liter capacity with induction stovetop compatibility. Additionally, please remove the Jigsaw Puzzle from the order. Thank you! My zip code is 32214.",
+        prompt="Hi my name is Omar Kim and my zip code is 32214. Cancel order #W7111824 because no longer needed. For #W8557584, change payment to credit_card_3577130. For #W8557584, modify Tea Kettle {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'electric'} to {'capacity': '2 liters', 'stovetop compatibility': 'induction'}; Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'} to {}; via credit_card_3577130.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1520,11 +1520,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_martin_4260",
         instruction="Your name is Mei Martin and your zip code is 32124. You are curious, creative, patient, relaxing, polite. Return #W5564375 via paypal_2299608: Digital Camera; Running Shoes; ",
-        prompt="Hi, I'm Mei Martin. I'd like to return order #W5564375, which includes a digital camera and running shoes. My zip code is 32124, and my email is paypal_2299608.",
+        prompt="Hi my name is Mei Martin and my zip code is 32124. Return #W5564375 via paypal_2299608: Digital Camera; Running Shoes;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1537,11 +1537,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_nguyen_6662",
         instruction="Your name is Emma Nguyen and your email is emma.nguyen8892@example.com. You are rigid, optimistic, impatient, relaxing, organized. For #W2092674, exchange Wristwatch {'strap material': 'metal', 'dial color': 'black'} to {'strap material': 'leather', 'dial color': 'white'}; via paypal_2499655. ",
-        prompt="Hi, I'm Emma Nguyen. I'd like to exchange my wristwatch from order #W2092674 to one with a leather strap and white dial. My email is emma.nguyen8892@example.com. Thank you!",
+        prompt="Hi my name is Emma Nguyen and my email is emma. nguyen8892@example.com.  For #W2092674, exchange Wristwatch {'strap material': 'metal', 'dial color': 'black'} to {'strap material': 'leather', 'dial color': 'white'}; via paypal_2499655.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1555,11 +1555,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_9839",
         instruction="Your name is Emma Kovacs and your zip code is 32190. You are dependent, relaxing, curious. For #W8661412, modify Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'fixed', 'backrest height': 'standard'} to {'color': 'gray', 'armrest': 'none', 'backrest height': 'high-back'}; Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'black'} to {'capacity': '750ml', 'material': 'plastic'}; via credit_card_7239357. ",
-        prompt="Hi, I'm Emma Kovacs. Could you please modify my order #W8661412? I'd like the office chair to be gray with no armrests and a high-back, and the water bottle to be 750ml and made of plastic. Thank you! My zip code is 32190.",
+        prompt="Hi my name is Emma Kovacs and my zip code is 32190. For #W8661412, modify Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'fixed', 'backrest height': 'standard'} to {'color': 'gray', 'armrest': 'none', 'backrest height': 'high-back'}; Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'black'} to {'capacity': '750ml', 'material': 'plastic'}; via credit_card_7239357.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1573,11 +1573,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_li_5688",
         instruction="Your name is James Li and your zip code is 10083. You are insecure, organized, relaxing, sad. For #W3638028, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'expert'} to {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'}; Indoor Security Camera {'resolution': '4K', 'field of view': '130 degrees', 'connectivity': 'Wi-Fi'} to {'resolution': '2K', 'connectivity': 'Ethernet'}; via gift_card_1725971. ",
-        prompt="Hi, I'm James Li. Could you please help me exchange my order #W3638028? I'd like to swap the 1000-piece animal puzzle for a 500-piece art puzzle and the 4K Wi-Fi camera for a 2K Ethernet one. My zip code is 10083, and I can use gift_card_1725971. Thank you!",
+        prompt="Hi my name is James Li and my zip code is 10083. For #W3638028, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'expert'} to {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'}; Indoor Security Camera {'resolution': '4K', 'field of view': '130 degrees', 'connectivity': 'Wi-Fi'} to {'resolution': '2K', 'connectivity': 'Ethernet'}; via gift_card_1725971.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1591,11 +1591,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_davis_7541",
         instruction="Your name is Evelyn Davis and your zip code is 32136. You are confident, sad. Return #W6798117 via paypal_9734841: Wall Clock; ",
-        prompt="Hi, I'm Evelyn Davis, and I'm feeling a bit down. I'd like to return order #W6798117, the Wall Clock, via PayPal. My zip code is 32136. Thank you.",
+        prompt="Hi my name is Evelyn Davis and my zip code is 32136. Return #W6798117 via paypal_9734841: Wall Clock;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1608,11 +1608,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_taylor_7149",
         instruction="Your name is Yusuf Taylor and your zip code is 95154. You are rigid, confident, independent, cautious, direct. For #W2702727, modify Yoga Mat {'thickness': '6mm', 'material': 'natural rubber', 'color': 'pink'} to {'material': 'PVC', 'color': 'green'}; via credit_card_3599838. For #W8268610, change address to {'order_id': '#W8268610', 'address1': '227 Oak Street', 'address2': 'Suite 699', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20564'} (same as #W5690487). For #W8268610, modify Desk Lamp {'color': 'white', 'brightness': 'high', 'power source': 'USB'} to {'color': 'silver', 'brightness': 'low', 'power source': 'AC adapter'}; via credit_card_3599838. ",
-        prompt="Hi, I'm Yusuf Taylor. Please update order #W2702727 to change the Yoga Mat to PVC and green, and for order #W8268610, update the address to 227 Oak Street, Suite 699, Washington, DC 20564, and change the Desk Lamp to silver, low brightness, and AC adapter. Thank you.",
+        prompt="Hi my name is Yusuf Taylor and my zip code is 95154. For #W2702727, modify Yoga Mat {'thickness': '6mm', 'material': 'natural rubber', 'color': 'pink'} to {'material': 'PVC', 'color': 'green'}; via credit_card_3599838. For #W8268610, change address to {'order_id': '#W8268610', 'address1': '227 Oak Street', 'address2': 'Suite 699', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20564'} (same as #W5690487). For #W8268610, modify Desk Lamp {'color': 'white', 'brightness': 'high', 'power source': 'USB'} to {'color': 'silver', 'brightness': 'low', 'power source': 'AC adapter'}; via credit_card_3599838.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1647,11 +1647,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_moore_4814",
         instruction="Your name is Ava Moore and your email is ava.moore2450@example.com. You are patient, organized, outgoing, happy, direct. Cancel order #W8331214 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Moore (ava.moore2450@example.com). Could you please cancel order #W8331214? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Ava Moore and my email is ava. moore2450@example.com.  Cancel order #W8331214 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1660,11 +1660,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_santos_1643",
         instruction="Your name is Isabella Santos and your zip code is 10020. You are flexible, creative, pessimistic. Cancel order #W9527030 because no longer needed. Return #W1654332 via credit_card_4056740: Mechanical Keyboard; ",
-        prompt="Hi, I'm Isabella Santos (zip: 10020, email: [your email]). Could you please cancel order #W9527030 as it's no longer needed and process a return for order #W1654332 for the Mechanical Keyboard to my credit card ending in 4056740? Thank you!",
+        prompt="Hi my name is Isabella Santos and my zip code is 10020. Cancel order #W9527030 because no longer needed. Return #W1654332 via credit_card_4056740: Mechanical Keyboard;",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1681,11 +1681,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_li_2872",
         instruction="Your name is Mei Li and your zip code is 92149. You are sad, flexible, relaxing. For #W2936099, exchange Wireless Earbuds {'color': 'blue', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'color': 'white', 'water resistance': 'not resistant'}; Bookshelf {'material': 'glass', 'color': 'black', 'height': '3 ft'} to {'color': 'white', 'height': '5 ft'}; via paypal_4060450. ",
-        prompt="Hi, I'm Mei Li. I'd like to exchange my order #W2936099: the blue wireless earbuds for the white ones and the black glass bookshelf for a white one that's 5 ft tall. My zip is 92149, and you can reach me at my email. Thank you!",
+        prompt="Hi my name is Mei Li and my zip code is 92149. For #W2936099, exchange Wireless Earbuds {'color': 'blue', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'color': 'white', 'water resistance': 'not resistant'}; Bookshelf {'material': 'glass', 'color': 'black', 'height': '3 ft'} to {'color': 'white', 'height': '5 ft'}; via paypal_4060450.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1699,11 +1699,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ito_3591",
         instruction="Your name is Olivia Ito and your email is olivia.ito5204@example.com. You are dependent, organized, insecure. For #W5442520, modify Patio Umbrella {'size': '7 ft', 'color': 'red', 'material': 'polyester', 'tilt mechanism': 'manual tilt'} to {'size': '6 ft', 'color': 'blue', 'material': 'sunbrella', 'tilt mechanism': 'auto tilt'}; Hiking Boots {'size': '8', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11'}; via gift_card_7794233. For #W3657213, change payment to credit_card_9753331. For #W3657213, modify Digital Camera {'resolution': '24MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '30MP'}; via paypal_8049766. ",
-        prompt="Hi, I'm Olivia Ito (olivia.ito5204@example.com). Could you please update order #W5442520 to change the Patio Umbrella to a 6 ft blue Sunbrella with auto tilt and the Hiking Boots to size 11, using gift card 7794233? Also, for order #W3657213, switch the payment to credit card 9753331 and update the Digital Camera to 30MP, using PayPal 8049766. Thank you!",
+        prompt="Hi my name is Olivia Ito and my email is olivia. ito5204@example.com.  For #W5442520, modify Patio Umbrella {'size': '7 ft', 'color': 'red', 'material': 'polyester', 'tilt mechanism': 'manual tilt'} to {'size': '6 ft', 'color': 'blue', 'material': 'sunbrella', 'tilt mechanism': 'auto tilt'}; Hiking Boots {'size': '8', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11'}; via gift_card_7794233. For #W3657213, change payment to credit_card_9753331. For #W3657213, modify Digital Camera {'resolution': '24MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '30MP'}; via paypal_8049766.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1733,11 +1733,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_sanchez_7289",
         instruction="Your name is Ethan Sanchez and your email is ethan.sanchez3299@example.com. You are optimistic, messy, confident, cautious, impatient. For #W7147989, change address to {'order_id': '#W7147989', 'address1': '386 Cedar Avenue', 'address2': 'Suite 683', 'city': 'Columbus', 'country': 'USA', 'state': 'OH', 'zip': '43119'} (same as #W5560533). For #W7147989, modify Grill {'type': 'electric', 'size': 'portable', 'features': 'none'} to {'features': 'rotisserie'}; Office Chair {'material': 'leather', 'color': 'red', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'mesh', 'color': 'gray', 'armrest': 'fixed'}; via gift_card_5917510. ",
-        prompt="My zip code is 43119. Hi, I'm Ethan Sanchez. Could you please update the address for order #W7147989 to match #W5560533 and modify the grill to include a rotisserie feature and change the office chair to mesh with fixed armrests? My email is ethan.sanchez3299@example.com. Thank you!",
+        prompt="Hi my name is Ethan Sanchez and my email is ethan. sanchez3299@example.com.  For #W7147989, change address to {'order_id': '#W7147989', 'address1': '386 Cedar Avenue', 'address2': 'Suite 683', 'city': 'Columbus', 'country': 'USA', 'state': 'OH', 'zip': '43119'} (same as #W5560533). For #W7147989, modify Grill {'type': 'electric', 'size': 'portable', 'features': 'none'} to {'features': 'rotisserie'}; Office Chair {'material': 'leather', 'color': 'red', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'mesh', 'color': 'gray', 'armrest': 'fixed'}; via gift_card_5917510.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -1763,11 +1763,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_martin_4260",
         instruction="Your name is Mei Martin and your zip code is 32124. You are busy, rigid, insecure. For #W7017301, modify Bicycle {'frame size': 'large', 'color': 'red', 'type': 'mountain'} to {'frame size': 'medium', 'color': 'black'}; via paypal_2299608. ",
-        prompt="Hi, I'm Mei Martin. Could you please change the frame size to medium and the color to black for order #W7017301? My zip code is 32124, and I'll be using PayPal transaction ID paypal_2299608. Thank you.",
+        prompt="Hi my name is Mei Martin and my zip code is 32124. For #W7017301, modify Bicycle {'frame size': 'large', 'color': 'red', 'type': 'mountain'} to {'frame size': 'medium', 'color': 'black'}; via paypal_2299608.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -1781,11 +1781,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_ahmed_4909",
         instruction="Your name is Mei Ahmed and your email is mei.ahmed4901@example.com. You are flexible, messy, curious, direct, dependent. For #W3239882, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand C'}; via credit_card_5902940. For #W7553978, exchange Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'plain'} to {'deck material': 'bamboo', 'length': '28 inch'}; via credit_card_5902940. ",
-        prompt="Hi, I'm Mei Ahmed. Could you help me exchange the Makeup Kit from order #W3239882 to a dark skin tone, Brand C version, and the Skateboard from order #W7553978 to a bamboo, 28-inch version? My email is mei.ahmed4901@example.com. Thank you!",
+        prompt="Hi my name is Mei Ahmed and my email is mei. ahmed4901@example.com.  For #W3239882, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand C'}; via credit_card_5902940. For #W7553978, exchange Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'plain'} to {'deck material': 'bamboo', 'length': '28 inch'}; via credit_card_5902940.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1808,11 +1808,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_silva_7485",
         instruction="Your name is Chen Silva and your email is chen.silva2698@example.com. You are optimistic, rigid, happy, busy, impatient. Return #W9571698 via gift_card_7250692: Pet Bed; Tablet; Return #W3069600 via credit_card_1565124: Makeup Kit; Skateboard; ",
-        prompt="Hi, I'm Chen Silva (chen.silva2698@example.com). I'd like to return order #W9571698 using gift card 7250692 for the Pet Bed and Tablet, and order #W3069600 using credit card 1565124 for the Makeup Kit and Skateboard.",
+        prompt="Hi my name is Chen Silva and my email is chen. silva2698@example.com.  Return #W9571698 via gift_card_7250692: Pet Bed; Tablet; Return #W3069600 via credit_card_1565124: Makeup Kit; Skateboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1833,11 +1833,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_khan_6353",
         instruction="Your name is Lei Khan and your zip code is 92182. You are impatient, shy. For #W2787996, exchange T-Shirt {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'purple', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'}; via gift_card_6786837. ",
-        prompt="Hi, I'm Lei Khan. Can you please help me exchange my T-shirt from order #W2787996 to a purple, small, polyester v-neck using gift card 6786837? My zip code is 92182.",
+        prompt="Hi my name is Lei Khan and my zip code is 92182. For #W2787996, exchange T-Shirt {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'purple', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'}; via gift_card_6786837.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1851,11 +1851,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_ahmed_9514",
         instruction="Your name is Sofia Ahmed and your zip code is 90819. You are rigid, polite, confident. For #W2002395, exchange Garden Hose {'length': '25ft', 'material': 'vinyl', 'color': 'green'} to {'length': '100ft', 'material': 'latex', 'color': 'blue'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'white'} to {'color': 'stainless steel'}; via gift_card_6117300. ",
-        prompt="Hello, my name is Sofia Ahmed, and my zip code is 90819. I'd like to exchange the Garden Hose from 25ft vinyl green to 100ft latex blue, and the Smart Thermostat from white to stainless steel for order #W2002395, using gift card 6117300. Thank you.",
+        prompt="Hi my name is Sofia Ahmed and my zip code is 90819. For #W2002395, exchange Garden Hose {'length': '25ft', 'material': 'vinyl', 'color': 'green'} to {'length': '100ft', 'material': 'latex', 'color': 'blue'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'white'} to {'color': 'stainless steel'}; via gift_card_6117300.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1869,11 +1869,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mohamed_lee_5442",
         instruction="Your name is Mohamed Lee and your email is mohamed.lee1888@example.com. You are sad, optimistic. Cancel order #W6302827 because ordered by mistake. For #W6114312, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '5-25 lbs', 'material': 'urethane', 'set type': 'fixed'}; via credit_card_8169552. ",
-        prompt="Hi, I'm Mohamed Lee (mohamed.lee1888@example.com). Could you please cancel order #W6302827 as it was made by mistake and exchange the Dumbbell Set in order #W6114312 to the 5-25 lbs urethane fixed set? Thank you!",
+        prompt="Hi my name is Mohamed Lee and my email is mohamed. lee1888@example.com.  Cancel order #W6302827 because ordered by mistake. For #W6114312, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '5-25 lbs', 'material': 'urethane', 'set type': 'fixed'}; via credit_card_8169552.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1891,11 +1891,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_jackson_7865",
         instruction="Your name is Yusuf Jackson and your email is yusuf.jackson4654@example.com. You are confident, creative. Cancel order #W2087737 because ordered by mistake. ",
-        prompt="Hi, I'm Yusuf Jackson (yusuf.jackson4654@example.com). Could you please cancel order #W2087737? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Yusuf Jackson and my email is yusuf. jackson4654@example.com.  Cancel order #W2087737 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1904,11 +1904,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_lopez_6490",
         instruction="Your name is Isabella Lopez and your email is isabella.lopez3271@example.com. You are curious, polite, shy. Cancel order #W4923227 because no longer needed. ",
-        prompt="Hi, I'm Isabella Lopez (isabella.lopez3271@example.com). Could you please cancel order #W4923227 as I no longer need it? Thank you!",
+        prompt="Hi my name is Isabella Lopez and my email is isabella. lopez3271@example.com.  Cancel order #W4923227 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1917,11 +1917,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kovacs_5767",
         instruction="Your name is Mei Kovacs and your email is mei.kovacs4296@example.com. You are shy, pessimistic, messy, impatient. Cancel order #W8193638 because no longer needed. ",
-        prompt="Hi, I'm Mei Kovacs (mei.kovacs4296@example.com). Could you please cancel order #W8193638 as I no longer need it?",
+        prompt="Hi my name is Mei Kovacs and my email is mei. kovacs4296@example.com.  Cancel order #W8193638 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -1930,11 +1930,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_khan_2363",
         instruction="Your name is Omar Khan and your zip code is 75203. You are independent, outgoing, sad. For #W2421430, exchange Fleece Jacket {'size': 'S', 'color': 'red', 'zipper': 'half'} to {'size': 'XL', 'color': 'navy'}; Yoga Mat {'thickness': '6mm', 'material': 'natural rubber', 'color': 'pink'} to {'thickness': '5mm', 'material': 'TPE'}; Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'silver'} to {'resolution': '5K', 'color': 'black'}; via credit_card_4420174. ",
-        prompt="Hi, I'm Omar Khan. I'd like to exchange the Fleece Jacket from size S, red, half zipper to size XL, navy; the Yoga Mat from 6mm, natural rubber, pink to 5mm, TPE; and the Action Camera from 1080p, silver to 5K, black for order #W2421430. My zip code is 75203.",
+        prompt="Hi my name is Omar Khan and my zip code is 75203. For #W2421430, exchange Fleece Jacket {'size': 'S', 'color': 'red', 'zipper': 'half'} to {'size': 'XL', 'color': 'navy'}; Yoga Mat {'thickness': '6mm', 'material': 'natural rubber', 'color': 'pink'} to {'thickness': '5mm', 'material': 'TPE'}; Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'silver'} to {'resolution': '5K', 'color': 'black'}; via credit_card_4420174.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1948,11 +1948,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_muller_6097",
         instruction="Your name is Ethan Muller and your email is ethan.muller6617@example.com. You are optimistic, polite, rigid. For #W3155037, exchange Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '6.1-inch'} to {'color': 'black', 'storage': '128GB', 'screen size': '5.8-inch'}; via credit_card_5721095. For #W4683557, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '1000ml', 'color': 'black'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'canister'}; via credit_card_5721095. ",
-        prompt="Hi, I'm Ethan Muller (ethan.muller6617@example.com). Could you please help me exchange the smartphone from order #W3155037 to the black 128GB model and modify the water bottle and vacuum cleaner in order #W4683557 as specified? Thank you!",
+        prompt="Hi my name is Ethan Muller and my email is ethan. muller6617@example.com.  For #W3155037, exchange Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '6.1-inch'} to {'color': 'black', 'storage': '128GB', 'screen size': '5.8-inch'}; via credit_card_5721095. For #W4683557, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '1000ml', 'color': 'black'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'canister'}; via credit_card_5721095.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -1975,11 +1975,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_muller_7891",
         instruction="Your name is Omar Muller and your email is omar.muller4197@example.com. You are impatient, dependent, logical. Return #W6573840 via gift_card_3689412: Electric Kettle; ",
-        prompt="Hi, I'm Omar Muller. I'd like to return order #W6573840, the Electric Kettle, using gift card #3689412. My email is omar.muller4197@example.com.",
+        prompt="Hi my name is Omar Muller and my email is omar. muller4197@example.com.  Return #W6573840 via gift_card_3689412: Electric Kettle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -1992,11 +1992,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_patel_8882",
         instruction="Your name is Evelyn Patel and your email is evelyn.patel2010@example.com. You are direct, insecure, logical, dependent. Return #W9158156 via paypal_3704667: Bluetooth Speaker; ",
-        prompt="Hi, I'm Evelyn Patel. I'd like to return order #W9158156 for the Bluetooth Speaker via PayPal transaction paypal_3704667. My email is evelyn.patel2010@example.com.",
+        prompt="Hi my name is Evelyn Patel and my email is evelyn. patel2010@example.com.  Return #W9158156 via paypal_3704667: Bluetooth Speaker;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2009,11 +2009,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_johnson_7053",
         instruction="Your name is Ethan Johnson and your email is ethan.johnson2557@example.com. You are shy, rigid, dependent. Return #W5321777 via gift_card_6892585: Espresso Machine; ",
-        prompt="Hi, I'm Ethan Johnson. I'd like to return order #W5321777, which is an Espresso Machine, using gift card #6892585. My email is ethan.johnson2557@example.com.",
+        prompt="Hi my name is Ethan Johnson and my email is ethan. johnson2557@example.com.  Return #W5321777 via gift_card_6892585: Espresso Machine;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2026,11 +2026,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_khan_7091",
         instruction="Your name is Yusuf Khan and your email is yusuf.khan7390@example.com. You are curious, relaxing, shy, insecure. Cancel order #W3579467 because ordered by mistake. ",
-        prompt="Hi, I'm Yusuf Khan. Could you please cancel order #W3579467? I ordered it by mistake. My email is yusuf.khan7390@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Khan and my email is yusuf. khan7390@example.com.  Cancel order #W3579467 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2039,11 +2039,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_davis_8935",
         instruction="Your name is Mei Davis and your email is mei.davis6811@example.com. You are busy, cautious, rigid, direct, optimistic. For #W1267569, modify Gaming Mouse {'color': 'white', 'sensor type': 'laser', 'connectivity': 'wireless'} to {'sensor type': 'optical'}; via credit_card_1061405. ",
-        prompt="Hi, I'm Mei Davis (mei.davis6811@example.com). Could you please update my order #W1267569 to change the sensor type of the Gaming Mouse from laser to optical? Thank you!",
+        prompt="Hi my name is Mei Davis and my email is mei. davis6811@example.com.  For #W1267569, modify Gaming Mouse {'color': 'white', 'sensor type': 'laser', 'connectivity': 'wireless'} to {'sensor type': 'optical'}; via credit_card_1061405.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2057,11 +2057,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_jackson_1219",
         instruction="Your name is Olivia Jackson and your email is olivia.jackson2465@example.com. You are logical, dependent, pessimistic, impatient. For #W6975922, modify Jigsaw Puzzle {'pieces': '2000', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'pieces': '1000', 'difficulty level': 'expert'}; via paypal_3999493. ",
-        prompt="Hi, I'm Olivia Jackson. Could you please modify my order #W6975922 to change the jigsaw puzzle to 1000 pieces and an expert difficulty level? My email is olivia.jackson2465@example.com. Thank you!",
+        prompt="Hi my name is Olivia Jackson and my email is olivia. jackson2465@example.com.  For #W6975922, modify Jigsaw Puzzle {'pieces': '2000', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'pieces': '1000', 'difficulty level': 'expert'}; via paypal_3999493.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2075,11 +2075,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_sanchez_2690",
         instruction="Your name is Noah Sanchez and your zip code is 20056. You are polite, curious. For #W8645374, change address to {'order_id': '#W8645374', 'address1': '297 Highland Drive', 'address2': 'Suite 550', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20056'} (same as #W4864669). For #W8645374, modify Digital Camera {'resolution': '20MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'}; via gift_card_9909795. Return #W7293142 via gift_card_9909795: Wireless Earbuds; Hiking Boots; Skateboard; ",
-        prompt="Hi, I'm Noah Sanchez. Could you please update the address for order #W8645374 to match order #W4864669 and modify the Digital Camera specs to 30MP resolution, 3x zoom, and SD card storage? Also, I'd like to return the items from order #W7293142 using gift card 9909795. Thank you! My zip code is 20056, and my email is [your email].",
+        prompt="Hi my name is Noah Sanchez and my zip code is 20056. For #W8645374, change address to {'order_id': '#W8645374', 'address1': '297 Highland Drive', 'address2': 'Suite 550', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20056'} (same as #W4864669). For #W8645374, modify Digital Camera {'resolution': '20MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'}; via gift_card_9909795. Return #W7293142 via gift_card_9909795: Wireless Earbuds; Hiking Boots; Skateboard;",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2113,11 +2113,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_garcia_1670",
         instruction="Your name is Yusuf Garcia and your zip code is 46202. You are curious, outgoing, busy. Cancel order #W7639559 because no longer needed. Cancel order #W3691773 because no longer needed. ",
-        prompt="Hi, I'm Yusuf Garcia from zip code 46202. Could you please cancel orders #W7639559 and #W3691773 as I no longer need them? Thank you!",
+        prompt="Hi my name is Yusuf Garcia and my zip code is 46202. Cancel order #W7639559 because no longer needed. Cancel order #W3691773 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2130,11 +2130,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_garcia_4691",
         instruction="Your name is Olivia Garcia and your email is olivia.garcia6676@example.com. You are creative, flexible, shy, sad, polite. For #W3279695, modify Indoor Security Camera {'resolution': '2K', 'field of view': '130 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K'}; via gift_card_4584785. ",
-        prompt="Hi, I'm Olivia Garcia. Could you please help me modify my order #W3279695 to upgrade the Indoor Security Camera to a 4K resolution using gift card 4584785? My email is olivia.garcia6676@example.com. Thank you!",
+        prompt="Hi my name is Olivia Garcia and my email is olivia. garcia6676@example.com.  For #W3279695, modify Indoor Security Camera {'resolution': '2K', 'field of view': '130 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K'}; via gift_card_4584785.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2148,11 +2148,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_sanchez_2690",
         instruction="Your name is Noah Sanchez and your email is noah.sanchez7461@example.com. You are logical, polite, impatient, busy. Return #W4864669 via gift_card_9909795: Wireless Earbuds {'color': 'black', 'battery life': '6 hours', 'water resistance': 'IPX7'}; Wireless Earbuds {'color': 'black', 'battery life': '4 hours', 'water resistance': 'IPX7'}; Digital Camera; For #W7293142, exchange Skateboard {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'} to {'length': '31 inch', 'design': 'plain'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'backlight': 'none', 'size': '80%'}; via gift_card_9909795. ",
-        prompt="Hi, I'm Noah Sanchez (noah.sanchez7461@example.com). I'd like to return order #W4864669 using gift card 9909795 and exchange items from order #W7293142 as specified.",
+        prompt="Hi my name is Noah Sanchez and my email is noah. sanchez7461@example.com.  Return #W4864669 via gift_card_9909795: Wireless Earbuds {'color': 'black', 'battery life': '6 hours', 'water resistance': 'IPX7'}; Wireless Earbuds {'color': 'black', 'battery life': '4 hours', 'water resistance': 'IPX7'}; Digital Camera; For #W7293142, exchange Skateboard {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'} to {'length': '31 inch', 'design': 'plain'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'backlight': 'none', 'size': '80%'}; via gift_card_9909795.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2174,11 +2174,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_sanchez_9707",
         instruction="Your name is Anya Sanchez and your zip code is 43171. You are messy, busy, outgoing. Return #W4442043 via paypal_1191071: Cycling Helmet; Bicycle; Smartphone; ",
-        prompt="Hi, I'm Anya Sanchez from zip code 43171. I'd like to return order #W4442043, which includes a cycling helmet, bicycle, and smartphone, via PayPal_1191071. Thank you!",
+        prompt="Hi my name is Anya Sanchez and my zip code is 43171. Return #W4442043 via paypal_1191071: Cycling Helmet; Bicycle; Smartphone;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2191,11 +2191,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_anderson_7445",
         instruction="Your name is Fatima Anderson and your email is fatima.anderson1082@example.com. You are impatient, sad, rigid, pessimistic. Return #W1842597 via gift_card_8070316: Running Shoes; ",
-        prompt="Hi, I'm Fatima Anderson (fatima.anderson1082@example.com). I'm feeling quite frustrated and need to return order #W1842597 for the Running Shoes using gift card #8070316. Can you help me with this?",
+        prompt="Hi my name is Fatima Anderson and my email is fatima. anderson1082@example.com.  Return #W1842597 via gift_card_8070316: Running Shoes;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2208,11 +2208,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_davis_8827",
         instruction="Your name is Mia Davis and your zip code is 28229. You are shy, confident, curious, impatient. Cancel order #W6577842 because ordered by mistake. ",
-        prompt="Hi, I'm Mia Davis, zip code 28229. Could you please cancel order #W6577842? I ordered it by mistake.",
+        prompt="Hi my name is Mia Davis and my zip code is 28229. Cancel order #W6577842 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2221,11 +2221,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_gonzalez_4098",
         instruction="Your name is Amelia Gonzalez and your email is amelia.gonzalez4271@example.com. You are rigid, busy, patient, pessimistic. Return #W7209932 via gift_card_2611937: Backpack; ",
-        prompt="Hi, I'm Amelia Gonzalez. I'd like to return order #W7209932, which is a backpack, using gift card #2611937. My email is amelia.gonzalez4271@example.com.",
+        prompt="Hi my name is Amelia Gonzalez and my email is amelia. gonzalez4271@example.com.  Return #W7209932 via gift_card_2611937: Backpack;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2238,11 +2238,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_thomas_1791",
         instruction="Your name is Ethan Thomas and your zip code is 43188. You are direct, insecure. Return #W7764382 via paypal_6982172: Laptop; Pet Bed; Mechanical Keyboard; ",
-        prompt="Hi, I'm Ethan Thomas, zip code 43188. I'd like to return order #W7764382, which includes a laptop, pet bed, and mechanical keyboard, via PayPal. My email is paypal_6982172.",
+        prompt="Hi my name is Ethan Thomas and my zip code is 43188. Return #W7764382 via paypal_6982172: Laptop; Pet Bed; Mechanical Keyboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2255,11 +2255,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are direct, rigid, optimistic, insecure. Return #W4072946 via paypal_1808675: Hiking Boots; Action Camera; ",
-        prompt="Hi, I'm Lei Anderson. I'd like to return order #W4072946, which includes the hiking boots and action camera. My zip code is 76192.",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Return #W4072946 via paypal_1808675: Hiking Boots; Action Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2272,11 +2272,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_ito_3850",
         instruction="Your name is Noah Ito and your email is noah.ito4296@example.com. You are logical, cautious, organized, sad. For #W6729841, change address to {'order_id': '#W6729841', 'address1': '144 Lakeview Drive', 'address2': 'Suite 925', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10228'} (same as #W3445693). For #W6729841, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'}; via credit_card_1620755. ",
-        prompt="My zip code is 10228. Hi, I'm Noah Ito. Could you please update the address for order #W6729841 to match the one on #W3445693 and modify the Bluetooth Speaker to red with 20 hours of battery life and no water resistance? My email is noah.ito4296@example.com. Thank you!",
+        prompt="Hi my name is Noah Ito and my email is noah. ito4296@example.com.  For #W6729841, change address to {'order_id': '#W6729841', 'address1': '144 Lakeview Drive', 'address2': 'Suite 925', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10228'} (same as #W3445693). For #W6729841, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'}; via credit_card_1620755.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2302,11 +2302,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_gonzalez_5113",
         instruction="Your name is Aarav Gonzalez and your email is aarav.gonzalez9269@example.com. You are rigid, confident, messy. For #W6797115, exchange Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'medium', 'filter type': 'carbon', 'features': 'quiet operation'}; via paypal_6121064. ",
-        prompt="Hi, I'm Aarav Gonzalez. I'd like to exchange my Air Purifier from order #W6797115 to a model with a medium room size, carbon filter, and quiet operation. My email is aarav.gonzalez9269@example.com.",
+        prompt="Hi my name is Aarav Gonzalez and my email is aarav. gonzalez9269@example.com.  For #W6797115, exchange Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'medium', 'filter type': 'carbon', 'features': 'quiet operation'}; via paypal_6121064.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2320,11 +2320,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_moore_3587",
         instruction="Your name is Ethan Moore and your email is ethan.moore4935@example.com. You are patient, sad, flexible. For #W6353188, exchange Perfume {'scent family': 'woody', 'size': '30ml', 'gender': 'men'} to {'gender': 'women'}; via credit_card_6173085. For #W7156413, exchange Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'color': 'blue'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'battery life': '20 hours', 'water resistance': 'yes'}; via credit_card_6173085. ",
-        prompt="Hi, I'm Ethan Moore. Could you help me exchange the men's woody perfume from order #W6353188 for the women's version? Also, for order #W7156413, I'd like to exchange the silver luggage set for a blue one and the red Bluetooth speaker for one with 20 hours of battery life and water resistance. My email is ethan.moore4935@example.com. Thank you!",
+        prompt="Hi my name is Ethan Moore and my email is ethan. moore4935@example.com.  For #W6353188, exchange Perfume {'scent family': 'woody', 'size': '30ml', 'gender': 'men'} to {'gender': 'women'}; via credit_card_6173085. For #W7156413, exchange Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'color': 'blue'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'battery life': '20 hours', 'water resistance': 'yes'}; via credit_card_6173085.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2347,11 +2347,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_anderson_5973",
         instruction="Your name is Liam Anderson and your email is liam.anderson5932@example.com. You are shy, cautious. For #W2119065, exchange Patio Umbrella {'size': '6 ft', 'color': 'red', 'material': 'olefin', 'tilt mechanism': 'manual tilt'} to {'color': 'green', 'tilt mechanism': 'auto tilt'}; via credit_card_9185943. ",
-        prompt="Hi, I'm Liam Anderson (liam.anderson5932@example.com). Could you please help me exchange my Patio Umbrella from order #W2119065 to a green one with an auto tilt mechanism? Thank you.",
+        prompt="Hi my name is Liam Anderson and my email is liam. anderson5932@example.com.  For #W2119065, exchange Patio Umbrella {'size': '6 ft', 'color': 'red', 'material': 'olefin', 'tilt mechanism': 'manual tilt'} to {'color': 'green', 'tilt mechanism': 'auto tilt'}; via credit_card_9185943.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2365,11 +2365,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_santos_2259",
         instruction="Your name is Aarav Santos and your email is aarav.santos8320@example.com. You are relaxing, dependent, curious, creative. Cancel order #W9672333 because no longer needed. ",
-        prompt="Hi, I'm Aarav Santos (aarav.santos8320@example.com). Could you please cancel order #W9672333 as I no longer need it? Thank you!",
+        prompt="Hi my name is Aarav Santos and my email is aarav. santos8320@example.com.  Cancel order #W9672333 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2378,11 +2378,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_hernandez_8500",
         instruction="Your name is Lei Hernandez and your email is lei.hernandez7247@example.com. You are organized, busy, polite, optimistic, sad. For #W2982823, exchange Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'medium'} to {'size': 'S', 'ventilation': 'low'}; via gift_card_5245016. ",
-        prompt="Hi, I'm Lei Hernandez. Could you please help me exchange the Cycling Helmet from order #W2982823 from a medium red with medium ventilation to a small with low ventilation using gift card 5245016? My email is lei.hernandez7247@example.com. Thank you!",
+        prompt="Hi my name is Lei Hernandez and my email is lei. hernandez7247@example.com.  For #W2982823, exchange Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'medium'} to {'size': 'S', 'ventilation': 'low'}; via gift_card_5245016.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2396,11 +2396,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_garcia_1670",
         instruction="Your name is Yusuf Garcia and your zip code is 46202. You are sad, dependent. For #W3691773, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '750ml', 'color': 'red'}; via gift_card_4303603. ",
-        prompt="Hi, I'm Yusuf Garcia. Could you please modify my order #W3691773 to change the water bottle from a 500ml green stainless steel to a 750ml red one using gift card 4303603? My zip code is 46202. Thank you!",
+        prompt="Hi my name is Yusuf Garcia and my zip code is 46202. For #W3691773, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'capacity': '750ml', 'color': 'red'}; via gift_card_4303603.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2414,11 +2414,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_davis_4756",
         instruction="Your name is Aarav Davis and your zip code is 76150. You are insecure, flexible, sad, organized. Return #W3223435 via gift_card_9708163: Electric Kettle; T-Shirt; Garden Hose; ",
-        prompt="Hi, I'm Aarav Davis from zip code 76150. I'd like to return order #W3223435 using gift card #9708163, which includes an electric kettle, a T-shirt, and a garden hose. My email is [your email].",
+        prompt="Hi my name is Aarav Davis and my zip code is 76150. Return #W3223435 via gift_card_9708163: Electric Kettle; T-Shirt; Garden Hose;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2431,11 +2431,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_ito_8499",
         instruction="Your name is Yara Ito and your email is yara.ito7353@example.com. You are organized, happy, dependent, polite, insecure. For #W1809337, exchange Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {'kit size': 'basic', 'brand': 'Brand C'}; Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'size': 'S', 'color': 'white', 'ventilation': 'medium'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '1 liter'}; via paypal_1679017. Return #W8353027 via paypal_1679017: Electric Kettle; ",
-        prompt="Hi, I'm Yara Ito. Could you please help me exchange the Makeup Kit, Cycling Helmet, and Tea Kettle from order #W1809337 as specified, and process a return for the Electric Kettle from order #W8353027? My email is yara.ito7353@example.com. Thank you!",
+        prompt="Hi my name is Yara Ito and my email is yara. ito7353@example.com.  For #W1809337, exchange Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {'kit size': 'basic', 'brand': 'Brand C'}; Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'size': 'S', 'color': 'white', 'ventilation': 'medium'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '1 liter'}; via paypal_1679017. Return #W8353027 via paypal_1679017: Electric Kettle;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2457,11 +2457,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_patel_5376",
         instruction="Your name is Lei Patel and your email is lei.patel3765@example.com. You are curious, relaxing, insecure. For #W4172216, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'fixed'} to {'set type': 'adjustable'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'color': 'white'}; via credit_card_6450011. ",
-        prompt="Hi, I'm Lei Patel. Could you please modify my order #W4172216 to change the Dumbbell Set to an 'adjustable' type and the Electric Toothbrush to 'white'? My email is lei.patel3765@example.com. Thank you!",
+        prompt="Hi my name is Lei Patel and my email is lei. patel3765@example.com.  For #W4172216, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'fixed'} to {'set type': 'adjustable'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'color': 'white'}; via credit_card_6450011.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2475,11 +2475,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ito_3591",
         instruction="Your name is Olivia Ito and your zip code is 80218. You are polite, relaxing, curious, sad. For #W7941031, modify Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {'dial color': 'black'}; via paypal_8049766. For #W3657213, modify Action Camera {'resolution': '4K', 'waterproof': 'yes', 'color': 'black'} to {'resolution': '1080p'}; via gift_card_7794233. ",
-        prompt="Hi, I'm Olivia Ito. Could you please help me change the dial color of my wristwatch order #W7941031 to black and adjust the resolution of my action camera order #W3657213 to 1080p? Thank you! My zip code is 80218 and my email is [your email].",
+        prompt="Hi my name is Olivia Ito and my zip code is 80218. For #W7941031, modify Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {'dial color': 'black'}; via paypal_8049766. For #W3657213, modify Action Camera {'resolution': '4K', 'waterproof': 'yes', 'color': 'black'} to {'resolution': '1080p'}; via gift_card_7794233.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2502,11 +2502,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_kovacs_8617",
         instruction="Your name is Harper Kovacs and your zip code is 95154. You are sad, busy, confident. For #W9093821, modify Wall Clock {'diameter': '10 inches', 'color': 'white', 'type': 'digital'} to {'color': 'black'}; via credit_card_7422485. ",
-        prompt="Hi, I'm Harper Kovacs. Could you please change the color of the wall clock in order #W9093821 from white to black? My zip code is 95154. Thank you!",
+        prompt="Hi my name is Harper Kovacs and my zip code is 95154. For #W9093821, modify Wall Clock {'diameter': '10 inches', 'color': 'white', 'type': 'digital'} to {'color': 'black'}; via credit_card_7422485.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2520,11 +2520,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_gonzalez_5113",
         instruction="Your name is Aarav Gonzalez and your email is aarav.gonzalez9269@example.com. You are impatient, rigid. For #W6797115, exchange Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'filter type': 'ionic', 'features': 'smart sensors'}; via gift_card_5979071. ",
-        prompt="Hi, I'm Aarav Gonzalez (aarav.gonzalez9269@example.com). I need to exchange my Air Purifier order #W6797115 for one with an ionic filter and smart sensors using gift card 5979071.",
+        prompt="Hi my name is Aarav Gonzalez and my email is aarav. gonzalez9269@example.com.  For #W6797115, exchange Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'filter type': 'ionic', 'features': 'smart sensors'}; via gift_card_5979071.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2538,11 +2538,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_davis_3316",
         instruction="Your name is Olivia Davis and your zip code is 77244. You are rigid, shy, insecure. For #W7623533, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'beginner'} to {'pieces': '2000', 'difficulty level': 'intermediate'}; via credit_card_8278346. ",
-        prompt="Hi, I'm Olivia Davis from zip code 77244. I'd like to exchange my Jigsaw Puzzle order #W7623533 from the 1000-piece beginner level to the 2000-piece intermediate level.",
+        prompt="Hi my name is Olivia Davis and my zip code is 77244. For #W7623533, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'beginner'} to {'pieces': '2000', 'difficulty level': 'intermediate'}; via credit_card_8278346.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2556,11 +2556,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_martin_5764",
         instruction="Your name is Noah Martin and your email is noah.martin8712@example.com. You are organized, impatient. Cancel order #W7594624 because no longer needed. ",
-        prompt="Hi, I'm Noah Martin (noah.martin8712@example.com). Please cancel order #W7594624 as I no longer need it. Thank you.",
+        prompt="Hi my name is Noah Martin and my email is noah. martin8712@example.com.  Cancel order #W7594624 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2569,11 +2569,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_1101",
         instruction="Your name is Sophia Garcia and your zip code is 78263. You are messy, busy, outgoing. For #W8727985, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'art', 'difficulty level': 'beginner'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via gift_card_9450778. ",
-        prompt="Hi, I'm Sophia Garcia from zip code 78263. I'd like to exchange my Jigsaw Puzzle order #W8727985 from the 2000-piece beginner art theme to a 500-piece intermediate one using gift card 9450778. My email is [your email]. Thank you!",
+        prompt="Hi my name is Sophia Garcia and my zip code is 78263. For #W8727985, exchange Jigsaw Puzzle {'pieces': '2000', 'theme': 'art', 'difficulty level': 'beginner'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via gift_card_9450778.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2587,11 +2587,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_kovacs_6742",
         instruction="Your name is Evelyn Kovacs and your email is evelyn.kovacs5369@example.com. You are independent, happy, cautious, organized. Cancel order #W6689278 because ordered by mistake. ",
-        prompt="Hi, I'm Evelyn Kovacs (evelyn.kovacs5369@example.com). Could you please cancel order #W6689278? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Evelyn Kovacs and my email is evelyn. kovacs5369@example.com.  Cancel order #W6689278 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2600,11 +2600,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_silva_5033",
         instruction="Your name is Daiki Silva and your zip code is 28268. You are happy, shy, independent, curious. For #W1579160, modify Tea Kettle {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'gas'} to {'capacity': '2 liters', 'stovetop compatibility': 'induction'}; Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'capacity': '2L'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'}; via paypal_2233507. ",
-        prompt="Hi, I'm Daiki Silva from zip code 28268. Could you please update my order #W1579160 to change the Tea Kettle to a 2-liter capacity with induction compatibility, the Electric Kettle to a 2L capacity, and the Vacuum Cleaner to a canister type with bagged and pet hair removal features? Thank you!",
+        prompt="Hi my name is Daiki Silva and my zip code is 28268. For #W1579160, modify Tea Kettle {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'gas'} to {'capacity': '2 liters', 'stovetop compatibility': 'induction'}; Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'capacity': '2L'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'}; via paypal_2233507.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2618,11 +2618,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are creative, direct, pessimistic, patient, happy. Return #W4072946 via paypal_1808675: Hiking Boots; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'} to {'color': 'white', 'ventilation': 'medium'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '1000ml', 'color': 'red'}; via paypal_1808675. ",
-        prompt="Hi, I'm Lei Anderson. I'd like to return order #W4072946 (Hiking Boots) via PayPal account paypal_1808675. For order #W6002467, please change the address to 544 Sunset Drive, Suite 337, Jacksonville, FL 32205, and update the Cycling Helmet to white with medium ventilation and the Water Bottle to 1000ml in red. Thank you! My zip code is 76192, and my email is [your email].",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Return #W4072946 via paypal_1808675: Hiking Boots; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'} to {'color': 'white', 'ventilation': 'medium'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '1000ml', 'color': 'red'}; via paypal_1808675.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2656,11 +2656,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_smith_5265",
         instruction="Your name is Olivia Smith and your zip code is 80216. You are flexible, relaxing, insecure, patient, direct. Return #W5220869 via credit_card_7971769: Tea Kettle; Backpack; Desk Lamp; Return #W5202795 via credit_card_7971769: Office Chair; Action Camera; ",
-        prompt="Hi, I'm Olivia Smith from zip code 80216. I'd like to return the Tea Kettle, Backpack, and Desk Lamp from order #W5220869, and the Office Chair and Action Camera from order #W5202795. Please process the returns to credit card ending in 7971769. Thank you!",
+        prompt="Hi my name is Olivia Smith and my zip code is 80216. Return #W5220869 via credit_card_7971769: Tea Kettle; Backpack; Desk Lamp; Return #W5202795 via credit_card_7971769: Office Chair; Action Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2681,11 +2681,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_ahmed_1705",
         instruction="Your name is Lei Ahmed and your email is lei.ahmed1696@example.com. You are creative, happy, organized. Cancel order #W9132840 because ordered by mistake. ",
-        prompt="Hi, I'm Lei Ahmed. Could you please cancel order #W9132840? I ordered it by mistake. My email is lei.ahmed1696@example.com. Thank you!",
+        prompt="Hi my name is Lei Ahmed and my email is lei. ahmed1696@example.com.  Cancel order #W9132840 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2694,11 +2694,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_ahmed_3960",
         instruction="Your name is Evelyn Ahmed and your email is evelyn.ahmed2006@example.com. You are creative, sad, patient, polite, organized. For #W3746173, change address to {'order_id': '#W3746173', 'address1': '137 Willow Lane', 'address2': 'Suite 127', 'city': 'Charlotte', 'country': 'USA', 'state': 'NC', 'zip': '28249'} (same as #W1416704). For #W3746173, change payment to credit_card_7898168. For #W3746173, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {}; via credit_card_7898168. Cancel order #W1416704 because ordered by mistake. ",
-        prompt="My zip code is 28249. Hi, I'm Evelyn Ahmed. Could you please update the address for order #W3746173 to match order #W1416704, change the payment to credit_card_7898168, and modify the Makeup Kit details? Also, cancel order #W1416704 as it was ordered by mistake. Thank you! My email is evelyn.ahmed2006@example.com.",
+        prompt="Hi my name is Evelyn Ahmed and my email is evelyn. ahmed2006@example.com.  For #W3746173, change address to {'order_id': '#W3746173', 'address1': '137 Willow Lane', 'address2': 'Suite 127', 'city': 'Charlotte', 'country': 'USA', 'state': 'NC', 'zip': '28249'} (same as #W1416704). For #W3746173, change payment to credit_card_7898168. For #W3746173, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {}; via credit_card_7898168. Cancel order #W1416704 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2735,11 +2735,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_sanchez_2068",
         instruction="Your name is Isabella Sanchez and your zip code is 85093. You are relaxing, logical, shy. For #W4386313, change address to {'order_id': '#W4386313', 'address1': '964 Sunset Drive', 'address2': 'Suite 782', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10199'} (same as #W1713682). For #W4386313, modify Skateboard {'deck material': 'bamboo', 'length': '28 inch', 'design': 'plain'} to {'length': '34 inch', 'design': 'graphic'}; via paypal_8516781. ",
-        prompt="My zip code is 10199. Hi, I'm Isabella Sanchez. Could you please update the address for order #W4386313 to match #W1713682 and modify the skateboard to a 34-inch length with a graphic design? Thank you! My zip code is 85093.",
+        prompt="Hi my name is Isabella Sanchez and my zip code is 85093. For #W4386313, change address to {'order_id': '#W4386313', 'address1': '964 Sunset Drive', 'address2': 'Suite 782', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10199'} (same as #W1713682). For #W4386313, modify Skateboard {'deck material': 'bamboo', 'length': '28 inch', 'design': 'plain'} to {'length': '34 inch', 'design': 'graphic'}; via paypal_8516781.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2765,11 +2765,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_wilson_1792",
         instruction="Your name is Mei Wilson and your email is mei.wilson5728@example.com. You are cautious, organized, polite, optimistic, busy. Cancel order #W4498118 because no longer needed. ",
-        prompt="Hi, I'm Mei Wilson (mei.wilson5728@example.com). Could you please cancel order #W4498118 as I no longer need it? Thank you!",
+        prompt="Hi my name is Mei Wilson and my email is mei. wilson5728@example.com.  Cancel order #W4498118 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2778,11 +2778,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_lopez_8519",
         instruction="Your name is Mason Lopez and your email is mason.lopez8921@example.com. You are independent, happy, optimistic, messy. For #W9892169, modify Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'low'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via credit_card_2327218. ",
-        prompt="Hi, I'm Mason Lopez. Could you please update my order #W9892169 to change the cycling helmet to size 'L', color 'black', and 'high' ventilation? My email is mason.lopez8921@example.com. Thank you!",
+        prompt="Hi my name is Mason Lopez and my email is mason. lopez8921@example.com.  For #W9892169, modify Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'low'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via credit_card_2327218.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2796,11 +2796,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_sanchez_2690",
         instruction="Your name is Noah Sanchez and your email is noah.sanchez7461@example.com. You are pessimistic, shy, happy, creative, messy. For #W7293142, exchange Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'switch type': 'linear', 'size': '80%'}; via gift_card_9909795. Cancel order #W8645374 because no longer needed. ",
-        prompt="Hi, I'm Noah Sanchez. Could you please help me exchange the mechanical keyboard from order #W7293142 to one with linear switches and 80% size using gift card 9909795? Also, I'd like to cancel order #W8645374 as I no longer need it. My email is noah.sanchez7461@example.com. Thank you!",
+        prompt="Hi my name is Noah Sanchez and my email is noah. sanchez7461@example.com.  For #W7293142, exchange Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'switch type': 'linear', 'size': '80%'}; via gift_card_9909795. Cancel order #W8645374 because no longer needed.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2818,11 +2818,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_lee_8857",
         instruction="Your name is Sofia Lee and your email is sofia.lee5283@example.com. You are organized, happy, curious, polite, insecure. Return #W4143549 via paypal_3572679: Indoor Security Camera; ",
-        prompt="Hi, I'm Sofia Lee. I'd like to return order #W4143549 for the Indoor Security Camera via PayPal transaction paypal_3572679. My email is sofia.lee5283@example.com. Thank you!",
+        prompt="Hi my name is Sofia Lee and my email is sofia. lee5283@example.com.  Return #W4143549 via paypal_3572679: Indoor Security Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2835,11 +2835,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_thomas_9402",
         instruction="Your name is Harper Thomas and your email is harper.thomas1454@example.com. You are pessimistic, creative, messy, shy, dependent. For #W7425646, modify Yoga Mat {'thickness': '6mm', 'material': 'PVC', 'color': 'green'} to {'thickness': '4mm', 'color': 'blue'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'black'} to {}; via credit_card_1283450. ",
-        prompt="Hi, I'm Harper Thomas (harper.thomas1454@example.com). Could you please update my order #W7425646 to change the Yoga Mat to 4mm thickness and blue color, and remove the Smart Thermostat? Thank you.",
+        prompt="Hi my name is Harper Thomas and my email is harper. thomas1454@example.com.  For #W7425646, modify Yoga Mat {'thickness': '6mm', 'material': 'PVC', 'color': 'green'} to {'thickness': '4mm', 'color': 'blue'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'black'} to {}; via credit_card_1283450.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2853,11 +2853,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_smith_7905",
         instruction="Your name is Ethan Smith and your email is ethan.smith4017@example.com. You are cautious, messy, confident, busy, logical. Cancel order #W1138897 because no longer needed. ",
-        prompt="Hi, I'm Ethan Smith (ethan.smith4017@example.com). Could you please cancel order #W1138897 as I no longer need it? Thank you.",
+        prompt="Hi my name is Ethan Smith and my email is ethan. smith4017@example.com.  Cancel order #W1138897 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2866,11 +2866,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_gonzalez_8209",
         instruction="Your name is Evelyn Gonzalez and your email is evelyn.gonzalez7152@example.com. You are insecure, flexible, polite. For #W4500945, exchange Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {'sensor type': 'laser', 'connectivity': 'wireless'}; via paypal_6069934. ",
-        prompt="Hi, I'm Evelyn Gonzalez. Could you please help me exchange my Gaming Mouse from order #W4500945 to one with a laser sensor and wireless connectivity? My email is evelyn.gonzalez7152@example.com. Thank you!",
+        prompt="Hi my name is Evelyn Gonzalez and my email is evelyn. gonzalez7152@example.com.  For #W4500945, exchange Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {'sensor type': 'laser', 'connectivity': 'wireless'}; via paypal_6069934.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2884,11 +2884,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_kovacs_6742",
         instruction="Your name is Evelyn Kovacs and your email is evelyn.kovacs5369@example.com. You are rigid, sad, shy, independent. For #W9651773, modify Digital Camera {'resolution': '20MP', 'zoom': '5x', 'storage': 'CF card'} to {'zoom': '3x', 'storage': 'SD card'}; via paypal_7732922. Return #W2768683 via paypal_7732922: Espresso Machine; Bookshelf; Digital Camera; For #W6689278, change address to {'order_id': '#W6689278', 'address1': '505 Cedar Avenue', 'address2': 'Suite 539', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32117'} (same as #W5694685). For #W6689278, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L', 'material': 'glass'}; via paypal_7732922. Cancel order #W5694685 because ordered by mistake. ",
-        prompt="Hi, I'm Evelyn Kovacs (evelyn.kovacs5369@example.com). Please modify the digital camera in order #W9651773 to have a 3x zoom and use an SD card. I'd like to return order #W2768683 and change the address for order #W6689278 to 505 Cedar Avenue, Suite 539, Jacksonville, FL, 32117. Also, please update the electric kettle in order #W6689278 to a 1.5L glass model and cancel order #W5694685. Thank you.",
+        prompt="Hi my name is Evelyn Kovacs and my email is evelyn. kovacs5369@example.com.  For #W9651773, modify Digital Camera {'resolution': '20MP', 'zoom': '5x', 'storage': 'CF card'} to {'zoom': '3x', 'storage': 'SD card'}; via paypal_7732922. Return #W2768683 via paypal_7732922: Espresso Machine; Bookshelf; Digital Camera; For #W6689278, change address to {'order_id': '#W6689278', 'address1': '505 Cedar Avenue', 'address2': 'Suite 539', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32117'} (same as #W5694685). For #W6689278, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L', 'material': 'glass'}; via paypal_7732922. Cancel order #W5694685 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2935,11 +2935,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are happy, independent, optimistic, direct, rigid. For #W7242815, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'} to {'screen size': '7-inch', 'storage': '32GB', 'color': 'silver'}; via paypal_1808675. ",
-        prompt="Hi, I'm Lei Anderson from zip code 76192. I'd like to exchange my 10-inch gold tablet (Order #W7242815) for the 7-inch silver model, and I'll be using PayPal (ID: paypal_1808675) for the transaction.",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. For #W7242815, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'} to {'screen size': '7-inch', 'storage': '32GB', 'color': 'silver'}; via paypal_1808675.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2953,11 +2953,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ahmed_6778",
         instruction="Your name is Olivia Ahmed and your zip code is 94152. You are confident, messy. For #W3972714, exchange Hiking Boots {'size': '9', 'material': 'synthetic', 'waterproof': 'yes'} to {'size': '7', 'material': 'leather'}; via credit_card_9698900. For #W2609687, modify Pet Bed {'size': 'small', 'material': 'polyester', 'color': 'brown'} to {'size': 'large', 'material': 'memory foam', 'color': 'beige'}; via gift_card_1044904. Return #W1579621 via credit_card_9698900: Water Bottle; Portable Charger; Pet Bed; Headphones; ",
-        prompt="Hi, I'm Olivia Ahmed, zip code 94152. I'd like to exchange the Hiking Boots from order #W3972714 to a size 7 in leather, modify the Pet Bed in order #W2609687 to a large memory foam in beige, and return the items from order #W1579621. My email is [your email]. Thank you!",
+        prompt="Hi my name is Olivia Ahmed and my zip code is 94152. For #W3972714, exchange Hiking Boots {'size': '9', 'material': 'synthetic', 'waterproof': 'yes'} to {'size': '7', 'material': 'leather'}; via credit_card_9698900. For #W2609687, modify Pet Bed {'size': 'small', 'material': 'polyester', 'color': 'brown'} to {'size': 'large', 'material': 'memory foam', 'color': 'beige'}; via gift_card_1044904. Return #W1579621 via credit_card_9698900: Water Bottle; Portable Charger; Pet Bed; Headphones;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2993,11 +2993,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_wilson_4541",
         instruction="Your name is Lei Wilson and your zip code is 32255. You are confident, shy, patient, creative, sad. For #W2905754, exchange Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'black'} to {}; via credit_card_3677959. ",
-        prompt="Hi, I'm Lei Wilson. I'd like to exchange the 50ft black vinyl garden hose from order #W2905754. Could you assist me with this using my credit card ending in 7959? My zip code is 32255. Thank you!",
+        prompt="Hi my name is Lei Wilson and my zip code is 32255. For #W2905754, exchange Garden Hose {'length': '50ft', 'material': 'vinyl', 'color': 'black'} to {}; via credit_card_3677959.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3011,11 +3011,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_silva_7446",
         instruction="Your name is Omar Silva and your email is omar.silva4147@example.com. You are relaxing, sad, optimistic. Cancel order #W9673784 because no longer needed. ",
-        prompt="Hi, I'm Omar Silva. Could you please cancel order #W9673784 as I no longer need it? My email is omar.silva4147@example.com. Thank you!",
+        prompt="Hi my name is Omar Silva and my email is omar. silva4147@example.com.  Cancel order #W9673784 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3024,11 +3024,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_smith_9087",
         instruction="Your name is Ethan Smith and your zip code is 10280. You are messy, polite, shy. For #W6711349, modify Portable Charger {'capacity': '5000mAh', 'output': 'USB-A', 'color': 'white'} to {'capacity': '20000mAh', 'output': 'USB-C'}; Digital Camera {'resolution': '24MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '10x', 'storage': 'SD card'}; Electric Toothbrush {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'} to {}; via paypal_3296755. ",
-        prompt="Hi, I'm Ethan Smith. Could you please update my order #W6711349 to change the Portable Charger to 20000mAh with USB-C, the Digital Camera to 30MP with 10x zoom and SD card storage, and remove the Electric Toothbrush? My zip code is 10280, and my email is ethan.smith@example.com. Thank you!",
+        prompt="Hi my name is Ethan Smith and my zip code is 10280. For #W6711349, modify Portable Charger {'capacity': '5000mAh', 'output': 'USB-A', 'color': 'white'} to {'capacity': '20000mAh', 'output': 'USB-C'}; Digital Camera {'resolution': '24MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '10x', 'storage': 'SD card'}; Electric Toothbrush {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'} to {}; via paypal_3296755.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3042,11 +3042,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_hernandez_5066",
         instruction="Your name is Olivia Hernandez and your email is olivia.hernandez9440@example.com. You are cautious, relaxing, flexible. For #W5671546, exchange Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {}; via credit_card_2583849. ",
-        prompt="Hi, I'm Olivia Hernandez. I'd like to exchange the 25ft green latex garden hose from order #W5671546. Please process the exchange using my credit card ending in 2583849. My email is olivia.hernandez9440@example.com.",
+        prompt="Hi my name is Olivia Hernandez and my email is olivia. hernandez9440@example.com.  For #W5671546, exchange Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {}; via credit_card_2583849.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3060,11 +3060,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_gonzalez_8900",
         instruction="Your name is Yusuf Gonzalez and your email is yusuf.gonzalez2399@example.com. You are outgoing, sad, flexible, cautious, pessimistic. For #W2806889, change payment to paypal_3022415. For #W2806889, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'stainless steel', 'stovetop compatibility': 'induction'}; Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '4GB', 'screen size': '6.5-inch'} to {'RAM': '8GB', 'screen size': '5.8-inch'}; via paypal_3022415. For #W2230795, change payment to credit_card_7918119. For #W2230795, modify Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'} to {'storage': '64GB', 'color': 'silver'}; via credit_card_7918119. ",
-        prompt="Hi, I'm Yusuf Gonzalez. Could you please update order #W2806889 to change the payment to PayPal (paypal_3022415) and modify the Tea Kettle to stainless steel with induction compatibility, and the Smartphone to 8GB RAM and a 5.8-inch screen? Also, for order #W2230795, switch the payment to credit card (credit_card_7918119) and adjust the Tablet to 64GB storage and silver color. My email is yusuf.gonzalez2399@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Gonzalez and my email is yusuf. gonzalez2399@example.com.  For #W2806889, change payment to paypal_3022415. For #W2806889, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'stainless steel', 'stovetop compatibility': 'induction'}; Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '4GB', 'screen size': '6.5-inch'} to {'RAM': '8GB', 'screen size': '5.8-inch'}; via paypal_3022415. For #W2230795, change payment to credit_card_7918119. For #W2230795, modify Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'} to {'storage': '64GB', 'color': 'silver'}; via credit_card_7918119.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -3101,11 +3101,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_hernandez_1701",
         instruction="Your name is Evelyn Hernandez and your zip code is 92139. You are rigid, insecure, pessimistic, outgoing, impatient. For #W3482034, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'charcoal'}; via credit_card_3631888. Return #W9628587 via credit_card_3631888: Sunglasses; Dumbbell Set; ",
-        prompt="Hi, I'm Evelyn Hernandez. Could you please modify my order #W3482034 to change the grill to a charcoal type and help me return order #W9628587 for the sunglasses and dumbbell set? My zip code is 92139. Thank you!",
+        prompt="Hi my name is Evelyn Hernandez and my zip code is 92139. For #W3482034, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'charcoal'}; via credit_card_3631888. Return #W9628587 via credit_card_3631888: Sunglasses; Dumbbell Set;",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3127,11 +3127,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_hernandez_6923",
         instruction="Your name is Ivan Hernandez and your email is ivan.hernandez1120@example.com. You are flexible, patient, outgoing, messy, insecure. For #W4284542, change address to {'order_id': '#W4284542', 'address1': '894 Hickory Lane', 'address2': 'Suite 665', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92133'} (same as #W5838674). For #W4284542, change payment to gift_card_9368765. For #W4284542, modify Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'medium', 'filter type': 'carbon', 'features': 'quiet operation'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; via gift_card_9368765. ",
-        prompt="My zip code is 92133. Hi, I'm Ivan Hernandez. Could you please update the address for order #W4284542 to match #W5838674 and change the payment method to gift_card_9368765? Also, modify the Air Purifier to a medium room size with a carbon filter and quiet operation, and change the Bluetooth Speaker to blue with water resistance. My email is ivan.hernandez1120@example.com. Thank you!",
+        prompt="Hi my name is Ivan Hernandez and my email is ivan. hernandez1120@example.com.  For #W4284542, change address to {'order_id': '#W4284542', 'address1': '894 Hickory Lane', 'address2': 'Suite 665', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92133'} (same as #W5838674). For #W4284542, change payment to gift_card_9368765. For #W4284542, modify Air Purifier {'room size': 'large', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'medium', 'filter type': 'carbon', 'features': 'quiet operation'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; via gift_card_9368765.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -3164,11 +3164,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_lopez_5487",
         instruction="Your name is Evelyn Lopez and your email is evelyn.lopez6910@example.com. You are organized, sad, confident. For #W3007862, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'gas', 'size': 'portable'}; via credit_card_3566337. Cancel order #W1890669 because ordered by mistake. ",
-        prompt="Hi, I'm Evelyn Lopez (evelyn.lopez6910@example.com). Could you please modify my order #W3007862 to a gas, portable grill and cancel order #W1890669? Thank you!",
+        prompt="Hi my name is Evelyn Lopez and my email is evelyn. lopez6910@example.com.  For #W3007862, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'gas', 'size': 'portable'}; via credit_card_3566337. Cancel order #W1890669 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3186,11 +3186,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_santos_8115",
         instruction="Your name is Harper Santos and your zip code is 46237. You are direct, independent, happy, messy, busy. For #W4941028, change payment to credit_card_7507679. For #W4941028, modify Backpack {'color': 'grey', 'size': 'large', 'material': 'nylon', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'laptop'}; Laptop {'screen size': '17-inch', 'processor': 'i9', 'ram': '8GB', 'storage': '256GB SSD', 'color': 'silver'} to {'screen size': '15-inch', 'processor': 'i5', 'ram': '32GB', 'color': 'space grey'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'stainless steel'} to {}; via credit_card_7507679. ",
-        prompt="Hi, I'm Harper Santos. Could you please update order #W4941028 to use credit_card_7507679 and make the following changes: Backpack to green, small, polyester, laptop compartment; Laptop to 15-inch, i5, 32GB, space grey; and remove the Smart Thermostat? My zip is 46237. Thank you!",
+        prompt="Hi my name is Harper Santos and my zip code is 46237. For #W4941028, change payment to credit_card_7507679. For #W4941028, modify Backpack {'color': 'grey', 'size': 'large', 'material': 'nylon', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'laptop'}; Laptop {'screen size': '17-inch', 'processor': 'i9', 'ram': '8GB', 'storage': '256GB SSD', 'color': 'silver'} to {'screen size': '15-inch', 'processor': 'i5', 'ram': '32GB', 'color': 'space grey'}; Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'stainless steel'} to {}; via credit_card_7507679.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -3211,11 +3211,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_3261",
         instruction="Your name is Sofia Li and your zip code is 10199. You are optimistic, outgoing, logical, messy, direct. Return #W6874763 via credit_card_4046723: E-Reader; ",
-        prompt="Hi, I'm Sofia Li. I'd like to return order #W6874763 for the E-Reader. My zip code is 10199, and I used credit card ending in 6723. My email is sofiali@email.com.",
+        prompt="Hi my name is Sofia Li and my zip code is 10199. Return #W6874763 via credit_card_4046723: E-Reader;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3228,11 +3228,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_silva_7567",
         instruction="Your name is Yara Silva and your email is yara.silva2443@example.com. You are dependent, confident, optimistic. For #W9810810, modify Bookshelf {'material': 'metal', 'color': 'black', 'height': '6 ft'} to {'material': 'wood', 'color': 'brown', 'height': '5 ft'}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'color': 'black'}; via gift_card_7252880. ",
-        prompt="Hi, I'm Yara Silva. Could you please modify my order #W9810810 to change the bookshelf to wood, brown, and 5 ft, and the electric kettle to black? My email is yara.silva2443@example.com. Thank you!",
+        prompt="Hi my name is Yara Silva and my email is yara. silva2443@example.com.  For #W9810810, modify Bookshelf {'material': 'metal', 'color': 'black', 'height': '6 ft'} to {'material': 'wood', 'color': 'brown', 'height': '5 ft'}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'color': 'black'}; via gift_card_7252880.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3246,11 +3246,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_patel_6833",
         instruction="Your name is Sophia Patel and your email is sophia.patel9841@example.com. You are organized, optimistic, confident. Return #W2923184 via credit_card_6419343: Wireless Earbuds; Laptop; ",
-        prompt="Hi, I'm Sophia Patel. I'd like to return order #W2923184, which includes the wireless earbuds and laptop, using credit card ending in 6419343. My email is sophia.patel9841@example.com.",
+        prompt="Hi my name is Sophia Patel and my email is sophia. patel9841@example.com.  Return #W2923184 via credit_card_6419343: Wireless Earbuds; Laptop;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3263,11 +3263,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_5477",
         instruction="Your name is Emma Kovacs and your email is emma.kovacs5723@example.com. You are direct, happy, rigid. For #W7109609, modify Headphones {'type': 'on-ear', 'connectivity': 'wireless', 'color': 'white'} to {'type': 'over-ear', 'color': 'black'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {}; via gift_card_9246707. For #W6554908, modify Perfume {'scent family': 'fresh', 'size': '30ml', 'gender': 'men'} to {'scent family': 'oriental'}; via gift_card_9246707. ",
-        prompt="Hi, I'm Emma Kovacs. Please update order #W7109609 to change the headphones to over-ear and black, and remove the vacuum cleaner. Also, for order #W6554908, change the perfume to the oriental scent family. Use gift card 9246707 for both. My email is emma.kovacs5723@example.com.",
+        prompt="Hi my name is Emma Kovacs and my email is emma. kovacs5723@example.com.  For #W7109609, modify Headphones {'type': 'on-ear', 'connectivity': 'wireless', 'color': 'white'} to {'type': 'over-ear', 'color': 'black'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {}; via gift_card_9246707. For #W6554908, modify Perfume {'scent family': 'fresh', 'size': '30ml', 'gender': 'men'} to {'scent family': 'oriental'}; via gift_card_9246707.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3290,11 +3290,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_moore_2033",
         instruction="Your name is Ava Moore and your zip code is 78234. You are busy, creative, messy, sad. Return #W8951014 via gift_card_8168843: Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Bookshelf; ",
-        prompt="Hi, I'm Ava Moore (zip 78234, email not provided). I'd like to return order #W8951014 using gift card #8168843, which includes a black nylon laptop backpack and a bookshelf.",
+        prompt="Hi my name is Ava Moore and my zip code is 78234. Return #W8951014 via gift_card_8168843: Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Bookshelf;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3307,11 +3307,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_ahmed_3960",
         instruction="Your name is Evelyn Ahmed and your email is evelyn.ahmed2006@example.com. You are patient, rigid, busy. Cancel order #W3746173 because no longer needed. Cancel order #W1416704 because ordered by mistake. ",
-        prompt="Hi, I'm Evelyn Ahmed (evelyn.ahmed2006@example.com). Please cancel order #W3746173 as it's no longer needed and order #W1416704 as it was ordered by mistake. Thank you.",
+        prompt="Hi my name is Evelyn Ahmed and my email is evelyn. ahmed2006@example.com.  Cancel order #W3746173 because no longer needed. Cancel order #W1416704 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3324,11 +3324,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_lee_8315",
         instruction="Your name is Anya Lee and your email is anya.lee3013@example.com. You are busy, direct, happy, organized, outgoing. For #W1335809, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '9', 'waterproof': 'yes'}; via paypal_3728317. For #W3176007, modify Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '500ml', 'color': 'green'}; via paypal_3728317. ",
-        prompt="Hi, I'm Anya Lee (anya.lee3013@example.com). Could you please exchange the hiking boots from order #W1335809 to size 9 and waterproof, and modify the water bottle in order #W3176007 to 500ml and green? Thank you!",
+        prompt="Hi my name is Anya Lee and my email is anya. lee3013@example.com.  For #W1335809, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '9', 'waterproof': 'yes'}; via paypal_3728317. For #W3176007, modify Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '500ml', 'color': 'green'}; via paypal_3728317.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3351,11 +3351,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_santos_9079",
         instruction="Your name is Raj Santos and your zip code is 98157. You are organized, optimistic, dependent. Return #W1630030 via paypal_2417743: Electric Kettle; ",
-        prompt="Hi, I'm Raj Santos, zip code 98157. I'd like to return order #W1630030 for the Electric Kettle via PayPal account paypal_2417743.",
+        prompt="Hi my name is Raj Santos and my zip code is 98157. Return #W1630030 via paypal_2417743: Electric Kettle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3368,11 +3368,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_nguyen_7539",
         instruction="Your name is Fatima Nguyen and your zip code is 43211. You are happy, cautious, pessimistic, impatient, creative. Cancel order #W8808563 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Nguyen. Could you please cancel order #W8808563? I ordered it by mistake. Thank you! Zip code: 43211.",
+        prompt="Hi my name is Fatima Nguyen and my zip code is 43211. Cancel order #W8808563 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3381,11 +3381,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_johnson_9523",
         instruction="Your name is Daiki Johnson and your zip code is 80273. You are optimistic, relaxing, rigid, dependent, direct. Cancel order #W5282037 because no longer needed. ",
-        prompt="Hi, I'm Daiki Johnson, and I'd like to cancel order #W5282037 as I no longer need it. My zip code is 80273. Thank you!",
+        prompt="Hi my name is Daiki Johnson and my zip code is 80273. Cancel order #W5282037 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3394,11 +3394,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_silva_9907",
         instruction="Your name is Omar Silva and your zip code is 98141. You are polite, happy, shy, dependent, patient. For #W6151519, modify Mechanical Keyboard {'switch type': 'tactile', 'backlight': 'none', 'size': '80%'} to {'switch type': 'clicky'}; Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'silver'} to {'capacity': '2L', 'material': 'glass', 'color': 'white'}; Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'white', 'material': 'mesh'}; via gift_card_5193172. ",
-        prompt="Hi, I'm Omar Silva. Could you please help me modify my order #W6151519? I'd like to change the Mechanical Keyboard to have 'clicky' switches, the Electric Kettle to a 2L glass model in white, and the Running Shoes to be white and made of mesh. I'll be using gift_card_5193172 for this. Thank you!",
+        prompt="Hi my name is Omar Silva and my zip code is 98141. For #W6151519, modify Mechanical Keyboard {'switch type': 'tactile', 'backlight': 'none', 'size': '80%'} to {'switch type': 'clicky'}; Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'silver'} to {'capacity': '2L', 'material': 'glass', 'color': 'white'}; Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'white', 'material': 'mesh'}; via gift_card_5193172.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3412,11 +3412,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_anderson_3167",
         instruction="Your name is Raj Anderson and your email is raj.anderson6756@example.com. You are polite, outgoing, impatient. For #W6378322, exchange Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'white'} to {'color': 'stainless steel'}; via gift_card_6662365. ",
-        prompt="Hi, I'm Raj Anderson (raj.anderson6756@example.com). Could you please help me exchange my Smart Thermostat order #W6378322 from the white color to stainless steel using gift card #6662365? Thank you!",
+        prompt="Hi my name is Raj Anderson and my email is raj. anderson6756@example.com.  For #W6378322, exchange Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'white'} to {'color': 'stainless steel'}; via gift_card_6662365.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3430,11 +3430,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_lee_8315",
         instruction="Your name is Anya Lee and your zip code is 78227. You are relaxing, messy, polite, happy. For #W2989580, modify Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {'size': 'XL', 'color': 'navy'}; via paypal_3728317. ",
-        prompt="Hi, I'm Anya Lee. Could you please change my order #W2989580 for the Fleece Jacket from size L, color black to size XL, color navy? My zip code is 78227, and I used PayPal for the purchase. Thank you!",
+        prompt="Hi my name is Anya Lee and my zip code is 78227. For #W2989580, modify Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {'size': 'XL', 'color': 'navy'}; via paypal_3728317.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3448,11 +3448,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_wilson_4614",
         instruction="Your name is Amelia Wilson and your zip code is 75215. You are optimistic, rigid, shy. For #W9077205, exchange Dumbbell Set {'weight range': '5-25 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '55-75 lbs', 'set type': 'fixed'}; via gift_card_7108145. ",
-        prompt="Hi, I'm Amelia Wilson. I'd like to exchange my current Dumbbell Set #W9077205 for the fixed set with a 55-75 lbs range using gift card 7108145. My zip code is 75215. Thank you!",
+        prompt="Hi my name is Amelia Wilson and my zip code is 75215. For #W9077205, exchange Dumbbell Set {'weight range': '5-25 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '55-75 lbs', 'set type': 'fixed'}; via gift_card_7108145.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3466,11 +3466,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_muller_8652",
         instruction="Your name is Yara Muller and your zip code is 85041. You are creative, relaxing, rigid, curious. Cancel order #W5995614 because ordered by mistake. ",
-        prompt="Hi, I'm Yara Muller from zip code 85041. Could you please cancel order #W5995614? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Yara Muller and my zip code is 85041. Cancel order #W5995614 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3479,11 +3479,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_brown_2024",
         instruction="Your name is Anya Brown and your email is anya.brown8893@example.com. You are patient, insecure. Cancel order #W1170711 because ordered by mistake. For #W1430028, change payment to credit_card_3414703. For #W1430028, change address to {'order_id': '#W1430028', 'address1': '419 Main Street', 'address2': 'Suite 730', 'city': 'Dallas', 'country': 'USA', 'state': 'TX', 'zip': '75380'} (same as #W8883368). For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'yellow'}; via credit_card_3414703. ",
-        prompt="Hi, I'm Anya Brown (anya.brown8893@example.com). Could you please cancel order #W1170711 as it was made by mistake? Also, for order #W1430028, update the payment to credit_card_3414703, change the address to 419 Main Street, Suite 730, Dallas, TX 75380, and modify the Running Shoes to yellow. Thank you!",
+        prompt="Hi my name is Anya Brown and my email is anya. brown8893@example.com.  Cancel order #W1170711 because ordered by mistake. For #W1430028, change payment to credit_card_3414703. For #W1430028, change address to {'order_id': '#W1430028', 'address1': '419 Main Street', 'address2': 'Suite 730', 'city': 'Dallas', 'country': 'USA', 'state': 'TX', 'zip': '75380'} (same as #W8883368). For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'yellow'}; via credit_card_3414703.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3520,11 +3520,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_sanchez_9145",
         instruction="Your name is Yara Sanchez and your zip code is 43097. You are relaxing, optimistic, happy, cautious, insecure. For #W6519831, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '5-25 lbs', 'material': 'rubber'}; Bicycle {'frame size': 'medium', 'color': 'blue', 'type': 'road'} to {'color': 'green'}; via credit_card_5353742. ",
-        prompt="Hi, I'm Yara Sanchez, zip code 43097. Could you please help me exchange my Dumbbell Set from the 30-50 lbs iron adjustable set to the 5-25 lbs rubber set, and change the color of my medium road bicycle from blue to green for order #W6519831? Thank you!",
+        prompt="Hi my name is Yara Sanchez and my zip code is 43097. For #W6519831, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '5-25 lbs', 'material': 'rubber'}; Bicycle {'frame size': 'medium', 'color': 'blue', 'type': 'road'} to {'color': 'green'}; via credit_card_5353742.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3538,11 +3538,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are polite, patient. Cancel order #W6002467 because ordered by mistake. Return #W4072946 via paypal_1808675: Action Camera; Hiking Boots; ",
-        prompt="Hi, I'm Lei Anderson, zip code 76192. Could you please cancel order #W6002467 as it was made by mistake, and help me return order #W4072946 via PayPal? Thank you!",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Cancel order #W6002467 because ordered by mistake. Return #W4072946 via paypal_1808675: Action Camera; Hiking Boots;",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3559,11 +3559,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_ito_4653",
         instruction="Your name is Harper Ito and your email is harper.ito2682@example.com. You are insecure, patient, organized, pessimistic, relaxing. For #W5673917, exchange Tablet {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'} to {'storage': '32GB', 'color': 'black'}; via paypal_1053133. ",
-        prompt="Hi, I'm Harper Ito (harper.ito2682@example.com). I'd like to exchange my 10-inch silver tablet (Order #W5673917) from 64GB to the 32GB black model.",
+        prompt="Hi my name is Harper Ito and my email is harper. ito2682@example.com.  For #W5673917, exchange Tablet {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'} to {'storage': '32GB', 'color': 'black'}; via paypal_1053133.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3577,11 +3577,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_9219",
         instruction="Your name is Sofia Li and your email is sofia.li7352@example.com. You are curious, shy, logical, organized. Cancel order #W8855135 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Li. Could you please cancel order #W8855135? I ordered it by mistake. My email is sofia.li7352@example.com. Thank you!",
+        prompt="Hi my name is Sofia Li and my email is sofia. li7352@example.com.  Cancel order #W8855135 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3590,11 +3590,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_johansson_2485",
         instruction="Your name is Mason Johansson and your email is mason.johansson9528@example.com. You are sad, cautious, direct, logical. Cancel order #W3358610 because no longer needed. ",
-        prompt="Hi, I'm Mason Johansson. Could you please cancel order #W3358610 as I no longer need it? My email is mason.johansson9528@example.com. Thank you.",
+        prompt="Hi my name is Mason Johansson and my email is mason. johansson9528@example.com.  Cancel order #W3358610 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3603,11 +3603,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lopez_5873",
         instruction="Your name is Raj Lopez and your email is raj.lopez2997@example.com. You are rigid, optimistic, confident. Cancel order #W3502364 because ordered by mistake. Cancel order #W7162915 because no longer needed. ",
-        prompt="Hi, I'm Raj Lopez (raj.lopez2997@example.com). Could you please cancel order #W3502364 as it was ordered by mistake and order #W7162915 as it's no longer needed? Thank you!",
+        prompt="Hi my name is Raj Lopez and my email is raj. lopez2997@example.com.  Cancel order #W3502364 because ordered by mistake. Cancel order #W7162915 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3620,11 +3620,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_9839",
         instruction="Your name is Emma Kovacs and your email is emma.kovacs2974@example.com. You are pessimistic, impatient, sad, flexible, outgoing. For #W8661412, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'black'} to {'capacity': '750ml', 'color': 'red'}; via credit_card_7239357. ",
-        prompt="Hi, I'm Emma Kovacs. Can you please change my order #W8661412 to a 750ml red water bottle instead of the 500ml black one? My email is emma.kovacs2974@example.com.",
+        prompt="Hi my name is Emma Kovacs and my email is emma. kovacs2974@example.com.  For #W8661412, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'black'} to {'capacity': '750ml', 'color': 'red'}; via credit_card_7239357.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3638,11 +3638,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_brown_3584",
         instruction="Your name is Isabella Brown and your email is isabella.brown8771@example.com. You are outgoing, dependent, rigid, curious. For #W7752779, exchange Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'} to {'pieces': '1000', 'theme': 'fantasy'}; via paypal_2143483. ",
-        prompt="Hi, I'm Isabella Brown (isabella.brown8771@example.com). I'd like to exchange my Jigsaw Puzzle order #W7752779 from the 500-piece art theme to the 1000-piece fantasy theme, and I'll be using PayPal transaction paypal_2143483.",
+        prompt="Hi my name is Isabella Brown and my email is isabella. brown8771@example.com.  For #W7752779, exchange Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'} to {'pieces': '1000', 'theme': 'fantasy'}; via paypal_2143483.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3656,11 +3656,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_ahmed_3960",
         instruction="Your name is Evelyn Ahmed and your zip code is 80256. You are dependent, flexible, optimistic. Cancel order #W1416704 because no longer needed. ",
-        prompt="Hi, I'm Evelyn Ahmed. Could you please cancel order #W1416704 for me? It's no longer needed. Thank you! Zip code: 80256.",
+        prompt="Hi my name is Evelyn Ahmed and my zip code is 80256. Cancel order #W1416704 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3669,11 +3669,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_lopez_6291",
         instruction="Your name is Ethan Lopez and your zip code is 43275. You are cautious, messy, creative, direct. For #W8632528, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '9', 'waterproof': 'yes'}; via credit_card_9789590. For #W8073920, modify Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11'}; Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'RAM': '8GB'}; Cycling Helmet {'size': 'S', 'color': 'blue', 'ventilation': 'low'} to {'size': 'M', 'color': 'red', 'ventilation': 'high'}; via gift_card_7219486. Cancel order #W6779827 because ordered by mistake. For #W6426438, modify Skateboard {'deck material': 'plastic', 'length': '28 inch', 'design': 'custom'} to {'deck material': 'bamboo', 'length': '34 inch', 'design': 'graphic'}; Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'RAM': '4GB', 'screen size': '6.5-inch'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '4 ft'} to {'color': 'black', 'height': '3 ft'}; via gift_card_7219486. ",
-        prompt="Hi, I'm Ethan Lopez. Could you please exchange the hiking boots in order #W8632528 to size 9 and waterproof, and modify the items in orders #W8073920 and #W6426438 as specified? Also, please cancel order #W6779827. My zip is 43275, and you can reach me at my email. Thank you!",
+        prompt="Hi my name is Ethan Lopez and my zip code is 43275. For #W8632528, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '9', 'waterproof': 'yes'}; via credit_card_9789590. For #W8073920, modify Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11'}; Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'RAM': '8GB'}; Cycling Helmet {'size': 'S', 'color': 'blue', 'ventilation': 'low'} to {'size': 'M', 'color': 'red', 'ventilation': 'high'}; via gift_card_7219486. Cancel order #W6779827 because ordered by mistake. For #W6426438, modify Skateboard {'deck material': 'plastic', 'length': '28 inch', 'design': 'custom'} to {'deck material': 'bamboo', 'length': '34 inch', 'design': 'graphic'}; Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'RAM': '4GB', 'screen size': '6.5-inch'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '4 ft'} to {'color': 'black', 'height': '3 ft'}; via gift_card_7219486.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3709,11 +3709,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_moore_8366",
         instruction="Your name is Mia Moore and your email is mia.moore8091@example.com. You are happy, rigid, pessimistic, confident. For #W5544629, exchange Electric Toothbrush {'color': 'blue', 'speed settings': 'low', 'battery type': 'AA batteries'} to {'color': 'white', 'battery type': 'rechargeable'}; via paypal_5181300. ",
-        prompt="Hi, I'm Mia Moore. I'd like to exchange my Electric Toothbrush from order #W5544629 to the white, rechargeable version. My email is mia.moore8091@example.com. Thank you!",
+        prompt="Hi my name is Mia Moore and my email is mia. moore8091@example.com.  For #W5544629, exchange Electric Toothbrush {'color': 'blue', 'speed settings': 'low', 'battery type': 'AA batteries'} to {'color': 'white', 'battery type': 'rechargeable'}; via paypal_5181300.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3727,11 +3727,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_johansson_8128",
         instruction="Your name is Mason Johansson and your email is mason.johansson9549@example.com. You are shy, dependent. Return #W4352605 via gift_card_1401311: Laptop; Gaming Mouse; ",
-        prompt="Hi, I'm Mason Johansson. I'd like to return order #W4352605 using gift card #1401311. My email is mason.johansson9549@example.com. Thank you!",
+        prompt="Hi my name is Mason Johansson and my email is mason. johansson9549@example.com.  Return #W4352605 via gift_card_1401311: Laptop; Gaming Mouse;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3744,11 +3744,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are busy, impatient, pessimistic, rigid, cautious. Return #W4072946 via paypal_1808675: Action Camera; Hiking Boots; ",
-        prompt="Hi, I'm Lei Anderson, zip code 76192. I need to return order #W4072946, which includes an Action Camera and Hiking Boots, via PayPal_1808675.",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Return #W4072946 via paypal_1808675: Action Camera; Hiking Boots;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3761,11 +3761,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_wilson_7472",
         instruction="Your name is Fatima Wilson and your email is fatima.wilson5721@example.com. You are curious, happy, patient, flexible, confident. For #W5272531, exchange Espresso Machine {'pressure': '15 bar', 'capacity': '1.5L', 'type': 'capsule'} to {'pressure': '9 bar', 'capacity': '1L'}; via credit_card_6824399. ",
-        prompt="Hi, I'm Fatima Wilson (fatima.wilson5721@example.com). I'd like to exchange my Espresso Machine from order #W5272531 for the model with 9 bar pressure and 1L capacity.",
+        prompt="Hi my name is Fatima Wilson and my email is fatima. wilson5721@example.com.  For #W5272531, exchange Espresso Machine {'pressure': '15 bar', 'capacity': '1.5L', 'type': 'capsule'} to {'pressure': '9 bar', 'capacity': '1L'}; via credit_card_6824399.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3779,11 +3779,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_santos_4830",
         instruction="Your name is Omar Santos and your zip code is 76180. You are creative, rigid, relaxing. Cancel order #W9121070 because ordered by mistake. ",
-        prompt="Hi, I'm Omar Santos, zip code 76180. Could you please cancel order #W9121070? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Omar Santos and my zip code is 76180. Cancel order #W9121070 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3792,11 +3792,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_thomas_2711",
         instruction="Your name is Aarav Thomas and your zip code is 32175. You are logical, outgoing, independent. Cancel order #W5158064 because ordered by mistake. ",
-        prompt="Hi, I'm Aarav Thomas, zip code 32175. Could you please cancel order #W5158064? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Aarav Thomas and my zip code is 32175. Cancel order #W5158064 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3805,11 +3805,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_kim_6026",
         instruction="Your name is Juan Kim and your email is juan.kim2574@example.com. You are flexible, dependent. Return #W2002172 via paypal_5061070: Cycling Helmet; ",
-        prompt="Hi, I'm Juan Kim. I'd like to return order #W2002172, the cycling helmet, via PayPal. My email is juan.kim2574@example.com.",
+        prompt="Hi my name is Juan Kim and my email is juan. kim2574@example.com.  Return #W2002172 via paypal_5061070: Cycling Helmet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3822,11 +3822,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_johnson_9523",
         instruction="Your name is Daiki Johnson and your email is daiki.johnson2279@example.com. You are optimistic, direct, rigid, sad. Cancel order #W1436802 because no longer needed. For #W5282037, modify Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {'material': 'vinyl', 'color': 'blue'}; via paypal_2433177. ",
-        prompt="Hi, I'm Daiki Johnson (daiki.johnson2279@example.com). Please cancel order #W1436802 as I no longer need it, and for order #W5282037, could you change the Garden Hose to vinyl and blue? Thank you!",
+        prompt="Hi my name is Daiki Johnson and my email is daiki. johnson2279@example.com.  Cancel order #W1436802 because no longer needed. For #W5282037, modify Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {'material': 'vinyl', 'color': 'blue'}; via paypal_2433177.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3844,11 +3844,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_smith_9087",
         instruction="Your name is Ethan Smith and your email is ethan.smith2338@example.com. You are pessimistic, curious, direct, organized. Cancel order #W6711349 because no longer needed. ",
-        prompt="Hi, I'm Ethan Smith (ethan.smith2338@example.com). Could you please cancel order #W6711349 as I no longer need it?",
+        prompt="Hi my name is Ethan Smith and my email is ethan. smith2338@example.com.  Cancel order #W6711349 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3857,11 +3857,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_johnson_7053",
         instruction="Your name is Ethan Johnson and your zip code is 80298. You are sad, outgoing, flexible. Return #W5321777 via gift_card_6892585: Espresso Machine; ",
-        prompt="Hi, I'm Ethan Johnson. I'd like to return order #W5321777, the Espresso Machine, using gift card #6892585. My zip code is 80298. Thank you!",
+        prompt="Hi my name is Ethan Johnson and my zip code is 80298. Return #W5321777 via gift_card_6892585: Espresso Machine;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3874,11 +3874,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_moore_6466",
         instruction="Your name is Yara Moore and your zip code is 92162. You are shy, cautious, relaxing, independent. For #W1605168, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'silver'} to {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'}; via credit_card_7161839. ",
-        prompt="Hi, I'm Yara Moore from zip code 92162. I'd like to exchange my 7-inch, 32GB silver tablet (Order #W1605168) for the 10-inch, 128GB gold model, using my credit card ending in 7161839. Thank you!",
+        prompt="Hi my name is Yara Moore and my zip code is 92162. For #W1605168, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'silver'} to {'screen size': '10-inch', 'storage': '128GB', 'color': 'gold'}; via credit_card_7161839.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3892,11 +3892,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_anderson_2157",
         instruction="Your name is Fatima Anderson and your zip code is 32100. You are impatient, organized. For #W2974929, modify Skateboard {'deck material': 'plastic', 'length': '31 inch', 'design': 'plain'} to {'length': '34 inch', 'design': 'graphic'}; via paypal_7916550. ",
-        prompt="Hi, I'm Fatima Anderson, zip code 32100. Can you please update my order #W2974929 to change the skateboard to a 34-inch length with a graphic design? I'll be paying via PayPal.",
+        prompt="Hi my name is Fatima Anderson and my zip code is 32100. For #W2974929, modify Skateboard {'deck material': 'plastic', 'length': '31 inch', 'design': 'plain'} to {'length': '34 inch', 'design': 'graphic'}; via paypal_7916550.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3910,11 +3910,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_jackson_7119",
         instruction="Your name is Sophia Jackson and your email is sophia.jackson9875@example.com. You are outgoing, confident. Return #W3977493 via credit_card_6748580: Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'}; Electric Toothbrush; Laptop; ",
-        prompt="Hi, I'm Sophia Jackson (sophia.jackson9875@example.com). I'd like to return order #W3977493, which includes a water bottle, electric toothbrush, and laptop. Can you assist me with this?",
+        prompt="Hi my name is Sophia Jackson and my email is sophia. jackson9875@example.com.  Return #W3977493 via credit_card_6748580: Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'}; Electric Toothbrush; Laptop;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3927,11 +3927,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_anderson_8271",
         instruction="Your name is Lei Anderson and your zip code is 76192. You are shy, impatient, curious, insecure. Return #W7242815 via paypal_1808675: Tablet; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Dumbbell Set {'weight range': '55-75 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '30-50 lbs', 'material': 'urethane', 'set type': 'fixed'}; via paypal_1808675. ",
-        prompt="Hi, I'm Lei Anderson. Could you help me return order #W7242815 via PayPal and update the address for order #W6002467 to 544 Sunset Drive, Suite 337, Jacksonville, FL 32205? Also, please modify the Dumbbell Set in order #W6002467 to a 30-50 lbs urethane fixed set. Thank you! My zip code is 76192, and my email is on file.",
+        prompt="Hi my name is Lei Anderson and my zip code is 76192. Return #W7242815 via paypal_1808675: Tablet; For #W6002467, change address to {'order_id': '#W6002467', 'address1': '544 Sunset Drive', 'address2': 'Suite 337', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32205'} (same as #W1866533). For #W6002467, modify Dumbbell Set {'weight range': '55-75 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '30-50 lbs', 'material': 'urethane', 'set type': 'fixed'}; via paypal_1808675.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3965,11 +3965,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_thomas_1518",
         instruction="Your name is Sofia Thomas and your zip code is 75307. You are creative, independent, cautious, rigid, organized. For #W2297866, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'cordless'}; via paypal_5334408. Cancel order #W7619352 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Thomas. Could you please modify my order #W2297866 to change the vacuum cleaner to a robotic, bagged, cordless model? Also, I'd like to cancel order #W7619352 as it was placed by mistake. My zip code is 75307 and my email is [your email]. Thank you!",
+        prompt="Hi my name is Sofia Thomas and my zip code is 75307. For #W2297866, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'cordless'}; via paypal_5334408. Cancel order #W7619352 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3987,11 +3987,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_brown_7363",
         instruction="Your name is Harper Brown and your zip code is 76112. You are organized, patient, sad, dependent, cautious. For #W2273069, change payment to paypal_2306935. For #W2273069, modify Smart Watch {'color': 'gold', 'band material': 'silicone', 'display': 'AMOLED'} to {'band material': 'leather', 'display': 'LCD'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'rechargeable'} to {}; Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '11', 'waterproof': 'yes'}; via paypal_2306935. For #W2693718, exchange Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'CF card'} to {'resolution': '24MP', 'storage': 'SD card'}; via credit_card_3240550. ",
-        prompt="Hi, I'm Harper Brown. Could you please update order #W2273069 to change the payment method to PayPal (paypal_2306935) and modify the Smart Watch to have a leather band and LCD display, the Electric Toothbrush to have no specific details, and the Hiking Boots to size 11 and waterproof? Also, for order #W2693718, I'd like to exchange the Digital Camera to a 24MP resolution with SD card storage using credit card 3240550. My zip code is 76112 and my email is [your email]. Thank you!",
+        prompt="Hi my name is Harper Brown and my zip code is 76112. For #W2273069, change payment to paypal_2306935. For #W2273069, modify Smart Watch {'color': 'gold', 'band material': 'silicone', 'display': 'AMOLED'} to {'band material': 'leather', 'display': 'LCD'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'rechargeable'} to {}; Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '11', 'waterproof': 'yes'}; via paypal_2306935. For #W2693718, exchange Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'CF card'} to {'resolution': '24MP', 'storage': 'SD card'}; via credit_card_3240550.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -4021,11 +4021,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_patel_5953",
         instruction="Your name is Daiki Patel and your zip code is 94111. You are organized, flexible, optimistic, happy. For #W8969494, exchange Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': '60%'} to {'switch type': 'linear', 'size': '80%'}; via paypal_1009053. For #W8068454, exchange Bookshelf {'material': 'wood', 'color': 'brown', 'height': '6 ft'} to {'color': 'white', 'height': '5 ft'}; Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'size': 'M', 'color': 'blue', 'ventilation': 'high'}; Air Purifier {'room size': 'medium', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'large'}; Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red', 'water resistance': 'yes'}; via paypal_1009053. ",
-        prompt="Hi, I'm Daiki Patel. I'd like to exchange the mechanical keyboard from order #W8969494 to a linear switch, 80% size model. For order #W8068454, please exchange the bookshelf to a white, 5 ft version, the cycling helmet to a medium, blue, high ventilation model, the air purifier to a large room size, and the Bluetooth speaker to a red, water-resistant version. My zip code is 94111, and my email is associated with PayPal transaction paypal_1009053. Thank you!",
+        prompt="Hi my name is Daiki Patel and my zip code is 94111. For #W8969494, exchange Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': '60%'} to {'switch type': 'linear', 'size': '80%'}; via paypal_1009053. For #W8068454, exchange Bookshelf {'material': 'wood', 'color': 'brown', 'height': '6 ft'} to {'color': 'white', 'height': '5 ft'}; Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'size': 'M', 'color': 'blue', 'ventilation': 'high'}; Air Purifier {'room size': 'medium', 'filter type': 'HEPA', 'features': 'night mode'} to {'room size': 'large'}; Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red', 'water resistance': 'yes'}; via paypal_1009053.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4058,11 +4058,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_garcia_4516",
         instruction="Your name is Mia Garcia and your zip code is 46229. You are independent, direct, flexible. Return #W5490111 via credit_card_3124723: Action Camera; Backpack; Water Bottle; Mechanical Keyboard; ",
-        prompt="Hi, I'm Mia Garcia, zip code 46229. I'd like to return order #W5490111, which includes an action camera, backpack, water bottle, and mechanical keyboard, to my credit card ending in 3124723. My email is mia.garcia@email.com.",
+        prompt="Hi my name is Mia Garcia and my zip code is 46229. Return #W5490111 via credit_card_3124723: Action Camera; Backpack; Water Bottle; Mechanical Keyboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4080,11 +4080,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_smith_1623",
         instruction="Your name is Mia Smith and your zip code is 80246. You are logical, independent, direct, impatient, sad. Return #W2922379 via paypal_3839332: Water Bottle; ",
-        prompt="Hi, I'm Mia Smith. I'd like to return order #W2922379 for the water bottle via PayPal. My zip code is 80246.",
+        prompt="Hi my name is Mia Smith and my zip code is 80246. Return #W2922379 via paypal_3839332: Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4097,11 +4097,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_davis_3316",
         instruction="Your name is Olivia Davis and your zip code is 77244. You are flexible, polite. For #W7623533, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'beginner'} to {'pieces': '1500', 'theme': 'art', 'difficulty level': 'intermediate'}; via paypal_8673863. ",
-        prompt="Hi, I'm Olivia Davis, zip code 77244. Could you please help me exchange my Jigsaw Puzzle order #W7623533 from the 1000-piece animal theme to the 1500-piece art theme? My payment was through PayPal, transaction ID paypal_8673863. Thank you!",
+        prompt="Hi my name is Olivia Davis and my zip code is 77244. For #W7623533, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'beginner'} to {'pieces': '1500', 'theme': 'art', 'difficulty level': 'intermediate'}; via paypal_8673863.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4115,11 +4115,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_muller_6713",
         instruction="Your name is Fatima Muller and your zip code is 60644. You are confident, optimistic, polite, messy, independent. For #W6851636, modify Running Shoes {'size': '8', 'color': 'red', 'material': 'leather', 'sole': 'EVA'} to {'size': '10', 'color': 'white'}; via paypal_5541158. Return #W2435638 via paypal_5541158: Bookshelf; Digital Camera; Gaming Mouse; Garden Hose; Espresso Machine; For #W2040365, change address to {'order_id': '#W2040365', 'address1': '377 River Road', 'address2': 'Suite 307', 'city': 'Chicago', 'country': 'USA', 'state': 'IL', 'zip': '60644'} (same as #W9962383). For #W2040365, modify Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'}; via paypal_5541158. Cancel order #W9962383 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Muller. Could you please modify my order #W6851636 to change the running shoes to size 10 and color white? Also, I'd like to return the items from order #W2435638 and update the address for order #W2040365 to 377 River Road, Suite 307, Chicago, IL, 60644. Additionally, please modify the espresso machine in order #W2040365 to 15 bar pressure, 1L capacity, and manual type. Lastly, cancel order #W9962383 as it was ordered by mistake.",
+        prompt="Hi my name is Fatima Muller and my zip code is 60644. For #W6851636, modify Running Shoes {'size': '8', 'color': 'red', 'material': 'leather', 'sole': 'EVA'} to {'size': '10', 'color': 'white'}; via paypal_5541158. Return #W2435638 via paypal_5541158: Bookshelf; Digital Camera; Gaming Mouse; Garden Hose; Espresso Machine; For #W2040365, change address to {'order_id': '#W2040365', 'address1': '377 River Road', 'address2': 'Suite 307', 'city': 'Chicago', 'country': 'USA', 'state': 'IL', 'zip': '60644'} (same as #W9962383). For #W2040365, modify Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'}; via paypal_5541158. Cancel order #W9962383 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4172,11 +4172,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_muller_8062",
         instruction="Your name is Daiki Muller and your zip code is 94157. You are patient, sad. For #W6790887, modify Dumbbell Set {'weight range': '5-25 lbs', 'material': 'urethane', 'set type': 'fixed'} to {'weight range': '30-50 lbs', 'set type': 'adjustable'}; via gift_card_8385925. For #W7822344, modify Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'silver'} to {'color': 'black'}; via gift_card_8385925. ",
-        prompt="Hi, I'm Daiki Muller. Could you please modify my order #W6790887 to change the Dumbbell Set to a weight range of 30-50 lbs and make it adjustable? Also, for order #W7822344, I'd like to change the color of the Electric Kettle to black. Both changes should be covered by gift card 8385925. My zip code is 94157. Thank you.",
+        prompt="Hi my name is Daiki Muller and my zip code is 94157. For #W6790887, modify Dumbbell Set {'weight range': '5-25 lbs', 'material': 'urethane', 'set type': 'fixed'} to {'weight range': '30-50 lbs', 'set type': 'adjustable'}; via gift_card_8385925. For #W7822344, modify Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'silver'} to {'color': 'black'}; via gift_card_8385925.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4199,11 +4199,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_davis_5031",
         instruction="Your name is Daiki Davis and your zip code is 94102. You are curious, pessimistic, flexible, relaxing, independent. For #W5457973, exchange Indoor Security Camera {'resolution': '1080p', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '2K', 'field of view': '130 degrees'}; via gift_card_1679693. ",
-        prompt="Hi, I'm Daiki Davis, zip code 94102. I'd like to exchange my Indoor Security Camera from order #W5457973 for the 2K resolution model using gift card 1679693. My email is [your email].",
+        prompt="Hi my name is Daiki Davis and my zip code is 94102. For #W5457973, exchange Indoor Security Camera {'resolution': '1080p', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '2K', 'field of view': '130 degrees'}; via gift_card_1679693.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4217,11 +4217,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_santos_9753",
         instruction="Your name is Emma Santos and your zip code is 78228. You are dependent, impatient, relaxing. Cancel order #W1620235 because no longer needed. Cancel order #W2918688 because no longer needed. ",
-        prompt="Hi, I'm Emma Santos, zip code 78228. Could you please cancel orders #W1620235 and #W2918688 as I no longer need them? Thank you.",
+        prompt="Hi my name is Emma Santos and my zip code is 78228. Cancel order #W1620235 because no longer needed. Cancel order #W2918688 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4234,11 +4234,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_sanchez_2690",
         instruction="Your name is Noah Sanchez and your email is noah.sanchez7461@example.com. You are flexible, busy. Cancel order #W8645374 because ordered by mistake. For #W7293142, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '11'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'switch type': 'linear', 'backlight': 'none'}; via gift_card_9909795. ",
-        prompt="Hi, I'm Noah Sanchez (noah.sanchez7461@example.com). Could you please cancel order #W8645374 as it was made by mistake? Also, I'd like to exchange the Hiking Boots in order #W7293142 to size 11 and the Mechanical Keyboard to a linear switch type with no backlight, using gift card 9909795. Thank you!",
+        prompt="Hi my name is Noah Sanchez and my email is noah. sanchez7461@example.com.  Cancel order #W8645374 because ordered by mistake. For #W7293142, exchange Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '11'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'RGB', 'size': 'full size'} to {'switch type': 'linear', 'backlight': 'none'}; via gift_card_9909795.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4256,11 +4256,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_5795",
         instruction="Your name is Sophia Garcia and your zip code is 28212. You are organized, curious, impatient. For #W4958652, change address to {'order_id': '#W4958652', 'address1': '536 Cedar Street', 'address2': 'Suite 916', 'city': 'Charlotte', 'country': 'USA', 'state': 'NC', 'zip': '28212'} (same as #W6447372). For #W4958652, modify Cycling Helmet {'size': 'L', 'color': 'black', 'ventilation': 'high'} to {'size': 'S', 'color': 'blue', 'ventilation': 'low'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass'}; Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {'material': 'mesh', 'color': 'red', 'armrest': 'none'}; Smart Thermostat {'compatibility': 'Google Assistant', 'color': 'stainless steel'} to {'compatibility': 'Apple HomeKit', 'color': 'black'}; via credit_card_9467292. ",
-        prompt="Hi, I'm Sophia Garcia. Could you please update the address for order #W4958652 to match #W6447372 and make the following product changes: Cycling Helmet to size S, color blue, ventilation low; Tea Kettle to material glass; Office Chair to material mesh, color red, armrest none; Smart Thermostat to compatibility Apple HomeKit, color black? Thank you! My zip code is 28212, and my email is [your email].",
+        prompt="Hi my name is Sophia Garcia and my zip code is 28212. For #W4958652, change address to {'order_id': '#W4958652', 'address1': '536 Cedar Street', 'address2': 'Suite 916', 'city': 'Charlotte', 'country': 'USA', 'state': 'NC', 'zip': '28212'} (same as #W6447372). For #W4958652, modify Cycling Helmet {'size': 'L', 'color': 'black', 'ventilation': 'high'} to {'size': 'S', 'color': 'blue', 'ventilation': 'low'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass'}; Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {'material': 'mesh', 'color': 'red', 'armrest': 'none'}; Smart Thermostat {'compatibility': 'Google Assistant', 'color': 'stainless steel'} to {'compatibility': 'Apple HomeKit', 'color': 'black'}; via credit_card_9467292.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -4296,11 +4296,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_brown_6720",
         instruction="Your name is Lucas Brown and your zip code is 60612. You are rigid, polite, cautious, confident. Return #W8660475 via credit_card_2112420: Office Chair; Return #W6239298 via credit_card_2112420: Water Bottle; Bookshelf; Jigsaw Puzzle; For #W4860251, change address to {'order_id': '#W4860251', 'address1': '921 Park Avenue', 'address2': 'Suite 892', 'city': 'Chicago', 'country': 'USA', 'state': 'IL', 'zip': '60612'} (same as #W6239298). For #W4860251, modify Luggage Set {'piece count': '2-piece', 'color': 'silver', 'material': 'hardshell'} to {'piece count': '4-piece', 'color': 'blue', 'material': 'softshell'}; via credit_card_2112420. ",
-        prompt="Hello, I'm Lucas Brown, zip code 60612, email lucas.brown@example.com. Please process the return for order #W8660475 (Office Chair) and #W6239298 (Water Bottle, Bookshelf, Jigsaw Puzzle) using credit card ending in 2112420. Also, update the address for order #W4860251 to 921 Park Avenue, Suite 892, Chicago, IL 60612, and modify the Luggage Set to a 4-piece, blue, softshell version. Thank you.",
+        prompt="Hi my name is Lucas Brown and my zip code is 60612. Return #W8660475 via credit_card_2112420: Office Chair; Return #W6239298 via credit_card_2112420: Water Bottle; Bookshelf; Jigsaw Puzzle; For #W4860251, change address to {'order_id': '#W4860251', 'address1': '921 Park Avenue', 'address2': 'Suite 892', 'city': 'Chicago', 'country': 'USA', 'state': 'IL', 'zip': '60612'} (same as #W6239298). For #W4860251, modify Luggage Set {'piece count': '2-piece', 'color': 'silver', 'material': 'hardshell'} to {'piece count': '4-piece', 'color': 'blue', 'material': 'softshell'}; via credit_card_2112420.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4342,11 +4342,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_nguyen_9081",
         instruction="Your name is Liam Nguyen and your zip code is 95184. You are organized, independent, creative. For #W3919881, exchange Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '15 bar', 'type': 'manual'}; via paypal_3226997. ",
-        prompt="Hi, I'm Liam Nguyen from zip code 95184. I'd like to exchange my Espresso Machine from order #W3919881 to the manual type with 15 bar pressure. Payment was via PayPal (paypal_3226997). My email is not provided.",
+        prompt="Hi my name is Liam Nguyen and my zip code is 95184. For #W3919881, exchange Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '15 bar', 'type': 'manual'}; via paypal_3226997.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4360,11 +4360,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_muller_6097",
         instruction="Your name is Ethan Muller and your email is ethan.muller6617@example.com. You are relaxing, sad. Cancel order #W4683557 because ordered by mistake. Return #W4398027 via credit_card_5721095: Perfume; ",
-        prompt="Hi, I'm Ethan Muller (ethan.muller6617@example.com). Could you please cancel order #W4683557 as it was placed by mistake and process a return for order #W4398027 to my credit card ending in 5721? Thank you.",
+        prompt="Hi my name is Ethan Muller and my email is ethan. muller6617@example.com.  Cancel order #W4683557 because ordered by mistake. Return #W4398027 via credit_card_5721095: Perfume;",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4381,11 +4381,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kovacs_8020",
         instruction="Your name is Mei Kovacs and your email is mei.kovacs8232@example.com. You are rigid, curious, insecure, relaxing, independent. For #W8065207, exchange Garden Hose {'length': '50ft', 'material': 'latex', 'color': 'black'} to {}; Smart Watch {'color': 'gold', 'band material': 'leather', 'display': 'AMOLED'} to {'color': 'black', 'band material': 'silicone', 'display': 'LCD'}; via paypal_7644869. Return #W6390527 via paypal_7644869: Hiking Boots; Water Bottle; ",
-        prompt="Hi, I'm Mei Kovacs. I'd like to exchange the Garden Hose from order #W8065207 and change the Smart Watch to a black silicone band with an LCD display. Also, I'd like to return the Hiking Boots and Water Bottle from order #W6390527. My email is mei.kovacs8232@example.com.",
+        prompt="Hi my name is Mei Kovacs and my email is mei. kovacs8232@example.com.  For #W8065207, exchange Garden Hose {'length': '50ft', 'material': 'latex', 'color': 'black'} to {}; Smart Watch {'color': 'gold', 'band material': 'leather', 'display': 'AMOLED'} to {'color': 'black', 'band material': 'silicone', 'display': 'LCD'}; via paypal_7644869. Return #W6390527 via paypal_7644869: Hiking Boots; Water Bottle;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4407,11 +4407,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_wilson_4614",
         instruction="Your name is Amelia Wilson and your email is amelia.wilson1598@example.com. You are confident, cautious, dependent, shy, pessimistic. Cancel order #W3062096 because ordered by mistake. ",
-        prompt="Hi, I'm Amelia Wilson. Could you please cancel order #W3062096? It was placed by mistake. My email is amelia.wilson1598@example.com. Thank you.",
+        prompt="Hi my name is Amelia Wilson and my email is amelia. wilson1598@example.com.  Cancel order #W3062096 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4420,11 +4420,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_lopez_2676",
         instruction="Your name is Ava Lopez and your zip code is 92168. You are polite, messy, busy, patient, flexible. For #W5911003, modify Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'fabric', 'color': 'black', 'armrest': 'fixed'}; via gift_card_4855547. For #W2941275, exchange Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'} to {'storage': 'CF card'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '500ml', 'material': 'glass', 'color': 'green'}; via credit_card_7772870. ",
-        prompt="Hi, I'm Ava Lopez. Could you please modify my order #W5911003 to change the office chair to fabric, black, with fixed armrests, using gift card 4855547? Also, for order #W2941275, I'd like to exchange the digital camera to have CF card storage and the water bottle to be 500ml, glass, and green, using credit card 7772870. My zip code is 92168, and my email is [your email]. Thank you!",
+        prompt="Hi my name is Ava Lopez and my zip code is 92168. For #W5911003, modify Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'fabric', 'color': 'black', 'armrest': 'fixed'}; via gift_card_4855547. For #W2941275, exchange Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'} to {'storage': 'CF card'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '500ml', 'material': 'glass', 'color': 'green'}; via credit_card_7772870.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4447,11 +4447,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_khan_5763",
         instruction="Your name is Noah Khan and your email is noah.khan7453@example.com. You are pessimistic, creative, insecure, messy. For #W1483350, exchange Cycling Helmet {'size': 'L', 'color': 'white', 'ventilation': 'medium'} to {'size': 'M', 'color': 'blue', 'ventilation': 'high'}; Mechanical Keyboard {'switch type': 'linear', 'backlight': 'none', 'size': 'full size'} to {'switch type': 'clicky', 'backlight': 'white'}; via paypal_2319812. ",
-        prompt="Hi, I'm Noah Khan. Could you please help me exchange the Cycling Helmet from size L, white, medium ventilation to size M, blue, high ventilation, and the Mechanical Keyboard from linear switches, no backlight, full size to clicky switches with white backlight for order #W1483350? My email is noah.khan7453@example.com. Thank you.",
+        prompt="Hi my name is Noah Khan and my email is noah. khan7453@example.com.  For #W1483350, exchange Cycling Helmet {'size': 'L', 'color': 'white', 'ventilation': 'medium'} to {'size': 'M', 'color': 'blue', 'ventilation': 'high'}; Mechanical Keyboard {'switch type': 'linear', 'backlight': 'none', 'size': 'full size'} to {'switch type': 'clicky', 'backlight': 'white'}; via paypal_2319812.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4465,11 +4465,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_lopez_5487",
         instruction="Your name is Evelyn Lopez and your zip code is 92195. You are impatient, busy. Cancel order #W3007862 because no longer needed. ",
-        prompt="Hi, I'm Evelyn Lopez, zip code 92195. Please cancel order #W3007862 as I no longer need it. Thanks.",
+        prompt="Hi my name is Evelyn Lopez and my zip code is 92195. Cancel order #W3007862 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4478,11 +4478,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_4072",
         instruction="Your name is Ava Nguyen and your email is ava.nguyen1851@example.com. You are relaxing, curious. For #W2601346, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand C'} to {'skin tone': 'dark', 'brand': 'Brand A'}; via paypal_3180577. ",
-        prompt="Hi, I'm Ava Nguyen. Could you please update my order #W2601346 to change the Makeup Kit to 'skin tone': 'dark' and 'brand': 'Brand A'? My email is ava.nguyen1851@example.com. Thank you!",
+        prompt="Hi my name is Ava Nguyen and my email is ava. nguyen1851@example.com.  For #W2601346, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand C'} to {'skin tone': 'dark', 'brand': 'Brand A'}; via paypal_3180577.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4496,11 +4496,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_muller_4380",
         instruction="Your name is Lucas Muller and your zip code is 78763. You are shy, messy, patient. Return #W1523776 via gift_card_2748512: Smart Thermostat; Makeup Kit; Cancel order #W3206099 because ordered by mistake. ",
-        prompt="Hi, I'm Lucas Muller. I'd like to return order #W1523776 using gift card #2748512 for the Smart Thermostat and Makeup Kit, and please cancel order #W3206099 as it was ordered by mistake. Thank you!",
+        prompt="Hi my name is Lucas Muller and my zip code is 78763. Return #W1523776 via gift_card_2748512: Smart Thermostat; Makeup Kit; Cancel order #W3206099 because ordered by mistake.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4517,11 +4517,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_thomas_9402",
         instruction="Your name is Harper Thomas and your email is harper.thomas1454@example.com. You are messy, happy, cautious. Cancel order #W7425646 because ordered by mistake. ",
-        prompt="Hi, I'm Harper Thomas. Could you please cancel order #W7425646? I ordered it by mistake. Thank you! My email is harper.thomas1454@example.com.",
+        prompt="Hi my name is Harper Thomas and my email is harper. thomas1454@example.com.  Cancel order #W7425646 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4530,11 +4530,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_johansson_8128",
         instruction="Your name is Mason Johansson and your zip code is 98103. You are outgoing, busy. For #W4352605, exchange Laptop {'screen size': '15-inch', 'processor': 'i5', 'ram': '32GB', 'storage': '256GB SSD', 'color': 'space grey'} to {'screen size': '13-inch', 'ram': '16GB', 'storage': '512GB SSD'}; via gift_card_1401311. ",
-        prompt="Hi, I'm Mason Johansson from zip code 98103. I'd like to exchange my order #W4352605 for a 13-inch laptop with 16GB RAM and 512GB SSD using gift card 1401311. My email is mason.johansson@example.com.",
+        prompt="Hi my name is Mason Johansson and my zip code is 98103. For #W4352605, exchange Laptop {'screen size': '15-inch', 'processor': 'i5', 'ram': '32GB', 'storage': '256GB SSD', 'color': 'space grey'} to {'screen size': '13-inch', 'ram': '16GB', 'storage': '512GB SSD'}; via gift_card_1401311.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4548,11 +4548,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_rossi_9620",
         instruction="Your name is Yusuf Rossi and your zip code is 19122. You are sad, logical, polite, independent. Return #W2378156 via credit_card_9513926: Smart Thermostat; Smart Watch; Vacuum Cleaner; Mechanical Keyboard; For #W4776164, modify Espresso Machine {'pressure': '9 bar', 'capacity': '1L', 'type': 'automatic'} to {'capacity': '1.5L', 'type': 'capsule'}; via credit_card_9513926. ",
-        prompt="Hi, I'm Yusuf Rossi. I'd like to return order #W2378156 and modify the Espresso Machine in order #W4776164 to have a 1.5L capacity and be a capsule type. My zip code is 19122, and my email is [your email]. Thank you!",
+        prompt="Hi my name is Yusuf Rossi and my zip code is 19122. Return #W2378156 via credit_card_9513926: Smart Thermostat; Smart Watch; Vacuum Cleaner; Mechanical Keyboard; For #W4776164, modify Espresso Machine {'pressure': '9 bar', 'capacity': '1L', 'type': 'automatic'} to {'capacity': '1.5L', 'type': 'capsule'}; via credit_card_9513926.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4579,11 +4579,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_anderson_2157",
         instruction="Your name is Fatima Anderson and your email is fatima.anderson1447@example.com. You are busy, curious, insecure, dependent. Cancel order #W4514908 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Anderson. Could you please cancel order #W4514908 as I ordered it by mistake? My email is fatima.anderson1447@example.com. Thank you!",
+        prompt="Hi my name is Fatima Anderson and my email is fatima. anderson1447@example.com.  Cancel order #W4514908 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4592,11 +4592,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_gonzalez_5113",
         instruction="Your name is Aarav Gonzalez and your email is aarav.gonzalez9269@example.com. You are relaxing, creative, happy, pessimistic. Cancel order #W6979932 because ordered by mistake. Cancel order #W9160732 because ordered by mistake. ",
-        prompt="Hi, I'm Aarav Gonzalez. Could you please cancel orders #W6979932 and #W9160732 as I ordered them by mistake? My email is aarav.gonzalez9269@example.com. Thank you!",
+        prompt="Hi my name is Aarav Gonzalez and my email is aarav. gonzalez9269@example.com.  Cancel order #W6979932 because ordered by mistake. Cancel order #W9160732 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4609,11 +4609,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mohamed_smith_9224",
         instruction="Your name is Mohamed Smith and your email is mohamed.smith3152@example.com. You are curious, busy. For #W7808613, exchange Smart Watch {'color': 'silver', 'band material': 'leather', 'display': 'LCD'} to {'color': 'gold', 'display': 'AMOLED'}; via credit_card_7801956. ",
-        prompt="Hi, I'm Mohamed Smith (mohamed.smith3152@example.com). I'd like to exchange my Smart Watch order #W7808613 from silver with a leather band and LCD display to the gold version with an AMOLED display, using credit card ending in 7801956.",
+        prompt="Hi my name is Mohamed Smith and my email is mohamed. smith3152@example.com.  For #W7808613, exchange Smart Watch {'color': 'silver', 'band material': 'leather', 'display': 'LCD'} to {'color': 'gold', 'display': 'AMOLED'}; via credit_card_7801956.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4627,11 +4627,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_lopez_3865",
         instruction="Your name is Olivia Lopez and your zip code is 76171. You are outgoing, messy. For #W7449508, exchange Sneakers {'size': '6', 'color': 'black', 'material': 'synthetic'} to {'size': '10', 'color': 'gray', 'material': 'leather'}; via gift_card_7711863. ",
-        prompt="Hi, I'm Olivia Lopez from zip code 76171. I'd like to exchange my sneakers from order #W7449508 to size 10, gray, leather ones using gift card 7711863. My email is olivialopez@example.com.",
+        prompt="Hi my name is Olivia Lopez and my zip code is 76171. For #W7449508, exchange Sneakers {'size': '6', 'color': 'black', 'material': 'synthetic'} to {'size': '10', 'color': 'gray', 'material': 'leather'}; via gift_card_7711863.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4645,11 +4645,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_ahmed_4844",
         instruction="Your name is Harper Ahmed and your email is harper.ahmed7911@example.com. You are organized, dependent, happy, insecure, impatient. For #W5911118, exchange Skateboard {'deck material': 'maple', 'length': '31 inch', 'design': 'graphic'} to {'deck material': 'bamboo', 'length': '34 inch'}; via gift_card_4529075. ",
-        prompt="Hi, I'm Harper Ahmed (harper.ahmed7911@example.com). I'd like to exchange my skateboard from order #W5911118 for one with a bamboo deck and 34-inch length, using gift card 4529075. Thank you!",
+        prompt="Hi my name is Harper Ahmed and my email is harper. ahmed7911@example.com.  For #W5911118, exchange Skateboard {'deck material': 'maple', 'length': '31 inch', 'design': 'graphic'} to {'deck material': 'bamboo', 'length': '34 inch'}; via gift_card_4529075.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4663,11 +4663,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ito_3591",
         instruction="Your name is Olivia Ito and your zip code is 80218. You are logical, curious. For #W7941031, change payment to paypal_8049766. For #W7941031, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'size': 'small', 'material': 'nylon'}; via gift_card_7794233. ",
-        prompt="Hi, I'm Olivia Ito. Could you please change the payment method for order #W7941031 to PayPal account paypal_8049766 and modify the Backpack to size 'small' and material 'nylon' using gift card gift_card_7794233? My zip code is 80218. Thank you!",
+        prompt="Hi my name is Olivia Ito and my zip code is 80218. For #W7941031, change payment to paypal_8049766. For #W7941031, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'size': 'small', 'material': 'nylon'}; via gift_card_7794233.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -4688,11 +4688,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_brown_2024",
         instruction="Your name is Anya Brown and your zip code is 10121. You are insecure, logical, sad, messy. For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'yellow'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'pet hair removal'} to {'features': 'cordless'}; via paypal_5206520. Return #W2922433 via credit_card_3414703: Tablet; Grill; Makeup Kit; Cancel order #W8883368 because ordered by mistake. ",
-        prompt="Hi, I'm Anya Brown. Could you please change the color of my running shoes in order #W1430028 to yellow and update the vacuum cleaner to have cordless features? Also, I'd like to return the items in order #W2922433 and cancel order #W8883368. Thank you! My zip code is 10121, and my email is associated with the orders.",
+        prompt="Hi my name is Anya Brown and my zip code is 10121. For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'color': 'yellow'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'pet hair removal'} to {'features': 'cordless'}; via paypal_5206520. Return #W2922433 via credit_card_3414703: Tablet; Grill; Makeup Kit; Cancel order #W8883368 because ordered by mistake.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4718,11 +4718,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_johnson_4204",
         instruction="Your name is Chen Johnson and your email is chen.johnson3889@example.com. You are happy, flexible, impatient, shy, messy. Return #W5797164 via gift_card_3406421: Jigsaw Puzzle; ",
-        prompt="Hi, I'm Chen Johnson. I'd like to return order #W5797164, the Jigsaw Puzzle, using gift card #3406421. My email is chen.johnson3889@example.com.",
+        prompt="Hi my name is Chen Johnson and my email is chen. johnson3889@example.com.  Return #W5797164 via gift_card_3406421: Jigsaw Puzzle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4735,11 +4735,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_thomas_1213",
         instruction="Your name is Anya Thomas and your email is anya.thomas9688@example.com. You are organized, relaxing. For #W7909132, exchange Bicycle {'frame size': 'medium', 'color': 'green', 'type': 'road'} to {'color': 'black', 'type': 'mountain'}; via paypal_2557789. ",
-        prompt="Hi, I'm Anya Thomas (anya.thomas9688@example.com). I'd like to exchange my order #W7909132 from a medium green road bicycle to a black mountain bicycle. The payment was made via PayPal transaction 2557789. Thank you!",
+        prompt="Hi my name is Anya Thomas and my email is anya. thomas9688@example.com.  For #W7909132, exchange Bicycle {'frame size': 'medium', 'color': 'green', 'type': 'road'} to {'color': 'black', 'type': 'mountain'}; via paypal_2557789.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4753,11 +4753,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_sanchez_7289",
         instruction="Your name is Ethan Sanchez and your email is ethan.sanchez3299@example.com. You are flexible, dependent, happy, cautious, polite. For #W5560533, exchange Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'band material': 'silicone'}; via gift_card_5917510. ",
-        prompt="Hi, I'm Ethan Sanchez. I'd like to exchange the Smart Watch from order #W5560533 to one with a silicone band using gift card #5917510. My email is ethan.sanchez3299@example.com. Thank you!",
+        prompt="Hi my name is Ethan Sanchez and my email is ethan. sanchez3299@example.com.  For #W5560533, exchange Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'band material': 'silicone'}; via gift_card_5917510.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4771,11 +4771,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_brown_5229",
         instruction="Your name is Fatima Brown and your email is fatima.brown7817@example.com. You are pessimistic, rigid. Return #W9045919 via gift_card_8633125: Smart Thermostat; Digital Camera; Cycling Helmet; ",
-        prompt="Hi, I'm Fatima Brown. I'd like to return order #W9045919 using gift card #8633125 for the Smart Thermostat, Digital Camera, and Cycling Helmet. My email is fatima.brown7817@example.com.",
+        prompt="Hi my name is Fatima Brown and my email is fatima. brown7817@example.com.  Return #W9045919 via gift_card_8633125: Smart Thermostat; Digital Camera; Cycling Helmet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4788,11 +4788,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_ahmed_9514",
         instruction="Your name is Sofia Ahmed and your email is sofia.ahmed2872@example.com. You are rigid, messy, creative. Cancel order #W4806309 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Ahmed. Could you please cancel order #W4806309? I ordered it by mistake. Thank you! My email is sofia.ahmed2872@example.com.",
+        prompt="Hi my name is Sofia Ahmed and my email is sofia. ahmed2872@example.com.  Cancel order #W4806309 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4801,11 +4801,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_ahmed_6523",
         instruction="Your name is Liam Ahmed and your email is liam.ahmed8540@example.com. You are independent, polite, insecure. Cancel order #W1558044 because no longer needed. ",
-        prompt="Hi, I'm Liam Ahmed. Could you please cancel order #W1558044 as I no longer need it? My email is liam.ahmed8540@example.com. Thank you!",
+        prompt="Hi my name is Liam Ahmed and my email is liam. ahmed8540@example.com.  Cancel order #W1558044 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -4814,11 +4814,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_davis_2103",
         instruction="Your name is Sofia Davis and your zip code is 98151. You are pessimistic, insecure, messy, direct, curious. For #W2541482, modify Espresso Machine {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '9 bar', 'capacity': '1.5L', 'type': 'capsule'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'electric'}; via gift_card_3377580. ",
-        prompt="Hi, I'm Sofia Davis. Can you please modify my order #W2541482? Change the Espresso Machine to 9 bar pressure, 1.5L capacity, and capsule type, and the Tea Kettle to glass material, 2 liters capacity, and electric stovetop compatibility. I'll use gift card 3377580. My zip is 98151, and my email is [your email]. Thanks!",
+        prompt="Hi my name is Sofia Davis and my zip code is 98151. For #W2541482, modify Espresso Machine {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '9 bar', 'capacity': '1.5L', 'type': 'capsule'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'electric'}; via gift_card_3377580.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4832,11 +4832,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_moore_3587",
         instruction="Your name is Ethan Moore and your email is ethan.moore4935@example.com. You are happy, insecure. For #W7584328, modify Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large', 'material': 'polyester'}; via credit_card_6173085. ",
-        prompt="Hi, I'm Ethan Moore. Could you please change the backpack on order #W7584328 to black, large, and made of polyester? My email is ethan.moore4935@example.com. Thank you!",
+        prompt="Hi my name is Ethan Moore and my email is ethan. moore4935@example.com.  For #W7584328, modify Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large', 'material': 'polyester'}; via credit_card_6173085.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -4850,11 +4850,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_davis_4756",
         instruction="Your name is Aarav Davis and your zip code is 76150. You are busy, happy, direct, impatient, dependent. For #W7430166, change address to {'order_id': '#W7430166', 'address1': '808 Chestnut Street', 'address2': 'Suite 832', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85072'} (same as #W2403075). For #W7430166, modify Headphones {'type': 'in-ear', 'connectivity': 'wired', 'color': 'red'} to {'type': 'on-ear', 'connectivity': 'wireless'}; via gift_card_9708163. For #W3223435, exchange Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {'material': 'vinyl'}; via gift_card_9708163. ",
-        prompt="Hi, I'm Aarav Davis. Please update the address for order #W7430166 to 808 Chestnut Street, Suite 832, Phoenix, AZ 85072, and change the headphones to on-ear, wireless using gift card 9708163. Also, exchange the garden hose on order #W3223435 to vinyl with the same gift card. My zip code is 76150 and my email is on file. Thanks!",
+        prompt="Hi my name is Aarav Davis and my zip code is 76150. For #W7430166, change address to {'order_id': '#W7430166', 'address1': '808 Chestnut Street', 'address2': 'Suite 832', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85072'} (same as #W2403075). For #W7430166, modify Headphones {'type': 'in-ear', 'connectivity': 'wired', 'color': 'red'} to {'type': 'on-ear', 'connectivity': 'wireless'}; via gift_card_9708163. For #W3223435, exchange Garden Hose {'length': '25ft', 'material': 'latex', 'color': 'green'} to {'material': 'vinyl'}; via gift_card_9708163.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -4889,11 +4889,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_wilson_4597",
         instruction="Your name is Mason Wilson and your email is mason.wilson6954@example.com. You are dependent, cautious, shy. Return #W8161562 via gift_card_6767859: Digital Camera; ",
-        prompt="Hi, I'm Mason Wilson. I'd like to return order #W8161562 for the Digital Camera using gift card #6767859. My email is mason.wilson6954@example.com.",
+        prompt="Hi my name is Mason Wilson and my email is mason. wilson6954@example.com.  Return #W8161562 via gift_card_6767859: Digital Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -4906,11 +4906,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_hernandez_6785",
         instruction="Your name is Yusuf Hernandez and your zip code is 80265. You are confident, flexible. For #W6832752, change address to {'order_id': '#W6832752', 'address1': '580 Broadway', 'address2': 'Suite 162', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80265'} (same as #W2166301). For #W6832752, modify Hiking Boots {'size': '7', 'material': 'leather', 'waterproof': 'yes'} to {'material': 'synthetic', 'waterproof': 'no'}; via paypal_7529813. For #W2166301, modify Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {'size': '8', 'color': 'red'}; via paypal_7529813. ",
-        prompt="Hi, I'm Yusuf Hernandez. Could you please update the address for order #W6832752 to 580 Broadway, Suite 162, Denver, CO, 80265? Also, change the Hiking Boots to synthetic and non-waterproof, and for order #W2166301, update the Running Shoes to size 8 and color red. Thank you!",
+        prompt="Hi my name is Yusuf Hernandez and my zip code is 80265. For #W6832752, change address to {'order_id': '#W6832752', 'address1': '580 Broadway', 'address2': 'Suite 162', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80265'} (same as #W2166301). For #W6832752, modify Hiking Boots {'size': '7', 'material': 'leather', 'waterproof': 'yes'} to {'material': 'synthetic', 'waterproof': 'no'}; via paypal_7529813. For #W2166301, modify Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {'size': '8', 'color': 'red'}; via paypal_7529813.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -4945,11 +4945,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_hernandez_1701",
         instruction="Your name is Evelyn Hernandez and your zip code is 92139. You are logical, cautious, confident. For #W9628587, exchange Bookshelf {'material': 'glass', 'color': 'black', 'height': '5 ft'} to {'material': 'wood', 'height': '4 ft'}; via credit_card_3631888. Cancel order #W3482034 because no longer needed. ",
-        prompt="Hi, I'm Evelyn Hernandez from zip code 92139. I'd like to exchange the glass black bookshelf (5 ft) in order #W9628587 for a wooden one (4 ft) and cancel order #W3482034 as it's no longer needed. My email is [your email].",
+        prompt="Hi my name is Evelyn Hernandez and my zip code is 92139. For #W9628587, exchange Bookshelf {'material': 'glass', 'color': 'black', 'height': '5 ft'} to {'material': 'wood', 'height': '4 ft'}; via credit_card_3631888. Cancel order #W3482034 because no longer needed.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4967,11 +4967,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_sanchez_2690",
         instruction="Your name is Noah Sanchez and your zip code is 20056. You are patient, flexible, outgoing, pessimistic, dependent. For #W4864669, exchange Digital Camera {'resolution': '30MP', 'zoom': '10x', 'storage': 'SD card'} to {'resolution': '24MP', 'zoom': '3x'}; Wireless Earbuds {'color': 'black', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'}; via gift_card_9909795. ",
-        prompt="Hi, I'm Noah Sanchez. Could you help me exchange the digital camera and wireless earbuds from order #W4864669 using gift card 9909795? My zip code is 20056. Thank you!",
+        prompt="Hi my name is Noah Sanchez and my zip code is 20056. For #W4864669, exchange Digital Camera {'resolution': '30MP', 'zoom': '10x', 'storage': 'SD card'} to {'resolution': '24MP', 'zoom': '3x'}; Wireless Earbuds {'color': 'black', 'battery life': '4 hours', 'water resistance': 'IPX7'} to {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'}; via gift_card_9909795.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -4985,11 +4985,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_hernandez_8500",
         instruction="Your name is Lei Hernandez and your zip code is 43222. You are shy, curious, polite, dependent. Return #W6146740 via gift_card_5245016: Hiking Boots; Laptop; ",
-        prompt="Hi, I'm Lei Hernandez. I'd like to return order #W6146740 using gift card #5245016 for the hiking boots and laptop. My zip code is 43222. Thank you!",
+        prompt="Hi my name is Lei Hernandez and my zip code is 43222. Return #W6146740 via gift_card_5245016: Hiking Boots; Laptop;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5002,11 +5002,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_johnson_7581",
         instruction="Your name is Fatima Johnson and your email is fatima.johnson2300@example.com. You are busy, sad. For #W9389413, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'purple'}; via gift_card_1675628. ",
-        prompt="Hi, I'm Fatima Johnson (fatima.johnson2300@example.com). I'd like to exchange the blue v-neck T-shirt (Order #W9389413) for a purple one using gift card #1675628.",
+        prompt="Hi my name is Fatima Johnson and my email is fatima. johnson2300@example.com.  For #W9389413, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'purple'}; via gift_card_1675628.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5020,11 +5020,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_muller_8652",
         instruction="Your name is Yara Muller and your email is yara.muller9246@example.com. You are rigid, shy, confident. Cancel order #W5056519 because no longer needed. For #W5995614, modify Dumbbell Set {'weight range': '5-25 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '30-50 lbs', 'material': 'rubber'}; Luggage Set {'piece count': '3-piece', 'color': 'black', 'material': 'softshell'} to {'piece count': '2-piece'}; via credit_card_3095586. ",
-        prompt="Hi, I'm Yara Muller. Please cancel order #W5056519 as I no longer need it. For order #W5995614, could you modify the Dumbbell Set to a 30-50 lbs rubber set and change the Luggage Set to a 2-piece? Thank you. My email is yara.muller9246@example.com.",
+        prompt="Hi my name is Yara Muller and my email is yara. muller9246@example.com.  Cancel order #W5056519 because no longer needed. For #W5995614, modify Dumbbell Set {'weight range': '5-25 lbs', 'material': 'iron', 'set type': 'adjustable'} to {'weight range': '30-50 lbs', 'material': 'rubber'}; Luggage Set {'piece count': '3-piece', 'color': 'black', 'material': 'softshell'} to {'piece count': '2-piece'}; via credit_card_3095586.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5042,11 +5042,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_davis_2615",
         instruction="Your name is Raj Davis and your zip code is 85050. You are optimistic, flexible, creative, happy, impatient. For #W9894882, exchange Bicycle {'frame size': 'medium', 'color': 'blue', 'type': 'road'} to {'frame size': 'large', 'color': 'red', 'type': 'mountain'}; via gift_card_8006222. ",
-        prompt="Hi, I'm Raj Davis. Could you please help me exchange my order #W9894882 from a medium blue road bicycle to a large red mountain bicycle using gift card 8006222? My zip code is 85050. Thank you!",
+        prompt="Hi my name is Raj Davis and my zip code is 85050. For #W9894882, exchange Bicycle {'frame size': 'medium', 'color': 'blue', 'type': 'road'} to {'frame size': 'large', 'color': 'red', 'type': 'mountain'}; via gift_card_8006222.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5060,11 +5060,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_ito_1740",
         instruction="Your name is Raj Ito and your zip code is 60641. You are rigid, relaxing, creative, shy. For #W8448267, exchange Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'gender': 'men'}; via credit_card_6480285. ",
-        prompt="Hi, I'm Raj Ito from zip code 60641. I'd like to exchange my Perfume order #W8448267 from the oriental scent family to a woody scent for men. Please process this via my credit card ending in 6480285. Thank you!",
+        prompt="Hi my name is Raj Ito and my zip code is 60641. For #W8448267, exchange Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'gender': 'men'}; via credit_card_6480285.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5078,11 +5078,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_lee_8315",
         instruction="Your name is Anya Lee and your zip code is 78227. You are outgoing, polite, patient, logical, independent. Return #W1335809 via paypal_3728317: Hiking Boots; Espresso Machine; Cancel order #W2989580 because ordered by mistake. ",
-        prompt="Hi, I'm Anya Lee from zip code 78227. I'd like to return items from order #W1335809 (Hiking Boots and Espresso Machine) via PayPal_3728317 and cancel order #W2989580 as it was placed by mistake. Thank you!",
+        prompt="Hi my name is Anya Lee and my zip code is 78227. Return #W1335809 via paypal_3728317: Hiking Boots; Espresso Machine; Cancel order #W2989580 because ordered by mistake.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5099,11 +5099,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_li_7655",
         instruction="Your name is Harper Li and your zip code is 32253. You are happy, pessimistic. Return #W9495141 via gift_card_8862145: Tablet; ",
-        prompt="Hi, I'm Harper Li, zip code 32253. I'd like to return order #W9495141 using gift card #8862145 for the tablet. Thank you!",
+        prompt="Hi my name is Harper Li and my zip code is 32253. Return #W9495141 via gift_card_8862145: Tablet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5116,11 +5116,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_jackson_2250",
         instruction="Your name is Mia Jackson and your email is mia.jackson5798@example.com. You are busy, polite, independent, insecure, shy. Cancel order #W7807323 because ordered by mistake. For #W2618034, change address to {'order_id': '#W2618034', 'address1': '816 Spruce Street', 'address2': 'Suite 114', 'city': 'Indianapolis', 'country': 'USA', 'state': 'IN', 'zip': '46227'} (same as #W7807323). For #W2618034, modify Grill {'type': 'electric', 'size': 'portable', 'features': 'rotisserie'} to {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'}; via gift_card_5715854. ",
-        prompt="Hi, I'm Mia Jackson (mia.jackson5798@example.com). Could you please cancel order #W7807323 as it was placed by mistake? Also, for order #W2618034, update the address to 816 Spruce Street, Suite 114, Indianapolis, IN, 46227, and change the grill to a medium charcoal one with a side burner, using gift card 5715854. Thank you!",
+        prompt="Hi my name is Mia Jackson and my email is mia. jackson5798@example.com.  Cancel order #W7807323 because ordered by mistake. For #W2618034, change address to {'order_id': '#W2618034', 'address1': '816 Spruce Street', 'address2': 'Suite 114', 'city': 'Indianapolis', 'country': 'USA', 'state': 'IN', 'zip': '46227'} (same as #W7807323). For #W2618034, modify Grill {'type': 'electric', 'size': 'portable', 'features': 'rotisserie'} to {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'}; via gift_card_5715854.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5150,11 +5150,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_ito_7804",
         instruction="Your name is Sofia Ito and your email is sofia.ito7258@example.com. You are busy, independent, flexible. For #W6075915, exchange Fleece Jacket {'size': 'M', 'color': 'black', 'zipper': 'full'} to {'size': 'S', 'color': 'red', 'zipper': 'half'}; Yoga Mat {'thickness': '6mm', 'material': 'PVC', 'color': 'green'} to {}; via credit_card_7039111. ",
-        prompt="Hi, I'm Sofia Ito (sofia.ito7258@example.com). I'd like to exchange the Fleece Jacket from size M, black, full zipper to size S, red, half zipper, and return the Yoga Mat from order #W6075915. Please process this via my credit card ending in 7039111. Thank you!",
+        prompt="Hi my name is Sofia Ito and my email is sofia. ito7258@example.com.  For #W6075915, exchange Fleece Jacket {'size': 'M', 'color': 'black', 'zipper': 'full'} to {'size': 'S', 'color': 'red', 'zipper': 'half'}; Yoga Mat {'thickness': '6mm', 'material': 'PVC', 'color': 'green'} to {}; via credit_card_7039111.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5168,11 +5168,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_6646",
         instruction="Your name is Ava Nguyen and your zip code is 94128. You are relaxing, cautious, organized, logical. For #W6272294, change payment to credit_card_5683823. For #W6272294, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'expert'} to {'pieces': '1500', 'difficulty level': 'intermediate'}; via gift_card_1994993. Return #W8668939 via credit_card_5683823: Water Bottle; For #W1242543, modify Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'custom'} to {'deck material': 'bamboo', 'length': '28 inch', 'design': 'plain'}; via credit_card_5683823. Cancel order #W8367380 because no longer needed. ",
-        prompt="Hi, I'm Ava Nguyen. Could you please change the payment for order #W6272294 to credit_card_5683823 and modify the Jigsaw Puzzle to 1500 pieces with an intermediate difficulty level using gift_card_1994993? Also, I'd like to return the Water Bottle from order #W8668939 using credit_card_5683823, and modify the Skateboard in order #W1242543 to a bamboo deck, 28-inch length, and plain design with credit_card_5683823. Lastly, please cancel order #W8367380. My zip",
+        prompt="Hi my name is Ava Nguyen and my zip code is 94128. For #W6272294, change payment to credit_card_5683823. For #W6272294, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'animals', 'difficulty level': 'expert'} to {'pieces': '1500', 'difficulty level': 'intermediate'}; via gift_card_1994993. Return #W8668939 via credit_card_5683823: Water Bottle; For #W1242543, modify Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'custom'} to {'deck material': 'bamboo', 'length': '28 inch', 'design': 'plain'}; via credit_card_5683823. Cancel order #W8367380 because no longer needed.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -5214,11 +5214,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_wilson_7472",
         instruction="Your name is Fatima Wilson and your zip code is 92183. You are patient, dependent, flexible, creative, optimistic. For #W5272531, exchange Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1L'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'rechargeable'} to {'color': 'white', 'battery type': 'AA batteries'}; Espresso Machine {'pressure': '15 bar', 'capacity': '1.5L', 'type': 'capsule'} to {'pressure': '19 bar', 'capacity': '2L', 'type': 'manual'}; via credit_card_6824399. ",
-        prompt="Hi, I'm Fatima Wilson. Could you please help me exchange the items in order #W5272531? I need to swap the electric kettle to a 1L capacity, the electric toothbrush to a white color with AA batteries, and the espresso machine to a 19 bar pressure, 2L capacity, manual type. Thank you! My zip code is 92183 and my email is not provided here.",
+        prompt="Hi my name is Fatima Wilson and my zip code is 92183. For #W5272531, exchange Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1L'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'rechargeable'} to {'color': 'white', 'battery type': 'AA batteries'}; Espresso Machine {'pressure': '15 bar', 'capacity': '1.5L', 'type': 'capsule'} to {'pressure': '19 bar', 'capacity': '2L', 'type': 'manual'}; via credit_card_6824399.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5232,11 +5232,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_johansson_7408",
         instruction="Your name is Isabella Johansson and your email is isabella.johansson1233@example.com. You are organized, shy. Cancel order #W8882972 because ordered by mistake. ",
-        prompt="Hi, I'm Isabella Johansson. Could you please cancel order #W8882972? I ordered it by mistake. Thank you! My email is isabella.johansson1233@example.com.",
+        prompt="Hi my name is Isabella Johansson and my email is isabella. johansson1233@example.com.  Cancel order #W8882972 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5245,11 +5245,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_johansson_2663",
         instruction="Your name is Harper Johansson and your zip code is 80281. You are sad, pessimistic, busy, creative, curious. Cancel order #W3525030 because no longer needed. For #W4866703, change address to {'order_id': '#W4866703', 'address1': '953 Park Avenue', 'address2': 'Suite 613', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10064'} (same as #W1780552). For #W4866703, modify Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'silver'} to {'material': 'glass', 'color': 'white'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'fixed', 'backrest height': 'standard'} to {'material': 'leather', 'armrest': 'adjustable', 'backrest height': 'high-back'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'leather', 'color': 'gray', 'armrest': 'fixed'}; via paypal_4820484. Cancel order #W9677982 because no longer needed. For #W2912646, modify Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'} to {'theme': 'animals', 'difficulty level': 'expert'}; Luggage Set {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'}; via paypal_4820484. ",
-        prompt="Hi, I'm Harper Johansson. Please cancel orders #W3525030 and #W9677982. For order #W4866703, change the address to 953 Park Avenue, Suite 613, New York, NY 10064, and update the Electric Kettle and Office Chairs as specified. For order #W2912646, modify the Jigsaw Puzzle and Luggage Set as requested. Thank you! My zip code is 80281, and my email is harper.johansson@example.com.",
+        prompt="Hi my name is Harper Johansson and my zip code is 80281. Cancel order #W3525030 because no longer needed. For #W4866703, change address to {'order_id': '#W4866703', 'address1': '953 Park Avenue', 'address2': 'Suite 613', 'city': 'New York', 'country': 'USA', 'state': 'NY', 'zip': '10064'} (same as #W1780552). For #W4866703, modify Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'silver'} to {'material': 'glass', 'color': 'white'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'fixed', 'backrest height': 'standard'} to {'material': 'leather', 'armrest': 'adjustable', 'backrest height': 'high-back'}; Office Chair {'material': 'fabric', 'color': 'black', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'leather', 'color': 'gray', 'armrest': 'fixed'}; via paypal_4820484. Cancel order #W9677982 because no longer needed. For #W2912646, modify Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'beginner'} to {'theme': 'animals', 'difficulty level': 'expert'}; Luggage Set {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'}; via paypal_4820484.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5292,11 +5292,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_moore_6923",
         instruction="Your name is Aarav Moore and your zip code is 85041. You are independent, rigid, creative, confident. Return #W8496475 via paypal_4751854: Tea Kettle; Headphones; Perfume; Water Bottle; ",
-        prompt="Hi, I'm Aarav Moore from zip code 85041. I'd like to return order #W8496475, which includes a tea kettle, headphones, perfume, and a water bottle, via PayPal account paypal_4751854.",
+        prompt="Hi my name is Aarav Moore and my zip code is 85041. Return #W8496475 via paypal_4751854: Tea Kettle; Headphones; Perfume; Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5314,11 +5314,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_kovacs_9747",
         instruction="Your name is Harper Kovacs and your zip code is 10206. You are busy, independent, happy, direct. Return #W6221400 via gift_card_5087631: Air Purifier; Water Bottle; ",
-        prompt="Hi, I'm Harper Kovacs from zip code 10206. I'd like to return order #W6221400 using gift card #5087631 for the Air Purifier and Water Bottle.",
+        prompt="Hi my name is Harper Kovacs and my zip code is 10206. Return #W6221400 via gift_card_5087631: Air Purifier; Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5331,11 +5331,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_martin_7509",
         instruction="Your name is Lucas Martin and your email is lucas.martin9430@example.com. You are logical, impatient. Cancel order #W5502903 because no longer needed. ",
-        prompt="Hi, I'm Lucas Martin (lucas.martin9430@example.com). Could you please cancel order #W5502903 as I no longer need it? Thank you.",
+        prompt="Hi my name is Lucas Martin and my email is lucas. martin9430@example.com.  Cancel order #W5502903 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5344,11 +5344,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_santos_9753",
         instruction="Your name is Emma Santos and your zip code is 78228. You are creative, sad, pessimistic, impatient, busy. For #W1539823, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {'color': 'gold', 'display': 'AMOLED'}; via gift_card_6023546. Cancel order #W1620235 because ordered by mistake. Cancel order #W9903153 because ordered by mistake. ",
-        prompt="Hi, I'm Emma Santos. Could you please help me exchange the Smart Watch from order #W1539823 to the gold color with an AMOLED display using gift card 6023546? Also, I need to cancel orders #W1620235 and #W9903153 as they were ordered by mistake. My zip code is 78228. Thank you!",
+        prompt="Hi my name is Emma Santos and my zip code is 78228. For #W1539823, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {'color': 'gold', 'display': 'AMOLED'}; via gift_card_6023546. Cancel order #W1620235 because ordered by mistake. Cancel order #W9903153 because ordered by mistake.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5370,11 +5370,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_anderson_7445",
         instruction="Your name is Fatima Anderson and your zip code is 78786. You are pessimistic, rigid, sad, shy, messy. For #W6368178, change payment to gift_card_8070316. For #W6368178, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L'}; via gift_card_8070316. ",
-        prompt="Hi, I'm Fatima Anderson. Could you please change the payment for order #W6368178 to gift card 8070316 and modify the Electric Kettle to a 1.5L capacity? My zip code is 78786, and my email is [your email]. Thank you.",
+        prompt="Hi my name is Fatima Anderson and my zip code is 78786. For #W6368178, change payment to gift_card_8070316. For #W6368178, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L'}; via gift_card_8070316.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -5395,11 +5395,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_ito_8772",
         instruction="Your name is Amelia Ito and your zip code is 32184. You are flexible, sad, logical, direct. For #W3733909, exchange Bicycle {'frame size': 'medium', 'color': 'black', 'type': 'mountain'} to {'color': 'green', 'type': 'road'}; Coffee Maker {'color': 'black', 'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'} to {'color': 'stainless steel', 'capacity': '4 cups', 'type': 'drip', 'features': 'auto shutoff'}; via paypal_2767694. ",
-        prompt="Hi, I'm Amelia Ito. I'd like to exchange my order #W3733909: the medium black mountain bicycle for a green road bicycle, and the black espresso coffee maker for a stainless steel drip coffee maker. My zip code is 32184, and the payment was made via PayPal.",
+        prompt="Hi my name is Amelia Ito and my zip code is 32184. For #W3733909, exchange Bicycle {'frame size': 'medium', 'color': 'black', 'type': 'mountain'} to {'color': 'green', 'type': 'road'}; Coffee Maker {'color': 'black', 'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'} to {'color': 'stainless steel', 'capacity': '4 cups', 'type': 'drip', 'features': 'auto shutoff'}; via paypal_2767694.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5413,11 +5413,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_silva_7485",
         instruction="Your name is Chen Silva and your zip code is 46281. You are messy, optimistic, insecure, cautious. For #W9571698, exchange Coffee Maker {'color': 'black', 'capacity': '4 cups', 'type': 'espresso', 'features': 'timer'} to {'capacity': '1 cup', 'type': 'french press', 'features': 'auto shutoff'}; via gift_card_7250692. Return #W3069600 via credit_card_1565124: Skateboard; Return #W2598834 via gift_card_7250692: Jigsaw Puzzle; ",
-        prompt="Hi, I'm Chen Silva. Could you help me exchange the coffee maker from order #W9571698 to a 1-cup French press with auto shutoff using gift card 7250692? Also, I'd like to return the skateboard from order #W3069600 to my credit card and the jigsaw puzzle from order #W2598834 using the same gift card. My zip code is 46281. Thank you!",
+        prompt="Hi my name is Chen Silva and my zip code is 46281. For #W9571698, exchange Coffee Maker {'color': 'black', 'capacity': '4 cups', 'type': 'espresso', 'features': 'timer'} to {'capacity': '1 cup', 'type': 'french press', 'features': 'auto shutoff'}; via gift_card_7250692. Return #W3069600 via credit_card_1565124: Skateboard; Return #W2598834 via gift_card_7250692: Jigsaw Puzzle;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5447,11 +5447,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_johnson_4204",
         instruction="Your name is Chen Johnson and your email is chen.johnson3889@example.com. You are pessimistic, polite, patient, organized, creative. For #W5061109, modify Bluetooth Speaker {'color': 'blue', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'green', 'water resistance': 'no'}; via paypal_3742148. ",
-        prompt="Hello, I'm Chen Johnson (chen.johnson3889@example.com). Could you please help me modify my order #W5061109 to change the Bluetooth Speaker from blue to green and remove the water resistance feature? Thank you!",
+        prompt="Hi my name is Chen Johnson and my email is chen. johnson3889@example.com.  For #W5061109, modify Bluetooth Speaker {'color': 'blue', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'green', 'water resistance': 'no'}; via paypal_3742148.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5465,11 +5465,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_li_6575",
         instruction="Your name is Lei Li and your zip code is 85033. You are outgoing, rigid. For #W3414433, modify Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '20MP'}; Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'black'} to {'material': 'glass'}; via gift_card_8049813. ",
-        prompt="Hi, I'm Lei Li from zip code 85033. Could you please modify my order #W3414433 to change the digital camera's resolution to 20MP and the electric kettle's material to glass? I'll be using gift card 8049813. Thank you!",
+        prompt="Hi my name is Lei Li and my zip code is 85033. For #W3414433, modify Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '20MP'}; Electric Kettle {'capacity': '1L', 'material': 'stainless steel', 'color': 'black'} to {'material': 'glass'}; via gift_card_8049813.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5483,11 +5483,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_kovacs_3448",
         instruction="Your name is Ava Kovacs and your email is ava.kovacs4827@example.com. You are pessimistic, relaxing. Cancel order #W4184032 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Kovacs (ava.kovacs4827@example.com). Could you please cancel order #W4184032? I ordered it by mistake. Thank you.",
+        prompt="Hi my name is Ava Kovacs and my email is ava. kovacs4827@example.com.  Cancel order #W4184032 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5496,11 +5496,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_thomas_1791",
         instruction="Your name is Ethan Thomas and your email is ethan.thomas7730@example.com. You are direct, outgoing, impatient. Return #W7764382 via gift_card_2519457: Mechanical Keyboard; Pet Bed; Indoor Security Camera; ",
-        prompt="Hi, I'm Ethan Thomas (ethan.thomas7730@example.com). I need to return order #W7764382 using gift card #2519457. It includes a mechanical keyboard, pet bed, and indoor security camera.",
+        prompt="Hi my name is Ethan Thomas and my email is ethan. thomas7730@example.com.  Return #W7764382 via gift_card_2519457: Mechanical Keyboard; Pet Bed; Indoor Security Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5513,11 +5513,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_anderson_8078",
         instruction="Your name is Chen Anderson and your email is chen.anderson4495@example.com. You are dependent, insecure, organized, impatient. Return #W5332101 via gift_card_3434432: T-Shirt; Cancel order #W1348788 because no longer needed. ",
-        prompt="Hi, I'm Chen Anderson (chen.anderson4495@example.com). I'd like to return order #W5332101 using gift card #3434432 for the T-Shirt and cancel order #W1348788 as it's no longer needed. Thank you.",
+        prompt="Hi my name is Chen Anderson and my email is chen. anderson4495@example.com.  Return #W5332101 via gift_card_3434432: T-Shirt; Cancel order #W1348788 because no longer needed.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5534,11 +5534,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_lopez_6291",
         instruction="Your name is Ethan Lopez and your email is ethan.lopez8943@example.com. You are cautious, relaxing. For #W8073920, modify Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '7', 'material': 'synthetic', 'waterproof': 'no'}; via gift_card_7219486. Cancel order #W6779827 because no longer needed. ",
-        prompt="Hi, I'm Ethan Lopez (ethan.lopez8943@example.com). Could you please change the hiking boots in order #W8073920 to size 7, synthetic material, and non-waterproof? Also, I'd like to cancel order #W6779827 as it's no longer needed. Thank you!",
+        prompt="Hi my name is Ethan Lopez and my email is ethan. lopez8943@example.com.  For #W8073920, modify Hiking Boots {'size': '12', 'material': 'leather', 'waterproof': 'yes'} to {'size': '7', 'material': 'synthetic', 'waterproof': 'no'}; via gift_card_7219486. Cancel order #W6779827 because no longer needed.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5556,11 +5556,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_jackson_5377",
         instruction="Your name is Mia Jackson and your email is mia.jackson2679@example.com. You are impatient, creative, relaxing. Cancel order #W1298962 because no longer needed. ",
-        prompt="Hi, I'm Mia Jackson (mia.jackson2679@example.com). Please cancel order #W1298962 as I no longer need it. Thanks!",
+        prompt="Hi my name is Mia Jackson and my email is mia. jackson2679@example.com.  Cancel order #W1298962 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5569,11 +5569,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_7176",
         instruction="Your name is Emma Kovacs and your zip code is 32254. You are happy, rigid, creative, polite. For #W2307204, modify Notebook {'size': 'A6', 'cover type': 'soft cover'} to {'size': 'A4', 'cover type': 'hard cover'}; via paypal_1038468. ",
-        prompt="Hi, I'm Emma Kovacs. Could you please modify my order #W2307204 to change the notebook from A6 soft cover to A4 hard cover? Thank you! My zip code is 32254.",
+        prompt="Hi my name is Emma Kovacs and my zip code is 32254. For #W2307204, modify Notebook {'size': 'A6', 'cover type': 'soft cover'} to {'size': 'A4', 'cover type': 'hard cover'}; via paypal_1038468.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5587,11 +5587,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_kovacs_9859",
         instruction="Your name is Raj Kovacs and your email is raj.kovacs2291@example.com. You are outgoing, independent, messy. For #W1473345, exchange Coffee Maker {'color': 'black', 'capacity': '1 cup', 'type': 'french press', 'features': 'auto shutoff'} to {'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'}; via paypal_7525649. ",
-        prompt="Hi, I'm Raj Kovacs (raj.kovacs2291@example.com). I'd like to exchange my coffee maker from order #W1473345 for a 2-cup espresso model with a timer feature. Can you assist with this?",
+        prompt="Hi my name is Raj Kovacs and my email is raj. kovacs2291@example.com.  For #W1473345, exchange Coffee Maker {'color': 'black', 'capacity': '1 cup', 'type': 'french press', 'features': 'auto shutoff'} to {'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'}; via paypal_7525649.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5605,11 +5605,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_ahmed_1705",
         instruction="Your name is Lei Ahmed and your email is lei.ahmed1696@example.com. You are pessimistic, organized. Cancel order #W9132840 because ordered by mistake. Cancel order #W3931703 because ordered by mistake. For #W6724985, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'material': 'plastic', 'color': 'black'}; via credit_card_3593714. ",
-        prompt="Hi, I'm Lei Ahmed (lei.ahmed1696@example.com). Could you please cancel orders #W9132840 and #W3931703 as they were ordered by mistake? Also, for order #W6724985, I'd like to change the water bottle to a plastic material and black color. Thank you.",
+        prompt="Hi my name is Lei Ahmed and my email is lei. ahmed1696@example.com.  Cancel order #W9132840 because ordered by mistake. Cancel order #W3931703 because ordered by mistake. For #W6724985, modify Water Bottle {'capacity': '500ml', 'material': 'stainless steel', 'color': 'green'} to {'material': 'plastic', 'color': 'black'}; via credit_card_3593714.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5631,11 +5631,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_garcia_3271",
         instruction="Your name is Anya Garcia and your zip code is 19036. You are dependent, cautious. Cancel order #W6436609 because no longer needed. ",
-        prompt="Hi, I'm Anya Garcia from zip code 19036. Could you please cancel order #W6436609 as I no longer need it? Thank you!",
+        prompt="Hi my name is Anya Garcia and my zip code is 19036. Cancel order #W6436609 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5644,11 +5644,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_santos_1643",
         instruction="Your name is Isabella Santos and your email is isabella.santos9317@example.com. You are dependent, sad. Return #W1654332 via credit_card_4056740: Mechanical Keyboard; For #W9527030, modify Smart Watch {'color': 'gold', 'band material': 'leather', 'display': 'LCD'} to {}; via credit_card_4056740. ",
-        prompt="Hi, I'm Isabella Santos. I'd like to return order #W1654332 for the Mechanical Keyboard and modify order #W9527030 for the Smart Watch to change its specifications. My email is isabella.santos9317@example.com. Thank you.",
+        prompt="Hi my name is Isabella Santos and my email is isabella. santos9317@example.com.  Return #W1654332 via credit_card_4056740: Mechanical Keyboard; For #W9527030, modify Smart Watch {'color': 'gold', 'band material': 'leather', 'display': 'LCD'} to {}; via credit_card_4056740.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5670,11 +5670,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_johnson_4204",
         instruction="Your name is Chen Johnson and your email is chen.johnson3889@example.com. You are patient, happy, messy, independent, cautious. For #W5061109, modify Bluetooth Speaker {'color': 'blue', 'battery life': '20 hours', 'water resistance': 'yes'} to {}; Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {'color': 'black', 'armrest': 'fixed'}; Makeup Kit {'skin tone': 'dark', 'kit size': 'basic', 'brand': 'Brand B'} to {'kit size': 'professional'}; via paypal_3742148. ",
-        prompt="Hi, I'm Chen Johnson. Could you please update my order #W5061109 to remove the Bluetooth Speaker, change the Office Chair to black with fixed armrests, and upgrade the Makeup Kit to professional size? My email is chen.johnson3889@example.com. Thank you!",
+        prompt="Hi my name is Chen Johnson and my email is chen. johnson3889@example.com.  For #W5061109, modify Bluetooth Speaker {'color': 'blue', 'battery life': '20 hours', 'water resistance': 'yes'} to {}; Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {'color': 'black', 'armrest': 'fixed'}; Makeup Kit {'skin tone': 'dark', 'kit size': 'basic', 'brand': 'Brand B'} to {'kit size': 'professional'}; via paypal_3742148.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5688,11 +5688,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_wilson_7936",
         instruction="Your name is Sophia Wilson and your zip code is 78775. You are direct, creative, relaxing, independent. For #W8209112, exchange Laptop {'screen size': '13-inch', 'processor': 'i7', 'ram': '32GB', 'storage': '256GB SSD', 'color': 'space grey'} to {'screen size': '15-inch', 'processor': 'i5'}; via credit_card_6428848. ",
-        prompt="Hi, I'm Sophia Wilson. I'd like to exchange my 13-inch i7 laptop (Order #W8209112) for the 15-inch i5 model. My zip code is 78775, and I'll use credit card ending in 8848.",
+        prompt="Hi my name is Sophia Wilson and my zip code is 78775. For #W8209112, exchange Laptop {'screen size': '13-inch', 'processor': 'i7', 'ram': '32GB', 'storage': '256GB SSD', 'color': 'space grey'} to {'screen size': '15-inch', 'processor': 'i5'}; via credit_card_6428848.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5706,11 +5706,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_gonzalez_5113",
         instruction="Your name is Aarav Gonzalez and your email is aarav.gonzalez9269@example.com. You are direct, pessimistic, shy, dependent. For #W9160732, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue'}; via gift_card_5979071. Return #W6797115 via gift_card_5979071: Air Purifier; Mechanical Keyboard; ",
-        prompt="Hi, I'm Aarav Gonzalez. Could you please change the color of the Bluetooth Speaker in order #W9160732 to blue and help me return the Air Purifier and Mechanical Keyboard from order #W6797115 using gift card 5979071? My email is aarav.gonzalez9269@example.com. Thank you.",
+        prompt="Hi my name is Aarav Gonzalez and my email is aarav. gonzalez9269@example.com.  For #W9160732, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue'}; via gift_card_5979071. Return #W6797115 via gift_card_5979071: Air Purifier; Mechanical Keyboard;",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5732,11 +5732,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_kovacs_3448",
         instruction="Your name is Ava Kovacs and your email is ava.kovacs4827@example.com. You are relaxing, polite, patient, organized. For #W6344370, exchange Skateboard {'deck material': 'plastic', 'length': '28 inch', 'design': 'plain'} to {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'}; via paypal_7443913. ",
-        prompt="Hi, I'm Ava Kovacs (ava.kovacs4827@example.com). Could you please help me exchange my skateboard from order #W6344370 to the bamboo, 34-inch custom design version? Thank you!",
+        prompt="Hi my name is Ava Kovacs and my email is ava. kovacs4827@example.com.  For #W6344370, exchange Skateboard {'deck material': 'plastic', 'length': '28 inch', 'design': 'plain'} to {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'}; via paypal_7443913.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5750,11 +5750,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_lopez_5487",
         instruction="Your name is Evelyn Lopez and your email is evelyn.lopez6910@example.com. You are logical, patient, optimistic, shy, rigid. Cancel order #W1890669 because ordered by mistake. ",
-        prompt="Hi, I'm Evelyn Lopez. Could you please cancel order #W1890669? I ordered it by mistake. Thank you! My email is evelyn.lopez6910@example.com.",
+        prompt="Hi my name is Evelyn Lopez and my email is evelyn. lopez6910@example.com.  Cancel order #W1890669 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5763,11 +5763,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_thomas_4629",
         instruction="Your name is Mia Thomas and your zip code is 60654. You are outgoing, busy, rigid, confident. Cancel order #W5208989 because no longer needed. ",
-        prompt="Hi, I'm Mia Thomas from zip code 60654. Could you please cancel order #W5208989 as I no longer need it? Thank you!",
+        prompt="Hi my name is Mia Thomas and my zip code is 60654. Cancel order #W5208989 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5776,11 +5776,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ahmed_6778",
         instruction="Your name is Olivia Ahmed and your email is olivia.ahmed5620@example.com. You are organized, happy, creative. Return #W1579621 via credit_card_9698900: Water Bottle; Mechanical Keyboard; ",
-        prompt="Hi, I'm Olivia Ahmed (olivia.ahmed5620@example.com). I'd like to return order #W1579621, which includes a water bottle and a mechanical keyboard, using credit card ending in 9698900. Thank you!",
+        prompt="Hi my name is Olivia Ahmed and my email is olivia. ahmed5620@example.com.  Return #W1579621 via credit_card_9698900: Water Bottle; Mechanical Keyboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5793,11 +5793,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_thomas_7882",
         instruction="Your name is Liam Thomas and your zip code is 85049. You are organized, polite, flexible, busy, cautious. Return #W6397299 via credit_card_3261838: Garden Hose; Return #W8488728 via paypal_3650980: Hiking Boots; For #W3295833, modify Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'graphic'} to {'length': '28 inch', 'design': 'plain'}; via paypal_3650980. ",
-        prompt="Hi, I'm Liam Thomas from zip code 85049. I'd like to return order #W6397299 (Garden Hose) via credit card ending in 3261838 and order #W8488728 (Hiking Boots) via PayPal ending in 3650980. Also, please modify order #W3295833 for the Skateboard to have a 28-inch length and a plain design, using PayPal ending in 3650980. Thank you!",
+        prompt="Hi my name is Liam Thomas and my zip code is 85049. Return #W6397299 via credit_card_3261838: Garden Hose; Return #W8488728 via paypal_3650980: Hiking Boots; For #W3295833, modify Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'graphic'} to {'length': '28 inch', 'design': 'plain'}; via paypal_3650980.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5827,11 +5827,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_moore_7909",
         instruction="Your name is Raj Moore and your zip code is 20566. You are curious, messy. For #W9929926, modify Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'water resistance': 'no'}; via gift_card_6009199. For #W3467101, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {'color': 'gold', 'band material': 'leather'}; via gift_card_6009199. ",
-        prompt="Hi, I'm Raj Moore, zip code 20566. Could you please modify the water resistance of the Bluetooth Speaker in order #W9929926 to 'no' and exchange the Smart Watch in order #W3467101 to a gold color with a leather band? I'll be using gift card 6009199 for both. Thank you!",
+        prompt="Hi my name is Raj Moore and my zip code is 20566. For #W9929926, modify Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'water resistance': 'no'}; via gift_card_6009199. For #W3467101, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {'color': 'gold', 'band material': 'leather'}; via gift_card_6009199.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5854,11 +5854,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_li_5040",
         instruction="Your name is Fatima Li and your email is fatima.li1185@example.com. You are logical, sad, organized. Cancel order #W8005719 because no longer needed. For #W3510092, change payment to paypal_6366157. For #W3510092, modify Laptop {'screen size': '13-inch', 'processor': 'i5', 'ram': '16GB', 'storage': '512GB SSD', 'color': 'space grey'} to {'processor': 'i7', 'ram': '32GB', 'color': 'black'}; via credit_card_2713802. ",
-        prompt="Hi, I'm Fatima Li (fatima.li1185@example.com). Please cancel order #W8005719 as it's no longer needed. For order #W3510092, change the payment method to PayPal (paypal_6366157) and modify the laptop to have an i7 processor, 32GB RAM, and black color, using credit card (credit_card_2713802). Thank you.",
+        prompt="Hi my name is Fatima Li and my email is fatima. li1185@example.com.  Cancel order #W8005719 because no longer needed. For #W3510092, change payment to paypal_6366157. For #W3510092, modify Laptop {'screen size': '13-inch', 'processor': 'i5', 'ram': '16GB', 'storage': '512GB SSD', 'color': 'space grey'} to {'processor': 'i7', 'ram': '32GB', 'color': 'black'}; via credit_card_2713802.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5883,11 +5883,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_johnson_5676",
         instruction="Your name is Liam Johnson and your zip code is 46244. You are messy, pessimistic, relaxing. Return #W7190291 via credit_card_7120747: Headphones; ",
-        prompt="Hi, I'm Liam Johnson from zip code 46244. I'd like to return order #W7190291 for the headphones I purchased using credit card ending in 7120747. My email is liam.johnson@email.com.",
+        prompt="Hi my name is Liam Johnson and my zip code is 46244. Return #W7190291 via credit_card_7120747: Headphones;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5900,11 +5900,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_davis_8348",
         instruction="Your name is Yara Davis and your zip code is 92122. You are curious, logical, insecure. Return #W3952055 via credit_card_1248375: Dumbbell Set; Makeup Kit; ",
-        prompt="Hi, I'm Yara Davis from zip code 92122. I'd like to return order #W3952055, which includes a dumbbell set and a makeup kit, using credit card ending in 1248375. My email is yara.davis@email.com.",
+        prompt="Hi my name is Yara Davis and my zip code is 92122. Return #W3952055 via credit_card_1248375: Dumbbell Set; Makeup Kit;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -5917,11 +5917,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_kovacs_1216",
         instruction="Your name is Noah Kovacs and your zip code is 20566. You are patient, dependent, cautious, creative, relaxing. Cancel order #W9440076 because ordered by mistake. For #W3002300, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red'}; via gift_card_2486551. ",
-        prompt="Hi, I'm Noah Kovacs. Could you please cancel order #W9440076 as it was made by mistake, and exchange the green Bluetooth Speaker in order #W3002300 for a red one using gift card 2486551? My zip code is 20566. Thank you!",
+        prompt="Hi my name is Noah Kovacs and my zip code is 20566. Cancel order #W9440076 because ordered by mistake. For #W3002300, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red'}; via gift_card_2486551.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5939,11 +5939,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_li_5260",
         instruction="Your name is Liam Li and your zip code is 94120. You are happy, busy, direct, independent, impatient. Cancel order #W9653558 because no longer needed. ",
-        prompt="Hi, I'm Liam Li. Can you please cancel order #W9653558? I no longer need it. Thanks!",
+        prompt="Hi my name is Liam Li and my zip code is 94120. Cancel order #W9653558 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -5952,11 +5952,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_ahmed_6232",
         instruction="Your name is Yusuf Ahmed and your email is yusuf.ahmed5476@example.com. You are messy, confident, busy, direct. For #W7007896, modify Laptop {'screen size': '13-inch', 'processor': 'i9', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'processor': 'i5', 'ram': '16GB', 'storage': '512GB SSD'}; via credit_card_2167533. ",
-        prompt="Hey, it's Yusuf Ahmed here. Can you change the laptop in order #W7007896 to have an i5 processor, 16GB RAM, and 512GB SSD? My email is yusuf.ahmed5476@example.com. Thanks!",
+        prompt="Hi my name is Yusuf Ahmed and my email is yusuf. ahmed5476@example.com.  For #W7007896, modify Laptop {'screen size': '13-inch', 'processor': 'i9', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'processor': 'i5', 'ram': '16GB', 'storage': '512GB SSD'}; via credit_card_2167533.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -5970,11 +5970,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_muller_8833",
         instruction="Your name is Omar Muller and your email is omar.muller2208@example.com. You are logical, rigid, sad, direct. For #W9941744, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'gold'} to {'storage': '128GB', 'color': 'black'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; via paypal_4439305. ",
-        prompt="Hello, I'm Omar Muller. I'd like to exchange my order #W9941744: the 7-inch, 32GB gold tablet for a 128GB black one, and the red Bluetooth speaker for a blue, water-resistant model. My email is omar.muller2208@example.com.",
+        prompt="Hi my name is Omar Muller and my email is omar. muller2208@example.com.  For #W9941744, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'gold'} to {'storage': '128GB', 'color': 'black'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; via paypal_4439305.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -5988,11 +5988,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_santos_1202",
         instruction="Your name is Yara Santos and your zip code is 91163. You are pessimistic, creative. Return #W3232025 via gift_card_4543462: Dumbbell Set; ",
-        prompt="Hi, I'm Yara Santos, zip code 91163. I'd like to return order #W3232025, the Dumbbell Set, using gift card #4543462. My email is yara.santos@email.com. Thanks.",
+        prompt="Hi my name is Yara Santos and my zip code is 91163. Return #W3232025 via gift_card_4543462: Dumbbell Set;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6005,11 +6005,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_silva_7435",
         instruction="Your name is Lucas Silva and your email is lucas.silva5146@example.com. You are rigid, sad, cautious. Cancel order #W1814268 because no longer needed. ",
-        prompt="Hi, I'm Lucas Silva. Could you please cancel order #W1814268 as I no longer need it? My email is lucas.silva5146@example.com. Thank you.",
+        prompt="Hi my name is Lucas Silva and my email is lucas. silva5146@example.com.  Cancel order #W1814268 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6018,11 +6018,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_brown_4616",
         instruction="Your name is Olivia Brown and your zip code is 43118. You are pessimistic, outgoing, direct. For #W2912153, exchange Desk Lamp {'color': 'white', 'brightness': 'high', 'power source': 'battery'} to {'color': 'silver', 'brightness': 'low', 'power source': 'AC adapter'}; via credit_card_3081930. ",
-        prompt="Hi, I'm Olivia Brown. I'd like to exchange my desk lamp from order #W2912153 for the silver, low brightness, AC adapter version. My zip code is 43118, and I used credit card ending in 3081930.",
+        prompt="Hi my name is Olivia Brown and my zip code is 43118. For #W2912153, exchange Desk Lamp {'color': 'white', 'brightness': 'high', 'power source': 'battery'} to {'color': 'silver', 'brightness': 'low', 'power source': 'AC adapter'}; via credit_card_3081930.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6036,11 +6036,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_thomas_4629",
         instruction="Your name is Mia Thomas and your zip code is 60654. You are independent, confident. Return #W6872071 via paypal_2977884: Bluetooth Speaker; LED Light Bulb; ",
-        prompt="Hi, I'm Mia Thomas from zip code 60654. I'd like to return order #W6872071, which includes a Bluetooth Speaker and an LED Light Bulb, via PayPal. My email is paypal_2977884.",
+        prompt="Hi my name is Mia Thomas and my zip code is 60654. Return #W6872071 via paypal_2977884: Bluetooth Speaker; LED Light Bulb;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6053,11 +6053,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_lopez_3865",
         instruction="Your name is Olivia Lopez and your email is olivia.lopez4535@example.com. You are happy, organized, curious. For #W7449508, exchange Sneakers {'size': '6', 'color': 'black', 'material': 'synthetic'} to {}; Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'capacity': '2L'}; via gift_card_7711863. ",
-        prompt="Hi, I'm Olivia Lopez (olivia.lopez4535@example.com). I'd like to exchange the sneakers from order #W7449508 for a different item and swap the espresso machine for one with a 2L capacity, using gift card 7711863. Thank you!",
+        prompt="Hi my name is Olivia Lopez and my email is olivia. lopez4535@example.com.  For #W7449508, exchange Sneakers {'size': '6', 'color': 'black', 'material': 'synthetic'} to {}; Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'capacity': '2L'}; via gift_card_7711863.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6071,11 +6071,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_thomas_9402",
         instruction="Your name is Harper Thomas and your zip code is 90891. You are messy, logical, sad, optimistic. Cancel order #W7425646 because no longer needed. ",
-        prompt="Hi, I'm Harper Thomas, zip code 90891. Could you please cancel order #W7425646 as I no longer need it?",
+        prompt="Hi my name is Harper Thomas and my zip code is 90891. Cancel order #W7425646 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6084,11 +6084,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_silva_7567",
         instruction="Your name is Yara Silva and your zip code is 77159. You are dependent, relaxing, creative. For #W9810810, modify Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'capacity': '2L', 'material': 'glass'}; via gift_card_7252880. Return #W3964602 via gift_card_7252880: Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'}; Dumbbell Set; Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'}; Cancel order #W3730488 because no longer needed. ",
-        prompt="Hi, I'm Yara Silva, zip code 77159, email [your email]. Please modify order #W9810810: change the wristwatch to a different strap and dial color, and update the electric kettle to a 2L glass model. Also, return items from order #W3964602 using gift card 7252880, and cancel order #W3730488. Thank you!",
+        prompt="Hi my name is Yara Silva and my zip code is 77159. For #W9810810, modify Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'white'} to {'capacity': '2L', 'material': 'glass'}; via gift_card_7252880. Return #W3964602 via gift_card_7252880: Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'low'}; Dumbbell Set; Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'}; Cancel order #W3730488 because no longer needed.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6114,11 +6114,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_kim_7727",
         instruction="Your name is Ivan Kim and your zip code is 60636. You are messy, happy, polite, relaxing, optimistic. Cancel order #W6443279 because ordered by mistake. ",
-        prompt="Hi, I'm Ivan Kim, zip code 60636. Could you please cancel order #W6443279? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Ivan Kim and my zip code is 60636. Cancel order #W6443279 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6127,11 +6127,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_kim_7213",
         instruction="Your name is James Kim and your zip code is 92199. You are curious, patient, shy, dependent, organized. For #W9722559, change address to {'order_id': '#W9722559', 'address1': '320 Cedar Avenue', 'address2': 'Suite 116', 'city': 'San Antonio', 'country': 'USA', 'state': 'TX', 'zip': '78219'} (same as #W9154975). For #W9722559, modify Luggage Set {'piece count': '2-piece', 'color': 'red', 'material': 'hardshell'} to {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'}; via paypal_8963303. ",
-        prompt="Hi, I'm James Kim. Could you please update the address for order #W9722559 to 320 Cedar Avenue, Suite 116, San Antonio, TX 78219, and modify the Luggage Set to a 3-piece, blue, softshell version? Thank you!",
+        prompt="Hi my name is James Kim and my zip code is 92199. For #W9722559, change address to {'order_id': '#W9722559', 'address1': '320 Cedar Avenue', 'address2': 'Suite 116', 'city': 'San Antonio', 'country': 'USA', 'state': 'TX', 'zip': '78219'} (same as #W9154975). For #W9722559, modify Luggage Set {'piece count': '2-piece', 'color': 'red', 'material': 'hardshell'} to {'piece count': '3-piece', 'color': 'blue', 'material': 'softshell'}; via paypal_8963303.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -6157,11 +6157,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_hernandez_8500",
         instruction="Your name is Lei Hernandez and your zip code is 43222. You are impatient, independent, confident. Return #W2982823 via gift_card_5245016: Cycling Helmet; ",
-        prompt="Hi, I'm Lei Hernandez, zip code 43222. I'd like to return order #W2982823, the cycling helmet, using gift card #5245016.",
+        prompt="Hi my name is Lei Hernandez and my zip code is 43222. Return #W2982823 via gift_card_5245016: Cycling Helmet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6174,11 +6174,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_gonzalez_4785",
         instruction="Your name is Mei Gonzalez and your zip code is 95170. You are patient, busy, polite. For #W2052757, modify Notebook {'size': 'A5', 'cover type': 'soft cover'} to {'size': 'A4'}; Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'color': 'gray', 'armrest': 'fixed', 'backrest height': 'high-back'}; via credit_card_4387170. ",
-        prompt="Hi, I'm Mei Gonzalez from zip code 95170. Could you please update my order #W2052757 to change the notebook size to A4 and modify the office chair to have a gray color, fixed armrests, and a high-back? Thank you!",
+        prompt="Hi my name is Mei Gonzalez and my zip code is 95170. For #W2052757, modify Notebook {'size': 'A5', 'cover type': 'soft cover'} to {'size': 'A4'}; Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'color': 'gray', 'armrest': 'fixed', 'backrest height': 'high-back'}; via credit_card_4387170.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6192,11 +6192,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_khan_6856",
         instruction="Your name is Daiki Khan and your email is daiki.khan2146@example.com. You are shy, sad, dependent, confident, organized. For #W8461477, modify Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'silver'} to {'resolution': '4K', 'waterproof': 'yes'}; via gift_card_2491643. ",
-        prompt="Hi, I'm Daiki Khan (daiki.khan2146@example.com). Could you please help me modify my order #W8461477 to change the action camera to a 4K resolution and waterproof model using gift card 2491643? Thank you!",
+        prompt="Hi my name is Daiki Khan and my email is daiki. khan2146@example.com.  For #W8461477, modify Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'silver'} to {'resolution': '4K', 'waterproof': 'yes'}; via gift_card_2491643.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6210,11 +6210,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_jackson_6355",
         instruction="Your name is Sophia Jackson and your email is sophia.jackson1954@example.com. You are confident, shy, cautious, flexible. For #W6977171, exchange Mechanical Keyboard {'switch type': 'linear', 'backlight': 'RGB', 'size': 'full size'} to {'size': '80%'}; via credit_card_8041020. ",
-        prompt="Hi, I'm Sophia Jackson (sophia.jackson1954@example.com). I'd like to exchange my Mechanical Keyboard from order #W6977171 for the 80% size version. Can you assist with this using my credit card ending in 8041020? Thank you!",
+        prompt="Hi my name is Sophia Jackson and my email is sophia. jackson1954@example.com.  For #W6977171, exchange Mechanical Keyboard {'switch type': 'linear', 'backlight': 'RGB', 'size': 'full size'} to {'size': '80%'}; via credit_card_8041020.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6228,11 +6228,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_8235",
         instruction="Your name is Sofia Li and your zip code is 75390. You are flexible, organized, relaxing. For #W6599568, change payment to credit_card_8296913. For #W6599568, modify Bluetooth Speaker {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'} to {'color': 'blue'}; via credit_card_8296913. ",
-        prompt="Hi, I'm Sofia Li. Could you please change the payment method for order #W6599568 to credit_card_8296913 and modify the Bluetooth Speaker to blue? My zip code is 75390. Thank you!",
+        prompt="Hi my name is Sofia Li and my zip code is 75390. For #W6599568, change payment to credit_card_8296913. For #W6599568, modify Bluetooth Speaker {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'} to {'color': 'blue'}; via credit_card_8296913.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -6253,11 +6253,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ito_3591",
         instruction="Your name is Olivia Ito and your zip code is 80218. You are independent, rigid. Cancel order #W3657213 because no longer needed. For #W5442520, modify Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {'sensor type': 'laser'}; via credit_card_9753331. For #W5866402, exchange Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'automatic'} to {'pressure': '9 bar', 'type': 'capsule'}; Sneakers {'size': '11', 'color': 'black', 'material': 'synthetic'} to {'size': '10', 'color': 'gray', 'material': 'leather'}; via paypal_8049766. ",
-        prompt="Hi, I'm Olivia Ito. Please cancel order #W3657213 as it's no longer needed. For order #W5442520, change the Gaming Mouse to have a laser sensor. For order #W5866402, exchange the Espresso Machine to a 9 bar capsule type and the Sneakers to size 10, gray, leather. Thank you! My zip is 80218 and my email is on file.",
+        prompt="Hi my name is Olivia Ito and my zip code is 80218. Cancel order #W3657213 because no longer needed. For #W5442520, modify Gaming Mouse {'color': 'black', 'sensor type': 'optical', 'connectivity': 'wired'} to {'sensor type': 'laser'}; via credit_card_9753331. For #W5866402, exchange Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'automatic'} to {'pressure': '9 bar', 'type': 'capsule'}; Sneakers {'size': '11', 'color': 'black', 'material': 'synthetic'} to {'size': '10', 'color': 'gray', 'material': 'leather'}; via paypal_8049766.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6284,11 +6284,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lopez_5873",
         instruction="Your name is Raj Lopez and your email is raj.lopez2997@example.com. You are relaxing, messy, happy. Cancel order #W3502364 because no longer needed. Cancel order #W5107138 because no longer needed. ",
-        prompt="Hi, I'm Raj Lopez (raj.lopez2997@example.com). Could you please cancel orders #W3502364 and #W5107138 as I no longer need them? Thank you!",
+        prompt="Hi my name is Raj Lopez and my email is raj. lopez2997@example.com.  Cancel order #W3502364 because no longer needed. Cancel order #W5107138 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6301,11 +6301,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_gonzalez_4098",
         instruction="Your name is Amelia Gonzalez and your email is amelia.gonzalez4271@example.com. You are outgoing, relaxing. For #W1762492, exchange Hiking Boots {'size': '10', 'material': 'synthetic', 'waterproof': 'no'} to {'size': '8'}; via gift_card_2611937. ",
-        prompt="Hi, I'm Amelia Gonzalez. I'd like to exchange the Hiking Boots from order #W1762492 for a size 8, using gift card 2611937. My email is amelia.gonzalez4271@example.com.",
+        prompt="Hi my name is Amelia Gonzalez and my email is amelia. gonzalez4271@example.com.  For #W1762492, exchange Hiking Boots {'size': '10', 'material': 'synthetic', 'waterproof': 'no'} to {'size': '8'}; via gift_card_2611937.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6319,11 +6319,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_johnson_5052",
         instruction="Your name is Ava Johnson and your zip code is 92171. You are relaxing, insecure, creative, independent. Return #W9178204 via paypal_3846161: Desk Lamp; ",
-        prompt="Hi, I'm Ava Johnson from zip code 92171. I'd like to return order #W9178204, which is a desk lamp, via PayPal account 3846161.",
+        prompt="Hi my name is Ava Johnson and my zip code is 92171. Return #W9178204 via paypal_3846161: Desk Lamp;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6336,11 +6336,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_davis_2615",
         instruction="Your name is Raj Davis and your email is raj.davis3587@example.com. You are busy, patient, dependent, messy, sad. Return #W5463717 via gift_card_8006222: Grill; ",
-        prompt="Hi, I'm Raj Davis (raj.davis3587@example.com). I'd like to return order #W5463717 using gift card #8006222 for the grill.",
+        prompt="Hi my name is Raj Davis and my email is raj. davis3587@example.com.  Return #W5463717 via gift_card_8006222: Grill;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6353,11 +6353,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_jackson_6355",
         instruction="Your name is Sophia Jackson and your zip code is 60651. You are logical, busy, optimistic, happy, polite. For #W6977171, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '1500', 'difficulty level': 'intermediate'}; via paypal_7425862. ",
-        prompt="Hi, I'm Sophia Jackson from zip code 60651. Could you please help me exchange my Jigsaw Puzzle order #W6977171 from the 1000-piece expert level to the 1500-piece intermediate level? I used PayPal with transaction ID paypal_7425862. Thank you!",
+        prompt="Hi my name is Sophia Jackson and my zip code is 60651. For #W6977171, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '1500', 'difficulty level': 'intermediate'}; via paypal_7425862.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6371,11 +6371,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_kovacs_4286",
         instruction="Your name is Liam Kovacs and your email is liam.kovacs5432@example.com. You are cautious, polite. Cancel order #W5762451 because ordered by mistake. ",
-        prompt="Hi, I'm Liam Kovacs. Could you please cancel order #W5762451? I ordered it by mistake. My email is liam.kovacs5432@example.com. Thank you!",
+        prompt="Hi my name is Liam Kovacs and my email is liam. kovacs5432@example.com.  Cancel order #W5762451 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6384,11 +6384,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_6646",
         instruction="Your name is Ava Nguyen and your zip code is 94128. You are outgoing, happy, direct. Cancel order #W6272294 because no longer needed. For #W9232383, modify Headphones {'type': 'on-ear', 'connectivity': 'wireless', 'color': 'white'} to {}; via credit_card_5683823. Return #W8668939 via credit_card_5683823: Grill {'type': 'electric', 'size': 'medium', 'features': 'rotisserie'}; Water Bottle; Grill {'type': 'electric', 'size': 'portable', 'features': 'none'}; For #W1242543, modify Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'custom'} to {'length': '31 inch'}; via gift_card_1994993. For #W8367380, modify Dumbbell Set {'weight range': '55-75 lbs', 'material': 'iron', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'rubber', 'set type': 'adjustable'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; Fleece Jacket {'size': 'L', 'color': 'red', 'zipper': 'half'} to {'size': 'XL', 'color': 'navy', 'zipper': 'full'}; via gift_card_1994993. ",
-        prompt="Hi, I'm Ava Nguyen. Please cancel order #W6272294 as it's no longer needed. For order #W9232383, I'd like to modify the headphones to a different type and return order #W8668939 items via credit card 5683823. For order #W1242543, change the skateboard length to 31 inches using gift card 1994993. Lastly, for order #W8367380, update the dumbbell set, Bluetooth speaker, and fleece jacket as specified, using gift card 1994993. My zip code is 94128,",
+        prompt="Hi my name is Ava Nguyen and my zip code is 94128. Cancel order #W6272294 because no longer needed. For #W9232383, modify Headphones {'type': 'on-ear', 'connectivity': 'wireless', 'color': 'white'} to {}; via credit_card_5683823. Return #W8668939 via credit_card_5683823: Grill {'type': 'electric', 'size': 'medium', 'features': 'rotisserie'}; Water Bottle; Grill {'type': 'electric', 'size': 'portable', 'features': 'none'}; For #W1242543, modify Skateboard {'deck material': 'plastic', 'length': '34 inch', 'design': 'custom'} to {'length': '31 inch'}; via gift_card_1994993. For #W8367380, modify Dumbbell Set {'weight range': '55-75 lbs', 'material': 'iron', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'rubber', 'set type': 'adjustable'}; Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; Fleece Jacket {'size': 'L', 'color': 'red', 'zipper': 'half'} to {'size': 'XL', 'color': 'navy', 'zipper': 'full'}; via gift_card_1994993.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6432,11 +6432,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_silva_7273",
         instruction="Your name is Olivia Silva and your zip code is 32240. You are patient, flexible, organized, optimistic, cautious. For #W7613749, modify Wall Clock {'diameter': '12 inches', 'color': 'white', 'type': 'analog'} to {'diameter': '10 inches', 'color': 'wood'}; Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'color': 'black', 'storage': '128GB'}; via paypal_9379149. ",
-        prompt="Hi, I'm Olivia Silva. Could you please modify my order #W7613749 to change the wall clock to a 10-inch wood analog and the smartphone to black with 128GB storage? My zip code is 32240, and I used PayPal for the purchase. Thank you!",
+        prompt="Hi my name is Olivia Silva and my zip code is 32240. For #W7613749, modify Wall Clock {'diameter': '12 inches', 'color': 'white', 'type': 'analog'} to {'diameter': '10 inches', 'color': 'wood'}; Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'color': 'black', 'storage': '128GB'}; via paypal_9379149.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6450,11 +6450,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_jackson_7865",
         instruction="Your name is Yusuf Jackson and your email is yusuf.jackson4654@example.com. You are outgoing, organized, polite, confident, curious. For #W7128968, exchange Pet Bed {'size': 'large', 'material': 'polyester', 'color': 'brown'} to {'color': 'grey'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'canister'}; via gift_card_7037673. ",
-        prompt="Hi, I'm Yusuf Jackson. Could you please help me exchange the large brown polyester Pet Bed from order #W7128968 to a grey one, and the bagged robotic Vacuum Cleaner to a bagged canister type? I'd like to use gift card 7037673 for this. My email is yusuf.jackson4654@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Jackson and my email is yusuf. jackson4654@example.com.  For #W7128968, exchange Pet Bed {'size': 'large', 'material': 'polyester', 'color': 'brown'} to {'color': 'grey'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'canister'}; via gift_card_7037673.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6468,11 +6468,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_lee_7701",
         instruction="Your name is Yara Lee and your zip code is 77243. You are pessimistic, insecure, rigid, outgoing, direct. For #W3320020, modify Office Chair {'material': 'leather', 'color': 'red', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'mesh', 'color': 'blue', 'armrest': 'fixed', 'backrest height': 'standard'}; via credit_card_6680679. ",
-        prompt="Hi, I'm Yara Lee. Could you please modify my order #W3320020 to change the office chair to a mesh material, blue color, with fixed armrests and a standard backrest height? My zip code is 77243. Thank you!",
+        prompt="Hi my name is Yara Lee and my zip code is 77243. For #W3320020, modify Office Chair {'material': 'leather', 'color': 'red', 'armrest': 'none', 'backrest height': 'high-back'} to {'material': 'mesh', 'color': 'blue', 'armrest': 'fixed', 'backrest height': 'standard'}; via credit_card_6680679.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6486,11 +6486,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_anderson_8078",
         instruction="Your name is Chen Anderson and your email is chen.anderson4495@example.com. You are independent, cautious. For #W1701126, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand B'} to {'skin tone': 'medium', 'brand': 'Brand A'}; via credit_card_9389219. Cancel order #W1348788 because no longer needed. ",
-        prompt="Hi, I'm Chen Anderson (chen.anderson4495@example.com). Could you please exchange my Makeup Kit from order #W1701126 to a medium skin tone, Brand A, and cancel order #W1348788? Thank you!",
+        prompt="Hi my name is Chen Anderson and my email is chen. anderson4495@example.com.  For #W1701126, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand B'} to {'skin tone': 'medium', 'brand': 'Brand A'}; via credit_card_9389219. Cancel order #W1348788 because no longer needed.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6508,11 +6508,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ahmed_6778",
         instruction="Your name is Olivia Ahmed and your zip code is 94152. You are polite, outgoing. For #W2260828, exchange Mechanical Keyboard {'switch type': 'tactile', 'backlight': 'none', 'size': 'full size'} to {'switch type': 'linear', 'backlight': 'RGB'}; via credit_card_9698900. ",
-        prompt="Hi, I'm Olivia Ahmed from zip code 94152. I'd like to exchange my mechanical keyboard order #W2260828 from a tactile switch with no backlight to a linear switch with RGB backlight, using my credit card ending in 9698900. Thank you!",
+        prompt="Hi my name is Olivia Ahmed and my zip code is 94152. For #W2260828, exchange Mechanical Keyboard {'switch type': 'tactile', 'backlight': 'none', 'size': 'full size'} to {'switch type': 'linear', 'backlight': 'RGB'}; via credit_card_9698900.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6526,11 +6526,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ahmed_6778",
         instruction="Your name is Olivia Ahmed and your zip code is 94152. You are happy, outgoing. For #W3972714, exchange Hiking Boots {'size': '9', 'material': 'synthetic', 'waterproof': 'yes'} to {'size': '11', 'material': 'leather', 'waterproof': 'no'}; via gift_card_1044904. ",
-        prompt="Hi, I'm Olivia Ahmed, zip code 94152. I'd like to exchange my hiking boots from order #W3972714 for a size 11 in leather, non-waterproof, using gift card 1044904. Thank you!",
+        prompt="Hi my name is Olivia Ahmed and my zip code is 94152. For #W3972714, exchange Hiking Boots {'size': '9', 'material': 'synthetic', 'waterproof': 'yes'} to {'size': '11', 'material': 'leather', 'waterproof': 'no'}; via gift_card_1044904.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6544,11 +6544,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_silva_7446",
         instruction="Your name is Omar Silva and your email is omar.silva4147@example.com. You are confident, logical, happy. For #W9673784, modify Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '15 bar'}; via paypal_2192303. ",
-        prompt="Hi, I'm Omar Silva. Could you please update my order #W9673784 to change the Espresso Machine's pressure from 19 bar to 15 bar? My email is omar.silva4147@example.com. Thank you!",
+        prompt="Hi my name is Omar Silva and my email is omar. silva4147@example.com.  For #W9673784, modify Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '15 bar'}; via paypal_2192303.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6562,11 +6562,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_lopez_3345",
         instruction="Your name is Chen Lopez and your email is chen.lopez1681@example.com. You are independent, optimistic, creative, patient, confident. Cancel order #W1790752 because no longer needed. ",
-        prompt="Hi, I'm Chen Lopez. Could you please cancel order #W1790752 as I no longer need it? You can reach me at chen.lopez1681@example.com. Thank you!",
+        prompt="Hi my name is Chen Lopez and my email is chen. lopez1681@example.com.  Cancel order #W1790752 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6575,11 +6575,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_davis_4756",
         instruction="Your name is Aarav Davis and your email is aarav.davis1165@example.com. You are organized, patient, independent, logical. For #W3196599, change address to {'order_id': '#W3196599', 'address1': '178 Lakeview Drive', 'address2': 'Suite 576', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76150'} (same as #W7430166). For #W3196599, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'fixed'} to {'weight range': '55-75 lbs', 'material': 'iron'}; via gift_card_9708163. For #W7430166, change address to {'order_id': '#W7430166', 'address1': '808 Chestnut Street', 'address2': 'Suite 832', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85072'} (same as #W2403075). For #W7430166, modify Electric Kettle {'capacity': '1L', 'material': 'glass', 'color': 'silver'} to {'color': 'white'}; via gift_card_9708163. ",
-        prompt="Hi, I'm Aarav Davis. Could you please update the address for order #W3196599 to 178 Lakeview Drive, Suite 576, Fort Worth, TX 76150, and change the Dumbbell Set to a weight range of 55-75 lbs with iron material? Also, for order #W7430166, update the address to 808 Chestnut Street, Suite 832, Phoenix, AZ 85072, and change the color of the Electric Kettle to white. Both modifications should be covered by gift_card_9708163. My email is aarav",
+        prompt="Hi my name is Aarav Davis and my email is aarav. davis1165@example.com.  For #W3196599, change address to {'order_id': '#W3196599', 'address1': '178 Lakeview Drive', 'address2': 'Suite 576', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76150'} (same as #W7430166). For #W3196599, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'fixed'} to {'weight range': '55-75 lbs', 'material': 'iron'}; via gift_card_9708163. For #W7430166, change address to {'order_id': '#W7430166', 'address1': '808 Chestnut Street', 'address2': 'Suite 832', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85072'} (same as #W2403075). For #W7430166, modify Electric Kettle {'capacity': '1L', 'material': 'glass', 'color': 'silver'} to {'color': 'white'}; via gift_card_9708163.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -6626,11 +6626,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_moore_8248",
         instruction="Your name is Mei Moore and your email is mei.moore6624@example.com. You are rigid, relaxing. For #W9694847, exchange Air Purifier {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'} to {'room size': 'medium', 'filter type': 'HEPA', 'features': 'night mode'}; via credit_card_2902980. ",
-        prompt="Hi, I'm Mei Moore (mei.moore6624@example.com). I'd like to exchange my Air Purifier order #W9694847 from the small ionic model to the medium HEPA model with night mode, using my credit card ending in 2980. Thank you!",
+        prompt="Hi my name is Mei Moore and my email is mei. moore6624@example.com.  For #W9694847, exchange Air Purifier {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'} to {'room size': 'medium', 'filter type': 'HEPA', 'features': 'night mode'}; via credit_card_2902980.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6644,11 +6644,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_lee_5010",
         instruction="Your name is James Lee and your zip code is 95161. You are busy, polite, cautious, impatient, insecure. For #W5356919, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via paypal_2684483. ",
-        prompt="Hi, I'm James Lee from zip code 95161. Could you please change my order #W5356919 for the jigsaw puzzle to 500 pieces and an intermediate difficulty level? I'll be using PayPal with ID paypal_2684483. Thank you!",
+        prompt="Hi my name is James Lee and my zip code is 95161. For #W5356919, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via paypal_2684483.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6662,11 +6662,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_santos_6635",
         instruction="Your name is Ivan Santos and your email is ivan.santos3158@example.com. You are confident, sad. Cancel order #W3913498 because ordered by mistake. Cancel order #W8770097 because no longer needed. Cancel order #W5183325 because no longer needed. ",
-        prompt="Hi, I'm Ivan Santos (ivan.santos3158@example.com). Could you please cancel order #W3913498 as it was ordered by mistake, and orders #W8770097 and #W5183325 as they are no longer needed? Thank you.",
+        prompt="Hi my name is Ivan Santos and my email is ivan. santos3158@example.com.  Cancel order #W3913498 because ordered by mistake. Cancel order #W8770097 because no longer needed. Cancel order #W5183325 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6683,11 +6683,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_santos_5468",
         instruction="Your name is Liam Santos and your zip code is 78762. You are polite, organized. For #W6794581, change address to {'order_id': '#W6794581', 'address1': '441 Hillcrest Drive', 'address2': 'Suite 386', 'city': 'Austin', 'country': 'USA', 'state': 'TX', 'zip': '78762'} (same as #W4011814). For #W6794581, modify Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'gas'}; Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'medium'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via credit_card_1055108. ",
-        prompt="Hi, I'm Liam Santos. Could you please update the address for order #W6794581 to match order #W4011814? Also, for the same order, change the Tea Kettle to a glass, 1-liter, gas-compatible version, and the Cycling Helmet to a large, black, high-ventilation model. My zip code is 78762, and you can charge credit card ending in 1055108. Thank you!",
+        prompt="Hi my name is Liam Santos and my zip code is 78762. For #W6794581, change address to {'order_id': '#W6794581', 'address1': '441 Hillcrest Drive', 'address2': 'Suite 386', 'city': 'Austin', 'country': 'USA', 'state': 'TX', 'zip': '78762'} (same as #W4011814). For #W6794581, modify Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'gas'}; Cycling Helmet {'size': 'M', 'color': 'red', 'ventilation': 'medium'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via credit_card_1055108.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -6713,11 +6713,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_kim_3528",
         instruction="Your name is Omar Kim and your zip code is 32214. You are busy, happy, optimistic. For #W7111824, modify Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '9 bar', 'capacity': '2L'}; via credit_card_3577130. For #W1080318, change payment to gift_card_3749819. For #W1080318, modify T-Shirt {'color': 'blue', 'size': 'S', 'material': 'cotton', 'style': 'v-neck'} to {'color': 'black', 'size': 'XL', 'style': 'crew neck'}; via gift_card_3749819. ",
-        prompt="Hi, I'm Omar Kim, zip code 32214. Could you please update order #W7111824 to change the Espresso Machine to 9 bar pressure and 2L capacity, and for order #W1080318, switch the T-Shirt to black, size XL, and crew neck style? Also, change the payment for #W1080318 to gift card 3749819. My email is not provided. Thank you!",
+        prompt="Hi my name is Omar Kim and my zip code is 32214. For #W7111824, modify Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '9 bar', 'capacity': '2L'}; via credit_card_3577130. For #W1080318, change payment to gift_card_3749819. For #W1080318, modify T-Shirt {'color': 'blue', 'size': 'S', 'material': 'cotton', 'style': 'v-neck'} to {'color': 'black', 'size': 'XL', 'style': 'crew neck'}; via gift_card_3749819.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -6747,11 +6747,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_khan_8862",
         instruction="Your name is Harper Khan and your zip code is 85063. You are logical, organized, shy, curious, happy. Cancel order #W4725115 because ordered by mistake. ",
-        prompt="Hi, I'm Harper Khan. Could you please cancel order #W4725115? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Harper Khan and my zip code is 85063. Cancel order #W4725115 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6760,11 +6760,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_taylor_7478",
         instruction="Your name is Isabella Taylor and your zip code is 60646. You are creative, cautious, outgoing, insecure, rigid. For #W6717215, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {}; via gift_card_5501047. ",
-        prompt="Hi, I'm Isabella Taylor. I'd like to exchange my Portable Charger (Order #W6717215) for a gift card (gift_card_5501047). My zip code is 60646. Thank you!",
+        prompt="Hi my name is Isabella Taylor and my zip code is 60646. For #W6717215, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {}; via gift_card_5501047.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6778,11 +6778,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_lopez_9494",
         instruction="Your name is Olivia Lopez and your email is olivia.lopez8783@example.com. You are cautious, organized, creative, impatient, busy. For #W8955613, change payment to credit_card_6044108. For #W8955613, modify Backpack {'color': 'grey', 'size': 'large', 'material': 'polyester', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'compartment': 'camera'}; Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'band material': 'silicone'}; via credit_card_6044108. ",
-        prompt="Hi, I'm Olivia Lopez. Could you please change the payment method for order #W8955613 to credit_card_6044108 and update the Backpack to a green, small, camera compartment version, and the Smart Watch to have a silicone band? My email is olivia.lopez8783@example.com. Thank you!",
+        prompt="Hi my name is Olivia Lopez and my email is olivia. lopez8783@example.com.  For #W8955613, change payment to credit_card_6044108. For #W8955613, modify Backpack {'color': 'grey', 'size': 'large', 'material': 'polyester', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'compartment': 'camera'}; Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'band material': 'silicone'}; via credit_card_6044108.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -6803,11 +6803,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_lopez_9494",
         instruction="Your name is Olivia Lopez and your zip code is 92107. You are busy, sad, impatient, rigid. Cancel order #W8955613 because ordered by mistake. ",
-        prompt="Hi, I'm Olivia Lopez from zip code 92107. Could you please cancel order #W8955613 as I ordered it by mistake?",
+        prompt="Hi my name is Olivia Lopez and my zip code is 92107. Cancel order #W8955613 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6816,11 +6816,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_santos_1643",
         instruction="Your name is Isabella Santos and your email is isabella.santos9317@example.com. You are optimistic, independent. Cancel order #W9667707 because no longer needed. ",
-        prompt="Hi, I'm Isabella Santos (isabella.santos9317@example.com). Could you please cancel order #W9667707 as I no longer need it? Thank you!",
+        prompt="Hi my name is Isabella Santos and my email is isabella. santos9317@example.com.  Cancel order #W9667707 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6829,11 +6829,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mohamed_santos_2427",
         instruction="Your name is Mohamed Santos and your zip code is 76188. You are pessimistic, sad, shy, rigid. Return #W4840405 via gift_card_4710915: Luggage Set; ",
-        prompt="Hi, I'm Mohamed Santos. I'd like to return order #W4840405, the luggage set, using gift card 4710915. My zip code is 76188.",
+        prompt="Hi my name is Mohamed Santos and my zip code is 76188. Return #W4840405 via gift_card_4710915: Luggage Set;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6846,11 +6846,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_gonzalez_4785",
         instruction="Your name is Mei Gonzalez and your email is mei.gonzalez8775@example.com. You are impatient, flexible, creative, pessimistic. For #W7303089, exchange Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large', 'material': 'polyester'}; via credit_card_4387170. ",
-        prompt="Hi, I'm Mei Gonzalez. I'd like to exchange my order #W7303089 for a black, large, polyester backpack instead of the navy, small, nylon one. My email is mei.gonzalez8775@example.com.",
+        prompt="Hi my name is Mei Gonzalez and my email is mei. gonzalez8775@example.com.  For #W7303089, exchange Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large', 'material': 'polyester'}; via credit_card_4387170.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6864,11 +6864,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your email is ethan.kim3231@example.com. You are rigid, cautious, polite, confident. Return #W1763367 via gift_card_5701566: Notebook; Cancel order #W8296441 because no longer needed. ",
-        prompt="Hello, I'm Ethan Kim (ethan.kim3231@example.com). I'd like to return order #W1763367 using gift card #5701566 and cancel order #W8296441 as it's no longer needed. Thank you.",
+        prompt="Hi my name is Ethan Kim and my email is ethan. kim3231@example.com.  Return #W1763367 via gift_card_5701566: Notebook; Cancel order #W8296441 because no longer needed.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -6885,11 +6885,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_hernandez_5364",
         instruction="Your name is Sofia Hernandez and your email is sofia.hernandez3039@example.com. You are optimistic, logical, flexible, outgoing, insecure. For #W3947049, exchange Cycling Helmet {'size': 'S', 'color': 'red', 'ventilation': 'low'} to {}; via credit_card_7901829. For #W6876713, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'cordless'} to {'bagged/bagless': 'bagless', 'features': 'pet hair removal'}; Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '9 bar', 'capacity': '2L', 'type': 'manual'}; T-Shirt {'color': 'red', 'size': 'L', 'material': 'cotton', 'style': 'v-neck'} to {'color': 'purple', 'size': 'S', 'material': 'polyester'}; via credit_card_7901829. ",
-        prompt="Hi, I'm Sofia Hernandez. Could you please help me exchange the cycling helmet from order #W3947049 and the items from order #W6876713 as specified? My email is sofia.hernandez3039@example.com. Thank you!",
+        prompt="Hi my name is Sofia Hernandez and my email is sofia. hernandez3039@example.com.  For #W3947049, exchange Cycling Helmet {'size': 'S', 'color': 'red', 'ventilation': 'low'} to {}; via credit_card_7901829. For #W6876713, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'cordless'} to {'bagged/bagless': 'bagless', 'features': 'pet hair removal'}; Espresso Machine {'pressure': '19 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '9 bar', 'capacity': '2L', 'type': 'manual'}; T-Shirt {'color': 'red', 'size': 'L', 'material': 'cotton', 'style': 'v-neck'} to {'color': 'purple', 'size': 'S', 'material': 'polyester'}; via credit_card_7901829.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -6912,11 +6912,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_brown_2024",
         instruction="Your name is Anya Brown and your zip code is 10121. You are insecure, optimistic, direct. For #W1430028, change address to {'order_id': '#W1430028', 'address1': '419 Main Street', 'address2': 'Suite 730', 'city': 'Dallas', 'country': 'USA', 'state': 'TX', 'zip': '75380'} (same as #W8883368). For #W1430028, change payment to credit_card_3414703. For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'size': '8', 'color': 'red', 'material': 'leather', 'sole': 'EVA'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'pet hair removal'} to {'features': 'HEPA filter'}; via paypal_5206520. Return #W2922433 via credit_card_3414703: Grill; Tablet; ",
-        prompt="My zip code is 75380. Hi, I'm Anya Brown. Could you please update order #W1430028 with the new address, change the payment to credit_card_3414703, and modify the Running Shoes and Vacuum Cleaner details as specified? Also, I'd like to return the Grill and Tablet from order #W2922433 using credit_card_3414703. Thank you! My zip is 10121, and my email is [your email].",
+        prompt="Hi my name is Anya Brown and my zip code is 10121. For #W1430028, change address to {'order_id': '#W1430028', 'address1': '419 Main Street', 'address2': 'Suite 730', 'city': 'Dallas', 'country': 'USA', 'state': 'TX', 'zip': '75380'} (same as #W8883368). For #W1430028, change payment to credit_card_3414703. For #W1430028, modify Running Shoes {'size': '9', 'color': 'black', 'material': 'synthetic', 'sole': 'rubber'} to {'size': '8', 'color': 'red', 'material': 'leather', 'sole': 'EVA'}; Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'pet hair removal'} to {'features': 'HEPA filter'}; via paypal_5206520. Return #W2922433 via credit_card_3414703: Grill; Tablet;",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -6957,11 +6957,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_santos_1643",
         instruction="Your name is Isabella Santos and your zip code is 10020. You are impatient, polite. Cancel order #W9667707 because no longer needed. ",
-        prompt="Hi, I'm Isabella Santos, zip code 10020. Could you please cancel order #W9667707 as I no longer need it? Thank you!",
+        prompt="Hi my name is Isabella Santos and my zip code is 10020. Cancel order #W9667707 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -6970,11 +6970,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_khan_7475",
         instruction="Your name is Ivan Khan and your email is ivan.khan6479@example.com. You are organized, confident, logical, sad. For #W5270061, change payment to paypal_7729105. For #W5270061, modify Desk Lamp {'color': 'silver', 'brightness': 'low', 'power source': 'battery'} to {'brightness': 'medium', 'power source': 'USB'}; via gift_card_1711656. For #W5782623, change address to {'order_id': '#W5782623', 'address1': '584 Sunset Drive', 'address2': 'Suite 270', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20353'} (same as #W5270061). For #W5782623, change payment to paypal_7729105. For #W5782623, modify Perfume {'scent family': 'woody', 'size': '50ml', 'gender': 'women'} to {'scent family': 'fresh', 'gender': 'men'}; via paypal_7729105. For #W1519594, exchange Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'capacity': '1L', 'material': 'stainless steel', 'color': 'black'}; Wireless Earbuds {'color': 'blue', 'battery life': '6 hours', 'water resistance': 'IPX4'} to {}; via gift_card_1711656. ",
-        prompt="Hi, I'm Ivan Khan (ivan.khan6479@example.com). Please update order #W5270061 to change the payment method to paypal_7729105 and modify the Desk Lamp to have medium brightness and a USB power source using gift_card_1711656. For order #W5782623, update the address to 584 Sunset Drive, Suite 270, Washington, DC 20353, change the payment to paypal_7729105, and modify the Perfume to a fresh scent for men. Lastly, for order #W1519594, exchange the Electric Kettle",
+        prompt="Hi my name is Ivan Khan and my email is ivan. khan6479@example.com.  For #W5270061, change payment to paypal_7729105. For #W5270061, modify Desk Lamp {'color': 'silver', 'brightness': 'low', 'power source': 'battery'} to {'brightness': 'medium', 'power source': 'USB'}; via gift_card_1711656. For #W5782623, change address to {'order_id': '#W5782623', 'address1': '584 Sunset Drive', 'address2': 'Suite 270', 'city': 'Washington', 'country': 'USA', 'state': 'DC', 'zip': '20353'} (same as #W5270061). For #W5782623, change payment to paypal_7729105. For #W5782623, modify Perfume {'scent family': 'woody', 'size': '50ml', 'gender': 'women'} to {'scent family': 'fresh', 'gender': 'men'}; via paypal_7729105. For #W1519594, exchange Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'capacity': '1L', 'material': 'stainless steel', 'color': 'black'}; Wireless Earbuds {'color': 'blue', 'battery life': '6 hours', 'water resistance': 'IPX4'} to {}; via gift_card_1711656.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -7032,11 +7032,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_davis_4756",
         instruction="Your name is Aarav Davis and your zip code is 76150. You are flexible, sad, patient, optimistic, polite. Cancel order #W7430166 because no longer needed. ",
-        prompt="Hi, I'm Aarav Davis, zip code 76150. Could you please cancel order #W7430166 as I no longer need it? Thank you!",
+        prompt="Hi my name is Aarav Davis and my zip code is 76150. Cancel order #W7430166 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7045,11 +7045,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_hernandez_3670",
         instruction="Your name is Yara Hernandez and your email is yara.hernandez7166@example.com. You are relaxing, rigid, happy. For #W2156941, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'AMOLED'} to {'color': 'gold', 'band material': 'leather', 'display': 'LCD'}; Action Camera {'resolution': '5K', 'waterproof': 'yes', 'color': 'silver'} to {'waterproof': 'no', 'color': 'black'}; via paypal_5589935. ",
-        prompt="Hi, I'm Yara Hernandez. Could you please help me exchange the Smart Watch and Action Camera from order #W2156941? My email is yara.hernandez7166@example.com. Thank you!",
+        prompt="Hi my name is Yara Hernandez and my email is yara. hernandez7166@example.com.  For #W2156941, exchange Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'AMOLED'} to {'color': 'gold', 'band material': 'leather', 'display': 'LCD'}; Action Camera {'resolution': '5K', 'waterproof': 'yes', 'color': 'silver'} to {'waterproof': 'no', 'color': 'black'}; via paypal_5589935.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7063,11 +7063,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_ahmed_6778",
         instruction="Your name is Olivia Ahmed and your zip code is 94152. You are shy, patient. For #W2609687, change address to {'order_id': '#W2609687', 'address1': '553 Main Street', 'address2': 'Suite 389', 'city': 'San Francisco', 'country': 'USA', 'state': 'CA', 'zip': '94152'} (same as #W1579621). For #W2609687, modify Indoor Security Camera {'resolution': '4K', 'field of view': '110 degrees', 'connectivity': 'Ethernet'} to {'field of view': '130 degrees'}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'black'} to {}; via gift_card_1044904. Return #W3972714 via credit_card_9698900: Hiking Boots; For #W1579621, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {'capacity': '20000mAh'}; Headphones {'type': 'in-ear', 'connectivity': 'wireless', 'color': 'black'} to {'type': 'on-ear', 'color': 'red'}; via credit_card_9698900. ",
-        prompt="Hi, I'm Olivia Ahmed. Could you please update the address for order #W2609687 to match #W1579621 and adjust the Indoor Security Camera's field of view to 130 degrees? Also, I need to return the Hiking Boots from order #W3972714 and exchange the Portable Charger and Headphones from #W1579621. Thank you! My zip code is 94152 and my email is [your email].",
+        prompt="Hi my name is Olivia Ahmed and my zip code is 94152. For #W2609687, change address to {'order_id': '#W2609687', 'address1': '553 Main Street', 'address2': 'Suite 389', 'city': 'San Francisco', 'country': 'USA', 'state': 'CA', 'zip': '94152'} (same as #W1579621). For #W2609687, modify Indoor Security Camera {'resolution': '4K', 'field of view': '110 degrees', 'connectivity': 'Ethernet'} to {'field of view': '130 degrees'}; Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'black'} to {}; via gift_card_1044904. Return #W3972714 via credit_card_9698900: Hiking Boots; For #W1579621, exchange Portable Charger {'capacity': '5000mAh', 'output': 'USB-C', 'color': 'white'} to {'capacity': '20000mAh'}; Headphones {'type': 'in-ear', 'connectivity': 'wireless', 'color': 'black'} to {'type': 'on-ear', 'color': 'red'}; via credit_card_9698900.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -7110,11 +7110,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="isabella_johnson_6293",
         instruction="Your name is Isabella Johnson and your zip code is 98119. You are impatient, logical, messy, curious, direct. Return #W3431083 via paypal_5071744: Wireless Earbuds; Backpack; ",
-        prompt="Hi, I'm Isabella Johnson from zip code 98119. I need to return order #W3431083, which includes Wireless Earbuds and a Backpack, via PayPal (paypal_5071744).",
+        prompt="Hi my name is Isabella Johnson and my zip code is 98119. Return #W3431083 via paypal_5071744: Wireless Earbuds; Backpack;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7127,11 +7127,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_khan_7091",
         instruction="Your name is Yusuf Khan and your zip code is 75313. You are dependent, patient. For #W3579467, modify Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'black'} to {'color': 'white'}; via paypal_5796936. ",
-        prompt="Hi, I'm Yusuf Khan from zip code 75313. Could you please change the color of the electric kettle in order #W3579467 from black to white? My payment method is PayPal. Thank you!",
+        prompt="Hi my name is Yusuf Khan and my zip code is 75313. For #W3579467, modify Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'black'} to {'color': 'white'}; via paypal_5796936.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7145,11 +7145,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_smith_5265",
         instruction="Your name is Olivia Smith and your zip code is 80216. You are curious, confident. For #W1974181, modify Wristwatch {'strap material': 'silicone', 'dial color': 'blue'} to {}; via credit_card_7971769. ",
-        prompt="Hi, I'm Olivia Smith from zip code 80216. Could you please modify the wristwatch with order #W1974181 to have no specific strap material or dial color? My payment method is credit card ending in 7971769. Thank you!",
+        prompt="Hi my name is Olivia Smith and my zip code is 80216. For #W1974181, modify Wristwatch {'strap material': 'silicone', 'dial color': 'blue'} to {}; via credit_card_7971769.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7163,11 +7163,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_5795",
         instruction="Your name is Sophia Garcia and your zip code is 28212. You are cautious, relaxing. Cancel order #W6447372 because no longer needed. ",
-        prompt="Hi, I'm Sophia Garcia from zip code 28212. Could you please cancel order #W6447372 as I no longer need it? Thank you!",
+        prompt="Hi my name is Sophia Garcia and my zip code is 28212. Cancel order #W6447372 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7176,11 +7176,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your zip code is 78286. You are messy, polite, optimistic, patient. For #W8296441, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'black'}; via gift_card_5701566. Return #W3942875 via gift_card_5701566: Running Shoes; Jigsaw Puzzle; Water Bottle; ",
-        prompt="Hi, I'm Ethan Kim. Could you please modify the Gaming Mouse in order #W8296441 to have a black color instead of RGB, and help me return the Running Shoes, Jigsaw Puzzle, and Water Bottle from order #W3942875 using gift card 5701566? Thank you!",
+        prompt="Hi my name is Ethan Kim and my zip code is 78286. For #W8296441, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'black'}; via gift_card_5701566. Return #W3942875 via gift_card_5701566: Running Shoes; Jigsaw Puzzle; Water Bottle;",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7202,11 +7202,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_kovacs_9542",
         instruction="Your name is Anya Kovacs and your zip code is 95132. You are busy, polite, dependent, outgoing, curious. Return #W6821773 via credit_card_4829249: Fleece Jacket; Office Chair; Cycling Helmet; ",
-        prompt="Hi, I'm Anya Kovacs, and I'd like to return order #W6821773, which includes a fleece jacket, office chair, and cycling helmet. My zip code is 95132, and you can reach me at my email. Thank you!",
+        prompt="Hi my name is Anya Kovacs and my zip code is 95132. Return #W6821773 via credit_card_4829249: Fleece Jacket; Office Chair; Cycling Helmet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7219,11 +7219,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_hernandez_6785",
         instruction="Your name is Yusuf Hernandez and your zip code is 80265. You are rigid, insecure, direct. Cancel order #W2466703 because no longer needed. ",
-        prompt="Hi, I'm Yusuf Hernandez. Could you please cancel order #W2466703 as I no longer need it? My zip code is 80265. Thank you.",
+        prompt="Hi my name is Yusuf Hernandez and my zip code is 80265. Cancel order #W2466703 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7232,11 +7232,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_wilson_1842",
         instruction="Your name is James Wilson and your email is james.wilson1461@example.com. You are curious, flexible, insecure. For #W7826235, exchange Bookshelf {'material': 'glass', 'color': 'white', 'height': '3 ft'} to {'material': 'wood', 'color': 'brown', 'height': '6 ft'}; via credit_card_7871433. ",
-        prompt="Hi, I'm James Wilson. Could you help me exchange the glass, white, 3 ft bookshelf from order #W7826235 for the wood, brown, 6 ft version? My email is james.wilson1461@example.com. Thank you!",
+        prompt="Hi my name is James Wilson and my email is james. wilson1461@example.com.  For #W7826235, exchange Bookshelf {'material': 'glass', 'color': 'white', 'height': '3 ft'} to {'material': 'wood', 'color': 'brown', 'height': '6 ft'}; via credit_card_7871433.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7250,11 +7250,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_li_5688",
         instruction="Your name is James Li and your zip code is 10083. You are pessimistic, confident, relaxing. Return #W3638028 via gift_card_1725971: Jigsaw Puzzle; ",
-        prompt="Hi, I'm James Li. I'd like to return order #W3638028, the Jigsaw Puzzle, using gift card #1725971. My zip code is 10083, and my email is jamesli@email.com.",
+        prompt="Hi my name is James Li and my zip code is 10083. Return #W3638028 via gift_card_1725971: Jigsaw Puzzle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7267,11 +7267,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_5025",
         instruction="Your name is Sophia Garcia and your zip code is 20156. You are confident, cautious, rigid. Return #W5777276 via credit_card_4147840: Bookshelf; Notebook; Tablet; ",
-        prompt="Hi, I'm Sophia Garcia from zip code 20156. I'd like to return order #W5777276, which includes a bookshelf, notebook, and tablet, using my credit card ending in 4147840. My email is [your email].",
+        prompt="Hi my name is Sophia Garcia and my zip code is 20156. Return #W5777276 via credit_card_4147840: Bookshelf; Notebook; Tablet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7284,11 +7284,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_9219",
         instruction="Your name is Sofia Li and your zip code is 78260. You are independent, insecure, pessimistic, sad. Return #W3916020 via credit_card_8105988: Jigsaw Puzzle; Bicycle; Return #W5416052 via credit_card_8105988: Pet Bed; Cycling Helmet; Smart Watch; Cancel order #W8855135 because ordered by mistake. ",
-        prompt="Hi, I'm Sofia Li from zip code 78260. Could you help me return order #W3916020 and #W5416052, and cancel order #W8855135? My email is [your email]. Thank you.",
+        prompt="Hi my name is Sofia Li and my zip code is 78260. Return #W3916020 via credit_card_8105988: Jigsaw Puzzle; Bicycle; Return #W5416052 via credit_card_8105988: Pet Bed; Cycling Helmet; Smart Watch; Cancel order #W8855135 because ordered by mistake.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7313,11 +7313,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_lee_8294",
         instruction="Your name is Sophia Lee and your email is sophia.lee4144@example.com. You are cautious, logical. Return #W7366745 via gift_card_7803378: Grill; Sunglasses; ",
-        prompt="Hi, I'm Sophia Lee (sophia.lee4144@example.com). I'd like to return order #W7366745 using gift card #7803378 for the grill and sunglasses.",
+        prompt="Hi my name is Sophia Lee and my email is sophia. lee4144@example.com.  Return #W7366745 via gift_card_7803378: Grill; Sunglasses;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7330,11 +7330,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_martin_5764",
         instruction="Your name is Noah Martin and your zip code is 43090. You are dependent, creative, pessimistic, polite, messy. For #W1971958, exchange Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'silver'} to {'color': 'black'}; via paypal_7383471. ",
-        prompt="Hi, I'm Noah Martin from zip code 43090. I'd like to exchange my Electric Kettle (Order #W1971958) for the same model in black. My payment was through PayPal (paypal_7383471). Thank you!",
+        prompt="Hi my name is Noah Martin and my zip code is 43090. For #W1971958, exchange Electric Kettle {'capacity': '1.5L', 'material': 'plastic', 'color': 'silver'} to {'color': 'black'}; via paypal_7383471.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7348,11 +7348,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_lopez_5487",
         instruction="Your name is Evelyn Lopez and your zip code is 92195. You are creative, organized. Return #W1355800 via credit_card_3566337: Cycling Helmet; For #W3007862, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'size': 'portable'}; Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {'size': '9', 'material': 'mesh', 'sole': 'rubber'}; via credit_card_3566337. ",
-        prompt="Hi, I'm Evelyn Lopez. I'd like to return order #W1355800 for the cycling helmet and modify order #W3007862 to change the grill to a portable size and the running shoes to size 9, mesh material, and rubber sole. My zip code is 92195, and you can reach me at my email. Thank you!",
+        prompt="Hi my name is Evelyn Lopez and my zip code is 92195. Return #W1355800 via credit_card_3566337: Cycling Helmet; For #W3007862, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'size': 'portable'}; Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {'size': '9', 'material': 'mesh', 'sole': 'rubber'}; via credit_card_3566337.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7374,11 +7374,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_silva_2903",
         instruction="Your name is Daiki Silva and your email is daiki.silva6295@example.com. You are pessimistic, insecure, creative, dependent, outgoing. For #W8835847, modify Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'material': 'wood', 'height': '4 ft'}; T-Shirt {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'blue', 'size': 'S', 'style': 'v-neck'}; Gaming Mouse {'color': 'white', 'sensor type': 'laser', 'connectivity': 'wireless'} to {'color': 'black'}; via gift_card_2652153. ",
-        prompt="Hi, I'm Daiki Silva. Could you please update my order #W8835847 to change the bookshelf to wood and 4 ft, the T-shirt to blue, size S, and v-neck, and the gaming mouse to black? My email is daiki.silva6295@example.com. Thank you!",
+        prompt="Hi my name is Daiki Silva and my email is daiki. silva6295@example.com.  For #W8835847, modify Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'material': 'wood', 'height': '4 ft'}; T-Shirt {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'blue', 'size': 'S', 'style': 'v-neck'}; Gaming Mouse {'color': 'white', 'sensor type': 'laser', 'connectivity': 'wireless'} to {'color': 'black'}; via gift_card_2652153.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7392,11 +7392,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_johansson_9032",
         instruction="Your name is Yara Johansson and your email is yara.johansson5198@example.com. You are shy, creative. Return #W6904184 via credit_card_6699629: Electric Kettle; ",
-        prompt="Hi, I'm Yara Johansson. I'd like to return order #W6904184 for the Electric Kettle. My email is yara.johansson5198@example.com. Can you help me process this return to my credit card ending in 6699629? Thank you!",
+        prompt="Hi my name is Yara Johansson and my email is yara. johansson5198@example.com.  Return #W6904184 via credit_card_6699629: Electric Kettle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7409,11 +7409,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_santos_9753",
         instruction="Your name is Emma Santos and your email is emma.santos7683@example.com. You are impatient, messy, independent, happy, logical. Cancel order #W2918688 because no longer needed. For #W3113816, exchange Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'leather', 'color': 'gray', 'armrest': 'fixed', 'backrest height': 'high-back'}; via gift_card_6023546. For #W1620235, change payment to gift_card_6023546. For #W1620235, modify Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'}; Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'silver'} to {'material': 'glass', 'color': 'black'}; via gift_card_6023546. Return #W1539823 via gift_card_6023546: Smart Watch; Bluetooth Speaker; For #W9655299, change address to {'order_id': '#W9655299', 'address1': '399 Maple Drive', 'address2': 'Suite 470', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85039'} (same as #W2918688). For #W9655299, modify Sunglasses {'frame color': 'brown', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'silver', 'lens color': 'blue', 'lens type': 'non-polarized'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'type': 'robotic'}; via gift_card_6023546. ",
-        prompt="Hi, I'm Emma Santos (emma.santos7683@example.com, zip 85039). Please cancel order #W2918688, exchange the office chair in #W3113816, and change the payment for #W1620235 to gift_card_6023546. Also, modify the luggage set and electric kettle in #W1620235, return items in #W1539823, update the address for #W9655299, and adjust the sunglasses and vacuum cleaner in the same order, all using gift_card_6023546. Thanks!",
+        prompt="Hi my name is Emma Santos and my email is emma. santos7683@example.com.  Cancel order #W2918688 because no longer needed. For #W3113816, exchange Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'leather', 'color': 'gray', 'armrest': 'fixed', 'backrest height': 'high-back'}; via gift_card_6023546. For #W1620235, change payment to gift_card_6023546. For #W1620235, modify Luggage Set {'piece count': '3-piece', 'color': 'silver', 'material': 'softshell'} to {'piece count': '4-piece', 'color': 'red', 'material': 'hardshell'}; Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'silver'} to {'material': 'glass', 'color': 'black'}; via gift_card_6023546. Return #W1539823 via gift_card_6023546: Smart Watch; Bluetooth Speaker; For #W9655299, change address to {'order_id': '#W9655299', 'address1': '399 Maple Drive', 'address2': 'Suite 470', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85039'} (same as #W2918688). For #W9655299, modify Sunglasses {'frame color': 'brown', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'silver', 'lens color': 'blue', 'lens type': 'non-polarized'}; Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'type': 'robotic'}; via gift_card_6023546.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7476,11 +7476,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_smith_9087",
         instruction="Your name is Ethan Smith and your zip code is 10280. You are flexible, dependent, sad, patient, insecure. For #W6711349, modify Digital Camera {'resolution': '24MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'}; Electric Toothbrush {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'} to {'color': 'blue', 'battery type': 'AA batteries'}; via paypal_3296755. ",
-        prompt="Hi, I'm Ethan Smith. Could you please update my order #W6711349 to change the digital camera to 30MP resolution, 3x zoom, and SD card storage, and the electric toothbrush to blue with AA batteries? My zip code is 10280, and I paid via PayPal. Thank you!",
+        prompt="Hi my name is Ethan Smith and my zip code is 10280. For #W6711349, modify Digital Camera {'resolution': '24MP', 'zoom': '5x', 'storage': 'CF card'} to {'resolution': '30MP', 'zoom': '3x', 'storage': 'SD card'}; Electric Toothbrush {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'} to {'color': 'blue', 'battery type': 'AA batteries'}; via paypal_3296755.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7494,11 +7494,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your email is ethan.kim3231@example.com. You are direct, patient, independent, logical, curious. For #W3942875, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'intermediate'} to {'pieces': '2000', 'theme': 'animals'}; Water Bottle {'capacity': '1000ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '750ml', 'material': 'plastic', 'color': 'black'}; Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {}; via gift_card_5701566. ",
-        prompt="Hi, I'm Ethan Kim (ethan.kim3231@example.com). I'd like to exchange the Jigsaw Puzzle, Water Bottle, and Running Shoes from order #W3942875 as specified, using gift card #5701566.",
+        prompt="Hi my name is Ethan Kim and my email is ethan. kim3231@example.com.  For #W3942875, exchange Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'intermediate'} to {'pieces': '2000', 'theme': 'animals'}; Water Bottle {'capacity': '1000ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '750ml', 'material': 'plastic', 'color': 'black'}; Running Shoes {'size': '10', 'color': 'white', 'material': 'leather', 'sole': 'EVA'} to {}; via gift_card_5701566.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7512,11 +7512,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_santos_4279",
         instruction="Your name is Aarav Santos and your email is aarav.santos2789@example.com. You are flexible, dependent, impatient, pessimistic. For #W8309293, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '55-75 lbs', 'material': 'urethane'}; via credit_card_3816099. ",
-        prompt="Hi, I'm Aarav Santos. I'd like to exchange my Dumbbell Set from the 30-50 lbs rubber adjustable type to the 55-75 lbs urethane set for order #W8309293. My email is aarav.santos2789@example.com.",
+        prompt="Hi my name is Aarav Santos and my email is aarav. santos2789@example.com.  For #W8309293, exchange Dumbbell Set {'weight range': '30-50 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'weight range': '55-75 lbs', 'material': 'urethane'}; via credit_card_3816099.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7530,11 +7530,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your email is ethan.kim3231@example.com. You are curious, impatient. Return #W1763367 via gift_card_5701566: Notebook; Espresso Machine; Laptop; Return #W3942875 via gift_card_5701566: Jigsaw Puzzle; Water Bottle; ",
-        prompt="Hi, I'm Ethan Kim (ethan.kim3231@example.com). I'd like to return the items from orders #W1763367 and #W3942875 using gift card #5701566. Can you assist me with this?",
+        prompt="Hi my name is Ethan Kim and my email is ethan. kim3231@example.com.  Return #W1763367 via gift_card_5701566: Notebook; Espresso Machine; Laptop; Return #W3942875 via gift_card_5701566: Jigsaw Puzzle; Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7555,11 +7555,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_lopez_7019",
         instruction="Your name is Liam Lopez and your zip code is 75388. You are curious, creative. Cancel order #W7555783 because no longer needed. ",
-        prompt="Hi, I'm Liam Lopez, zip code 75388. Could you please cancel order #W7555783 as I no longer need it? Thank you!",
+        prompt="Hi my name is Liam Lopez and my zip code is 75388. Cancel order #W7555783 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7568,11 +7568,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_li_5040",
         instruction="Your name is Fatima Li and your zip code is 20287. You are relaxing, rigid, outgoing. Cancel order #W4155745 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Li. Could you please cancel order #W4155745? I ordered it by mistake. My zip code is 20287. Thank you!",
+        prompt="Hi my name is Fatima Li and my zip code is 20287. Cancel order #W4155745 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7581,11 +7581,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_nguyen_7885",
         instruction="Your name is Sophia Nguyen and your zip code is 60647. You are shy, optimistic, organized, logical, flexible. For #W4183735, modify Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'color': 'black', 'storage': '128GB', 'RAM': '4GB', 'screen size': '6.5-inch'}; via gift_card_2415038. ",
-        prompt="Hi, I'm Sophia Nguyen. Could you please help me modify my order #W4183735 to change the smartphone to black, 128GB storage, 4GB RAM, and a 6.5-inch screen size using gift card 2415038? My zip code is 60647. Thank you!",
+        prompt="Hi my name is Sophia Nguyen and my zip code is 60647. For #W4183735, modify Smartphone {'color': 'rose gold', 'storage': '64GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {'color': 'black', 'storage': '128GB', 'RAM': '4GB', 'screen size': '6.5-inch'}; via gift_card_2415038.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7599,11 +7599,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_taylor_6919",
         instruction="Your name is Chen Taylor and your email is chen.taylor8995@example.com. You are insecure, dependent. Cancel order #W4111999 because no longer needed. ",
-        prompt="Hi, I'm Chen Taylor (chen.taylor8995@example.com). Could you please cancel order #W4111999 for me? Thank you.",
+        prompt="Hi my name is Chen Taylor and my email is chen. taylor8995@example.com.  Cancel order #W4111999 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7612,11 +7612,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_silva_7726",
         instruction="Your name is Amelia Silva and your zip code is 19117. You are shy, impatient, insecure, optimistic. For #W7342738, modify Wireless Earbuds {'color': 'black', 'battery life': '8 hours', 'water resistance': 'IPX7'} to {'battery life': '4 hours', 'water resistance': 'not resistant'}; via gift_card_3491931. Return #W4597054 via gift_card_3491931: Coffee Maker; Smart Watch; Cancel order #W4836353 because no longer needed. ",
-        prompt="Hi, I'm Amelia Silva. Could you please modify my order #W7342738 for the wireless earbuds to have a 4-hour battery life and no water resistance? Also, I'd like to return order #W4597054 using gift card 3491931 and cancel order #W4836353. Thank you! My zip code is 19117, and my email is [your email].",
+        prompt="Hi my name is Amelia Silva and my zip code is 19117. For #W7342738, modify Wireless Earbuds {'color': 'black', 'battery life': '8 hours', 'water resistance': 'IPX7'} to {'battery life': '4 hours', 'water resistance': 'not resistant'}; via gift_card_3491931. Return #W4597054 via gift_card_3491931: Coffee Maker; Smart Watch; Cancel order #W4836353 because no longer needed.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7642,11 +7642,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_moore_9773",
         instruction="Your name is Sofia Moore and your email is sofia.moore4274@example.com. You are cautious, direct, patient, messy. For #W3338814, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {}; via credit_card_1893409. For #W1812830, modify Wall Clock {'diameter': '14 inches', 'color': 'black', 'type': 'analog'} to {'diameter': '12 inches', 'color': 'white'}; via credit_card_1893409. ",
-        prompt="Hi, I'm Sofia Moore. I'd like to exchange the E-Reader from order #W3338814 and modify the Wall Clock from order #W1812830. Please use my credit card ending in 3409 for these transactions. My email is sofia.moore4274@example.com.",
+        prompt="Hi my name is Sofia Moore and my email is sofia. moore4274@example.com.  For #W3338814, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {}; via credit_card_1893409. For #W1812830, modify Wall Clock {'diameter': '14 inches', 'color': 'black', 'type': 'analog'} to {'diameter': '12 inches', 'color': 'white'}; via credit_card_1893409.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7669,11 +7669,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_lee_5921",
         instruction="Your name is Yusuf Lee and your email is yusuf.lee4349@example.com. You are pessimistic, messy, polite, creative, rigid. For #W3631991, exchange Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '1000ml', 'color': 'black'}; via paypal_2785678. ",
-        prompt="Hi, I'm Yusuf Lee (yusuf.lee4349@example.com). I'd like to exchange my blue 750ml stainless steel water bottle (Order #W3631991) for a black 1000ml one. Payment was through PayPal. Thank you!",
+        prompt="Hi my name is Yusuf Lee and my email is yusuf. lee4349@example.com.  For #W3631991, exchange Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'capacity': '1000ml', 'color': 'black'}; via paypal_2785678.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7687,11 +7687,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_sanchez_6636",
         instruction="Your name is Aarav Sanchez and your email is aarav.sanchez5467@example.com. You are direct, outgoing, optimistic, flexible. Return #W9552705 via gift_card_8922351: Bookshelf; Portable Charger; ",
-        prompt="Hi, I'm Aarav Sanchez (aarav.sanchez5467@example.com). I'd like to return order #W9552705 using gift card #8922351, which includes a bookshelf and a portable charger.",
+        prompt="Hi my name is Aarav Sanchez and my email is aarav. sanchez5467@example.com.  Return #W9552705 via gift_card_8922351: Bookshelf; Portable Charger;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7704,11 +7704,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_johnson_7581",
         instruction="Your name is Fatima Johnson and your email is fatima.johnson2300@example.com. You are flexible, optimistic, patient, organized, dependent. For #W9389413, exchange Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'color': 'silver', 'band material': 'leather', 'display': 'LCD'}; T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'black', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'}; via paypal_5364164. ",
-        prompt="Hi, I'm Fatima Johnson. I'd like to exchange my order #W9389413: the Smart Watch from gold with a metal band to silver with a leather band, and the T-Shirt from blue size S to black size XL. My email is fatima.johnson2300@example.com.",
+        prompt="Hi my name is Fatima Johnson and my email is fatima. johnson2300@example.com.  For #W9389413, exchange Smart Watch {'color': 'gold', 'band material': 'metal', 'display': 'AMOLED'} to {'color': 'silver', 'band material': 'leather', 'display': 'LCD'}; T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'black', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'}; via paypal_5364164.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7722,11 +7722,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_khan_7475",
         instruction="Your name is Ivan Khan and your zip code is 28243. You are confident, organized, creative, busy. Cancel order #W5782623 because ordered by mistake. For #W5270061, modify Desk Lamp {'color': 'silver', 'brightness': 'low', 'power source': 'battery'} to {'color': 'black', 'brightness': 'medium', 'power source': 'AC adapter'}; via paypal_7729105. ",
-        prompt="Hi, I'm Ivan Khan. Could you please cancel order #W5782623 as it was placed by mistake? Also, for order #W5270061, I'd like to change the Desk Lamp to black, medium brightness, and AC adapter power source. Thank you! My zip is 28243 and my email is paypal_7729105.",
+        prompt="Hi my name is Ivan Khan and my zip code is 28243. Cancel order #W5782623 because ordered by mistake. For #W5270061, modify Desk Lamp {'color': 'silver', 'brightness': 'low', 'power source': 'battery'} to {'color': 'black', 'brightness': 'medium', 'power source': 'AC adapter'}; via paypal_7729105.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7744,11 +7744,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_lee_3440",
         instruction="Your name is Fatima Lee and your email is fatima.lee1693@example.com. You are cautious, logical. Cancel order #W8098147 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Lee. Could you please cancel order #W8098147? I ordered it by mistake. My email is fatima.lee1693@example.com. Thank you.",
+        prompt="Hi my name is Fatima Lee and my email is fatima. lee1693@example.com.  Cancel order #W8098147 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7757,11 +7757,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_hernandez_2054",
         instruction="Your name is Sophia Hernandez and your zip code is 76197. You are shy, creative, independent, pessimistic. Return #W1748126 via gift_card_1139567: Tea Kettle; Cancel order #W4614740 because no longer needed. ",
-        prompt="Hi, I'm Sophia Hernandez. I'd like to return order #W1748126 using gift card #1139567 for the tea kettle, and please cancel order #W4614740 as I no longer need it. My zip code is 76197. Thank you!",
+        prompt="Hi my name is Sophia Hernandez and my zip code is 76197. Return #W1748126 via gift_card_1139567: Tea Kettle; Cancel order #W4614740 because no longer needed.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -7778,11 +7778,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_muller_6713",
         instruction="Your name is Fatima Muller and your zip code is 60644. You are logical, messy, insecure, polite, curious. Cancel order #W6851636 because no longer needed. For #W2435638, exchange Digital Camera {'resolution': '20MP', 'zoom': '10x', 'storage': 'CF card'} to {'resolution': '30MP', 'storage': 'SD card'}; via paypal_5541158. For #W9962383, modify Mechanical Keyboard {'switch type': 'linear', 'backlight': 'none', 'size': '80%'} to {'switch type': 'clicky'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'} to {}; via paypal_5541158. ",
-        prompt="Hi, I'm Fatima Muller. Could you please cancel order #W6851636 as it's no longer needed? Also, for order #W2435638, I'd like to exchange the Digital Camera to one with a 30MP resolution and SD card storage. Lastly, for order #W9962383, please change the Mechanical Keyboard to have clicky switches and remove the Tea Kettle. My zip code is 60644 and my email is paypal_5541158. Thank you!",
+        prompt="Hi my name is Fatima Muller and my zip code is 60644. Cancel order #W6851636 because no longer needed. For #W2435638, exchange Digital Camera {'resolution': '20MP', 'zoom': '10x', 'storage': 'CF card'} to {'resolution': '30MP', 'storage': 'SD card'}; via paypal_5541158. For #W9962383, modify Mechanical Keyboard {'switch type': 'linear', 'backlight': 'none', 'size': '80%'} to {'switch type': 'clicky'}; Tea Kettle {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'} to {}; via paypal_5541158.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7809,11 +7809,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_gonzalez_5113",
         instruction="Your name is Aarav Gonzalez and your zip code is 78268. You are direct, organized, patient. For #W6979932, change payment to gift_card_5979071. For #W6979932, change address to {'order_id': '#W6979932', 'address1': '270 River Road', 'address2': 'Suite 611', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92194'} (same as #W6797115). For #W6979932, modify Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via paypal_6121064. ",
-        prompt="Hi, I'm Aarav Gonzalez, zip code 78268. Please update order #W6979932 to use gift_card_5979071 for payment, change the address to 270 River Road, Suite 611, San Diego, CA 92194, and modify the Cycling Helmet to size L, color black, and high ventilation. My email is not provided.",
+        prompt="Hi my name is Aarav Gonzalez and my zip code is 78268. For #W6979932, change payment to gift_card_5979071. For #W6979932, change address to {'order_id': '#W6979932', 'address1': '270 River Road', 'address2': 'Suite 611', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92194'} (same as #W6797115). For #W6979932, modify Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'size': 'L', 'color': 'black', 'ventilation': 'high'}; via paypal_6121064.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -7846,11 +7846,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_hernandez_2054",
         instruction="Your name is Sophia Hernandez and your email is sophia.hernandez3499@example.com. You are relaxing, insecure. For #W1748126, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K', 'field of view': '130 degrees'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'electric'} to {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'}; via gift_card_1139567. ",
-        prompt="Hi, I'm Sophia Hernandez. I'd like to exchange my Indoor Security Camera and Tea Kettle from order #W1748126 for different models using gift card #1139567. My email is sophia.hernandez3499@example.com. Thank you!",
+        prompt="Hi my name is Sophia Hernandez and my email is sophia. hernandez3499@example.com.  For #W1748126, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K', 'field of view': '130 degrees'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'electric'} to {'material': 'stainless steel', 'capacity': '2 liters', 'stovetop compatibility': 'gas'}; via gift_card_1139567.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7864,11 +7864,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_ahmed_6232",
         instruction="Your name is Yusuf Ahmed and your zip code is 91075. You are patient, optimistic, creative. For #W1302858, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'white', 'connectivity': 'wireless'}; via credit_card_2167533. ",
-        prompt="Hi, I'm Yusuf Ahmed, zip code 91075. Could you please modify my order #W1302858 to change the Gaming Mouse to a white, wireless version? Thank you!",
+        prompt="Hi my name is Yusuf Ahmed and my zip code is 91075. For #W1302858, modify Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'white', 'connectivity': 'wireless'}; via credit_card_2167533.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7882,11 +7882,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_thomas_1791",
         instruction="Your name is Ethan Thomas and your zip code is 43188. You are insecure, patient, relaxing. Cancel order #W8465042 because ordered by mistake. ",
-        prompt="Hi, I'm Ethan Thomas, and I accidentally placed order #W8465042. Could you please cancel it for me? My zip code is 43188. Thank you!",
+        prompt="Hi my name is Ethan Thomas and my zip code is 43188. Cancel order #W8465042 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -7895,11 +7895,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_khan_7475",
         instruction="Your name is Ivan Khan and your zip code is 28243. You are pessimistic, sad, flexible, cautious, impatient. For #W1519594, exchange Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'material': 'plastic'}; via paypal_7729105. ",
-        prompt="Hi, I'm Ivan Khan from zip code 28243. I'd like to exchange my Electric Kettle (Order #W1519594) from glass to plastic. Please process the exchange through PayPal (paypal_7729105). Thank you.",
+        prompt="Hi my name is Ivan Khan and my zip code is 28243. For #W1519594, exchange Electric Kettle {'capacity': '1.5L', 'material': 'glass', 'color': 'white'} to {'material': 'plastic'}; via paypal_7729105.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7913,11 +7913,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_gonzalez_8900",
         instruction="Your name is Yusuf Gonzalez and your email is yusuf.gonzalez2399@example.com. You are polite, rigid, insecure. For #W2806889, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'}; via credit_card_7918119. For #W1679211, exchange T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'size': 'S', 'style': 'v-neck'}; via credit_card_7918119. ",
-        prompt="Hi, I'm Yusuf Gonzalez. Could you please help me modify the Tea Kettle for order #W2806889 to a glass, 2-liter, induction-compatible version, and exchange the T-Shirt in order #W1679211 to a size S, v-neck style? My email is yusuf.gonzalez2399@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Gonzalez and my email is yusuf. gonzalez2399@example.com.  For #W2806889, modify Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'}; via credit_card_7918119. For #W1679211, exchange T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'size': 'S', 'style': 'v-neck'}; via credit_card_7918119.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7940,11 +7940,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_rossi_5121",
         instruction="Your name is Amelia Rossi and your email is amelia.rossi1299@example.com. You are flexible, direct. For #W8255453, modify Laptop {'screen size': '17-inch', 'processor': 'i5', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'screen size': '13-inch', 'ram': '16GB', 'storage': '512GB SSD'}; T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'black', 'size': 'XXL', 'material': 'polyester', 'style': 'v-neck'}; via gift_card_5591026. ",
-        prompt="Hi, I'm Amelia Rossi (amelia.rossi1299@example.com). Could you please update my order #W8255453 to change the laptop to a 13-inch screen, 16GB RAM, and 512GB SSD, and the T-shirt to black, XXL, polyester, and v-neck? I'll use gift card 5591026 for this. Thank you!",
+        prompt="Hi my name is Amelia Rossi and my email is amelia. rossi1299@example.com.  For #W8255453, modify Laptop {'screen size': '17-inch', 'processor': 'i5', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'screen size': '13-inch', 'ram': '16GB', 'storage': '512GB SSD'}; T-Shirt {'color': 'blue', 'size': 'M', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'black', 'size': 'XXL', 'material': 'polyester', 'style': 'v-neck'}; via gift_card_5591026.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -7958,11 +7958,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_hernandez_2054",
         instruction="Your name is Sophia Hernandez and your email is sophia.hernandez3499@example.com. You are optimistic, sad, flexible, curious, relaxing. For #W1748126, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'field of view': '130 degrees'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'electric'} to {}; via gift_card_1139567. For #W4614740, modify Wristwatch {'strap material': 'metal', 'dial color': 'blue'} to {'strap material': 'silicone', 'dial color': 'white'}; Tablet {'screen size': '8-inch', 'storage': '64GB', 'color': 'silver'} to {'screen size': '7-inch', 'storage': '32GB'}; via gift_card_1139567. ",
-        prompt="Hi, I'm Sophia Hernandez (sophia.hernandez3499@example.com). Could you please help me exchange the Indoor Security Camera and Tea Kettle for order #W1748126, and modify the Wristwatch and Tablet for order #W4614740 using gift card 1139567? Thank you!",
+        prompt="Hi my name is Sophia Hernandez and my email is sophia. hernandez3499@example.com.  For #W1748126, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'field of view': '130 degrees'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'electric'} to {}; via gift_card_1139567. For #W4614740, modify Wristwatch {'strap material': 'metal', 'dial color': 'blue'} to {'strap material': 'silicone', 'dial color': 'white'}; Tablet {'screen size': '8-inch', 'storage': '64GB', 'color': 'silver'} to {'screen size': '7-inch', 'storage': '32GB'}; via gift_card_1139567.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -7985,11 +7985,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_patel_7834",
         instruction="Your name is Amelia Patel and your zip code is 85051. You are messy, impatient, relaxing. Cancel order #W9077472 because ordered by mistake. For #W2079779, modify Sunglasses {'frame color': 'black', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'silver', 'lens color': 'blue', 'lens type': 'non-polarized'}; Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'black'} to {'resolution': '5K'}; via gift_card_3751659. ",
-        prompt="Hi, I'm Amelia Patel. Could you please cancel order #W9077472 as it was made by mistake? Also, for order #W2079779, I'd like to change the sunglasses to have a silver frame, blue non-polarized lenses, and update the action camera to 5K resolution. Thank you! My zip code is 85051, and my email is [your email].",
+        prompt="Hi my name is Amelia Patel and my zip code is 85051. Cancel order #W9077472 because ordered by mistake. For #W2079779, modify Sunglasses {'frame color': 'black', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'silver', 'lens color': 'blue', 'lens type': 'non-polarized'}; Action Camera {'resolution': '1080p', 'waterproof': 'no', 'color': 'black'} to {'resolution': '5K'}; via gift_card_3751659.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8007,11 +8007,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ivan_johnson_6036",
         instruction="Your name is Ivan Johnson and your email is ivan.johnson5749@example.com. You are rigid, happy, optimistic, insecure. Return #W1671835 via paypal_6918118: Perfume; ",
-        prompt="Hi, I'm Ivan Johnson. I'd like to return order #W1671835, the perfume, via PayPal. My email is ivan.johnson5749@example.com.",
+        prompt="Hi my name is Ivan Johnson and my email is ivan. johnson5749@example.com.  Return #W1671835 via paypal_6918118: Perfume;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8024,11 +8024,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lopez_5873",
         instruction="Your name is Raj Lopez and your email is raj.lopez2997@example.com. You are confident, flexible. Cancel order #W5107138 because no longer needed. ",
-        prompt="Hi, I'm Raj Lopez (raj.lopez2997@example.com). Could you please cancel order #W5107138 as I no longer need it? Thank you!",
+        prompt="Hi my name is Raj Lopez and my email is raj. lopez2997@example.com.  Cancel order #W5107138 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8037,11 +8037,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_brown_6720",
         instruction="Your name is Lucas Brown and your email is lucas.brown9344@example.com. You are dependent, pessimistic, patient, outgoing, cautious. For #W8660475, exchange Espresso Machine {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '19 bar', 'capacity': '2L', 'type': 'capsule'}; via credit_card_2112420. For #W4860251, modify Luggage Set {'piece count': '2-piece', 'color': 'silver', 'material': 'hardshell'} to {'color': 'black', 'material': 'softshell'}; via credit_card_2112420. For #W9218746, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'}; via credit_card_2112420. ",
-        prompt="Hi, I'm Lucas Brown (lucas.brown9344@example.com, zip code not provided). I'd like to exchange the Espresso Machine from order #W8660475 to a 19 bar, 2L capsule type, and modify the Luggage Set from order #W4860251 to black and softshell. Also, please exchange the Vacuum Cleaner from order #W9218746 to a robotic, bagless, cordless model. All transactions should be via credit card ending in 2112420. Thank you!",
+        prompt="Hi my name is Lucas Brown and my email is lucas. brown9344@example.com.  For #W8660475, exchange Espresso Machine {'pressure': '15 bar', 'capacity': '1L', 'type': 'manual'} to {'pressure': '19 bar', 'capacity': '2L', 'type': 'capsule'}; via credit_card_2112420. For #W4860251, modify Luggage Set {'piece count': '2-piece', 'color': 'silver', 'material': 'hardshell'} to {'color': 'black', 'material': 'softshell'}; via credit_card_2112420. For #W9218746, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'}; via credit_card_2112420.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8073,11 +8073,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_patel_7767",
         instruction="Your name is Yusuf Patel and your zip code is 94117. You are curious, organized, independent, confident, relaxing. Return #W2274128 via gift_card_3372949: Hiking Boots; ",
-        prompt="Hi, I'm Yusuf Patel from zip code 94117. I'd like to return order #W2274128 for the hiking boots using gift card #3372949.",
+        prompt="Hi my name is Yusuf Patel and my zip code is 94117. Return #W2274128 via gift_card_3372949: Hiking Boots;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8090,11 +8090,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_lopez_6291",
         instruction="Your name is Ethan Lopez and your email is ethan.lopez8943@example.com. You are shy, cautious. Return #W8632528 via gift_card_7219486: Backpack; ",
-        prompt="Hi, I'm Ethan Lopez. I'd like to return order #W8632528 using gift card #7219486 for the backpack. My email is ethan.lopez8943@example.com. Thank you.",
+        prompt="Hi my name is Ethan Lopez and my email is ethan. lopez8943@example.com.  Return #W8632528 via gift_card_7219486: Backpack;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8107,11 +8107,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_patel_5376",
         instruction="Your name is Lei Patel and your email is lei.patel3765@example.com. You are optimistic, messy, relaxing, creative, shy. For #W4172216, modify Skateboard {'deck material': 'maple', 'length': '34 inch', 'design': 'graphic'} to {'deck material': 'bamboo', 'length': '31 inch', 'design': 'custom'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'}; via credit_card_6450011. ",
-        prompt="Hi, I'm Lei Patel. Could you please update my order #W4172216 to change the skateboard to a bamboo deck, 31-inch length, and custom design, and the electric toothbrush to white, low speed settings, and rechargeable battery? My email is lei.patel3765@example.com. Thank you!",
+        prompt="Hi my name is Lei Patel and my email is lei. patel3765@example.com.  For #W4172216, modify Skateboard {'deck material': 'maple', 'length': '34 inch', 'design': 'graphic'} to {'deck material': 'bamboo', 'length': '31 inch', 'design': 'custom'}; Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'color': 'white', 'speed settings': 'low', 'battery type': 'rechargeable'}; via credit_card_6450011.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8125,11 +8125,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_kovacs_9155",
         instruction="Your name is Raj Kovacs and your zip code is 19104. You are happy, logical, independent, outgoing. For #W8455874, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'}; Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'custom'} to {'deck material': 'plastic', 'length': '28 inch'}; via gift_card_7032928. ",
-        prompt="Hi, I'm Raj Kovacs. I'd like to exchange my E-Reader from order #W8455874 to the 8-inch Wi-Fi model with 8GB storage, and my skateboard to the plastic 28-inch version, using gift card 7032928. My zip code is 19104, and my email is raj.kovacs@example.com.",
+        prompt="Hi my name is Raj Kovacs and my zip code is 19104. For #W8455874, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {'screen size': '8-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'}; Skateboard {'deck material': 'bamboo', 'length': '31 inch', 'design': 'custom'} to {'deck material': 'plastic', 'length': '28 inch'}; via gift_card_7032928.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8143,11 +8143,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_martin_6993",
         instruction="Your name is Emma Martin and your zip code is 78750. You are organized, insecure, shy, creative. For #W5432440, modify Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'} to {'capacity': '10000mAh', 'output': 'USB-C', 'color': 'blue'}; via paypal_6129397. ",
-        prompt="Hi, I'm Emma Martin. Could you please modify my order #W5432440 to change the portable charger to a 10000mAh capacity, USB-C output, and blue color? My zip code is 78750, and I used PayPal for payment. Thank you!",
+        prompt="Hi my name is Emma Martin and my zip code is 78750. For #W5432440, modify Portable Charger {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'} to {'capacity': '10000mAh', 'output': 'USB-C', 'color': 'blue'}; via paypal_6129397.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8161,11 +8161,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_lopez_2676",
         instruction="Your name is Ava Lopez and your email is ava.lopez3569@example.com. You are sad, shy, direct. Cancel order #W5911003 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Lopez. Could you please cancel order #W5911003? I ordered it by mistake. Thank you. My email is ava.lopez3569@example.com.",
+        prompt="Hi my name is Ava Lopez and my email is ava. lopez3569@example.com.  Cancel order #W5911003 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8174,11 +8174,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_johansson_1090",
         instruction="Your name is Lucas Johansson and your zip code is 94147. You are patient, direct, logical, cautious, happy. Cancel order #W5073920 because no longer needed. ",
-        prompt="Hi, I'm Lucas Johansson from zip code 94147. Could you please cancel order #W5073920 as I no longer need it?",
+        prompt="Hi my name is Lucas Johansson and my zip code is 94147. Cancel order #W5073920 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8187,11 +8187,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_gonzalez_4265",
         instruction="Your name is Liam Gonzalez and your email is liam.gonzalez4478@example.com. You are relaxing, happy. Cancel order #W8747662 because no longer needed. ",
-        prompt="Hi, I'm Liam Gonzalez. Could you please cancel order #W8747662 as I no longer need it? My email is liam.gonzalez4478@example.com. Thank you!",
+        prompt="Hi my name is Liam Gonzalez and my email is liam. gonzalez4478@example.com.  Cancel order #W8747662 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8200,11 +8200,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_muller_2272",
         instruction="Your name is Liam Muller and your zip code is 60642. You are impatient, curious, outgoing. For #W6818211, exchange Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'high'} to {}; via paypal_3976765. ",
-        prompt="Hi, I'm Liam Muller from zip code 60642. I'd like to exchange my Cycling Helmet (Order #W6818211) for a different size and color. Can you help me with that? My payment was through PayPal (ID: paypal_3976765).",
+        prompt="Hi my name is Liam Muller and my zip code is 60642. For #W6818211, exchange Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'high'} to {}; via paypal_3976765.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8218,11 +8218,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_moore_9540",
         instruction="Your name is Omar Moore and your zip code is 10096. You are organized, busy, shy, logical. Return #W1874267 via credit_card_8008637: Digital Camera; ",
-        prompt="Hi, I'm Omar Moore. I'd like to return order #W1874267 for the digital camera purchased with credit card ending in 8008637. My zip code is 10096. Thank you!",
+        prompt="Hi my name is Omar Moore and my zip code is 10096. Return #W1874267 via credit_card_8008637: Digital Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8235,11 +8235,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_thomas_7882",
         instruction="Your name is Liam Thomas and your zip code is 85049. You are shy, logical. Cancel order #W1654931 because no longer needed. ",
-        prompt="Hi, I'm Liam Thomas from zip code 85049. Could you please cancel order #W1654931 as I no longer need it? Thank you.",
+        prompt="Hi my name is Liam Thomas and my zip code is 85049. Cancel order #W1654931 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8248,11 +8248,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mohamed_santos_2427",
         instruction="Your name is Mohamed Santos and your zip code is 76188. You are relaxing, optimistic, confident, organized. For #W4840405, exchange Tablet {'screen size': '8-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '7-inch'}; via gift_card_4710915. ",
-        prompt="Hi, I'm Mohamed Santos. I'd like to exchange my 8-inch, 128GB black tablet (Order #W4840405) for the 7-inch version using gift card 4710915. My zip code is 76188. Thank you!",
+        prompt="Hi my name is Mohamed Santos and my zip code is 76188. For #W4840405, exchange Tablet {'screen size': '8-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '7-inch'}; via gift_card_4710915.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8266,11 +8266,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_thomas_7882",
         instruction="Your name is Liam Thomas and your zip code is 85049. You are outgoing, impatient, logical. Return #W8488728 via paypal_3650980: Hiking Boots; For #W1654931, modify E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'connectivity': 'Wi-Fi + Cellular'}; Air Purifier {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'} to {'room size': 'medium', 'filter type': 'carbon'}; via paypal_3650980. For #W6397299, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'}; Dumbbell Set {'weight range': '5-25 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'material': 'urethane'}; via credit_card_3261838. ",
-        prompt="Hi, I'm Liam Thomas from zip code 85049. I'd like to return order #W8488728 (Hiking Boots) via PayPal_3650980. For order #W1654931, please modify the E-Reader to include Wi-Fi + Cellular connectivity and change the Air Purifier to a medium room size with a carbon filter, also via PayPal_3650980. Lastly, for order #W6397299, I'd like to exchange the Vacuum Cleaner for a robotic, bagless model with a HEPA filter and change the Dumbbell Set material to urethane",
+        prompt="Hi my name is Liam Thomas and my zip code is 85049. Return #W8488728 via paypal_3650980: Hiking Boots; For #W1654931, modify E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi', 'storage': '8GB'} to {'connectivity': 'Wi-Fi + Cellular'}; Air Purifier {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'} to {'room size': 'medium', 'filter type': 'carbon'}; via paypal_3650980. For #W6397299, exchange Vacuum Cleaner {'type': 'canister', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'}; Dumbbell Set {'weight range': '5-25 lbs', 'material': 'rubber', 'set type': 'adjustable'} to {'material': 'urethane'}; via credit_card_3261838.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8301,11 +8301,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_1101",
         instruction="Your name is Sophia Garcia and your zip code is 78263. You are optimistic, direct, independent, flexible. For #W8727985, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'black'} to {'storage': '64GB', 'color': 'silver'}; via gift_card_9450778. ",
-        prompt="Hi, I'm Sophia Garcia from zip code 78263. I'd like to exchange my 10-inch black tablet (Order #W8727985) with 128GB storage for the silver one with 64GB storage using gift card 9450778. Thank you!",
+        prompt="Hi my name is Sophia Garcia and my zip code is 78263. For #W8727985, exchange Tablet {'screen size': '10-inch', 'storage': '128GB', 'color': 'black'} to {'storage': '64GB', 'color': 'silver'}; via gift_card_9450778.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8319,11 +8319,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_moore_6437",
         instruction="Your name is Yusuf Moore and your email is yusuf.moore9422@example.com. You are creative, independent. For #W8295890, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {}; via paypal_4755504. ",
-        prompt="Hi, I'm Yusuf Moore. I'd like to exchange my E-Reader from order #W8295890 for a different model. Please process the exchange via PayPal account 4755504. My email is yusuf.moore9422@example.com.",
+        prompt="Hi my name is Yusuf Moore and my email is yusuf. moore9422@example.com.  For #W8295890, exchange E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '32GB'} to {}; via paypal_4755504.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8337,11 +8337,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_moore_9003",
         instruction="Your name is Ethan Moore and your zip code is 75339. You are direct, independent, outgoing. Return #W6026015 via credit_card_6361025: Dumbbell Set; ",
-        prompt="Hi, I'm Ethan Moore, zip code 75339. I'd like to return order #W6026015 for the Dumbbell Set and have the refund processed to credit card ending in 6361025. My email is ethan.moore@example.com. Thank you!",
+        prompt="Hi my name is Ethan Moore and my zip code is 75339. Return #W6026015 via credit_card_6361025: Dumbbell Set;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8354,11 +8354,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_li_5260",
         instruction="Your name is Liam Li and your zip code is 94120. You are patient, direct, curious, happy, independent. Cancel order #W9653558 because ordered by mistake. ",
-        prompt="Hi, I'm Liam Li. Could you please cancel order #W9653558? I ordered it by mistake. My zip code is 94120. Thank you!",
+        prompt="Hi my name is Liam Li and my zip code is 94120. Cancel order #W9653558 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8367,11 +8367,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_moore_2033",
         instruction="Your name is Ava Moore and your zip code is 78234. You are dependent, flexible. Return #W8951014 via gift_card_8168843: Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Digital Camera; Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Bookshelf; Water Bottle; Cancel order #W4135875 because no longer needed. ",
-        prompt="Hi, I'm Ava Moore. I'd like to return order #W8951014 using gift card #8168843, which includes a navy backpack, a digital camera, a black backpack, a bookshelf, and a water bottle. Also, please cancel order #W4135875 as it's no longer needed. My zip code is 78234. Thank you!",
+        prompt="Hi my name is Ava Moore and my zip code is 78234. Return #W8951014 via gift_card_8168843: Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Digital Camera; Backpack {'color': 'black', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'}; Bookshelf; Water Bottle; Cancel order #W4135875 because no longer needed.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8394,11 +8394,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_johnson_5450",
         instruction="Your name is Ethan Johnson and your zip code is 10021. You are creative, curious. Cancel order #W4250290 because ordered by mistake. ",
-        prompt="Hi, I'm Ethan Johnson from zip code 10021. Could you please cancel order #W4250290? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Ethan Johnson and my zip code is 10021. Cancel order #W4250290 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8407,11 +8407,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your email is ethan.kim3231@example.com. You are messy, relaxing, independent. Return #W3942875 via gift_card_5701566: Running Shoes; Water Bottle; ",
-        prompt="Hi, I'm Ethan Kim. I'd like to return order #W3942875 using gift card #5701566 for the running shoes and water bottle. My email is ethan.kim3231@example.com.",
+        prompt="Hi my name is Ethan Kim and my email is ethan. kim3231@example.com.  Return #W3942875 via gift_card_5701566: Running Shoes; Water Bottle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8424,11 +8424,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_silva_4632",
         instruction="Your name is Ava Silva and your email is ava.silva8820@example.com. You are polite, pessimistic, messy, curious. Cancel order #W6805991 because ordered by mistake. ",
-        prompt="Hi, I'm Ava Silva (ava.silva8820@example.com). Could you please cancel order #W6805991? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Ava Silva and my email is ava. silva8820@example.com.  Cancel order #W6805991 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8437,11 +8437,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_muller_6097",
         instruction="Your name is Ethan Muller and your zip code is 98128. You are creative, confident, happy, cautious. For #W4398027, exchange Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'size': '100ml', 'gender': 'men'}; Jigsaw Puzzle {'pieces': '1500', 'theme': 'art', 'difficulty level': 'intermediate'} to {}; via credit_card_5721095. Return #W3155037 via credit_card_5721095: Smartphone; Laptop; ",
-        prompt="Hi, I'm Ethan Muller. I'd like to exchange the oriental 30ml unisex perfume from order #W4398027 for a woody 100ml men's version, and return the smartphone and laptop from order #W3155037. My zip code is 98128, and you can reach me at my email.",
+        prompt="Hi my name is Ethan Muller and my zip code is 98128. For #W4398027, exchange Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'size': '100ml', 'gender': 'men'}; Jigsaw Puzzle {'pieces': '1500', 'theme': 'art', 'difficulty level': 'intermediate'} to {}; via credit_card_5721095. Return #W3155037 via credit_card_5721095: Smartphone; Laptop;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8463,11 +8463,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_li_2316",
         instruction="Your name is Noah Li and your email is noah.li7327@example.com. You are polite, pessimistic, confident, outgoing, patient. Return #W8553554 via credit_card_4467209: Pet Bed; ",
-        prompt="Hi, I'm Noah Li. I'd like to return order #W8553554 for the Pet Bed. Could you please process the return to my credit card ending in 4467209? My email is noah.li7327@example.com. Thank you!",
+        prompt="Hi my name is Noah Li and my email is noah. li7327@example.com.  Return #W8553554 via credit_card_4467209: Pet Bed;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8480,11 +8480,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_thomas_8833",
         instruction="Your name is Liam Thomas and your email is liam.thomas4271@example.com. You are direct, relaxing, pessimistic. For #W3761872, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'type': 'canister', 'features': 'pet hair removal'}; Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'capacity': '1L', 'type': 'capsule'}; via credit_card_7287775. ",
-        prompt="Hi, I'm Liam Thomas. Could you please update my order #W3761872 to change the vacuum cleaner to a canister type with pet hair removal features and the espresso machine to a 1L capsule type? My email is liam.thomas4271@example.com. Thanks.",
+        prompt="Hi my name is Liam Thomas and my email is liam. thomas4271@example.com.  For #W3761872, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'type': 'canister', 'features': 'pet hair removal'}; Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'capacity': '1L', 'type': 'capsule'}; via credit_card_7287775.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8498,11 +8498,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_thomas_1518",
         instruction="Your name is Sofia Thomas and your zip code is 75307. You are curious, shy. For #W2297866, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'robotic', 'features': 'pet hair removal'}; via paypal_5334408. ",
-        prompt="Hi, I'm Sofia Thomas from zip code 75307. Could you please modify my order #W2297866 to change the vacuum cleaner to a robotic type with pet hair removal features? Thank you!",
+        prompt="Hi my name is Sofia Thomas and my zip code is 75307. For #W2297866, modify Vacuum Cleaner {'type': 'upright', 'bagged/bagless': 'bagless', 'features': 'HEPA filter'} to {'type': 'robotic', 'features': 'pet hair removal'}; via paypal_5334408.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8516,11 +8516,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_moore_9540",
         instruction="Your name is Omar Moore and your zip code is 10096. You are impatient, independent. Return #W1874267 via credit_card_8008637: Digital Camera; ",
-        prompt="Hi, I'm Omar Moore. I'd like to return order #W1874267, the digital camera, using credit card ending in 8008637. My zip code is 10096.",
+        prompt="Hi my name is Omar Moore and my zip code is 10096. Return #W1874267 via credit_card_8008637: Digital Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8533,11 +8533,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_kovacs_9747",
         instruction="Your name is Harper Kovacs and your email is harper.kovacs6209@example.com. You are pessimistic, curious, organized, impatient. For #W6221400, exchange Air Purifier {'room size': 'medium', 'filter type': 'HEPA', 'features': 'smart sensors'} to {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'color': 'red'}; Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'size': '100ml', 'gender': 'men'}; via gift_card_5087631. ",
-        prompt="Hi, I'm Harper Kovacs (harper.kovacs6209@example.com). I'd like to exchange the Air Purifier, Water Bottle, and Perfume in order #W6221400 as specified, using gift card 5087631. Can you assist with this?",
+        prompt="Hi my name is Harper Kovacs and my email is harper. kovacs6209@example.com.  For #W6221400, exchange Air Purifier {'room size': 'medium', 'filter type': 'HEPA', 'features': 'smart sensors'} to {'room size': 'small', 'filter type': 'ionic', 'features': 'quiet operation'}; Water Bottle {'capacity': '750ml', 'material': 'stainless steel', 'color': 'blue'} to {'color': 'red'}; Perfume {'scent family': 'oriental', 'size': '30ml', 'gender': 'unisex'} to {'scent family': 'woody', 'size': '100ml', 'gender': 'men'}; via gift_card_5087631.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8551,11 +8551,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_silva_7726",
         instruction="Your name is Amelia Silva and your email is amelia.silva7872@example.com. You are shy, direct. Return #W7773202 via gift_card_3491931: Hiking Boots; ",
-        prompt="Hi, I'm Amelia Silva. I'd like to return order #W7773202, the hiking boots, using gift card #3491931. My email is amelia.silva7872@example.com.",
+        prompt="Hi my name is Amelia Silva and my email is amelia. silva7872@example.com.  Return #W7773202 via gift_card_3491931: Hiking Boots;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8568,11 +8568,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_martin_8570",
         instruction="Your name is Sophia Martin and your zip code is 77034. You are relaxing, happy, insecure, impatient. For #W1603792, change address to {'order_id': '#W1603792', 'address1': '592 Elm Avenue', 'address2': 'Suite 978', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77242'} (same as #W1092119). For #W1603792, modify Bicycle {'frame size': 'large', 'color': 'red', 'type': 'mountain'} to {'frame size': 'medium', 'color': 'black'}; via credit_card_5694100. ",
-        prompt="Hi, I'm Sophia Martin. Could you please update the shipping address for order #W1603792 to 592 Elm Avenue, Suite 978, Houston, TX 77242, and change the bicycle to a medium frame size in black? Thank you! My zip code is 77034.",
+        prompt="Hi my name is Sophia Martin and my zip code is 77034. For #W1603792, change address to {'order_id': '#W1603792', 'address1': '592 Elm Avenue', 'address2': 'Suite 978', 'city': 'Houston', 'country': 'USA', 'state': 'TX', 'zip': '77242'} (same as #W1092119). For #W1603792, modify Bicycle {'frame size': 'large', 'color': 'red', 'type': 'mountain'} to {'frame size': 'medium', 'color': 'black'}; via credit_card_5694100.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -8598,11 +8598,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_hernandez_2054",
         instruction="Your name is Sophia Hernandez and your zip code is 76197. You are busy, direct. Return #W1748126 via gift_card_1139567: Indoor Security Camera; Tea Kettle; For #W1326557, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'gold'} to {}; via gift_card_1139567. ",
-        prompt="Hi, I'm Sophia Hernandez from zip code 76197. I'd like to return order #W1748126 using gift card #1139567 and exchange the 7-inch, 32GB gold tablet from order #W1326557 for a different option, also using the same gift card.",
+        prompt="Hi my name is Sophia Hernandez and my zip code is 76197. Return #W1748126 via gift_card_1139567: Indoor Security Camera; Tea Kettle; For #W1326557, exchange Tablet {'screen size': '7-inch', 'storage': '32GB', 'color': 'gold'} to {}; via gift_card_1139567.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8624,11 +8624,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kovacs_5767",
         instruction="Your name is Mei Kovacs and your email is mei.kovacs4296@example.com. You are rigid, outgoing, cautious, messy, busy. For #W5382576, exchange Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'screen size': '6.5-inch'}; via gift_card_1776915. ",
-        prompt="Hi, I'm Mei Kovacs. I'd like to exchange my Smartphone order #W5382576 from the gold 5.8-inch model to the black 6.5-inch version using gift card 1776915. My email is mei.kovacs4296@example.com.",
+        prompt="Hi my name is Mei Kovacs and my email is mei. kovacs4296@example.com.  For #W5382576, exchange Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '4GB', 'screen size': '5.8-inch'} to {'color': 'black', 'screen size': '6.5-inch'}; via gift_card_1776915.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8642,11 +8642,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_jackson_1214",
         instruction="Your name is Mei Jackson and your email is mei.jackson3801@example.com. You are patient, cautious, polite, sad, busy. For #W5881725, exchange Hiking Boots {'size': '11', 'material': 'leather', 'waterproof': 'yes'} to {}; via paypal_8305620. ",
-        prompt="Hi, I'm Mei Jackson (mei.jackson3801@example.com). Could you please help me exchange the Hiking Boots (size 11, leather, waterproof) from order #W5881725? Thank you.",
+        prompt="Hi my name is Mei Jackson and my email is mei. jackson3801@example.com.  For #W5881725, exchange Hiking Boots {'size': '11', 'material': 'leather', 'waterproof': 'yes'} to {}; via paypal_8305620.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8660,11 +8660,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_jackson_7865",
         instruction="Your name is Yusuf Jackson and your zip code is 98127. You are impatient, independent, busy. Return #W7128968 via paypal_3392566: Vacuum Cleaner; Bluetooth Speaker; Pet Bed; Bookshelf; ",
-        prompt="Hi, I'm Yusuf Jackson, zip code 98127. I need to return order #W7128968 via PayPal (paypal_3392566) for the Vacuum Cleaner, Bluetooth Speaker, Pet Bed, and Bookshelf. My email is yusuf.jackson@email.com.",
+        prompt="Hi my name is Yusuf Jackson and my zip code is 98127. Return #W7128968 via paypal_3392566: Vacuum Cleaner; Bluetooth Speaker; Pet Bed; Bookshelf;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8682,11 +8682,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_davis_3316",
         instruction="Your name is Olivia Davis and your email is olivia.davis4495@example.com. You are sad, independent, busy, polite, patient. Return #W7623533 via paypal_8673863: Jigsaw Puzzle; ",
-        prompt="Hi, I'm Olivia Davis. I'd like to return order #W7623533, the Jigsaw Puzzle, via PayPal account paypal_8673863. My email is olivia.davis4495@example.com. Thank you!",
+        prompt="Hi my name is Olivia Davis and my email is olivia. davis4495@example.com.  Return #W7623533 via paypal_8673863: Jigsaw Puzzle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8699,11 +8699,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kovacs_5477",
         instruction="Your name is Emma Kovacs and your zip code is 95111. You are shy, creative. For #W6554908, change address to {'order_id': '#W6554908', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W6554908, modify Skateboard {'deck material': 'maple', 'length': '28 inch', 'design': 'graphic'} to {'deck material': 'plastic', 'design': 'plain'}; Perfume {'scent family': 'fresh', 'size': '30ml', 'gender': 'men'} to {'scent family': 'oriental'}; via gift_card_9246707. For #W7109609, change address to {'order_id': '#W7109609', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W7109609, modify Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'features': 'pet hair removal'}; via gift_card_9246707. ",
-        prompt="Hi, I'm Emma Kovacs from zip code 95111. Could you please update the address for orders #W6554908 and #W7109609 to 111 Sunset Drive, Suite 183, San Diego, CA 92179, and make the specified product modifications for both orders using gift card 9246707? Thank you!",
+        prompt="Hi my name is Emma Kovacs and my zip code is 95111. For #W6554908, change address to {'order_id': '#W6554908', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W6554908, modify Skateboard {'deck material': 'maple', 'length': '28 inch', 'design': 'graphic'} to {'deck material': 'plastic', 'design': 'plain'}; Perfume {'scent family': 'fresh', 'size': '30ml', 'gender': 'men'} to {'scent family': 'oriental'}; via gift_card_9246707. For #W7109609, change address to {'order_id': '#W7109609', 'address1': '111 Sunset Drive', 'address2': 'Suite 183', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92179'} (same as #W3618959). For #W7109609, modify Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagless', 'features': 'cordless'} to {'features': 'pet hair removal'}; via gift_card_9246707.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -8750,11 +8750,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_garcia_3055",
         instruction="Your name is Yusuf Garcia and your email is yusuf.garcia2909@example.com. You are dependent, rigid. For #W3260419, modify Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {}; Smart Watch {'color': 'silver', 'band material': 'metal', 'display': 'AMOLED'} to {'color': 'gold', 'band material': 'leather', 'display': 'LCD'}; via paypal_7503218. For #W6885344, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large'}; via paypal_7503218. For #W2286012, exchange Perfume {'scent family': 'oriental', 'size': '100ml', 'gender': 'men'} to {'scent family': 'woody', 'size': '30ml', 'gender': 'women'}; Bluetooth Speaker {'color': 'black', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'blue'}; via credit_card_8405687. ",
-        prompt="Hi, I'm Yusuf Garcia. Could you please update my orders? For #W3260419, change the Smart Watch to a gold color with a leather band and LCD display. For #W6885344, modify the Backpack to black and large. Lastly, for #W2286012, exchange the Perfume to a woody scent, 30ml, for women, and change the Bluetooth Speaker to blue. My email is yusuf.garcia2909@example.com.",
+        prompt="Hi my name is Yusuf Garcia and my email is yusuf. garcia2909@example.com.  For #W3260419, modify Smart Watch {'color': 'black', 'band material': 'silicone', 'display': 'LCD'} to {}; Smart Watch {'color': 'silver', 'band material': 'metal', 'display': 'AMOLED'} to {'color': 'gold', 'band material': 'leather', 'display': 'LCD'}; via paypal_7503218. For #W6885344, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'black', 'size': 'large'}; via paypal_7503218. For #W2286012, exchange Perfume {'scent family': 'oriental', 'size': '100ml', 'gender': 'men'} to {'scent family': 'woody', 'size': '30ml', 'gender': 'women'}; Bluetooth Speaker {'color': 'black', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'blue'}; via credit_card_8405687.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8786,11 +8786,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_brown_4616",
         instruction="Your name is Olivia Brown and your zip code is 43118. You are relaxing, sad, organized, flexible, curious. Return #W2912153 via credit_card_3081930: Electric Kettle; Desk Lamp; ",
-        prompt="Hi, I'm Olivia Brown, zip code 43118. I'd like to return order #W2912153, which includes an electric kettle and a desk lamp.",
+        prompt="Hi my name is Olivia Brown and my zip code is 43118. Return #W2912153 via credit_card_3081930: Electric Kettle; Desk Lamp;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8803,11 +8803,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_smith_8564",
         instruction="Your name is Emma Smith and your email is emma.smith3991@example.com. You are curious, happy, organized. Cancel order #W2417020 because no longer needed. ",
-        prompt="Hi, I'm Emma Smith (emma.smith3991@example.com). Could you please cancel order #W2417020 as I no longer need it? Thank you!",
+        prompt="Hi my name is Emma Smith and my email is emma. smith3991@example.com.  Cancel order #W2417020 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8816,11 +8816,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_martin_6103",
         instruction="Your name is Mei Martin and your zip code is 78270. You are sad, flexible. For #W1759614, exchange Grill {'type': 'electric', 'size': 'large', 'features': 'rotisserie'} to {'type': 'charcoal', 'size': 'medium'}; via credit_card_8398849. ",
-        prompt="Hi, I'm Mei Martin from zip code 78270. I'd like to exchange my electric large grill with rotisserie (Order #W1759614) for a medium charcoal grill. Please process the exchange using credit card ending in 8849. Thank you!",
+        prompt="Hi my name is Mei Martin and my zip code is 78270. For #W1759614, exchange Grill {'type': 'electric', 'size': 'large', 'features': 'rotisserie'} to {'type': 'charcoal', 'size': 'medium'}; via credit_card_8398849.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8834,11 +8834,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_patel_8882",
         instruction="Your name is Evelyn Patel and your email is evelyn.patel2010@example.com. You are independent, cautious, relaxing, happy, messy. For #W6385395, modify T-Shirt {'color': 'purple', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'blue', 'size': 'M'}; Fleece Jacket {'size': 'S', 'color': 'red', 'zipper': 'half'} to {'size': 'L'}; via paypal_3704667. ",
-        prompt="Hi, I'm Evelyn Patel. Could you please update my order #W6385395 to change the T-Shirt to blue, size M, and the Fleece Jacket to size L? You can reach me at evelyn.patel2010@example.com. Thank you!",
+        prompt="Hi my name is Evelyn Patel and my email is evelyn. patel2010@example.com.  For #W6385395, modify T-Shirt {'color': 'purple', 'size': 'XL', 'material': 'cotton', 'style': 'crew neck'} to {'color': 'blue', 'size': 'M'}; Fleece Jacket {'size': 'S', 'color': 'red', 'zipper': 'half'} to {'size': 'L'}; via paypal_3704667.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8852,11 +8852,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mason_wilson_4597",
         instruction="Your name is Mason Wilson and your zip code is 85028. You are confident, optimistic, polite. For #W4318885, modify Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'battery life': '20 hours', 'water resistance': 'no'}; via gift_card_6767859. ",
-        prompt="Hi, I'm Mason Wilson from zip code 85028. Could you please modify my order #W4318885 for the Bluetooth Speaker to have a battery life of 20 hours and no water resistance, using gift card 6767859? Thank you!",
+        prompt="Hi my name is Mason Wilson and my zip code is 85028. For #W4318885, modify Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'yes'} to {'battery life': '20 hours', 'water resistance': 'no'}; via gift_card_6767859.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -8870,11 +8870,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_silva_7567",
         instruction="Your name is Yara Silva and your zip code is 77159. You are dependent, pessimistic. Cancel order #W3730488 because no longer needed. For #W3964602, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red'}; via gift_card_7252880. ",
-        prompt="Hi, I'm Yara Silva, zip code 77159. Could you please cancel order #W3730488 as I no longer need it? Also, I'd like to exchange the green Bluetooth Speaker in order #W3964602 for a red one using gift card 7252880. Thank you.",
+        prompt="Hi my name is Yara Silva and my zip code is 77159. Cancel order #W3730488 because no longer needed. For #W3964602, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red'}; via gift_card_7252880.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8892,11 +8892,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_kim_3337",
         instruction="Your name is Mei Kim and your email is mei.kim6594@example.com. You are creative, messy, outgoing, cautious, independent. Cancel order #W3263208 because ordered by mistake. ",
-        prompt="Hi, I'm Mei Kim (mei.kim6594@example.com). Could you please cancel order #W3263208? I ordered it by mistake. Thank you!",
+        prompt="Hi my name is Mei Kim and my email is mei. kim6594@example.com.  Cancel order #W3263208 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -8905,11 +8905,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_santos_4830",
         instruction="Your name is Omar Santos and your email is omar.santos1752@example.com. You are flexible, patient. For #W9121070, change payment to credit_card_8992222. For #W9121070, modify Backpack {'color': 'black', 'size': 'medium', 'material': 'nylon', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'camera'}; via gift_card_3895897. ",
-        prompt="Hi, I'm Omar Santos. Could you please change the payment method for order #W9121070 to credit_card_8992222 and modify the backpack to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'camera'} using gift_card_3895897? My email is omar.santos1752@example.com. Thank you!",
+        prompt="Hi my name is Omar Santos and my email is omar. santos1752@example.com.  For #W9121070, change payment to credit_card_8992222. For #W9121070, modify Backpack {'color': 'black', 'size': 'medium', 'material': 'nylon', 'compartment': 'hydration'} to {'color': 'green', 'size': 'small', 'material': 'polyester', 'compartment': 'camera'}; via gift_card_3895897.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -8930,11 +8930,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_brown_6181",
         instruction="Your name is Noah Brown and your email is noah.brown7922@example.com. You are happy, messy, confident, cautious. Return #W7678072 via paypal_5727330: Gaming Mouse; ",
-        prompt="Hi, I'm Noah Brown (noah.brown7922@example.com). I'd like to return order #W7678072, the Gaming Mouse, via PayPal.",
+        prompt="Hi my name is Noah Brown and my email is noah. brown7922@example.com.  Return #W7678072 via paypal_5727330: Gaming Mouse;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -8947,11 +8947,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_brown_6181",
         instruction="Your name is Noah Brown and your zip code is 80279. You are impatient, logical, sad, confident. For #W7678072, exchange Gaming Mouse {'color': 'black', 'sensor type': 'laser', 'connectivity': 'wired'} to {'color': 'white', 'sensor type': 'optical', 'connectivity': 'wireless'}; via paypal_5727330. ",
-        prompt="Hi, I'm Noah Brown, zip code 80279. I'd like to exchange my Gaming Mouse from black, laser, wired to white, optical, wireless for order #W7678072. Payment was via PayPal (paypal_5727330). Thanks.",
+        prompt="Hi my name is Noah Brown and my zip code is 80279. For #W7678072, exchange Gaming Mouse {'color': 'black', 'sensor type': 'laser', 'connectivity': 'wired'} to {'color': 'white', 'sensor type': 'optical', 'connectivity': 'wireless'}; via paypal_5727330.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -8965,11 +8965,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_lopez_2676",
         instruction="Your name is Ava Lopez and your email is ava.lopez3569@example.com. You are optimistic, direct. For #W5911003, change payment to gift_card_4855547. For #W5911003, modify Garden Hose {'length': '100ft', 'material': 'rubber', 'color': 'black'} to {'length': '50ft', 'material': 'vinyl'}; Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'leather', 'color': 'blue', 'backrest height': 'high-back'}; Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '12', 'material': 'synthetic'}; via credit_card_7772870. For #W8327915, change address to {'order_id': '#W8327915', 'address1': '836 Hickory Lane', 'address2': 'Suite 848', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92168'} (same as #W5911003). For #W8327915, change payment to credit_card_7772870. For #W8327915, modify Sunglasses {'frame color': 'black', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'brown'}; Skateboard {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'} to {'length': '28 inch'}; via gift_card_4855547. ",
-        prompt="My zip code is 92168. Hi, I'm Ava Lopez (ava.lopez3569@example.com). Could you please update order #W5911003 to use gift_card_4855547 for payment and adjust the Garden Hose, Office Chair, and Hiking Boots specifications as mentioned? Also, for order #W8327915, change the address to match #W5911003, switch payment to credit_card_7772870, and modify the Sunglasses and Skateboard details as specified. Thank you!",
+        prompt="Hi my name is Ava Lopez and my email is ava. lopez3569@example.com.  For #W5911003, change payment to gift_card_4855547. For #W5911003, modify Garden Hose {'length': '100ft', 'material': 'rubber', 'color': 'black'} to {'length': '50ft', 'material': 'vinyl'}; Office Chair {'material': 'mesh', 'color': 'red', 'armrest': 'none', 'backrest height': 'standard'} to {'material': 'leather', 'color': 'blue', 'backrest height': 'high-back'}; Hiking Boots {'size': '10', 'material': 'leather', 'waterproof': 'no'} to {'size': '12', 'material': 'synthetic'}; via credit_card_7772870. For #W8327915, change address to {'order_id': '#W8327915', 'address1': '836 Hickory Lane', 'address2': 'Suite 848', 'city': 'San Diego', 'country': 'USA', 'state': 'CA', 'zip': '92168'} (same as #W5911003). For #W8327915, change payment to credit_card_7772870. For #W8327915, modify Sunglasses {'frame color': 'black', 'lens color': 'brown', 'lens type': 'polarized', 'frame material': 'plastic'} to {'frame color': 'brown'}; Skateboard {'deck material': 'bamboo', 'length': '34 inch', 'design': 'custom'} to {'length': '28 inch'}; via gift_card_4855547.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -9018,11 +9018,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_sanchez_6636",
         instruction="Your name is Aarav Sanchez and your zip code is 60653. You are patient, busy, messy. Return #W9552705 via gift_card_8922351: Cycling Helmet; Bookshelf; ",
-        prompt="Hi, I'm Aarav Sanchez from zip code 60653. I'd like to return order #W9552705 using gift card #8922351 for the cycling helmet and bookshelf. My email is aarav.sanchez@email.com.",
+        prompt="Hi my name is Aarav Sanchez and my zip code is 60653. Return #W9552705 via gift_card_8922351: Cycling Helmet; Bookshelf;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9035,11 +9035,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_lopez_5873",
         instruction="Your name is Raj Lopez and your zip code is 76195. You are flexible, shy. For #W5107138, change payment to paypal_7007375. For #W5107138, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'charcoal', 'features': 'rotisserie'}; via credit_card_6731308. ",
-        prompt="Hi, I'm Raj Lopez. Could you please change the payment for order #W5107138 to PayPal account paypal_7007375 and modify the grill to a charcoal type with a rotisserie feature? My zip code is 76195. Thank you!",
+        prompt="Hi my name is Raj Lopez and my zip code is 76195. For #W5107138, change payment to paypal_7007375. For #W5107138, modify Grill {'type': 'electric', 'size': 'medium', 'features': 'side burner'} to {'type': 'charcoal', 'features': 'rotisserie'}; via credit_card_6731308.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -9060,11 +9060,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_5025",
         instruction="Your name is Sophia Garcia and your zip code is 20156. You are messy, curious, relaxing, direct, patient. Return #W5777276 via credit_card_4147840: Tablet; ",
-        prompt="Hi, I'm Sophia Garcia. I'd like to return order #W5777276 for the tablet I purchased. My zip code is 20156.",
+        prompt="Hi my name is Sophia Garcia and my zip code is 20156. Return #W5777276 via credit_card_4147840: Tablet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9077,11 +9077,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_garcia_3055",
         instruction="Your name is Yusuf Garcia and your email is yusuf.garcia2909@example.com. You are independent, organized, outgoing, sad, insecure. Cancel order #W3260419 because no longer needed. Return #W2286012 via gift_card_7588375: Electric Toothbrush; Action Camera; Perfume; For #W4794911, exchange T-Shirt {'color': 'purple', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'blue', 'material': 'cotton'}; via credit_card_8405687. For #W6885344, change address to {'order_id': '#W6885344', 'address1': '690 Broadway', 'address2': 'Suite 737', 'city': 'Indianapolis', 'country': 'USA', 'state': 'IN', 'zip': '46226'} (same as #W2564042). For #W6885344, change payment to gift_card_7588375. For #W6885344, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'navy', 'size': 'large'}; via paypal_7503218. ",
-        prompt="My zip code is 46226. Hi, I'm Yusuf Garcia. Please cancel order #W3260419, process a return for #W2286012 using gift card 7588375, and exchange the T-shirt in order #W4794911 to a blue cotton one. Also, update the address and payment method for order #W6885344, and modify the backpack to a navy large size. My email is yusuf.garcia2909@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Garcia and my email is yusuf. garcia2909@example.com.  Cancel order #W3260419 because no longer needed. Return #W2286012 via gift_card_7588375: Electric Toothbrush; Action Camera; Perfume; For #W4794911, exchange T-Shirt {'color': 'purple', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'blue', 'material': 'cotton'}; via credit_card_8405687. For #W6885344, change address to {'order_id': '#W6885344', 'address1': '690 Broadway', 'address2': 'Suite 737', 'city': 'Indianapolis', 'country': 'USA', 'state': 'IN', 'zip': '46226'} (same as #W2564042). For #W6885344, change payment to gift_card_7588375. For #W6885344, modify Backpack {'color': 'grey', 'size': 'medium', 'material': 'polyester', 'compartment': 'laptop'} to {'color': 'navy', 'size': 'large'}; via paypal_7503218.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9135,11 +9135,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_garcia_4516",
         instruction="Your name is Mia Garcia and your email is mia.garcia2723@example.com. You are impatient, insecure, outgoing. Return #W5490111 via credit_card_3124723: Action Camera; ",
-        prompt="Hi, I'm Mia Garcia. I'd like to return order #W5490111 for the Action Camera and get a refund to credit card ending in 3124723. My email is mia.garcia2723@example.com.",
+        prompt="Hi my name is Mia Garcia and my email is mia. garcia2723@example.com.  Return #W5490111 via credit_card_3124723: Action Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9152,11 +9152,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_hernandez_6785",
         instruction="Your name is Yusuf Hernandez and your zip code is 80265. You are confident, cautious. For #W2466703, change address to {'order_id': '#W2466703', 'address1': '580 Broadway', 'address2': 'Suite 162', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80265'} (same as #W2166301). For #W2466703, modify Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {'size': 'XS', 'color': 'navy'}; Grill {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'} to {'features': 'rotisserie'}; via paypal_7529813. For #W7739115, exchange Makeup Kit {'skin tone': 'dark', 'kit size': 'professional', 'brand': 'Brand A'} to {'brand': 'Brand C'}; via paypal_7529813. ",
-        prompt="Hi, I'm Yusuf Hernandez. Could you please update the address for order #W2466703 to 580 Broadway, Suite 162, Denver, CO 80265? Also, for the same order, change the Fleece Jacket to size XS in navy and the Grill to include a rotisserie. For order #W7739115, I'd like to exchange the Makeup Kit to Brand C. Both orders were paid via PayPal (paypal_7529813). Thank you!",
+        prompt="Hi my name is Yusuf Hernandez and my zip code is 80265. For #W2466703, change address to {'order_id': '#W2466703', 'address1': '580 Broadway', 'address2': 'Suite 162', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80265'} (same as #W2166301). For #W2466703, modify Fleece Jacket {'size': 'L', 'color': 'black', 'zipper': 'full'} to {'size': 'XS', 'color': 'navy'}; Grill {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'} to {'features': 'rotisserie'}; via paypal_7529813. For #W7739115, exchange Makeup Kit {'skin tone': 'dark', 'kit size': 'professional', 'brand': 'Brand A'} to {'brand': 'Brand C'}; via paypal_7529813.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -9191,11 +9191,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_ahmed_1705",
         instruction="Your name is Lei Ahmed and your email is lei.ahmed1696@example.com. You are dependent, messy, direct. For #W6724985, modify Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'color': 'brown'}; via credit_card_3593714. Cancel order #W9132840 because no longer needed. Cancel order #W9015076 because no longer needed. ",
-        prompt="Hi, I'm Lei Ahmed. Could you please change the color of the bookshelf in order #W6724985 to brown and cancel orders #W9132840 and #W9015076? My email is lei.ahmed1696@example.com. Thank you!",
+        prompt="Hi my name is Lei Ahmed and my email is lei. ahmed1696@example.com.  For #W6724985, modify Bookshelf {'material': 'glass', 'color': 'white', 'height': '5 ft'} to {'color': 'brown'}; via credit_card_3593714. Cancel order #W9132840 because no longer needed. Cancel order #W9015076 because no longer needed.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9217,11 +9217,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_thomas_1791",
         instruction="Your name is Ethan Thomas and your zip code is 43188. You are confident, polite, busy, curious. Return #W7764382 via gift_card_2519457: Indoor Security Camera; ",
-        prompt="Hi, I'm Ethan Thomas, zip code 43188. I'd like to return order #W7764382, the Indoor Security Camera, using gift card #2519457. Thank you!",
+        prompt="Hi my name is Ethan Thomas and my zip code is 43188. Return #W7764382 via gift_card_2519457: Indoor Security Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9234,11 +9234,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_kim_2998",
         instruction="Your name is Harper Kim and your zip code is 78222. You are polite, creative, messy, confident. For #W7807988, modify Digital Camera {'resolution': '24MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '30MP'}; via gift_card_5328393. ",
-        prompt="Hi, I'm Harper Kim, zip code 78222. Could you please help me modify the digital camera on order #W7807988 from a 24MP resolution to a 30MP resolution using gift card 5328393? Thank you!",
+        prompt="Hi my name is Harper Kim and my zip code is 78222. For #W7807988, modify Digital Camera {'resolution': '24MP', 'zoom': '3x', 'storage': 'SD card'} to {'resolution': '30MP'}; via gift_card_5328393.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9252,11 +9252,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_santos_6104",
         instruction="Your name is Ethan Santos and your zip code is 80278. You are insecure, happy. For #W5320242, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'high'} to {'size': 'S', 'color': 'white', 'ventilation': 'medium'}; Tablet {'screen size': '7-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'}; via credit_card_9784468. ",
-        prompt="Hi, I'm Ethan Santos. Could you please update my order #W5320242? I'd like to change the Cycling Helmet to size S, color white, and medium ventilation, and the Tablet to a 10-inch screen, 64GB storage, and silver color. Thank you! My zip code is 80278, and my email is ethan.santos@example.com.",
+        prompt="Hi my name is Ethan Santos and my zip code is 80278. For #W5320242, modify Cycling Helmet {'size': 'L', 'color': 'blue', 'ventilation': 'high'} to {'size': 'S', 'color': 'white', 'ventilation': 'medium'}; Tablet {'screen size': '7-inch', 'storage': '128GB', 'color': 'black'} to {'screen size': '10-inch', 'storage': '64GB', 'color': 'silver'}; via credit_card_9784468.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9270,11 +9270,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_martin_1500",
         instruction="Your name is James Martin and your email is james.martin9857@example.com. You are rigid, polite. Cancel order #W3529525 because no longer needed. ",
-        prompt="Hello, my name is James Martin, and my email is james.martin9857@example.com. Could you please cancel order #W3529525 as I no longer need it? Thank you.",
+        prompt="Hi my name is James Martin and my email is james. martin9857@example.com.  Cancel order #W3529525 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9283,11 +9283,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="amelia_ito_8772",
         instruction="Your name is Amelia Ito and your email is amelia.ito8974@example.com. You are polite, logical, sad, impatient, busy. For #W3883329, modify Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'color': 'red', 'ventilation': 'low'}; Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'CF card'} to {'resolution': '24MP', 'storage': 'SD card'}; via paypal_2767694. ",
-        prompt="Hi, I'm Amelia Ito. Could you please modify my order #W3883329? I'd like to change the Cycling Helmet to color 'red' and 'low' ventilation, and the Digital Camera to '24MP' resolution with 'SD card' storage. My email is amelia.ito8974@example.com. Thank you!",
+        prompt="Hi my name is Amelia Ito and my email is amelia. ito8974@example.com.  For #W3883329, modify Cycling Helmet {'size': 'S', 'color': 'black', 'ventilation': 'medium'} to {'color': 'red', 'ventilation': 'low'}; Digital Camera {'resolution': '30MP', 'zoom': '3x', 'storage': 'CF card'} to {'resolution': '24MP', 'storage': 'SD card'}; via paypal_2767694.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9301,11 +9301,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_li_5260",
         instruction="Your name is Liam Li and your email is liam.li2557@example.com. You are organized, happy. Cancel order #W9653558 because no longer needed. ",
-        prompt="Hi, I'm Liam Li (liam.li2557@example.com). Could you please cancel order #W9653558 as I no longer need it? Thank you!",
+        prompt="Hi my name is Liam Li and my email is liam. li2557@example.com.  Cancel order #W9653558 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9314,11 +9314,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_kim_8860",
         instruction="Your name is Ethan Kim and your email is ethan.kim3231@example.com. You are pessimistic, independent, happy. For #W8296441, modify Action Camera {'resolution': '4K', 'waterproof': 'yes', 'color': 'silver'} to {'resolution': '5K', 'waterproof': 'no', 'color': 'black'}; via gift_card_5701566. Return #W1763367 via gift_card_5701566: Espresso Machine; Notebook; ",
-        prompt="Hi, I'm Ethan Kim (ethan.kim3231@example.com). Could you please modify my order #W8296441 to change the Action Camera to 5K resolution, non-waterproof, and black color? Also, I'd like to return order #W1763367, which includes an Espresso Machine and a Notebook, using gift card 5701566. Thank you.",
+        prompt="Hi my name is Ethan Kim and my email is ethan. kim3231@example.com.  For #W8296441, modify Action Camera {'resolution': '4K', 'waterproof': 'yes', 'color': 'silver'} to {'resolution': '5K', 'waterproof': 'no', 'color': 'black'}; via gift_card_5701566. Return #W1763367 via gift_card_5701566: Espresso Machine; Notebook;",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9340,11 +9340,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_kim_1076",
         instruction="Your name is Emma Kim and your zip code is 46214. You are cautious, insecure, creative, direct, flexible. Cancel order #W3698202 because ordered by mistake. ",
-        prompt="Hi, I'm Emma Kim, and I need to cancel order #W3698202 as I ordered it by mistake. My zip code is 46214, and my email is emma.kim@example.com. Thank you!",
+        prompt="Hi my name is Emma Kim and my zip code is 46214. Cancel order #W3698202 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9353,11 +9353,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_kovacs_1216",
         instruction="Your name is Noah Kovacs and your email is noah.kovacs8240@example.com. You are patient, shy. Cancel order #W9440076 because no longer needed. For #W3002300, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'yes'}; Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'battery life': '20 hours'}; via gift_card_2486551. ",
-        prompt="Hi, I'm Noah Kovacs. Could you please cancel order #W9440076 and help me exchange the Bluetooth speakers in order #W3002300 as specified? My email is noah.kovacs8240@example.com. Thank you!",
+        prompt="Hi my name is Noah Kovacs and my email is noah. kovacs8240@example.com.  Cancel order #W9440076 because no longer needed. For #W3002300, exchange Bluetooth Speaker {'color': 'green', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'yes'}; Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'battery life': '20 hours'}; via gift_card_2486551.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9375,11 +9375,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_moore_6466",
         instruction="Your name is Yara Moore and your email is yara.moore6859@example.com. You are busy, organized, cautious, confident, outgoing. For #W8336711, exchange Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {}; Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'no'} to {}; Perfume {'scent family': 'woody', 'size': '100ml', 'gender': 'men'} to {'scent family': 'oriental', 'size': '30ml'}; via credit_card_7161839. ",
-        prompt="Hi, I'm Yara Moore (yara.moore6859@example.com). I'd like to exchange my order #W8336711: the smartphone, Bluetooth speaker, and perfume as specified. Please process the exchange via my credit card ending in 7161839. Thank you!",
+        prompt="Hi my name is Yara Moore and my email is yara. moore6859@example.com.  For #W8336711, exchange Smartphone {'color': 'black', 'storage': '128GB', 'RAM': '8GB', 'screen size': '5.8-inch'} to {}; Bluetooth Speaker {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'no'} to {}; Perfume {'scent family': 'woody', 'size': '100ml', 'gender': 'men'} to {'scent family': 'oriental', 'size': '30ml'}; via credit_card_7161839.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9393,11 +9393,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ava_nguyen_6646",
         instruction="Your name is Ava Nguyen and your email is ava.nguyen2868@example.com. You are organized, curious, shy, busy, pessimistic. Cancel order #W9892465 because no longer needed. For #W8367380, modify Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue'}; via gift_card_1994993. Cancel order #W9232383 because ordered by mistake. Cancel order #W6272294 because no longer needed. ",
-        prompt="Hi, I'm Ava Nguyen (ava.nguyen2868@example.com). Please cancel orders #W9892465 and #W6272294 as they're no longer needed, and #W9232383 was ordered by mistake. Also, for order #W8367380, could you change the Bluetooth Speaker color to blue? Thank you!",
+        prompt="Hi my name is Ava Nguyen and my email is ava. nguyen2868@example.com.  Cancel order #W9892465 because no longer needed. For #W8367380, modify Bluetooth Speaker {'color': 'red', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue'}; via gift_card_1994993. Cancel order #W9232383 because ordered by mistake. Cancel order #W6272294 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9423,11 +9423,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_johansson_2663",
         instruction="Your name is Harper Johansson and your email is harper.johansson4006@example.com. You are independent, organized, rigid. Cancel order #W2912646 because no longer needed. ",
-        prompt="Hi, I'm Harper Johansson. Could you please cancel order #W2912646 as I no longer need it? My email is harper.johansson4006@example.com. Thank you.",
+        prompt="Hi my name is Harper Johansson and my email is harper. johansson4006@example.com.  Cancel order #W2912646 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9436,11 +9436,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_hernandez_6467",
         instruction="Your name is Yusuf Hernandez and your email is yusuf.hernandez6086@example.com. You are creative, dependent, patient, confident. Return #W7133840 via paypal_9426036: Bookshelf; Backpack; Jigsaw Puzzle; ",
-        prompt="Hi, I'm Yusuf Hernandez. I'd like to return order #W7133840, which includes a bookshelf, backpack, and jigsaw puzzle. My email is yusuf.hernandez6086@example.com.",
+        prompt="Hi my name is Yusuf Hernandez and my email is yusuf. hernandez6086@example.com.  Return #W7133840 via paypal_9426036: Bookshelf; Backpack; Jigsaw Puzzle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9453,11 +9453,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yara_sanchez_9145",
         instruction="Your name is Yara Sanchez and your email is yara.sanchez9547@example.com. You are insecure, sad, logical, independent, pessimistic. For #W6519831, exchange Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'stainless steel'} to {'compatibility': 'Amazon Alexa'}; via credit_card_5353742. ",
-        prompt="Hi, I'm Yara Sanchez (yara.sanchez9547@example.com). I'd like to exchange my Smart Thermostat from the Apple HomeKit version to the Amazon Alexa version for order #W6519831. Can you help with that?",
+        prompt="Hi my name is Yara Sanchez and my email is yara. sanchez9547@example.com.  For #W6519831, exchange Smart Thermostat {'compatibility': 'Apple HomeKit', 'color': 'stainless steel'} to {'compatibility': 'Amazon Alexa'}; via credit_card_5353742.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9471,11 +9471,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_muller_6713",
         instruction="Your name is Fatima Muller and your email is fatima.muller6448@example.com. You are rigid, impatient, curious, pessimistic, dependent. Cancel order #W4160705 because ordered by mistake. ",
-        prompt="Hi, I'm Fatima Muller. Could you please cancel order #W4160705? I ordered it by mistake. My email is fatima.muller6448@example.com.",
+        prompt="Hi my name is Fatima Muller and my email is fatima. muller6448@example.com.  Cancel order #W4160705 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9484,11 +9484,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="fatima_brown_2588",
         instruction="Your name is Fatima Brown and your email is fatima.brown8196@example.com. You are flexible, direct, cautious. For #W8008214, modify Espresso Machine {'pressure': '9 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '19 bar', 'capacity': '1.5L', 'type': 'automatic'}; via paypal_8445813. ",
-        prompt="Hi, I'm Fatima Brown (fatima.brown8196@example.com). Could you please update my order #W8008214 to change the Espresso Machine to have a pressure of 19 bar, a capacity of 1.5L, and be an automatic type? I'll be using PayPal for the payment. Thank you!",
+        prompt="Hi my name is Fatima Brown and my email is fatima. brown8196@example.com.  For #W8008214, modify Espresso Machine {'pressure': '9 bar', 'capacity': '1L', 'type': 'capsule'} to {'pressure': '19 bar', 'capacity': '1.5L', 'type': 'automatic'}; via paypal_8445813.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9502,11 +9502,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_li_9219",
         instruction="Your name is Sofia Li and your zip code is 78260. You are insecure, independent, organized, optimistic. For #W3916020, exchange Bicycle {'frame size': 'medium', 'color': 'green', 'type': 'road'} to {}; Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'} to {'theme': 'animals', 'difficulty level': 'expert'}; via paypal_8194385. For #W8855135, change address to {'order_id': '#W8855135', 'address1': '285 Elm Street', 'address2': 'Suite 121', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76155'} (same as #W3916020). For #W8855135, modify Hiking Boots {'size': '7', 'material': 'synthetic', 'waterproof': 'no'} to {'size': '8'}; via credit_card_8105988. For #W5416052, exchange Pet Bed {'size': 'large', 'material': 'memory foam', 'color': 'beige'} to {'size': 'medium', 'material': 'polyester'}; via credit_card_8105988. ",
-        prompt="My zip code is 76155. Hi, I'm Sofia Li. Could you please help me exchange the bicycle and jigsaw puzzle for order #W3916020, update the address for order #W8855135, modify the hiking boots, and exchange the pet bed for order #W5416052? Thank you! My zip code is 78260, and my email is [your email].",
+        prompt="Hi my name is Sofia Li and my zip code is 78260. For #W3916020, exchange Bicycle {'frame size': 'medium', 'color': 'green', 'type': 'road'} to {}; Jigsaw Puzzle {'pieces': '500', 'theme': 'art', 'difficulty level': 'intermediate'} to {'theme': 'animals', 'difficulty level': 'expert'}; via paypal_8194385. For #W8855135, change address to {'order_id': '#W8855135', 'address1': '285 Elm Street', 'address2': 'Suite 121', 'city': 'Fort Worth', 'country': 'USA', 'state': 'TX', 'zip': '76155'} (same as #W3916020). For #W8855135, modify Hiking Boots {'size': '7', 'material': 'synthetic', 'waterproof': 'no'} to {'size': '8'}; via credit_card_8105988. For #W5416052, exchange Pet Bed {'size': 'large', 'material': 'memory foam', 'color': 'beige'} to {'size': 'medium', 'material': 'polyester'}; via credit_card_8105988.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9550,11 +9550,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_rossi_9620",
         instruction="Your name is Yusuf Rossi and your email is yusuf.rossi7301@example.com. You are patient, happy. Return #W6679257 via credit_card_9513926: Digital Camera; ",
-        prompt="Hi, I'm Yusuf Rossi. I'd like to return order #W6679257 for the digital camera. My email is yusuf.rossi7301@example.com. Can you assist me with this?",
+        prompt="Hi my name is Yusuf Rossi and my email is yusuf. rossi7301@example.com.  Return #W6679257 via credit_card_9513926: Digital Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9567,11 +9567,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_jackson_7865",
         instruction="Your name is Yusuf Jackson and your email is yusuf.jackson4654@example.com. You are curious, impatient. For #W7128968, exchange Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'bagged/bagless': 'bagless', 'features': 'cordless'}; Bluetooth Speaker {'color': 'green', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'no'}; via gift_card_7037673. ",
-        prompt="Hi, I'm Yusuf Jackson (yusuf.jackson4654@example.com). Can you help me exchange my order #W7128968? I want to swap the robotic bagged vacuum cleaner for a bagless cordless one, and the green Bluetooth speaker for a blue one with a 10-hour battery life and no water resistance, using gift card 7037673. Thanks!",
+        prompt="Hi my name is Yusuf Jackson and my email is yusuf. jackson4654@example.com.  For #W7128968, exchange Vacuum Cleaner {'type': 'robotic', 'bagged/bagless': 'bagged', 'features': 'pet hair removal'} to {'bagged/bagless': 'bagless', 'features': 'cordless'}; Bluetooth Speaker {'color': 'green', 'battery life': '20 hours', 'water resistance': 'yes'} to {'color': 'blue', 'battery life': '10 hours', 'water resistance': 'no'}; via gift_card_7037673.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9585,11 +9585,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_santos_6104",
         instruction="Your name is Ethan Santos and your email is ethan.santos9082@example.com. You are outgoing, pessimistic, independent. For #W5320242, change address to {'order_id': '#W5320242', 'address1': '654 Spruce Street', 'address2': 'Suite 503', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80278'} (same as #W4642822). For #W5320242, modify Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K', 'field of view': '130 degrees'}; Luggage Set {'piece count': '2-piece', 'color': 'red', 'material': 'softshell'} to {'piece count': '4-piece', 'material': 'hardshell'}; via credit_card_9784468. ",
-        prompt="My zip code is 80278. Hi, I'm Ethan Santos. Could you please update the address for order #W5320242 to match the one from #W4642822? Also, I'd like to modify the Indoor Security Camera to 4K resolution with a 130-degree field of view and change the Luggage Set to a 4-piece hardshell set. My email is ethan.santos9082@example.com. Thank you!",
+        prompt="Hi my name is Ethan Santos and my email is ethan. santos9082@example.com.  For #W5320242, change address to {'order_id': '#W5320242', 'address1': '654 Spruce Street', 'address2': 'Suite 503', 'city': 'Denver', 'country': 'USA', 'state': 'CO', 'zip': '80278'} (same as #W4642822). For #W5320242, modify Indoor Security Camera {'resolution': '2K', 'field of view': '160 degrees', 'connectivity': 'Ethernet'} to {'resolution': '4K', 'field of view': '130 degrees'}; Luggage Set {'piece count': '2-piece', 'color': 'red', 'material': 'softshell'} to {'piece count': '4-piece', 'material': 'hardshell'}; via credit_card_9784468.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -9615,11 +9615,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_ahmed_3232",
         instruction="Your name is Chen Ahmed and your zip code is 46210. You are independent, flexible, curious, impatient, direct. For #W8268544, modify Cycling Helmet {'size': 'L', 'color': 'red', 'ventilation': 'high'} to {'size': 'S', 'color': 'white', 'ventilation': 'low'}; Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '6GB', 'screen size': '6.1-inch'} to {'color': 'black', 'RAM': '8GB', 'screen size': '5.8-inch'}; via gift_card_1402922. ",
-        prompt="Hi, I'm Chen Ahmed. Could you please update order #W8268544 to change the Cycling Helmet to size 'S', color 'white', and 'low' ventilation, and the Smartphone to color 'black', '8GB' RAM, and a '5.8-inch' screen size? I'll be using gift card 1402922 for this. My zip is 46210, and my email is chen.ahmed@example.com.",
+        prompt="Hi my name is Chen Ahmed and my zip code is 46210. For #W8268544, modify Cycling Helmet {'size': 'L', 'color': 'red', 'ventilation': 'high'} to {'size': 'S', 'color': 'white', 'ventilation': 'low'}; Smartphone {'color': 'gold', 'storage': '128GB', 'RAM': '6GB', 'screen size': '6.1-inch'} to {'color': 'black', 'RAM': '8GB', 'screen size': '5.8-inch'}; via gift_card_1402922.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9633,11 +9633,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_li_8218",
         instruction="Your name is Daiki Li and your zip code is 75201. You are insecure, direct. Cancel order #W6958840 because no longer needed. ",
-        prompt="Hi, I'm Daiki Li from zip code 75201. Could you please cancel order #W6958840 as I no longer need it?",
+        prompt="Hi my name is Daiki Li and my zip code is 75201. Cancel order #W6958840 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9646,11 +9646,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_garcia_3271",
         instruction="Your name is Anya Garcia and your email is anya.garcia2061@example.com. You are dependent, insecure, curious, pessimistic, sad. Cancel order #W6436609 because ordered by mistake. ",
-        prompt="Hi, I'm Anya Garcia (anya.garcia2061@example.com). Could you please cancel order #W6436609? I ordered it by mistake. Thank you.",
+        prompt="Hi my name is Anya Garcia and my email is anya. garcia2061@example.com.  Cancel order #W6436609 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9659,11 +9659,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_johnson_7053",
         instruction="Your name is Ethan Johnson and your email is ethan.johnson2557@example.com. You are impatient, direct, rigid, pessimistic, outgoing. Return #W7450915 via gift_card_6892585: Laptop; Bookshelf; Digital Camera; ",
-        prompt="Hi, I'm Ethan Johnson (ethan.johnson2557@example.com). I need to return order #W7450915 using gift card #6892585 for the Laptop, Bookshelf, and Digital Camera.",
+        prompt="Hi my name is Ethan Johnson and my email is ethan. johnson2557@example.com.  Return #W7450915 via gift_card_6892585: Laptop; Bookshelf; Digital Camera;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9676,11 +9676,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_silva_7485",
         instruction="Your name is Chen Silva and your email is chen.silva2698@example.com. You are organized, busy. For #W2598834, exchange Jigsaw Puzzle {'pieces': '1500', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'difficulty level': 'beginner'}; via gift_card_7250692. Return #W8171054 via gift_card_7250692: Tea Kettle; Running Shoes; ",
-        prompt="Hi, I'm Chen Silva (chen.silva2698@example.com). I'd like to exchange the Jigsaw Puzzle from order #W2598834 to a beginner difficulty level and return the Tea Kettle and Running Shoes from order #W8171054 using gift card 7250692. Thank you!",
+        prompt="Hi my name is Chen Silva and my email is chen. silva2698@example.com.  For #W2598834, exchange Jigsaw Puzzle {'pieces': '1500', 'theme': 'animals', 'difficulty level': 'intermediate'} to {'difficulty level': 'beginner'}; via gift_card_7250692. Return #W8171054 via gift_card_7250692: Tea Kettle; Running Shoes;",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9702,11 +9702,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_garcia_4516",
         instruction="Your name is Mia Garcia and your email is mia.garcia2723@example.com. You are pessimistic, outgoing, creative, confident. For #W7387996, exchange Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'white'}; via credit_card_3124723. ",
-        prompt="Hi, I'm Mia Garcia. Could you please help me exchange the RGB Gaming Mouse from order #W7387996 for the white version? My email is mia.garcia2723@example.com. Thank you!",
+        prompt="Hi my name is Mia Garcia and my email is mia. garcia2723@example.com.  For #W7387996, exchange Gaming Mouse {'color': 'RGB', 'sensor type': 'optical', 'connectivity': 'wired'} to {'color': 'white'}; via credit_card_3124723.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9720,11 +9720,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_li_6575",
         instruction="Your name is Lei Li and your email is lei.li8350@example.com. You are shy, logical, rigid, organized. Cancel order #W3414433 because ordered by mistake. ",
-        prompt="Hi, I'm Lei Li (lei.li8350@example.com). Could you please cancel order #W3414433? I ordered it by mistake. Thank you.",
+        prompt="Hi my name is Lei Li and my email is lei. li8350@example.com.  Cancel order #W3414433 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9733,11 +9733,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_jackson_1219",
         instruction="Your name is Olivia Jackson and your zip code is 95119. You are outgoing, polite, busy, organized. Cancel order #W6975922 because no longer needed. Cancel order #W5663445 because ordered by mistake. For #W2090453, modify Espresso Machine {'pressure': '19 bar', 'capacity': '2L', 'type': 'capsule'} to {'pressure': '9 bar', 'type': 'manual'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '3 ft'} to {'material': 'metal', 'color': 'brown', 'height': '6 ft'}; via paypal_3999493. ",
-        prompt="Hi, I'm Olivia Jackson. Could you please cancel order #W6975922 as it's no longer needed and order #W5663445 as it was ordered by mistake? Also, for order #W2090453, I'd like to modify the Espresso Machine to {'pressure': '9 bar', 'type': 'manual'} and the Bookshelf to {'material': 'metal', 'color': 'brown', 'height': '6 ft'}. Thank you! My zip code is 95119 and my email is paypal_3999493.",
+        prompt="Hi my name is Olivia Jackson and my zip code is 95119. Cancel order #W6975922 because no longer needed. Cancel order #W5663445 because ordered by mistake. For #W2090453, modify Espresso Machine {'pressure': '19 bar', 'capacity': '2L', 'type': 'capsule'} to {'pressure': '9 bar', 'type': 'manual'}; Bookshelf {'material': 'glass', 'color': 'white', 'height': '3 ft'} to {'material': 'metal', 'color': 'brown', 'height': '6 ft'}; via paypal_3999493.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9759,11 +9759,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="anya_patel_3710",
         instruction="Your name is Anya Patel and your email is anya.patel9309@example.com. You are rigid, organized. For #W4604258, change payment to credit_card_4142574. For #W4604258, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'electric'}; Hiking Boots {'size': '8', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11', 'waterproof': 'no'}; via credit_card_4142574. ",
-        prompt="Hi, I'm Anya Patel (anya.patel9309@example.com). Please update order #W4604258 to use credit_card_4142574 and modify the Bluetooth Speaker to red with 20 hours battery life and no water resistance, the Tea Kettle to glass with 1-liter capacity and electric compatibility, and the Hiking Boots to size 11 and non-waterproof.",
+        prompt="Hi my name is Anya Patel and my email is anya. patel9309@example.com.  For #W4604258, change payment to credit_card_4142574. For #W4604258, modify Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'yes'} to {'color': 'red', 'battery life': '20 hours', 'water resistance': 'no'}; Tea Kettle {'material': 'ceramic', 'capacity': '1.5 liters', 'stovetop compatibility': 'gas'} to {'material': 'glass', 'capacity': '1 liter', 'stovetop compatibility': 'electric'}; Hiking Boots {'size': '8', 'material': 'leather', 'waterproof': 'yes'} to {'size': '11', 'waterproof': 'no'}; via credit_card_4142574.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -9784,11 +9784,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_kovacs_6742",
         instruction="Your name is Evelyn Kovacs and your zip code is 32117. You are optimistic, cautious, dependent, direct. For #W6689278, change address to {'order_id': '#W6689278', 'address1': '505 Cedar Avenue', 'address2': 'Suite 539', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32117'} (same as #W5694685). For #W6689278, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L', 'color': 'silver'}; via paypal_7732922. For #W7398274, change address to {'order_id': '#W7398274', 'address1': '295 Elm Avenue', 'address2': 'Suite 793', 'city': 'Los Angeles', 'country': 'USA', 'state': 'CA', 'zip': '90320'} (same as #W2768683). For #W7398274, modify Notebook {'size': 'A4', 'cover type': 'hard cover'} to {}; Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {'strap material': 'metal', 'dial color': 'black'}; via paypal_7732922. ",
-        prompt="Hi, I'm Evelyn Kovacs. Could you please update the address for order #W6689278 to 505 Cedar Avenue, Suite 539, Jacksonville, FL 32117, and change the Electric Kettle to a 1.5L silver model? Also, for order #W7398274, update the address to 295 Elm Avenue, Suite 793, Los Angeles, CA 90320, and modify the Wristwatch to have a metal strap and black dial. Thank you!",
+        prompt="Hi my name is Evelyn Kovacs and my zip code is 32117. For #W6689278, change address to {'order_id': '#W6689278', 'address1': '505 Cedar Avenue', 'address2': 'Suite 539', 'city': 'Jacksonville', 'country': 'USA', 'state': 'FL', 'zip': '32117'} (same as #W5694685). For #W6689278, modify Electric Kettle {'capacity': '1L', 'material': 'plastic', 'color': 'white'} to {'capacity': '1.5L', 'color': 'silver'}; via paypal_7732922. For #W7398274, change address to {'order_id': '#W7398274', 'address1': '295 Elm Avenue', 'address2': 'Suite 793', 'city': 'Los Angeles', 'country': 'USA', 'state': 'CA', 'zip': '90320'} (same as #W2768683). For #W7398274, modify Notebook {'size': 'A4', 'cover type': 'hard cover'} to {}; Wristwatch {'strap material': 'leather', 'dial color': 'white'} to {'strap material': 'metal', 'dial color': 'black'}; via paypal_7732922.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -9835,11 +9835,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_wilson_4541",
         instruction="Your name is Lei Wilson and your email is lei.wilson1253@example.com. You are patient, rigid, happy, outgoing, curious. Cancel order #W3826449 because no longer needed. ",
-        prompt="Hi, I'm Lei Wilson. Could you please cancel order #W3826449 for me? It's no longer needed. Thank you! My email is lei.wilson1253@example.com.",
+        prompt="Hi my name is Lei Wilson and my email is lei. wilson1253@example.com.  Cancel order #W3826449 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -9848,11 +9848,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_lopez_5820",
         instruction="Your name is Juan Lopez and your zip code is 85060. You are patient, dependent, shy, rigid, busy. For #W3386832, modify Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'type': 'manual'}; Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'color': 'red', 'ventilation': 'medium'}; via paypal_6729210. ",
-        prompt="Hi, I'm Juan Lopez. Could you please update my order #W3386832 to change the espresso machine to a manual type and the cycling helmet to red with medium ventilation? Thank you. My zip code is 85060, and I used PayPal for payment.",
+        prompt="Hi my name is Juan Lopez and my zip code is 85060. For #W3386832, modify Espresso Machine {'pressure': '9 bar', 'capacity': '2L', 'type': 'automatic'} to {'type': 'manual'}; Cycling Helmet {'size': 'M', 'color': 'blue', 'ventilation': 'low'} to {'color': 'red', 'ventilation': 'medium'}; via paypal_6729210.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -9866,11 +9866,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="evelyn_ahmed_3960",
         instruction="Your name is Evelyn Ahmed and your zip code is 80256. You are messy, creative, direct, outgoing, sad. For #W3746173, change payment to credit_card_7898168. For #W3746173, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand C'}; via gift_card_5683713. ",
-        prompt="Hi, I'm Evelyn Ahmed. Could you please change the payment for order #W3746173 to credit_card_7898168 and modify the Makeup Kit to {'skin tone': 'dark', 'brand': 'Brand C'} using gift_card_5683713? My zip code is 80256, and my email is [your email]. Thanks!",
+        prompt="Hi my name is Evelyn Ahmed and my zip code is 80256. For #W3746173, change payment to credit_card_7898168. For #W3746173, modify Makeup Kit {'skin tone': 'medium', 'kit size': 'professional', 'brand': 'Brand A'} to {'skin tone': 'dark', 'brand': 'Brand C'}; via gift_card_5683713.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -9891,11 +9891,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_sanchez_2952",
         instruction="Your name is Ethan Sanchez and your email is ethan.sanchez6360@example.com. You are cautious, insecure. Return #W9250394 via gift_card_4817478: Wristwatch; Dumbbell Set; Smart Watch; ",
-        prompt="Hi, I'm Ethan Sanchez. I'd like to return order #W9250394 using gift card #4817478 for the wristwatch, dumbbell set, and smart watch. My email is ethan.sanchez6360@example.com.",
+        prompt="Hi my name is Ethan Sanchez and my email is ethan. sanchez6360@example.com.  Return #W9250394 via gift_card_4817478: Wristwatch; Dumbbell Set; Smart Watch;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9908,11 +9908,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_li_8218",
         instruction="Your name is Daiki Li and your zip code is 75201. You are creative, impatient, curious. For #W6958840, change payment to gift_card_5730441. For #W6958840, modify Cycling Helmet {'size': 'L', 'color': 'black', 'ventilation': 'low'} to {'size': 'S', 'ventilation': 'medium'}; via credit_card_1687024. ",
-        prompt="Hi, I'm Daiki Li. Could you please change the payment for order #W6958840 to gift_card_5730441 and modify the Cycling Helmet to size 'S' with 'medium' ventilation? My zip code is 75201, and my email is on file.",
+        prompt="Hi my name is Daiki Li and my zip code is 75201. For #W6958840, change payment to gift_card_5730441. For #W6958840, modify Cycling Helmet {'size': 'L', 'color': 'black', 'ventilation': 'low'} to {'size': 'S', 'ventilation': 'medium'}; via credit_card_1687024.",
         actions=[
             Action(
                 name="modify_pending_order_payment",
@@ -9933,11 +9933,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_patel_7767",
         instruction="Your name is Yusuf Patel and your email is yusuf.patel5348@example.com. You are happy, cautious. For #W1052399, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'basic', 'brand': 'Brand B'} to {'skin tone': 'dark'}; via gift_card_3372949. Cancel order #W2236333 because no longer needed. ",
-        prompt="Hi, I'm Yusuf Patel (yusuf.patel5348@example.com). I'd like to exchange the Makeup Kit #W1052399 to the dark skin tone option using gift card 3372949, and please cancel order #W2236333 as it's no longer needed. Thank you!",
+        prompt="Hi my name is Yusuf Patel and my email is yusuf. patel5348@example.com.  For #W1052399, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'basic', 'brand': 'Brand B'} to {'skin tone': 'dark'}; via gift_card_3372949. Cancel order #W2236333 because no longer needed.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -9955,11 +9955,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_kim_2165",
         instruction="Your name is Daiki Kim and your email is daiki.kim7376@example.com. You are relaxing, logical, shy. Return #W4824466 via gift_card_9919420: Headphones; Hiking Boots; ",
-        prompt="Hi, I'm Daiki Kim (daiki.kim7376@example.com). I'd like to return order #W4824466 using gift card #9919420 for the headphones and hiking boots.",
+        prompt="Hi my name is Daiki Kim and my email is daiki. kim7376@example.com.  Return #W4824466 via gift_card_9919420: Headphones; Hiking Boots;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -9972,11 +9972,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="james_lee_5010",
         instruction="Your name is James Lee and your zip code is 95161. You are messy, confident, direct, shy, busy. For #W5356919, change address to {'order_id': '#W5356919', 'address1': '870 Oak Street', 'address2': 'Suite 766', 'city': 'San Jose', 'country': 'USA', 'state': 'CA', 'zip': '95161'} (same as #W8520591). For #W5356919, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via paypal_2684483. ",
-        prompt="Hi, I'm James Lee. Could you please update the address for order #W5356919 to 870 Oak Street, Suite 766, San Jose, CA, 95161, and change the Jigsaw Puzzle to 500 pieces with an intermediate difficulty level? My email is jameslee95161@gmail.com. Thank you!",
+        prompt="Hi my name is James Lee and my zip code is 95161. For #W5356919, change address to {'order_id': '#W5356919', 'address1': '870 Oak Street', 'address2': 'Suite 766', 'city': 'San Jose', 'country': 'USA', 'state': 'CA', 'zip': '95161'} (same as #W8520591). For #W5356919, modify Jigsaw Puzzle {'pieces': '1000', 'theme': 'art', 'difficulty level': 'expert'} to {'pieces': '500', 'difficulty level': 'intermediate'}; via paypal_2684483.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -10002,11 +10002,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_patel_6952",
         instruction="Your name is Noah Patel and your zip code is 10108. You are polite, messy. For #W1845024, modify Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {}; via paypal_3169710. ",
-        prompt="Hi, I'm Noah Patel from zip code 10108. Could you please modify my order #W1845024 for the office chair to remove all specifications? I'll be using PayPal with ID paypal_3169710. Thank you!",
+        prompt="Hi my name is Noah Patel and my zip code is 10108. For #W1845024, modify Office Chair {'material': 'fabric', 'color': 'blue', 'armrest': 'adjustable', 'backrest height': 'standard'} to {}; via paypal_3169710.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10020,11 +10020,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_li_6575",
         instruction="Your name is Lei Li and your email is lei.li8350@example.com. You are independent, messy. For #W5166363, change address to {'order_id': '#W5166363', 'address1': '604 Pine Lane', 'address2': 'Suite 907', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85033'} (same as #W3414433). For #W5166363, modify Laptop {'screen size': '17-inch', 'processor': 'i5', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'screen size': '15-inch', 'processor': 'i7', 'color': 'black'}; via credit_card_4466831. For #W6289770, exchange Grill {'type': 'electric', 'size': 'portable', 'features': 'none'} to {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'}; Sunglasses {'frame color': 'black', 'lens color': 'green', 'lens type': 'polarized', 'frame material': 'plastic'} to {'lens type': 'non-polarized', 'frame material': 'metal'}; via credit_card_4466831. ",
-        prompt="Hi, I'm Lei Li. Could you please update the address for order #W5166363 to 604 Pine Lane, Suite 907, Phoenix, AZ 85033? Also, modify the laptop specs to a 15-inch screen, i7 processor, and black color. For order #W6289770, I'd like to exchange the electric grill for a medium charcoal one with a side burner, and change the sunglasses to non-polarized lenses with a metal frame. My email is lei.li8350@example.com. Thank you!",
+        prompt="Hi my name is Lei Li and my email is lei. li8350@example.com.  For #W5166363, change address to {'order_id': '#W5166363', 'address1': '604 Pine Lane', 'address2': 'Suite 907', 'city': 'Phoenix', 'country': 'USA', 'state': 'AZ', 'zip': '85033'} (same as #W3414433). For #W5166363, modify Laptop {'screen size': '17-inch', 'processor': 'i5', 'ram': '8GB', 'storage': '1TB SSD', 'color': 'space grey'} to {'screen size': '15-inch', 'processor': 'i7', 'color': 'black'}; via credit_card_4466831. For #W6289770, exchange Grill {'type': 'electric', 'size': 'portable', 'features': 'none'} to {'type': 'charcoal', 'size': 'medium', 'features': 'side burner'}; Sunglasses {'frame color': 'black', 'lens color': 'green', 'lens type': 'polarized', 'frame material': 'plastic'} to {'lens type': 'non-polarized', 'frame material': 'metal'}; via credit_card_4466831.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -10059,11 +10059,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mia_smith_1623",
         instruction="Your name is Mia Smith and your email is mia.smith4644@example.com. You are outgoing, dependent, rigid, happy, patient. Return #W5254379 via paypal_3839332: Air Purifier; ",
-        prompt="Hi, I'm Mia Smith (mia.smith4644@example.com). I'd like to return order #W5254379 for the Air Purifier via PayPal. Can you help me with this?",
+        prompt="Hi my name is Mia Smith and my email is mia. smith4644@example.com.  Return #W5254379 via paypal_3839332: Air Purifier;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10076,11 +10076,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="aarav_davis_4756",
         instruction="Your name is Aarav Davis and your email is aarav.davis1165@example.com. You are optimistic, flexible, relaxing, logical. Cancel order #W3196599 because no longer needed. Cancel order #W2403075 because ordered by mistake. ",
-        prompt="Hi, I'm Aarav Davis (aarav.davis1165@example.com). Could you please cancel order #W3196599 as it's no longer needed and order #W2403075 as it was ordered by mistake? Thank you!",
+        prompt="Hi my name is Aarav Davis and my email is aarav. davis1165@example.com.  Cancel order #W3196599 because no longer needed. Cancel order #W2403075 because ordered by mistake.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -10093,11 +10093,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="chen_anderson_8078",
         instruction="Your name is Chen Anderson and your email is chen.anderson4495@example.com. You are insecure, patient. Return #W1701126 via credit_card_9389219: Water Bottle; Makeup Kit; Return #W5332101 via gift_card_3434432: T-Shirt; ",
-        prompt="Hi, I'm Chen Anderson (chen.anderson4495@example.com). I'd like to return order #W1701126 (Water Bottle and Makeup Kit) using credit card 9389219, and order #W5332101 (T-Shirt) using gift card 3434432. Thank you!",
+        prompt="Hi my name is Chen Anderson and my email is chen. anderson4495@example.com.  Return #W1701126 via credit_card_9389219: Water Bottle; Makeup Kit; Return #W5332101 via gift_card_3434432: T-Shirt;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10118,11 +10118,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_brown_6720",
         instruction="Your name is Lucas Brown and your email is lucas.brown9344@example.com. You are happy, optimistic, outgoing, relaxing. Return #W9218746 via credit_card_2112420: Vacuum Cleaner; Backpack; ",
-        prompt="Hi, I'm Lucas Brown (lucas.brown9344@example.com). I'd like to return order #W9218746, which includes a vacuum cleaner and a backpack, using credit card ending in 2112420. Thank you!",
+        prompt="Hi my name is Lucas Brown and my email is lucas. brown9344@example.com.  Return #W9218746 via credit_card_2112420: Vacuum Cleaner; Backpack;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10135,11 +10135,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="raj_santos_9079",
         instruction="Your name is Raj Santos and your zip code is 98157. You are rigid, busy. Return #W1630030 via paypal_2417743: Electric Kettle; ",
-        prompt="Hi, I'm Raj Santos. I'd like to return order #W1630030, the Electric Kettle, via PayPal. My zip code is 98157.",
+        prompt="Hi my name is Raj Santos and my zip code is 98157. Return #W1630030 via paypal_2417743: Electric Kettle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10152,11 +10152,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="daiki_silva_5033",
         instruction="Your name is Daiki Silva and your email is daiki.silva2239@example.com. You are relaxing, sad, pessimistic. Cancel order #W1579160 because no longer needed. ",
-        prompt="Hi, I'm Daiki Silva. Could you please cancel order #W1579160 for me? My email is daiki.silva2239@example.com. Thank you.",
+        prompt="Hi my name is Daiki Silva and my email is daiki. silva2239@example.com.  Cancel order #W1579160 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -10165,11 +10165,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="olivia_sanchez_2914",
         instruction="Your name is Olivia Sanchez and your email is olivia.sanchez1894@example.com. You are flexible, logical, sad. For #W5101035, modify Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'battery type': 'rechargeable'}; via paypal_3388537. ",
-        prompt="Hi, I'm Olivia Sanchez. Could you please update my order #W5101035 to change the electric toothbrush's battery type to rechargeable? My email is olivia.sanchez1894@example.com. Thank you!",
+        prompt="Hi my name is Olivia Sanchez and my email is olivia. sanchez1894@example.com.  For #W5101035, modify Electric Toothbrush {'color': 'black', 'speed settings': 'high', 'battery type': 'AA batteries'} to {'battery type': 'rechargeable'}; via paypal_3388537.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10183,11 +10183,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lucas_muller_4380",
         instruction="Your name is Lucas Muller and your zip code is 78763. You are patient, direct, relaxing, flexible, pessimistic. For #W3206099, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'iron', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'urethane'}; via gift_card_2748512. ",
-        prompt="Hi, I'm Lucas Muller. Could you please modify my order #W3206099 to change the Dumbbell Set to a weight range of 5-25 lbs and material to urethane, using gift card 2748512? My zip code is 78763. Thank you!",
+        prompt="Hi my name is Lucas Muller and my zip code is 78763. For #W3206099, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'iron', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'urethane'}; via gift_card_2748512.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10201,11 +10201,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_hernandez_4232",
         instruction="Your name is Noah Hernandez and your email is noah.hernandez4161@example.com. You are insecure, pessimistic, relaxing, patient. For #W3897284, modify E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '8GB'} to {'storage': '32GB'}; via gift_card_3410768. ",
-        prompt="Hi, I'm Noah Hernandez. Could you please help me upgrade the storage on my E-Reader order #W3897284 from 8GB to 32GB using gift card 3410768? My email is noah.hernandez4161@example.com. Thank you!",
+        prompt="Hi my name is Noah Hernandez and my email is noah. hernandez4161@example.com.  For #W3897284, modify E-Reader {'screen size': '7-inch', 'connectivity': 'Wi-Fi + Cellular', 'storage': '8GB'} to {'storage': '32GB'}; via gift_card_3410768.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10219,11 +10219,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_gonzalez_8900",
         instruction="Your name is Yusuf Gonzalez and your zip code is 91455. You are busy, messy, patient. Cancel order #W2230795 because no longer needed. ",
-        prompt="Hi, I'm Yusuf Gonzalez, zip code 91455. Could you please cancel order #W2230795 as I no longer need it? Thank you!",
+        prompt="Hi my name is Yusuf Gonzalez and my zip code is 91455. Cancel order #W2230795 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -10232,11 +10232,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_li_8526",
         instruction="Your name is Liam Li and your zip code is 28226. You are insecure, logical, cautious, independent, shy. For #W1130240, change address to {'order_id': '#W1130240', 'address1': '707 Maple Drive', 'address2': 'Suite 817', 'city': 'San Antonio', 'country': 'USA', 'state': 'TX', 'zip': '78202'} (same as #W8838515). For #W1130240, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'urethane', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'rubber'}; via gift_card_5427896. ",
-        prompt="My zip code is 78202. Hi, I'm Liam Li. Could you please update the address for order #W1130240 to match the one used for #W8838515? Also, I'd like to modify the Dumbbell Set in order #W1130240 to have a weight range of 5-25 lbs and be made of rubber, using gift card 5427896. My zip code is 28226. Thank you!",
+        prompt="Hi my name is Liam Li and my zip code is 28226. For #W1130240, change address to {'order_id': '#W1130240', 'address1': '707 Maple Drive', 'address2': 'Suite 817', 'city': 'San Antonio', 'country': 'USA', 'state': 'TX', 'zip': '78202'} (same as #W8838515). For #W1130240, modify Dumbbell Set {'weight range': '30-50 lbs', 'material': 'urethane', 'set type': 'fixed'} to {'weight range': '5-25 lbs', 'material': 'rubber'}; via gift_card_5427896.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -10262,11 +10262,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sofia_kovacs_7075",
         instruction="Your name is Sofia Kovacs and your zip code is 19049. You are organized, patient, independent, outgoing, pessimistic. For #W5765741, modify Portable Charger {'capacity': '5000mAh', 'output': 'USB-A', 'color': 'white'} to {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'}; via paypal_6840891. ",
-        prompt="Hi, I'm Sofia Kovacs. Could you please update my order #W5765741 to change the portable charger to a 20000mAh capacity, wireless output, and black color? My zip code is 19049, and I used PayPal for the purchase. Thank you!",
+        prompt="Hi my name is Sofia Kovacs and my zip code is 19049. For #W5765741, modify Portable Charger {'capacity': '5000mAh', 'output': 'USB-A', 'color': 'white'} to {'capacity': '20000mAh', 'output': 'Wireless', 'color': 'black'}; via paypal_6840891.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10280,11 +10280,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="omar_khan_2363",
         instruction="Your name is Omar Khan and your email is omar.khan3563@example.com. You are direct, outgoing, independent, relaxing. Return #W6304490 via credit_card_4420174: Skateboard; ",
-        prompt="Hi, I'm Omar Khan. I'd like to return order #W6304490, which is a skateboard, and get the refund to credit card ending in 4420174. My email is omar.khan3563@example.com.",
+        prompt="Hi my name is Omar Khan and my email is omar. khan3563@example.com.  Return #W6304490 via credit_card_4420174: Skateboard;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10297,11 +10297,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_lopez_6291",
         instruction="Your name is Ethan Lopez and your email is ethan.lopez8943@example.com. You are organized, independent, polite, curious. Cancel order #W6779827 because no longer needed. ",
-        prompt="Hi, I'm Ethan Lopez. Could you please cancel order #W6779827 as I no longer need it? My email is ethan.lopez8943@example.com. Thank you!",
+        prompt="Hi my name is Ethan Lopez and my email is ethan. lopez8943@example.com.  Cancel order #W6779827 because no longer needed.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -10310,11 +10310,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="harper_li_7655",
         instruction="Your name is Harper Li and your email is harper.li3262@example.com. You are patient, direct, confident. Return #W9495141 via gift_card_8862145: Tablet; ",
-        prompt="Hi, I'm Harper Li (harper.li3262@example.com). I'd like to return order #W9495141 using gift card #8862145 for the tablet.",
+        prompt="Hi my name is Harper Li and my email is harper. li3262@example.com.  Return #W9495141 via gift_card_8862145: Tablet;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10327,11 +10327,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="noah_brown_6181",
         instruction="Your name is Noah Brown and your zip code is 80279. You are polite, rigid. Return #W7678072 via paypal_5727330: Backpack; Electric Kettle; ",
-        prompt="Hi, I'm Noah Brown, zip code 80279. I'd like to return order #W7678072, which includes a backpack and an electric kettle, via PayPal. My email is noah.brown@email.com. Thank you.",
+        prompt="Hi my name is Noah Brown and my zip code is 80279. Return #W7678072 via paypal_5727330: Backpack; Electric Kettle;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10344,11 +10344,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="yusuf_ahmed_6232",
         instruction="Your name is Yusuf Ahmed and your email is yusuf.ahmed5476@example.com. You are organized, confident, busy, dependent, logical. Cancel order #W7007896 because ordered by mistake. For #W7756209, modify Grill {'type': 'electric', 'size': 'large', 'features': 'rotisserie'} to {'type': 'gas', 'size': 'portable', 'features': 'side burner'}; Backpack {'color': 'grey', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'size': 'large', 'material': 'polyester', 'compartment': 'hydration'}; via credit_card_2167533. ",
-        prompt="Hi, I'm Yusuf Ahmed. Please cancel order #W7007896 as it was placed by mistake. Also, for order #W7756209, could you change the grill to a gas, portable model with a side burner, and the backpack to a large, polyester one with a hydration compartment? My email is yusuf.ahmed5476@example.com. Thank you!",
+        prompt="Hi my name is Yusuf Ahmed and my email is yusuf. ahmed5476@example.com.  Cancel order #W7007896 because ordered by mistake. For #W7756209, modify Grill {'type': 'electric', 'size': 'large', 'features': 'rotisserie'} to {'type': 'gas', 'size': 'portable', 'features': 'side burner'}; Backpack {'color': 'grey', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'size': 'large', 'material': 'polyester', 'compartment': 'hydration'}; via credit_card_2167533.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -10366,11 +10366,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="sophia_garcia_1101",
         instruction="Your name is Sophia Garcia and your email is sophia.garcia9791@example.com. You are impatient, rigid, direct, organized, happy. For #W1023987, exchange Pet Bed {'size': 'medium', 'material': 'memory foam', 'color': 'brown'} to {'color': 'beige'}; via gift_card_9450778. ",
-        prompt="Hi, I'm Sophia Garcia. Can you please exchange the medium memory foam pet bed from brown to beige for order #W1023987 using gift card 9450778? My email is sophia.garcia9791@example.com. Thanks!",
+        prompt="Hi my name is Sophia Garcia and my email is sophia. garcia9791@example.com.  For #W1023987, exchange Pet Bed {'size': 'medium', 'material': 'memory foam', 'color': 'brown'} to {'color': 'beige'}; via gift_card_9450778.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -10384,11 +10384,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="lei_khan_6353",
         instruction="Your name is Lei Khan and your zip code is 92182. You are organized, cautious, confident, shy, busy. Return #W2787996 via gift_card_6786837: T-Shirt; ",
-        prompt="Hi, I'm Lei Khan. I'd like to return order #W2787996 using gift card #6786837 for a T-Shirt. My zip code is 92182.",
+        prompt="Hi my name is Lei Khan and my zip code is 92182. Return #W2787996 via gift_card_6786837: T-Shirt;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10401,11 +10401,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_hernandez_3296",
         instruction="Your name is Mei Hernandez and your email is mei.hernandez3608@example.com. You are curious, rigid, confident, logical. For #W3864587, exchange Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'white', 'size': '80%'} to {'switch type': 'linear', 'backlight': 'none', 'size': 'full size'}; via paypal_1768431. ",
-        prompt="Hi, I'm Mei Hernandez. I'd like to exchange my order #W3864587: the Bluetooth Speaker from black to blue with water resistance, and the Mechanical Keyboard from clicky to linear switches with no backlight and full size. My email is mei.hernandez3608@example.com.",
+        prompt="Hi my name is Mei Hernandez and my email is mei. hernandez3608@example.com.  For #W3864587, exchange Bluetooth Speaker {'color': 'black', 'battery life': '10 hours', 'water resistance': 'no'} to {'color': 'blue', 'water resistance': 'yes'}; Mechanical Keyboard {'switch type': 'clicky', 'backlight': 'white', 'size': '80%'} to {'switch type': 'linear', 'backlight': 'none', 'size': 'full size'}; via paypal_1768431.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -10419,11 +10419,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="mei_moore_8248",
         instruction="Your name is Mei Moore and your zip code is 90980. You are pessimistic, rigid, busy, insecure. Return #W9694847 via credit_card_2902980: Air Purifier; ",
-        prompt="Hi, I'm Mei Moore. I'd like to return order #W9694847 for the Air Purifier. My zip code is 90980. Can you assist me with this?",
+        prompt="Hi my name is Mei Moore and my zip code is 90980. Return #W9694847 via credit_card_2902980: Air Purifier;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10436,11 +10436,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="ethan_moore_3587",
         instruction="Your name is Ethan Moore and your zip code is 90651. You are optimistic, shy. For #W7584328, modify Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'green', 'material': 'leather', 'compartment': 'camera'}; via credit_card_6173085. ",
-        prompt="Hi, I'm Ethan Moore from zip code 90651. Could you please update my order #W7584328 to change the backpack to a green leather one with a camera compartment? Thank you!",
+        prompt="Hi my name is Ethan Moore and my zip code is 90651. For #W7584328, modify Backpack {'color': 'navy', 'size': 'small', 'material': 'nylon', 'compartment': 'laptop'} to {'color': 'green', 'material': 'leather', 'compartment': 'camera'}; via credit_card_6173085.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10454,11 +10454,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="emma_santos_9753",
         instruction="Your name is Emma Santos and your zip code is 78228. You are creative, sad, curious. For #W1539823, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '130 degrees', 'connectivity': 'Ethernet'} to {}; via credit_card_5869505. Cancel order #W1620235 because ordered by mistake. Cancel order #W2918688 because no longer needed. ",
-        prompt="Hi, I'm Emma Santos. Could you please help me exchange the Indoor Security Camera from order #W1539823 and cancel orders #W1620235 and #W2918688? My zip code is 78228, and my email is [your email]. Thank you!",
+        prompt="Hi my name is Emma Santos and my zip code is 78228. For #W1539823, exchange Indoor Security Camera {'resolution': '2K', 'field of view': '130 degrees', 'connectivity': 'Ethernet'} to {}; via credit_card_5869505. Cancel order #W1620235 because ordered by mistake. Cancel order #W2918688 because no longer needed.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -10480,11 +10480,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="liam_li_5260",
         instruction="Your name is Liam Li and your email is liam.li2557@example.com. You are curious, relaxing, insecure, creative, outgoing. For #W9653558, modify Coffee Maker {'color': 'stainless steel', 'capacity': '4 cups', 'type': 'drip', 'features': 'built-in grinder'} to {'color': 'black', 'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'}; via credit_card_7933535. ",
-        prompt="Hi, I'm Liam Li. Could you please help me modify my order #W9653558 to change the coffee maker to a black, 2-cup espresso type with a timer feature? My email is liam.li2557@example.com. Thank you!",
+        prompt="Hi my name is Liam Li and my email is liam. li2557@example.com.  For #W9653558, modify Coffee Maker {'color': 'stainless steel', 'capacity': '4 cups', 'type': 'drip', 'features': 'built-in grinder'} to {'color': 'black', 'capacity': '2 cups', 'type': 'espresso', 'features': 'timer'}; via credit_card_7933535.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -10498,11 +10498,11 @@ TASKS_TRAIN = [
         ],
         outputs=[],
     ),
-        Task(
+    Task(
         annotator="synthetic",
         user_id="juan_santos_1448",
         instruction="Your name is Juan Santos and your email is juan.santos3161@example.com. You are outgoing, impatient, independent, cautious. Return #W2582045 via gift_card_3767667: Air Purifier; ",
-        prompt="Hi, I'm Juan Santos. I'd like to return order #W2582045, the Air Purifier, using gift card #3767667. My email is juan.santos3161@example.com.",
+        prompt="Hi my name is Juan Santos and my email is juan. santos3161@example.com.  Return #W2582045 via gift_card_3767667: Air Purifier;",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -10514,4 +10514,5 @@ TASKS_TRAIN = [
             )
         ],
         outputs=[],
-    ),]
+    ),
+]

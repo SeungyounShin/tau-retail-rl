@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -76,15 +77,15 @@ class GetOrderDetails(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         order_id = parameters.get("order_id", "")
-        orders = data["orders"]
-        if not data or "orders" not in data:
-            return "Error: data is not provided", 0.0, {}
         orders = data.get("orders", {})
         if order_id in orders:
             return json.dumps(orders[order_id]), 0.0, {}
-        return "Error: order not found", 0.0, {}
+        return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
         return 0.0

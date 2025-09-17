@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -99,7 +100,10 @@ class ModifyPendingOrderItems(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         products, orders, users = data["products"], data["orders"], data["users"]
 
         order_id : str = parameters.get("order_id", "")
@@ -108,19 +112,19 @@ class ModifyPendingOrderItems(BaseTool):
         payment_method_id : str = parameters.get("payment_method_id", "")
 
         if order_id not in orders:
-            return "Error: order not found", 0.0, {}
+            return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
         order = orders[order_id]
         if order["status"] != "pending":
-            return "Error: non-pending order cannot be modified", 0.0, {}
+            return "Error: non-pending order cannot be modified", 0.0 + TOOL_ERROR_REWARD, {}
         
         # check if the items to be exchanged exist
         for item_id in item_ids:
             if item_id not in products:
-                return "Error: item not found", 0.0, {}
+                return "Error: item not found", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Check new items exist, match old items, and are available
         if len(item_ids) != len(new_item_ids):
-            return "Error: the number of items to be exchanged should match", 0.0, {}
+            return "Error: the number of items to be exchanged should match", 0.0 + TOOL_ERROR_REWARD, {}
         
         diff_price = 0
         for item_id, new_item_id in zip(item_ids, new_item_ids):
@@ -130,7 +134,7 @@ class ModifyPendingOrderItems(BaseTool):
                 new_item_id in products[product_id]["variants"]
                 and products[product_id]["variants"][new_item_id]["available"]
             ):
-                return f"Error: new item {new_item_id} not found or available"
+                return f"Error: new item {new_item_id} not found or available", 0.0 + TOOL_ERROR_REWARD, {}
 
             old_price = item["price"]
             new_price = products[product_id]["variants"][new_item_id]["price"]
@@ -138,7 +142,7 @@ class ModifyPendingOrderItems(BaseTool):
         
         # Check if the payment method exists
         if payment_method_id not in users[order["user_id"]]["payment_methods"]:
-            return "Error: payment method not found", 0.0, {}
+            return "Error: payment method not found", 0.0 + TOOL_ERROR_REWARD, {}
 
         # If the new item is more expensive, check if the gift card has enough balance
         payment_method = users[order["user_id"]]["payment_methods"][payment_method_id]
@@ -146,7 +150,7 @@ class ModifyPendingOrderItems(BaseTool):
             payment_method["source"] == "gift_card"
             and payment_method["balance"] < diff_price
         ):
-            return "Error: insufficient gift card balance to pay for the new item", 0.0, {}
+            return "Error: insufficient gift card balance to pay for the new item", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Handle the payment or refund
         order["payment_history"].append(

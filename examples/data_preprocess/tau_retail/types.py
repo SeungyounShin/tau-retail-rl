@@ -17,6 +17,7 @@ class Task(BaseModel):
     actions: List[Action]
     instruction: str
     outputs: List[str]
+    prompt : Optional[str] = None
 
 
 class RewardOutputInfo(BaseModel):

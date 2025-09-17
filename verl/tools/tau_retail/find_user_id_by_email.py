@@ -18,6 +18,7 @@ import os
 from typing import Any, Optional
 from uuid import uuid4
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -79,18 +80,18 @@ class FindUserIdByEmail(BaseTool):
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
         email = parameters.get("email", "")
-        data = kwargs.get("data", {})
-        if not data or "users" not in data:
-            return "Error: data is not provided", 0.0, {}
-        users = data.get("users", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or "users" not in data:
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
+        users = data.get("users") or {}
         for user_id, profile in users.items():
             try:
                 if profile.get("email", "").lower() == email.lower():
                     return user_id, 0.0, {}
             except Exception as e:
-                print(f"\033[93m<debug:find_user_id_by_email>: {e} {profile} {parameters}\033[0m")
-                return "Error: user not found", 0.0, {}
-        return "Error: user not found", 0.0, {}
+                return "Error: user not found", 0.0 + TOOL_ERROR_REWARD, {}
+        return "Error: user not found", 0.0 + TOOL_ERROR_REWARD, {}
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:
         return 0.0

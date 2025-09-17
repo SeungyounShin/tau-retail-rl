@@ -18,6 +18,7 @@ import torch
 
 from verl import DataProto
 from verl.utils.reward_score import default_compute_score
+from verl.utils.reward_score import tau_retail as tau_retail_score
 from verl.workers.reward_manager import register
 
 
@@ -85,7 +86,44 @@ class NaiveRewardManager:
                     data_item.non_tensor_batch.get("reward_scores", {})
                     .get("user_turn_rewards", [])
                 )
-                score = max(user_turn_rewards) if user_turn_rewards else 0.0
+                tool_step_rewards = (
+                    data_item.non_tensor_batch.get("reward_scores", {})
+                    .get("tool_step_rewards", [])
+                )
+                agent_actions = (
+                    data_item.non_tensor_batch.get("reward_scores", {})
+                    .get("agent_actions", [])
+                )
+                tool_penalty = sum(tool_step_rewards) if tool_step_rewards else 0.0
+                # print in red
+                print(f"\033[91m[tool_penalty] {tool_penalty}\033[0m")
+                # 기본: 사용자 턴 보상 + 툴 패널티
+                base_user = (max(user_turn_rewards) if user_turn_rewards else 0.0)
+
+                # 유저 턴이 없는(no-user-interaction) 경우 GT 기반 성공/실패를 직접 평가
+                if not user_turn_rewards:
+                    # 필요한 부가정보 준비
+                    extra_info = data_item.non_tensor_batch.get("extra_info", {}) or {}
+                    ground_truth = data_item.non_tensor_batch.get("reward_model", {}).get("ground_truth")
+                    data_snapshot = extra_info.get("data")
+                    raw_data_snapshot = extra_info.get("raw_data")
+
+                    try:
+                        gt_reward = tau_retail_score.compute_score(
+                            solution_str=None,
+                            ground_truth=ground_truth,
+                            data=data_snapshot,
+                            raw_data=raw_data_snapshot,
+                            actions=agent_actions,
+                            method="strict",
+                            format_score=0.0,
+                            score=1.0,
+                        )
+                    except Exception:
+                        gt_reward = 0.0
+                    base_user = max(base_user, gt_reward)
+
+                score = base_user + tool_penalty
                 #score = sum(user_turn_rewards)
             else:
                 score = self.compute_score(

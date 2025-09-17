@@ -5,7 +5,7 @@ TASKS_TEST = [
         annotator="0",
         user_id="yusuf_rossi_9620",
         instruction="You are Yusuf Rossi in 19122. You received your order #W2378156 and wish to exchange the mechanical keyboard for a similar one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, you'd go for no backlight. You are detail-oriented and want to make sure everything is addressed in one go.",
-        prompt="Hi, I'm Yusuf Rossi, zip 19122, email [your email]. I received order #W2378156 and would like to exchange the mechanical keyboard for one with clicky switches and the smart thermostat for a Google Home compatible model. If there's no clicky, RGB backlit, full-size keyboard, I'll take one without backlight. Can you assist with this?",
+        prompt="Hi my name is Yusuf Rossi and my zip code is 19122. I received my order #W2378156 and wish to exchange the mechanical keyboard for a similar one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, I'd go for no backlight.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -26,11 +26,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="yusuf_rossi_9620",
         instruction="You are Yusuf Rossi in 19122. You received your order #W2378156 and wish to exchange the mechanical keyboard for a similar one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, you'd rather only exchange the thermostat. You are detail-oriented and want to make sure everything is addressed in one go.",
-        prompt="Hi, I'm Yusuf Rossi from 19122. I received order #W2378156 and would like to exchange the mechanical keyboard for one with clicky switches and the smart thermostat for a Google Home-compatible model. If there's no clicky, RGB backlit, full-size keyboard available, I'll just exchange the thermostat. My email is yusuf.rossi@email.com.",
+        prompt="Hi my name is Yusuf Rossi and my zip code is 19122. I received my order #W2378156 and wish to exchange the mechanical keyboard for a similar one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, I'd rather only exchange the thermostat.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -51,11 +51,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="yusuf_rossi_9620",
         instruction="You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to also return the cleaner, headphone, and smart watch.",
-        prompt="Hi, I'm Yusuf Rossi from 19122. Could you let me know how many t-shirt options are currently available in the online store? Also, I'd like to return the cleaner, headphones, and smartwatch.",
+        prompt="Hi my name is Yusuf Rossi and my zip code is 19122. I’d like to know how many t-shirt options are currently available in the online store. I also want to return the cleaner, the headphones, and the smart watch.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -82,11 +82,11 @@ TASKS_TEST = [
         ],
         outputs=["10"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="yusuf_rossi_9620",
         instruction="You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to modify all your pending small tshirt to purple, same size, same v-neck, and prefer polyester. You are a private person that does not want to reveal much about yourself.",
-        prompt="Hi, I'm Yusuf Rossi from 19122. Could you let me know how many t-shirt options are currently available online? Also, I'd like to change all my pending small v-neck t-shirt orders to purple polyester, keeping the same size.",
+        prompt="I’d like to know how many t-shirt options are currently available in the online store. Also, please modify all my pending small t-shirt orders to purple, same size, same v-neck, and polyester if possible.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -115,11 +115,10 @@ TASKS_TEST = [
         ],
         outputs=["10"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="yusuf_rossi_9620",
         instruction="You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to modify all your pending tshirts (i.e., your 2 relevant orders) to purple, s size, same v-neck, and prefer polyester. You are a private person that does not want to reveal much about yourself.",
-        prompt="Hi, I'm Yusuf Rossi from 19122. Could you tell me how many t-shirt options are available in the online store right now? Also, I'd like to change all my pending t-shirt orders to purple, size S, v-neck, and preferably polyester.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -157,11 +156,11 @@ TASKS_TEST = [
         ],
         outputs=["10"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_kovacs_8020",
         instruction="You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp. If the agent asks for confirmation again, do not exchange anything, and return the water bottle instead.",
-        prompt="Hi, I'm Mei Kovacs (zip code 28236, email: mei_kovacs_8020). I'd like to exchange my water bottle for a bigger one and my desk lamp for a less bright option, preferably battery-operated.",
+        prompt="Hi, my name is Mei Kovacs and my zip code is 28236. I’d like to exchange the water bottle for a bigger one and the desk lamp for a less bright model, preferably battery-powered (then USB, then AC).",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -181,11 +180,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_kovacs_8020",
         instruction="You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp.",
-        prompt="Hi, I'm Mei Kovacs (zip code 28236, email: mei_kovacs_8020). I'd like to exchange my water bottle for a bigger one and my desk lamp for a less bright, preferably battery-operated model. If there's any issue, please prioritize exchanging the desk lamp.",
+        prompt="Hi, my name is Mei Kovacs and my zip code is 28236. I’d like to exchange the water bottle for a bigger one and the desk lamp for a less bright model, preferably battery-powered first, then USB, then AC.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -207,11 +206,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_kovacs_8020",
         instruction="You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer AC adapter > battery > USB). If the agent asks for confirmation, only exchange the desk lamp.",
-        prompt="Hi, I'm Mei Kovacs (zip code 28236, email: mei_kovacs_8020). I'd like to exchange my water bottle for a bigger one and my desk lamp for a less bright model, preferably one with an AC adapter. If you need confirmation, please proceed with just the desk lamp exchange.",
+        prompt="Hi, my name is Mei Kovacs and my zip code is 28236. I’d like to exchange the water bottle for a bigger one and the desk lamp for a less bright model, preferably AC adapter first, then battery, then USB.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -233,11 +232,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_kovacs_8020",
         instruction="You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a brighter one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp.",
-        prompt="Hi, I'm Mei Kovacs (zip code 28236, email: mei_kovacs_8020). I'd like to exchange the water bottle for a bigger one and the desk lamp for a brighter one, preferably battery-operated. If needed, please prioritize exchanging the desk lamp.",
+        prompt="Hi, my name is Mei Kovacs and my zip code is 28236. I’d like to exchange the water bottle for a bigger one and the desk lamp for a brighter model, preferably battery-powered first, then USB, then AC.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -259,11 +258,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_kovacs_8020",
         instruction="You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a brighter one (prefer AC adapter > battery > USB). If the agent asks for confirmation, only exchange the desk lamp.",
-        prompt="Hi, I'm Mei Kovacs (zip code 28236, email: mei_kovacs_8020). I'd like to exchange my water bottle for a bigger one and my desk lamp for a brighter one, preferably with an AC adapter. If needed, please prioritize exchanging the desk lamp.",
+        prompt="Hi, my name is Mei Kovacs and my zip code is 28236. I’d like to exchange the water bottle for a bigger one and the desk lamp for a brighter model, preferably AC adapter first, then battery, then USB.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -285,11 +284,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mia_garcia_4516",
         instruction="You are mia_garcia_4516 (mia.garcia2723@example.com). For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the opposite order's payment method. If not possible, you are angry and swear for a few times, then asks for human representative. You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",
-        prompt="Hi, I'm Mia Garcia (mia.garcia2723@example.com, zip 4516). I need to return all items from my orders and refund each to the opposite payment method. If that's not possible, please connect me with a human representative.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -307,11 +305,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mia_garcia_4516",
         instruction="You are mia_garcia_4516 (mia.garcia2723@example.com). For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the opposite order's payment method. If not possible, you are angry and swear for a few times, then agree to return all things with the original payment method. You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",
-        prompt="Hi, I'm Mia Garcia (mia.garcia2723@example.com). I'd like to return all items from my orders and refund each to the opposite payment method used. If that's not possible, please proceed with the original payment method. Thank you.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -344,11 +341,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mia_garcia_4516",
         instruction="You are mia_garcia_4516 (mia.garcia2723@example.com). You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is prefered for refund, but otherwise you are angry and ask for human agent for help. You are into gaming but realized the importance of studying hard.",
-        prompt="Hi, I'm Mia Garcia (mia.garcia2723@example.com). I'd like to cancel or return everything from my recent order except for a couple of items. Can you assist me with this? Please process the refund through PayPal. Thank you!",
+        prompt="Hi, this is mia.garcia2723@example.com. I’d like to cancel or return everything from my orders that isn’t related to gaming. Please refund through PayPal if possible. If not, I want to speak to a human agent right away.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -374,11 +371,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mia_garcia_4516",
         instruction="You are mia_garcia_4516 (mia.garcia2723@example.com). You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is prefered for refund, but otherwise credit card can be accepted. You are into gaming but realized the importance of studying hard.",
-        prompt="Hi, I'm Mia Garcia (mia.garcia2723@example.com). I'd like to cancel or return all items from my recent order except for a couple of gaming accessories. Could you process the refund via PayPal, please?",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -406,11 +402,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mia_garcia_4516",
         instruction="You are mia_garcia_4516 (mia.garcia2723@example.com). You just quit gaming and want to cancel or return everything associated with it. (It's just a keyboard and a mouse, but do not reveal it to the agent). Original payment is preferred. You are into gaming but realized the importance of studying hard.",
-        prompt="Hi, I'm Mia Garcia (mia.garcia2723@example.com). I've decided to quit gaming and would like to return everything I purchased related to it for a refund to the original payment method. Thank you.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -438,11 +433,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="fatima_johnson_7581",
         instruction="You are Fatima Johnson in 78712. You want to modify the pending boots to a size 8, and want the material, but do not care about waterproof or not. You are a private person that does not want to reveal much about yourself.",
-        prompt="Hi, I'm Fatima Johnson from 78712. Could you please change my pending boots order to a size 8? I'm interested in the material, but waterproofing isn't a concern for me.",
+        prompt="Please update my pending boots order to size 8, keeping the same material. I don’t mind whether they are waterproof or not.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -471,11 +466,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="fatima_johnson_7581",
         instruction="You are Fatima Johnson in 78712. You want to cancel all pending orders (since they are no longer needed) and return the watch you have received (but nothing else), and you want to know the total amount you can get back. You are a private person that does not want to reveal much about yourself.",
-        prompt="Hi, I'm Fatima Johnson in 78712. I'd like to cancel all my pending orders and return the watch I received. Could you let me know the total refund amount?",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -513,11 +507,11 @@ TASKS_TEST = [
         ],
         outputs=["8276.23"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="fatima_johnson_7581",
         instruction="You are Fatima Johnson in 78712. You want to change #W8665881 to be delivered to Suite 641 instead. You are a private person that does not want to reveal much about yourself.",
-        prompt="Hi, I'm Fatima Johnson from 78712. Could you please change the delivery address for order #W8665881 to Suite 641?",
+        prompt="Hi, my name is Fatima Johnson and my zip code is 78712. Please update order #W8665881 so it is delivered to Suite 641.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -548,11 +542,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_davis_8935",
         instruction="You are Mei Davis in 80217. You want to return the office chair because it came with some broken pieces. But if the agent asks you for confirm, you say you want to rethink for a while, and then change your mind to exchange for the same item. You are in debt and sad today, but very brief.",
-        prompt="Hi, I'm Mei Davis from 80217. I received an office chair with broken pieces and would like to exchange it for the same item. My email is meimei@gmail.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -573,11 +566,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_davis_8935",
         instruction="You are Mei Davis in 80217. You want to return the water bottle, and exchange the pet bed and office chair to the cheapest version. Mention the two things together. If you can only do one of the two things, you prefer to do whatever saves you most money, but you want to know the money you can save in both ways. You are in debt and sad today, but very brief.",
-        prompt="Hi, I'm Mei Davis from 80217. I'd like to return the water bottle and exchange the pet bed and office chair for the cheapest versions. Could you let me know which option saves me the most money? Thanks.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -599,11 +591,11 @@ TASKS_TEST = [
         ],
         outputs=["54.04", "41.64"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ethan_garcia_1261",
         instruction="You are Ethan Garcia, and you live in Denver, 80280. You just won a lottery, and you want to upgrade all your items to the most expensive options (but make sure the shoe is still the same size). You want to pay the difference with your GC, but if it is impossible, PayPal is fine. You are a mysterious person and do not want to reveal much about yourself.",
-        prompt="Hi, I'm Ethan Garcia from Denver, 80280. I just won a lottery and would like to upgrade all my items to the most expensive options, keeping the same shoe size. Can I pay the difference with my gift card, or should I use PayPal?",
+        prompt="Hi, my name is Ethan Garcia and I live in Denver, 80280. I’d like to upgrade all my items to the most expensive options, but please keep the shoe in the same size. I’d prefer to pay the difference with my gift card, but if that’s not possible, PayPal is fine.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -643,11 +635,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ethan_garcia_1261",
         instruction="You are Ethan Garcia, and you live in Denver, 80280. You want to exchange your shoes to 4107812777, and use GC to cover possible charges. But if the agent asks for confirmation, you change you mind and also want to change product 1656367028 to 1421289881. You are not familiar with the domain and might confuse product and item ids, so ask the agent to figure out the details on its own if needed. You want to know your GC balance after all these. You are a mysterious person and do not want to reveal much about yourself.",
-        prompt="Hi, I'm Ethan Garcia from Denver, 80280. I'd like to exchange my shoes with order ID 4107812777 and use my gift card for any charges. If needed, please also change product 1656367028 to 1421289881. Could you let me know my gift card balance afterward? My email is [your email].",
+        prompt="Hi, my name is Ethan Garcia and I live in Denver, 80280. I’d like to exchange my shoes for product 4107812777, and please use my gift card to cover any possible charges. If I’ve mixed up product or item IDs, please figure out the details on your end. Also, after these changes I’d like to know my remaining gift card balance.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -682,11 +674,10 @@ TASKS_TEST = [
         ],
         outputs=["44.08"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ethan_garcia_1261",
         instruction="You are Ethan Garcia, and you live in Denver, 80280. You want to change your user address and all possible order addresses to be 101 Highway, New York, 10001. Then you regret and want to change the user address back to the original address. You are a mysterious person and do not want to reveal much about yourself.",
-        prompt="Hi, I'm Ethan Garcia from Denver, 80280. Could you please update all my order addresses to 101 Highway, New York, 10001, and then revert my user address back to the original? Thank you.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -738,11 +729,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="sofia_hernandez_5364",
         instruction="You are Sofia Hernandez, and you live in Seattle, WA, 98193. You want to exchange the helmet for a medium sized, red, high ventilation type, and you want to exchange the luggage set (in another order) to a two-piece black one with soft material. Lastly, you want to modify the grill you just ordered to the same type as the one you already received.",
-        prompt="Hi, I'm Sofia Hernandez from Seattle, WA, 98193. I'd like to exchange the helmet for a medium-sized red one with high ventilation, swap the luggage set for a two-piece black one with soft material, and modify the grill order to match the type I already received.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -792,19 +782,17 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="sofia_hernandez_5364",
         instruction="You are Sofia Hernandez, and you live in Seattle, WA, 98193. You want to cancel the grill, but if the agent asks you to confirm, you regret and want to keep it. You then want to ask which two t-shirts you have ordered in another order, and what materials are they. Make everything sound very natural and make up reasons.",
-        prompt="Hi, I'm Sofia Hernandez from Seattle, WA, 98193. I was considering canceling the grill I ordered, but I've decided to keep it. Could you also let me know which two t-shirts I ordered in another order and what materials they're made of? My email is sofia.hernandez@email.com. Thanks!",
         actions=[],
         outputs=["polyester", "cotton"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_johansson_2152",
         instruction="You are Isabella Johansson, and you live in 32286. You have an order sent to Texas by accident, and you want to know the tracking number of the order, and return all items in it except the pet bed. You want the refund to your amex credit card, and if the agent cannot help, transfer to a human. You don't remember the order number. It is urgent.",
-        prompt="Hi, I'm Isabella Johansson from zip code 32286. My order was mistakenly sent to Texas, and I need the tracking number. I want to return everything except the pet bed and get a refund to my Amex card. If you can't assist, please transfer me to a human agent. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -825,11 +813,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_johansson_2152",
         instruction="You are Isabella Johansson, and you live in 32286. You have an order sent to Texas by accident, and you want to know the tracking number of the order, and return all items in it except the pet bed. You don't remember the order number. It is urgent.",
-        prompt="Hi, I'm Isabella Johansson from zip code 32286. My order was mistakenly sent to Texas, and I need the tracking number. I also want to return everything except the pet bed. Can you help me with this urgently?",
+        prompt="Hi, my name is Isabella Johansson and my zip code is 32286. One of my orders was sent to Texas by accident. I need the tracking number for it, and I want to return everything in that order except the pet bed. I don’t remember the order number, and this is urgent.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -864,11 +852,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_johansson_2152",
         instruction="You are Isabella Johansson, and you live in 32286. You want to return the hose, backpack, and exchange the hiking boots to the exact same item except that it is waterproof. Make sure you mention the two requests at the same time, and if the agent can only do one, you prefer the exchange. You are a bit anxious and want to get things done quickly.",
-        prompt="Hi, I'm Isabella Johansson from 32286. I'd like to return the hose and backpack, and exchange the hiking boots for the waterproof version. If you can only process one request right now, please prioritize the exchange. Thank you!",
+        prompt="Hi, my name is Isabella Johansson and my zip code is 32286. I’d like to return the hose and the backpack, and also exchange the hiking boots for the exact same model but waterproof. If only one request can be handled, I prefer the exchange. Please help me get this done quickly.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -897,11 +885,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_johansson_2152",
         instruction="You are Isabella Johansson, and you live in 32286. You want to return the skateboard, garden hose, backpack, keyboard, bed, and also cancel the hose you just ordered (if cancelling one item is not possible, forget about it, you just want to cancel the hose and nothing else). You want to know how much you can get in total as refund. You are extremely brief but patient.",
-        prompt="Hi, I'm Isabella Johansson from 32286. I'd like to return the skateboard, garden hose, backpack, keyboard, and bed, and cancel the hose I just ordered if possible. Could you let me know the total refund amount?",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -951,11 +938,10 @@ TASKS_TEST = [
         ],
         outputs=["918.43"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_johansson_2152",
         instruction="You are Isabella Johansson, and you live in 32286. You want to exchange your skateboard for a shorter bamboo material one. If several options are available, you want to know all options and their prices, and choose the most expensive one because you believe price is quality. Also, you want to exchange the garden hose you received to the type that you just ordered (pending). You are a chill person but want to get both things done.",
-        prompt="Hi, I'm Isabella Johansson from zip code 32286. I'd like to exchange my skateboard for a shorter bamboo one and would appreciate knowing all available options and their prices. Also, I want to exchange the garden hose I received for the type I just ordered. My email is [your email]. Thanks!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -992,11 +978,10 @@ TASKS_TEST = [
         ],
         outputs=["180.1", "189.57", "208.6"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="olivia_lopez_3865",
         instruction="You are Olivia Lopez, and you live in Texas in 76171. You just received your tablet and it is damaged when you opened the package. You want to know the tracking number of the order. Also if the agent can help you exchange or return the tablet (you prefer exchange for the same item, but if it is not available just return). If tablet returned, also cancel the charger you just bought, because it goes with the tablet... And return the sneaker. You like to do one thing at a time, and reveal minimal information about yourself.",
-        prompt="Hi, I'm Olivia Lopez from Texas, zip 76171. I received a damaged tablet and need the tracking number for my order. Can you assist with an exchange or return? If a return is necessary, please also cancel the charger I bought with it. My email is olivia.lopez@example.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1038,11 +1023,10 @@ TASKS_TEST = [
         ],
         outputs=["746342064230"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="olivia_lopez_3865",
         instruction="You are Olivia Lopez, and you live in Texas in 76171. You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and keep the kettle (if not possible, do not do anything on that order), and return the sneaker. You like to do one thing at a time, and reveal minimal information about yourself.",
-        prompt="Hi, I'm Olivia Lopez from Texas, zip 76171. I lost my tablet and need the tracking number for my order. Can you help me with a refund or reorder? If not, please cancel the charger I just bought. Also, cancel the boot but keep the kettle; if that's not possible, don't change that order. Lastly, I need to return the sneaker. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1076,11 +1060,10 @@ TASKS_TEST = [
         ],
         outputs=["746342064230"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="olivia_lopez_3865",
         instruction="You are Olivia Lopez, and you live in Texas in 76171. You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and kettle, and return the sneaker. You like to do one thing at a time, and reveal minimal information about yourself.",
-        prompt="Hi, I'm Olivia Lopez from Texas, zip code 76171. I recently lost the tablet I received and would like the tracking number for my order. Can you assist with a refund or reorder? If not, please cancel the charger I just bought. Thank you.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1118,11 +1101,11 @@ TASKS_TEST = [
         ],
         outputs=["746342064230"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="noah_patel_6952",
         instruction="You are an interesting guy called Noah Patel, living in the Big Apple in 10108. You had a work-from-home situation and ordered three home office items along with some hiking items, so that you can go back to your parent's place at Seattle to remote work and enjoy outdoor life. But your company just announced that you will be back to the office soon. If cancelling partial items is possible with the agent, you want to return the office items (your forgot what) and keep the hiking items. You want to know the total amount you will get back, and you want to get the refund on your original payment method. If cancelling partial items is not possible, just keep the order and forget about it, but change your default user profile address to the Seattle parent house shown in your order (you do not want to reveal it in chat). You are a funny guy but recently the WFH situation made you a bit anxious.",
-        prompt="Hi, I'm Noah Patel from NYC, zip 10108, email: [your email]. My company just announced a return to the office, so I'd like to cancel the home office items from my order if possible and keep the hiking gear. Can you let me know the refund amount and process it to my original payment method? If partial cancellation isn't possible, please update my default address to my Seattle location. Thanks!",
+        prompt="Hi, my name is Noah Patel and I live in New York, 10108. With my recent order I had included some home office items and some hiking items. Since my company just announced we’re going back to the office soon, I’d like to return the home office items (I don’t remember exactly which ones) and keep the hiking gear. Could you let me know the total refund amount, and please process it to my original payment method? If partial returns aren’t possible, just leave the order as is, but please update my default profile address to my parents’ house in Seattle that was listed in the order.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1147,11 +1130,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="noah_patel_6952",
         instruction="You are an interesting guy called Noah Patel, living in the Big Apple in 10108. You had a work-from-home situation and ordered three home office items along with some hiking items, so that you can go back to your parent's place at Seattle to remote work and enjoy outdoor life. But your company just announced that you will be back to the office soon. If cancelling partial items is possible with the agent, you want to return the office items (your forgot what) and keep the hiking items. You want to know the total amount you will get back, and you want to get the refund on your original payment method. If cancelling partial items is not possible, just change the address to your NYC place and you will return the items later. You are a funny guy but recently the WFH situation made you a bit anxious.",
-        prompt="Hi, I'm Noah Patel from NYC, 10108 (email: [your email]). I need to cancel the home office items from my recent order and keep the hiking gear. Can you let me know the refund amount and process it back to my original payment method? If partial cancellation isn't possible, please change the delivery address to my NYC place. Thanks!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1176,11 +1158,10 @@ TASKS_TEST = [
         ],
         outputs=["1093.34"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="aarav_santos_2259",
         instruction="You are aarav_santos_2259 and aarav.santos8321@example.com and aarav.santos8320@example.com. You want to return the speaker that is more expensive yet not resistent to water. Also, You want to modify the 17-inch laptop to the 13-inch version in another order. If no exact item is available, you want to know all available 13-inch options, and you prefer i5 over i7, and prefer silver and black than other colors. You are a rude person.",
-        prompt="I'm Aarav Santos, zip code 2259, email aarav.santos8321@example.com. I want to return the more expensive, non-water-resistant speaker. Also, change my 17-inch laptop order to a 13-inch version. If that's not possible, tell me all 13-inch options, prioritizing i5 over i7 and silver or black colors.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1213,11 +1194,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="daiki_sanchez_3253",
         instruction="Your name is Daiki Sanchez, and you live in 46236, your email is daikisanchez1479@example.com. You just placed an order but you realize that your card has only $1131 credit left, but the order total is more than $1160. You wonder if the agent can help split the payment with another card. If not, you wonder what the most expensive item and its price, and if you can just cancel that item. If not, you wonder if you can switch all items to their cheapest options and bring the cost down to $1131. If so, do it. If not, you wonder if the agent can just cancel the order so that you can order again. You are a bit anxious and want to get things done quickly, and you speak very briefly.",
-        prompt="Hi, I'm Daiki Sanchez from 46236, email daikisanchez1479@example.com. I just placed an order but my card has only $1131 credit left, and the order total is over $1160. Can you help split the payment with another card? If not, what's the most expensive item and can I cancel it? If that's not possible, can we switch to the cheapest options to bring the cost down to $1131? If none of these work, please cancel the order so I can reorder. Thanks!",
+        prompt="Hi, my name is Daiki Sanchez, I live in 46236, and my email is daikisanchez1479@example.com. I just placed an order but my card only has $1131 credit left, and the total is over $1160. Can you split the payment with another card? If not, tell me the most expensive item and its price and cancel it. If that’s not possible, switch everything to the cheapest options to bring total under $1131. If that’s not possible either, just cancel the whole order. Please handle this quickly.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1252,11 +1233,11 @@ TASKS_TEST = [
         ],
         outputs=["camera", "481.5"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="daiki_sanchez_3253",
         instruction="Your name is Daiki Sanchez, and you live in 46236, your email is daikisanchez1479@example.com. You just placed an order but you realize that your card has only $1150 credit left, but the order total is more than $1160. You wonder if the agent can help split the payment with another card. If not, you wonder what the most expensive item and its price, and if you can just cancel that item. If not, you wonder if you can switch all items to their cheapest options and bring the cost down to $1150. If so, do it. If not, you wonder if the agent can just cancel the order so that you can order again. You are a bit anxious and want to get things done quickly, and you speak very briefly.",
-        prompt="My zip code is 46236. Hi, I'm Daiki Sanchez. I just placed an order, but my card has only $1150 credit left, and the total is over $1160. Can you help split the payment with another card? If not, what's the most expensive item, and can I cancel it? If that's not possible, can we switch to the cheapest options to bring the cost down to $1150? If none of these work, please cancel the order so I can reorder. Thanks!",
+        prompt="Hi, my name is Daiki Sanchez, I live in 46236, and my email is daikisanchez1479@example.com. I just placed an order but my card only has $1150 credit left, and the total is over $1160. Can you split the payment with another card? If not, tell me the most expensive item and its price and cancel it. If that’s not possible, switch everything to the cheapest options to bring total under $1150. If that’s not possible either, just cancel the whole order. Please handle this quickly.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1291,11 +1272,11 @@ TASKS_TEST = [
         ],
         outputs=["camera", "481.5"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="daiki_sanchez_3253",
         instruction="Your name is Daiki Sanchez, and you live in 46236, your email is daikisanchez1479@example.com. You just placed an order but you realize that your card has only $950 credit left, but the order total is more than $1100. You wonder if the agent can help split the payment with another card. If not, you wonder what the most expensive item and its price, and if you can just cancel that item. If not, you wonder if you can switch all items to their cheapest options and bring the cost down to $950. If not, you wonder if the agent can just cancel the order so that you can order again. You are a bit anxious and want to get things done quickly, and you speak very briefly.",
-        prompt="My zip code is 46236. Hi, I'm Daiki Sanchez. I just placed an order, but my card only has $950 credit left, and the total is over $1100. Can you help split the payment with another card, or let me know the most expensive item to cancel? If not, can we switch to cheaper options or cancel the order? Thanks.",
+        prompt="Hi, my name is Daiki Sanchez, I live in 46236, and my email is daikisanchez1479@example.com. I just placed an order but my card only has $950 credit left, and the total is over $1100. Can you split the payment with another card? If not, tell me the most expensive item and its price and cancel it. If that’s not possible, switch everything to the cheapest options to bring total under $950. If that’s not possible either, just cancel the whole order. Please handle this quickly.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1329,11 +1310,11 @@ TASKS_TEST = [
         ],
         outputs=["camera", "481.5"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="fatima_taylor_3452",
         instruction="You are fatima_taylor_3452, and you just moved from Florida (32169) to Phoenix (85033). Unfortunately your address is still the old one, and you want to update it. Your current address should be in your order, and you do not want to reveal it. Also, you want to know what is the price of the cheapest available t-shirt right now, and if you can order it through the agent. You are a funny person with lots of jokes, and you want to make the agent laugh.",
-        prompt="Hi there! I'm Fatima Taylor, and I've just moved to Phoenix, 85033. Could you update my address for me? Also, what's the price of the cheapest t-shirt you have? Can I order it through you? By the way, why did the scarecrow win an award? Because he was outstanding in his field! My email is fatima_taylor_3452@example.com.",
+        prompt="Hi, my name is Fatima Taylor (fatima_taylor_3452). I just moved from Florida (32169) to Phoenix (85033), but my address is still the old one. Could you please update it to my new Phoenix address? It should already be in my order, so I won’t spill the beans here. Also, what’s the price of the cheapest t-shirt you’ve got right now, and can I order it through you? By the way, I promise not to wear it to a comedy show, otherwise people might mistake me for part of the act!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1372,11 +1353,11 @@ TASKS_TEST = [
         ],
         outputs=["46.66"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="isabella_lopez_6490",
         instruction="You are Isabella Lopez, and your email address is isabella.lopez3271@example.com. You want to know how much balance does your gift card have. Also, for your recent order, whether you used your visa, mastercard, or amex credit card. You also wonder if you can apply the gift card balance to the order. If not, you want to change your payment method to visa, because the other two cards have a lot of balance. You are a yound college student under the pressure of final exams and student loans, so you are a bit anxious and want to get things done quickly.",
-        prompt="Hi, I'm Isabella Lopez (isabella.lopez3271@example.com). Could you please check the balance on my gift card and confirm which credit card I used for my recent order? If possible, I'd like to apply the gift card balance to the order or switch the payment method to my Visa card. Thanks!",
+        prompt="Hi, my name is Isabella Lopez and my email is isabella.lopez3271@example.com. I’d like to know my current gift card balance, and also for my recent order, whether I used my Visa, Mastercard, or Amex. Can I apply the gift card balance to that order? If not, please change the payment method to Visa, since my other two cards are tied up. I’m a bit stressed with finals and loans, so I’d really appreciate it if this could be handled quickly.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1396,11 +1377,10 @@ TASKS_TEST = [
         ],
         outputs=["60", "mastercard"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_patel_7272",
         instruction="Your name is Mei Patel, and you live in 445 Maple Drive, Suite 394, Fort Worth, Texas, 76165. You just created your user id mei_patel_7272 and ordered some things, but you have two problems: first, the 1000-piece intermediate jigsaw might be too hard for your little kid, you wonder if you can change it to the easiest one with fewest pieces; second, you might have typed your address wrong. You want to check it, and potentially correct all order addresses and your user address. Make sure you mention these two problems at the same time in the same order. You are brief and your memory is not too good sometimes, but you are polite.",
-        prompt="My zip code is 76165. Hi, I'm Mei Patel (mei_patel_7272). I just ordered a 1000-piece jigsaw, but I think it might be too difficult for my child. Can I change it to the easiest one with the fewest pieces? Also, I might have entered my address incorrectly. Could you help me verify and correct it? Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1459,11 +1439,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="mei_patel_7272",
         instruction="Your name is Mei Patel, and you live in 445 Maple Drive, Suite 394, Fort Worth, Texas, 76165. You just created your user id mei_patel_7272 and ordered some things, but realized you might have typed your address wrong. You want to check it, and potentially correct all order addresses and your user address. After this, you'd like to check the jigsaw you ordered, and if it's not shipped yet, you want to change it to the easiest jigsaw (easiest level, least pieces) because your kid is too young. By default you use PayPal. You are brief and your memory is not too good sometimes, but you are polite.",
-        prompt="My zip code is 76165. Hi, I'm Mei Patel. I think I might have entered my address incorrectly for my recent order (user ID: mei_patel_7272). Could you please check and correct it if needed? Also, I ordered a jigsaw puzzle and would like to change it to the easiest one if it hasn't shipped yet. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1522,11 +1501,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="lucas_santos_6600",
         instruction="You are Lucas (lucas_santos_6600), you live in Denver CO 80239, and your daughter lives in Chicago. You order some things for her but she has not received, so you want to know which address the order was sent to, the tracking number, and if the order is still in transit. You also want to check if the storage of the tablet you ordered. Lastly, you want to change your default address to your daughter's address so that you don't have to change it every time you order something for her. You are a lonely man and you want to talk to the agent for a while.",
-        prompt="Hi, I'm Lucas Santos from Denver, CO 80239 (lucas_santos_6600). Can you help me check the shipping address and tracking number for my recent order to my daughter in Chicago? Also, could you confirm the storage capacity of the tablet I ordered and update my default address to my daughter's? I'd appreciate a chat too.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1562,11 +1540,10 @@ TASKS_TEST = [
             "64GB",
         ],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="aarav_anderson_8794",
         instruction="You are Aarav Anderson, residing in Philadelphia 19031. You're a private person and are reluctant to share information unless it's absolutely necessary. You want to change the Desk Lamp in order #W9300146 that you've placed for the cheapest Desk Lamp that's available. Any price difference should go to a gift card. You also want to know how much you get back in total.",
-        prompt="Hi, I'm Aarav Anderson from Philadelphia, 19031. I'd like to exchange the Desk Lamp in order #W9300146 for the cheapest available option and have any price difference added to a gift card. Could you also let me know the total amount I'll receive back?",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1591,11 +1568,10 @@ TASKS_TEST = [
         ],
         outputs=["17.99"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="daiki_johnson_9523",
         instruction="You are daiki_johnson_9523 living in Denver, USA, 80273. You want to exchange a robotic vacuum cleaner in your recent order for a canister based one from the same product line. When asked for order ID, provide 9502127 first. If that doesn't work, respond exactly with 'I forgot the W at the beginning'. If and only if the agent gives you several options for the new vacuum, go for the bagless version (don't mention this if the agent just provides you one option). Ask the agent for getting a gift card for the price difference instead of the original payment method, if possible. You randomly insert typos into your messages.",
-        prompt="Hi, I'm Daiki Johnson from Denver, 80273. I'd like to exchange the robotic vacuum cleaner from my recent order (ID: 9502127) for a canister-based one from the same line. Could I get a gift card for the price difference? My email is daiki_johnson_9523@example.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1620,11 +1596,10 @@ TASKS_TEST = [
         ],
         outputs=["9.89"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="daiki_johnson_9523",
         instruction="You are daiki_johnson_9523 living in Denver, USA, 80273. You want to return an air purifier and a vacuum cleaner in your recent order. When asked for order ID, provide 9502126 first. If the agent asks you to double check, then say that you made a mistake and provide 9502127. If that doesn't work, say that you forgot the 'W' at the beginning. If the agent asks you for which vacuum cleaner, mention the robotic one. You are impatient and want the refund as soon as possible. Ask the agent explicitly to provide the refund within 3 days and the total amount of the refund you should expect. After the return is complete, ask the agent about the total amount you paid for the remaining items in the same order.",
-        prompt="Hi, I'm Daiki Johnson from Denver, 80273. I'd like to return an air purifier and a robotic vacuum cleaner from my recent order. The order ID is 9502126. Can you please process the refund within 3 days and let me know the total refund amount? Also, once the return is complete, could you tell me the total amount I paid for the remaining items in the order? My email is daiki_johnson_9523@example.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1650,11 +1625,10 @@ TASKS_TEST = [
         ],
         outputs=["1126.04", "1497.65"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="daiki_johnson_9523",
         instruction="You are daiki_johnson_9523 living in Denver, USA, 80273. You want to return an air purifier and a vacuum cleaner in your recent order. When asked for order ID, provide 9502126 first. If the agent asks you to double check, then say that you made a mistake and provide 9502127. If that doesn't work, say that you forgot the 'W' at the beginning. If the agent asks you for which vacuum cleaner, mention the canister one. You are impatient and want the refund as soon as possible. Ask the agent explicitly to provide the refund within 3 days and the total amount of the refund you should expect. After the return is complete, ask the agent about the total amount you paid for the remaining items in the same order.",
-        prompt="Hi, I'm Daiki Johnson from Denver, 80273. I need to return an air purifier and a canister vacuum cleaner from my recent order. The order ID is 9502126. Can you process the refund within 3 days and let me know the total refund amount? Also, once the return is complete, could you tell me the total amount I paid for the remaining items in the order? My email is daiki_johnson_9523@example.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1680,11 +1654,10 @@ TASKS_TEST = [
         ],
         outputs=["1095.55", "1528.14"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="daiki_johnson_9523",
         instruction="You are daiki_johnson_9523 living in Denver, USA, 80273. You want to return an air purifier that you received since it doesn't work well.  You want the refund on your original method of payment. Be polite and thank the agent for the help. Also, check at the end whether you are able to return the vacuum cleaner, but you are not sure yet so don't process anything.",
-        prompt="Hi, I'm Daiki Johnson from Denver, 80273. I'd like to return an air purifier I received as it doesn't work well and would appreciate a refund to my original payment method. Also, could you let me know if it's possible to return a vacuum cleaner, though I'm not certain about returning it yet? Thank you for your help!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1711,11 +1684,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="aarav_anderson_8794",
         instruction="You are Aarav Anderson, residing in Philadelphia 19031. You mistakenly ordered a Wireless Earbud with an IPX7 water resistance level, but you don't require this feature. You wish to exchange it for one with the same water resistance level as the other Wireless Earbuds that you've purchased. In fact, you want to exchange it to the cheapest earbud item from the rest of that order. Please be polite and concise, yet assertive.",
-        prompt="Hi, I'm Aarav Anderson from Philadelphia, 19031. I accidentally ordered a Wireless Earbud with IPX7 water resistance and would like to exchange it for the cheapest earbud from my order without this feature. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1747,11 +1719,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="chen_smith_8425",
         instruction="You're Chen Smith, living in Jacksonville 32278. You're in a rush and you want to undo cancelling an order that you've previously placed. Be insistent that the customer service agent should undo the cancellation and ensure that the order is delivered as soon as possible. Do NOT mention the actual items that were in the order, just that you want to undo the cancellation and receive all the items that were in the initial order as soon as possible.",
-        prompt="Hi, I'm Chen Smith from Jacksonville, 32278. I need to urgently undo the cancellation of my order and ensure it gets delivered as soon as possible. Please assist me with this.",
         actions=[
             Action(
                 name="transfer_to_human_agents",
@@ -1762,11 +1733,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="sofia_li_9219",
         instruction="You are Sofia Li, residing in San Antonio, 78260. You want to return the digital camera that you received. You guess that the order number is #W8855135, but you're not 100% sure. Insist that you want to return the camera and get a refund to the original payment method.",
-        prompt="Hi, I'm Sofia Li from San Antonio, 78260. I'd like to return the digital camera from order #W8855135 and get a refund to my original payment method. My email is sofiali@email.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1788,11 +1758,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="sofia_li_9219",
         instruction="You are Sofia Li, residing in San Antonio, 78260. The digital camera you received doesn't zoom as far as you expected. You use the camera for bird-watching and want to exchange it for a camera that has the maximum zoom capacity. Price is not an issue, but ensure all the other specifications of the camera to be exchanged are the same, except for the zoom capacity which has to be maximized. You want the exchange to be completed as soon as possible. You want to use your PayPal account for any additional payment.",
-        prompt="Hi, I'm Sofia Li from San Antonio, 78260. The digital camera I received doesn't zoom as far as I need for bird-watching. I'd like to exchange it for a camera with maximum zoom capacity, keeping all other specs the same. Price isn't an issue, and I'd like to use my PayPal for any additional payment. Can we expedite this exchange?",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1813,11 +1782,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="1",
         user_id="sofia_li_9219",
         instruction="You are Sofia Li, residing in San Antonio, 78260. The bicycle you received was damaged during delivery, and you want to get a refund. You're quite frustrated because the bike was very expensive and you'd like to receive the refund as soon as possible. You want the refund to be credited to your original credit card.",
-        prompt="Hi, I'm Sofia Li from San Antonio, 78260. The bicycle I received was damaged during delivery, and I'd like a refund to be credited to my original credit card as soon as possible.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1838,11 +1806,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="amelia_silva_7726",
         instruction="You are Amelia, and you have two emails: silva7872@example.com and amelia.silva7872@example.com. You live in Philadelphia, and you are a loyal customer. But you just faced a fincinal issue and want to cancel or return all possible orders. Well, except the boots that you really really love, but you are happy to exchange it for boots of the exact same size and material to get maximum money back, but only if they are cheaper than what you have paid. You are now emotional and a bit stress out. You like to talk very tersely. At the end of the day, you wonder how much money you can get back today.",
-        prompt="Hi, I'm Amelia Silva from Philadelphia. I need to cancel or return all possible orders except for the boots, which I'd like to exchange for a cheaper pair of the same size and material. How much money can I get back today? My email is silva7872@example.com.",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1883,11 +1850,10 @@ TASKS_TEST = [
         ],
         outputs=["3646.68"],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="amelia_silva_7726",
         instruction="You are Amelia, and you have two emails: silva7872@example.com and amelia.silva7872@example.com. You live in Philadelphia, and you are a loyal customer. But you just faced a fincinal issue and want to cancel or return all possible orders. You are now emotional and a bit stress out. You like to talk a lot and explain your situation.",
-        prompt="Hi, I'm Amelia Silva from Philadelphia. I'm facing a financial issue and need to cancel or return all possible orders. My emails are silva7872@example.com and amelia.silva7872@example.com. Can you help me with this?",
         actions=[
             Action(
                 name="find_user_id_by_email",
@@ -1936,11 +1902,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ivan_hernandez_6923",
         instruction="You are ivan_hernandez_6923 living in San Diego, 92133. You wonder when is your air purifier is arriving. If it has not been shipped yet, you want to cancel the air purifier inside it. If you cannot cancel just the air purifier, you want to modify it to the cheapest possible air purifier, and refund to the gift card. You do not remember your gift card id but it should be in your user account. If you cannot modify it or refund to the gift card, no action. You are polite but brief and firm.",
-        prompt="Hi, I'm Ivan Hernandez from San Diego, 92133. Could you let me know when my air purifier is arriving? If it hasn't shipped yet, I'd like to cancel it. If that's not possible, please modify it to the cheapest option and refund the difference to my gift card on file. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -1969,19 +1934,17 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ivan_hernandez_6923",
         instruction="You are ivan_hernandez_6923 living in San Diego, 92133. You wonder when is your order W4284542 is arriving. If it has not been shipped yet, you want to cancel the air purifier inside it. If you cannot cancel just the air purifier, you want to cancel the whole order and refund to gift card. If you cannot refund to the gift card, no cancelation at all. You are polite but brief and firm.",
-        prompt="Hi, I'm Ivan Hernandez from San Diego, 92133. Could you let me know the status of order W4284542? If it hasn't shipped yet, I'd like to cancel the air purifier. If that's not possible, please cancel the entire order and refund to a gift card. If a gift card refund isn't an option, please don't cancel. Thank you!",
         actions=[],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="0",
         user_id="ivan_hernandez_6923",
         instruction="You are ivan_hernandez_6923 living in San Diego, 92133. You want to modify two items in an order you just received: a coffee machine and a laptop. For the coffee machine, you want to keep the capacity and type but change the pressure lower to 8 bar. If 8 bar is not possible, you want 9 bar. If 9 bar is not possible, you want 7 bar. If 7, 8, 9 are not possible, no exchange for the coffee machine. For the laptop, you want to exchange to the cheapest i7 or above, and you do not care about other specs. If a price difference is needed to pay, you would be angry but prefer gift card payment. If that is not possible, you would use the credit card. You are polite but brief and firm.",
-        prompt="Hi, I'm Ivan Hernandez from San Diego, 92133. I'd like to modify my recent order: please adjust the coffee machine to 8 bar pressure, or 9 bar if unavailable, or 7 bar if neither is possible. For the laptop, please exchange it for the cheapest i7 or above. If there's a price difference, I'd prefer to pay with a gift card, but credit card is okay if necessary. My email is ivan_hernandez_6923@gmail.com. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2009,11 +1972,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="yusuf_taylor_7149",
         instruction="You are Yusuf Taylor from San Jose, CA, 95154. You recently placed two orders, and now you would like to make several changes and checks. You'll first inquire about the status difference between your two orders, #W2702727 and #W8268610, since both are \"pending,\" but one was placed much earlier in the year. You are considering cancelling the older order as you find the wait time unreasonable. If the agent cannot guarantee the older order will be processed within 5 days, you want to cancel it. You also want to confirm the total price of the refund.\n\nFor order #W2702727, you intend to switch the shipping address to your new home in a different city because you plan to move prior to its delivery next month. Your new address is 1234 Elm St, Springfield, IL, 62701. You want the agent to confirm the change and ensure the order will be delivered to the new address. You also want to confirm the total price of the order after the address change.\n\nYour approach will be firm, as you are unhappy with the pending status's duration but try to make all requests in one go and ask for them to be resolved efficiently and correctly in context with each other.",
-        prompt="Hi, I'm Yusuf Taylor from San Jose, CA, 95154 (email: [your email]). Can you explain why orders #W2702727 and #W8268610 are both pending, especially since #W8268610 was placed much earlier? If #W8268610 can't be processed in 5 days, I'd like to cancel it and confirm the refund amount. Also, please update the shipping address for #W2702727 to 1234 Elm St, Springfield, IL, 62701, and confirm the total price after this change. Thank you.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2045,11 +2007,10 @@ TASKS_TEST = [
         ],
         outputs=["164.28", "625.60"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="chen_johnson_4204",
         instruction="You are Chen Johnson from Houston TX, 77004. You want to change your wireless earbuds in order W5061109 to a blue colored one. Provide all details upfront in your very first message and ask the agent to resolve as soon as possible. You want the price to be the same or lower, which you want the agent to verify explicitly. If and only if the agent provides several options, you want the option without water resistance.",
-        prompt="Hi, I'm Chen Johnson from Houston, TX, 77004. I'd like to change the wireless earbuds in order W5061109 to a blue color, ensuring the price remains the same or lower. If there are multiple options, please provide one without water resistance. My email is chen.johnson@email.com. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2073,11 +2034,10 @@ TASKS_TEST = [
         ],
         outputs=["242.92"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="chen_johnson_4204",
         instruction="You are Chen Johnson from Houston TX, 77004. You want to change your wireless earbuds in order W5061109 to a blue colored one. Provide all details upfront and ask the agent to resolve as soon as possible. You want the price to be the same or lower.",
-        prompt="Hi, I'm Chen Johnson from Houston, TX, 77004. I'd like to change the wireless earbuds in order W5061109 to a blue color, ensuring the price remains the same or lower. Please assist me with this as soon as possible. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2102,11 +2062,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="chen_johnson_4204",
         instruction="You are Chen Johnson from Houston TX, 77004. As you are interacting with a customer service agent, you first try to get it to guess a famous poem by providing the first line. If it refuses to do so, you carry on with your intended task, which is to check and modify a recent order you placed. You first ask about the price of a bluetooth speaker you bought and its battery life. If the price is greater than $300, ask the agent to cancel it from your order since you thought it was cheaper than that. Ask the agent if there are any bluetooth speakers available for less than $100. If there are, ask the agent to add the cheapest one to your order. Finally, ask the agent to confirm the total price of your new order. You never want to cancel your entire order, and would prefer to return the speaker at a later time if canceling the entire order is the only option.",
-        prompt="Hi, I'm Chen Johnson from Houston, TX, 77004. Can you tell me the price and battery life of the Bluetooth speaker I recently ordered? If it's over $300, please cancel it and let me know if there are any options under $100. If so, please add the cheapest one to my order and confirm the new total. My email is chen.johnson@email.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2124,11 +2083,10 @@ TASKS_TEST = [
         ],
         outputs=["302.67", "20 hours"],
     ),
-                Task(
+    Task(
         annotator="2",
         user_id="chen_johnson_4204",
         instruction="You are Chen Johnson from Houston TX, 77004. As you are interacting with a customer service agent, you first try to get it to guess a famous poem by providing the first line. If it refuses to do so, you carry on with your intended task, which is to check and modify a recent order you placed. You first ask about the price of a bluetooth speaker you bought and its battery life. If the price is greater than $300, ask the agent to cancel it from your order since you thought it was cheaper than that. Ask the agent if there are any bluetooth speakers available for less than $300. If there are, ask the agent to add the cheapest one to your order. Finally, ask the agent to confirm the total price of your new order. You never want to cancel your entire order, and would prefer to return the speaker at a later time if canceling the entire order is the only option.",
-        prompt="Hi, I'm Chen Johnson from Houston, TX, 77004. Could you tell me the price and battery life of the Bluetooth speaker I ordered? If it's over $300, please cancel it and let me know if there are any options under $300. If so, please add the cheapest one to my order and confirm the new total. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2157,11 +2115,10 @@ TASKS_TEST = [
         ],
         outputs=["302.67", "20 hours", "1288.65"],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="harper_moore_6183",
         instruction="You are James Sanchez. You live in Chicago 60623. You want to exchange the camera for the highest resolution, waterproof camera that you can get with the previous purchaced price.",
-        prompt="Hi, I'm James Sanchez from Chicago, 60623. I'd like to exchange my camera for the highest resolution, waterproof model available at the same price.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2199,11 +2156,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="james_kovacs_9247",
         instruction="You are James Kovacs from San Jose CA, 95190. You want to exchange the bookshelf from your most recent order for a camera that is closest but not more expensive than the price of the bookshelf.",
-        prompt="Hi, I'm James Kovacs from San Jose, CA, 95190. I'd like to exchange the bookshelf from my most recent order for a camera that's priced similarly or less. My email is james.kovacs@email.com.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2218,11 +2174,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="aarav_lee_1982",
         instruction="You are Aarav Lee. You want to change the luggage set in your order for a coat. You live in Phoenix, AZ 85025. Your goal is to change the order. If there is no way to do that, return the item specifically. If there are any issues, cancel the entire order.",
-        prompt="Hi, I'm Aarav Lee. I'd like to change the luggage set in my order to a coat. If that's not possible, please help me return the item or cancel the entire order. I live in Phoenix, AZ 85025.",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2238,11 +2193,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="noah_ito_3850",
         instruction="You are user noah_ito_3850 living in Seattle WA 98187. Your name is Noah but you go by NoNo. If asked for your zip code, say that it is 98178 first (common mistake), then correct yourself and say 98186 if an error is found. If that fails, then say 98187. You want to check how much you paid for the order that you most recently placed. You are not sure how long ago the order was placed.",
-        prompt="My zip code is 98178. Hi, I'm Noah Ito, but I go by NoNo. Could you help me check how much I paid for my most recent order? My zip code is 98187. Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2261,11 +2215,10 @@ TASKS_TEST = [
         ],
         outputs=["829.43"],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="noah_ito_3850",
         instruction="You are user noah_ito_3850 living in Seattle WA 98187. If asked for your zip code, say that it is 98178 first (common mistake), then correct yourself and say 98187 if an error is found. You want to check how much you paid for the order that you most recently placed. You are not sure how long ago the order was placed.",
-        prompt="My zip code is 98178. Hi, I'm Noah Ito from Seattle, WA 98187. Could you help me check how much I paid for my most recent order? My email is noah_ito_3850@gmail.com. Thanks!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2280,11 +2233,10 @@ TASKS_TEST = [
         ],
         outputs=["829.43"],
     ),
-                Task(
+    Task(
         annotator="3",
         user_id="emma_smith_8564",
         instruction="You are emma_smith_8564 living in New York, New York, 10192. You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled. You are polite and friendly.",
-        prompt="Hi, I'm Emma Smith from New York, 10192. I recently received a laptop that I ordered around April 2023, and I'd like to return it for a full refund as I found a better deal elsewhere. If a return isn't possible, could it be canceled? Thank you!",
         actions=[
             Action(
                 name="find_user_id_by_name_zip",
@@ -2299,11 +2251,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sofia_hernandez_5364",
         instruction="You name is Sofia Hernandez and your zip code is 98193. You are impatient, confident, direct, messy. You recently received a helmet but you are not happy with it and want to exchange. The size is too small and you want medium, plus you want high ventilation. If multiple colors are available, you prefer blue. You do not want the  You prefer original payment to pay for the price difference, and you want to know how much you need to pay today.",
-        prompt="Hi, I'm Sofia Hernandez from zip code 98193. I need to exchange a helmet I received for a medium size with high ventilation, preferably in blue. Can you let me know the price difference and charge it to my original payment method?",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2317,11 +2268,10 @@ TASKS_TEST = [
         ],
         outputs=["22.55"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="ivan_khan_7475",
         instruction="You name is Ivan Khan and your zip code is 28243. You are polite, optimistic, organized. You made some mistake and ordered an order sent to your son's address in Washington DC, and you want to modify it to your default address in Charlotte (you do not want to mention it, but it is in your user profile the agent can look up) because he is coming back home. You also want to adjust the desk lamp to be black color, and the backpack to be medium size and polyester material instead. If multiple colors are available for the backpack, you prefer grey. If the agent asks for payment method, you say GC initially, but if the agent does not allow it or asks you to confirm it, you change your mind to PayPal, and decide to only modify the backpack.",
-        prompt="Hi, I'm Ivan Khan, and my zip code is 28243. I mistakenly sent my order to my son's address in Washington DC, and I'd like to change it to my default address in Charlotte. Also, could you please adjust the desk lamp to black and the backpack to medium size in polyester, preferably grey? My email is ivan.khan@email.com. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2347,11 +2297,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="ivan_khan_7475",
         instruction="You name is Ivan Khan and your zip code is 28243. You are polite, optimistic, organized. You made some mistake and ordered an order sent to your son's address in Washington DC, and you want to modify it to your default address in Charlotte (you do not want to mention it, but it is in your user profile the agent can look up) because he is coming back home. You also want to adjust the desk lamp to be black color, and the backpack to be medium size and polyester material instead. If multiple colors are available for the backpack, you prefer grey. If the agent asks for payment method, you say GC initially, but if the agent does not allow it or asks you to confirm it, you change your mind to PayPal, and decide to only modify the backpack. Make sure you briefly mention the two things at the same time at the beginning, but first mention the modification then the address.",
-        prompt="Hi, I'm Ivan Khan (zip 28243, email ivan.khan@example.com). Could you help me change the desk lamp to black and the backpack to medium size in polyester, preferably grey? Also, I need to update the shipping address to my default one in Charlotte. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2377,11 +2326,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="fatima_wilson_7472",
         instruction="You name is Fatima Wilson and your email is fatima.wilson5721@example.com. You are polite, flexible, creative. You want to return everything you just bought except the coffee machine.",
-        prompt="Hi, I'm Fatima Wilson (fatima.wilson5721@example.com). I'd like to return everything from my recent purchase except the coffee machine.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2399,11 +2347,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lei_li_6575",
         instruction="You name is Lei Li and your zip code is 85033. You are insecure, shy. You recently bought a laptop, but you want to exchange it to i9 CPU. If multiple storage options are available, you prefer 256GB SSD. If multiple colors are available, you prefer silver. You also have a pending order with five items (you don't remember order ID), and you want to cancel it because you no longer need them.",
-        prompt="Hi, I'm Lei Li from zip code 85033. I recently bought a laptop and would like to exchange it for one with an i9 CPU, preferably with a 256GB SSD and in silver. Also, I have a pending order with five items that I’d like to cancel. My email is [your email].",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2421,11 +2368,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="liam_moore_4057",
         instruction="You name is Liam Moore and your email is liam.moore6985@example.com. You are direct, patient, organized, optimistic. For #W6908222, exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to {'color': 'black', 'battery life': '4 hours', 'water resistance': 'not resistant'}; ",
-        prompt="Hi, I'm Liam Moore. Could you please help me exchange my Wireless Earbuds from order #W6908222 from the blue ones to the black ones? My email is liam.moore6985@example.com.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2439,11 +2385,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="ava_nguyen_6646",
         instruction="You name is Ava Nguyen and your zip code is 94128. You are polite, optimistic, busy. You ordered a fleece jacket by mistake and want to remove it from your pending order. If removing one item is not possible, cancel the whole order. You also want to modify the skateboard to maple material, 34 inch, graphic. If not availabe, cancel the order so that you can order again. You also want to know the total prices for the grills you have paid for.",
-        prompt="Hi, I'm Ava Nguyen from zip code 94128. Could you please help me remove the fleece jacket from my pending order? If that's not possible, please cancel the entire order. Also, I'd like to change the skateboard to maple material, 34 inch, graphic; if that's not available, please cancel it so I can reorder. Lastly, could you provide the total prices for the grills I've paid for? Thank you!",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2456,11 +2401,10 @@ TASKS_TEST = [
         ],
         outputs=["1939.05"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="ivan_johnson_6036",
         instruction="You name is Ivan Johnson and your zip code is 94183. You ordered a perfume and you just tried a little bit and you like it extremely. You want to get the maximum size available for it. If the agent cannot help with placing a new order, exchange your current one to the largest size available.",
-        prompt="Hi, I'm Ivan Johnson, zip code 94183. I love the perfume I ordered and would like to get the maximum size available. Can you help me with placing a new order or exchanging my current one?",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2474,11 +2418,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yara_muller_8652",
         instruction="You name is Yara Muller and your email is yara.muller9246@example.com. You are sad, organized, pessimistic. For #W5056519, change address to same as #W8277957. For #W5056519, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand B'} to {'skin tone': 'dark', 'brand': 'Brand A'}; Cancel order #W5995614 because ordered by mistake. ",
-        prompt="My zip code is 92101. Hi, I'm Yara Muller (yara.muller9246@example.com). Could you please change the address for order #W5056519 to match #W8277957, exchange the Makeup Kit in #W5056519 to {'skin tone': 'dark', 'brand': 'Brand A'}, and cancel order #W5995614? Thank you.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2508,11 +2451,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="emma_kovacs_9839",
         instruction="You name is Emma Kovacs and your zip code is 32190. You are insecure, rigid, sad, logical. You just bought a water bottle with 500ml but you regret it, and you want to change it to the other bottle you just placed with 1000ml capacity. If the exact item is not available any more, you can allow the material to be different.",
-        prompt="Hi, I'm Emma Kovacs from zip code 32190. I recently purchased a 500ml water bottle but would like to exchange it for the 1000ml one I just ordered. If the exact item isn't available, I'm open to a different material. My email is [Your Email].",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2526,11 +2468,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="amelia_gonzalez_4098",
         instruction="You name is Amelia Gonzalez and your email is amelia.gonzalez4271@example.com. You are curious, patient, outgoing. For #W7209932, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'}; Use the gift card. Try to make the conversation as confusing for the agent as possible.",
-        prompt="Hi, I'm Amelia Gonzalez (amelia.gonzalez4271@example.com). Could you help me exchange the blue, small, polyester v-neck T-shirt from order #W7209932 for a red, XXL, cotton crew neck? I'd like to use my gift card for this. Thanks!",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2544,11 +2485,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="james_kim_7213",
         instruction="You name is James Kim and your email is james.kim1995@example.com. You are sad, independent, polite. Due to some life changes, you no longer need hiking boots, watch, keyboard, charger, jacket, and running shoes. If cancelling part of the order is not possible, you don't care, just cancel the whole order.",
-        prompt="Hi, I'm James Kim (james.kim1995@example.com). Due to some changes, I need to cancel the hiking boots, watch, keyboard, charger, jacket, and running shoes from my order. If partial cancellation isn't possible, please cancel the entire order. Thank you.",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2561,11 +2501,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="chen_silva_7485",
         instruction="You name is Chen Silva and your zip code is 46281. You are messy, flexible, outgoing. You received two tablets and you only need one. You want to return the more expensive one and refund to credit card. If refund to credit card is not possible, you become angry and return everything on that order and refund to GC.",
-        prompt="Hi, I'm Chen Silva, zip code 46281. I received two tablets but only need one. I'd like to return the more expensive one and get a refund to my credit card. If that's not possible, I'll return everything from the order for a gift card refund. My email is chen.silva@email.com.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2583,11 +2522,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="chen_silva_7485",
         instruction="You name is Chen Silva and your zip code is 46281. You are messy, flexible, outgoing. You received two tablets and you only need one. You want to return the more expensive one and refund to credit card. If refund to credit card is not possible, you become angry and refund to GC.",
-        prompt="Hi, I'm Chen Silva, zip code 46281. I received two tablets but only need one. I'd like to return the more expensive one for a refund to my credit card. If that's not possible, please issue a refund to a gift card.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2600,11 +2538,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="chen_silva_7485",
         instruction="You name is Chen Silva and your zip code is 46281. You are messy, flexible, outgoing. You received two tablets and you only need one. You want to return the less expensive one and refund to credit card. But if the agent asks for confirmation, you change your mind and return the more expensive one and refund to GC.",
-        prompt="Hi, I'm Chen Silva from zip code 46281. I received two tablets and only need one. I'd like to return the less expensive one and get a refund to my credit card. My email is chen.silva@email.com.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2617,11 +2554,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_hernandez_6785",
         instruction="You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to exchange your Fleece Jacket for a large red Fleece Jacket with a half zipper",
-        prompt="Hi, I'm Yusuf Hernandez (yusuf.hernandez8836@example.com). I'd like to exchange my Fleece Jacket for a large red one with a half zipper.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2635,11 +2571,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_hernandez_6785",
         instruction="You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to exchange your Fleece Jacket to red color and half zipper. You also want to want to change your default address to your Washington DC address (which you do not want to reveal but is in one of the orders).",
-        prompt="My zip code is 20307. Hi, I'm Yusuf Hernandez (yusuf.hernandez8836@example.com). I'd like to exchange my Fleece Jacket for a red, half-zip version and update my default address to the Washington DC one on file. Thank you.",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -2665,11 +2600,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_hernandez_6785",
         instruction="You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to modify all your pending order address to the Washington DC address (which you do not want to reveal but is in one of the orders), along with your user default address.",
-        prompt="My zip code is 20307. Hi, I'm Yusuf Hernandez (yusuf.hernandez8836@example.com). Could you please update all my pending orders and my default address to the Washington DC address on file? Thank you.",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2722,11 +2656,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="daiki_silva_2903",
         instruction="You name is Daiki Silva and your email is daiki.silva6295@example.com. You are insecure, creative, direct, relaxing. You want to change the book shelf to 4 foot but with the same material and color. If it is not available, cancel the whole order and you will buy again. If the agent asks for the cancellation reason, you say you ordered by mistake.",
-        prompt="Hi, I'm Daiki Silva (daiki.silva6295@example.com). Could you please change my bookshelf order to a 4-foot version with the same material and color? If that's not possible, please cancel the entire order as I ordered by mistake. Thank you!",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2735,11 +2668,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="raj_santos_9079",
         instruction="You name is Raj Santos and your zip code is 98157. You are dependent, flexible. You want to know what is the cheapest availabe mechanical keyboard right now and its options. If it is less than 200 bucks you want to exchange your current one to it. If not, return your current one.",
-        prompt="Hi, I'm Raj Santos from zip code 98157. Could you please let me know the cheapest available mechanical keyboard and its options? If it's under $200, I'd like to exchange my current one; otherwise, I'll return it.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2752,11 +2684,10 @@ TASKS_TEST = [
         ],
         outputs=["226.11", "tactile", "white", "full"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="emma_kovacs_9839",
         instruction="You name is Emma Kovacs and your email is emma.kovacs2974@example.com. You are polite, curious, flexible, relaxing, impatient. You want to know if the digital camera you just bought is 10x zoom. If not, modify the item to 10x zoom without changing the other options. If 10x zoom is not available, cancel the order with the reason of no longer needed. If it is available but the price is more than 3000, cancel the order with the reason of ordered by mistake.",
-        prompt="Hi, I'm Emma Kovacs (emma.kovacs2974@example.com). Could you please confirm if the digital camera I just purchased has a 10x zoom? If not, can you modify it to include 10x zoom, or cancel the order if it's unavailable or over $3000? Thank you!",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -2765,11 +2696,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="mei_ahmed_4909",
         instruction="You name is Mei Ahmed and your zip code is 78705. You are polite, outgoing. You are angry about the quality of the two skateboards you just bought. You want to return them and refund to credit card. If the agent asks for confirmation, do not say yes, because you also want to return the smart watch. You also want to return the e-reader you just bought. If the same item is availabe online, you're willing to exchange it to the same item. If not, you want to return it and refund to credit card.",
-        prompt="Hi, I'm Mei Ahmed, zip code 78705. I'm really disappointed with the quality of the two skateboards I just bought and would like to return them for a refund to my credit card. Additionally, I want to return the smartwatch and e-reader as well. If the e-reader is available online, I'd be open to an exchange; otherwise, I'd prefer a refund. My email is mei.ahmed@example.com.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2791,11 +2721,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="mei_ahmed_4909",
         instruction="You name is Mei Ahmed and your zip code is 78705. You are polite, outgoing. You are angry about the quality of the two skateboards you just bought. You want to return them and refund to credit card. If the agent asks for confirmation, do not say yes, because you also want to return the smart watch and e-reader.",
-        prompt="Hi, I'm Mei Ahmed, zip code 78705. I'm really disappointed with the quality of the two skateboards I just bought and would like to return them for a refund to my credit card.",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -2816,11 +2745,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lei_wilson_4541",
         instruction="You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 32GB.",
-        prompt="Hi, I'm Lei Wilson, zip code 32255. I received a 15-inch laptop with 32GB, and I'd like to exchange it for one with an i7 processor, 8GB RAM, and 1TB SSD. My email is [your email].",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2834,11 +2762,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lei_wilson_4541",
         instruction="You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 16GB.",
-        prompt="Hi, I'm Lei Wilson, zip code 32255. I received a 15-inch laptop with 16GB, and I'd like to exchange it for one with an i7 processor, 8GB RAM, and 1TB SSD. My email is [your email].",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2852,11 +2779,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lei_wilson_4541",
         instruction="You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 32GB.",
-        prompt="Hi, I'm Lei Wilson, zip code 32255. I'd like to exchange my current 15-inch, 32GB laptop for one with an i7 processor, 8GB RAM, and 1TB SSD. My email is [your email].",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2870,11 +2796,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lei_wilson_4541",
         instruction="You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, and it is actually two laptops that you want to exchange. You want to know how much you need to pay today in total.",
-        prompt="Hi, I'm Lei Wilson from zip code 32255. I'd like to exchange two 15-inch laptops for models with an i7 processor, 8GB RAM, and 1TB SSD. Could you let me know the total cost for this exchange?",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2897,11 +2822,10 @@ TASKS_TEST = [
         ],
         outputs=["167.87", "60.78", "107.09"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_li_7255",
         instruction="You name is Yusuf Li and your zip code is 91148. You are cautious, insecure, organized. You want to change your LA order to your NYC address (you prefer not to reveal it but it is in your other order). You also want to exchange Bluetooth Speaker to be the cheapest green type.",
-        prompt="My zip code is 10093. Hi, I'm Yusuf Li, zip code 91148. Could you please change my LA order to my NYC address (it's in my other order) and exchange the Bluetooth Speaker for the cheapest green type? Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2927,11 +2851,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_li_7255",
         instruction="You name is Yusuf Li and your zip code is 91148. You are cautious, insecure, organized. You want to change your LA order to your NYC address (you prefer not to reveal it but it is in your other order). You also want to exchange Bluetooth Speaker to be the cheapest green type. Make sure you mention the two requests at the same time to the agent, but mention the exchange first.",
-        prompt="My zip code is 10093. Hi, I'm Yusuf Li, and I'd like to exchange the Bluetooth Speaker for the cheapest green type. Also, could you please change my LA order to my NYC address listed in my other order? My zip code is 91148, and my email is [your email]. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -2957,11 +2880,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sofia_li_9219",
         instruction="You name is Sofia Li and your zip code is 78260. You are outgoing, organized, cautious, pessimistic.  You want to exchange your Bicycle to a larger frame size for your kid. Jigsaw Puzzle in the same order also needs to be exchanged, you want the same difficulty, but 1000 more pieces, and you prefer animal than art theme if both are available. Make sure you mention these at the same time.  You also want to exchange your camera to a slightly lower resolution, without changing the other options. If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. Lastly, you want to cancel the skateboard order. If you cannot cancel one single item, you are okay with cancelling the whole order, with the reason of no longer needed.",
-        prompt="Hi, I'm Sofia Li, zip code 78260, email [your email]. I'd like to exchange the bicycle for a larger frame size for my kid and swap the jigsaw puzzle for one with 1000 more pieces, preferably with an animal theme. Also, I'd like to exchange my camera for a slightly lower resolution without changing other options. Lastly, please cancel the skateboard order as it's no longer needed. If you need payment confirmation, I'd prefer using the other card. Thank you!",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -2988,11 +2910,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sofia_li_9219",
         instruction="You name is Sofia Li and your zip code is 78260. You are outgoing, organized, cautious, pessimistic.  You want to exchange your Bicycle to a larger frame size for your kid. Jigsaw Puzzle in the same order also needs to be exchanged, you want the same difficulty, but 1000 more pieces, and you prefer art than animal theme if both are available. Make sure you mention these at the same time. You also want to exchange your camera to a slightly lower resolution, without changing the other options. For both orders, you'd prefer the visa card as payment or refund method. Lastly, you want to cancel the skateboard order. If you cannot cancel one single item, you are okay with cancelling the whole order, but you will do it yourself on the website and no need for the agent to help.",
-        prompt="Hi, I'm Sofia Li from zip code 78260. I'd like to exchange the bicycle for a larger frame size for my kid and swap the jigsaw puzzle for one with 1000 more pieces, preferably with an art theme. I'd also like to exchange my camera for a slightly lower resolution model, keeping other options the same. Please use my Visa card for any payment or refund. Additionally, I need to cancel the skateboard order, but I'll handle that myself online. My email is [your email]. Thank you!",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3015,11 +2936,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="liam_thomas_7882",
         instruction="You name is Liam Thomas and your zip code is 85049. You are pessimistic, insecure. You want to return your luggage set and get the exact same item but with red color, and reutrn you skateboard in the same order to {'length': '34 inch', 'design': 'custom'}; You also want to return the hiking boots.",
-        prompt="Hi, I'm Liam Thomas from zip code 85049. I'd like to return my luggage set for the same item in red, exchange my skateboard for a 34-inch custom design, and return the hiking boots. My email is [your email].",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3041,11 +2961,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="noah_ito_3850",
         instruction="You name is Noah Ito and your zip code is 98187. You are logical, impatient. You just placed an order with two watches, you wan to change its address to your New York address (you don't want to reveal it but it's in your other order). You also want to modify the silicone watch to a metal one. If multiple colors available, you prefer white. For the air purifier you received along with a speaker, you want to exchange the purifier to large size and night mode, but still with HEPA filter. You like to say things in pieces.",
-        prompt="My zip code is 10228. Hi, I'm Noah Ito, zip code 98187. I just placed an order with two watches and need to change the shipping address to my New York address from a previous order. Can I also switch the silicone watch to a metal one, preferably in white? For the air purifier I received, could I exchange it for a large size with night mode, but still with a HEPA filter? Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -3080,11 +2999,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="noah_ito_3850",
         instruction="You name is Noah Ito and your zip code is 98187. You are logical, impatient. You just placed an order with two watches, you wan to change its address to your New York address (you don't want to reveal it but it's in your other order). You also want to modify the silicone watch to a metal one. If multiple colors available, you prefer white. For the air purifier you received along with sneakers, you want to exchange the purifier to large size and night mode, but still with HEPA filter. You like to say things in pieces.",
-        prompt="My zip code is 10228. Hi, I'm Noah Ito, zip code 98187. I just placed an order with two watches and need to change the address to my New York one from a previous order. Can I also switch the silicone watch to a metal one, preferably in white? For the air purifier I received with the sneakers, I'd like to exchange it for a large size with night mode, still with a HEPA filter. Thanks!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -3119,11 +3037,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lucas_brown_6720",
         instruction="You name is Lucas Brown and your email is lucas.brown9344@example.com. You are busy, happy, outgoing, messy, optimistic. You want to return the bookshelf and jigsaw you received in the same order. Make sure you mention at the beginning that you want to cancel these two things, and they are from the same order. You also want to return the backpack you received with the vacuum cleaner. You also want to change your pending order address to the default Chicago one, and change its item color to red. You want to get the tracking number of your cancelled order. You like to say one thing at a time.",
-        prompt="My zip code is 60612. Hi, I'm Lucas Brown (lucas.brown9344@example.com). I want to cancel and return the bookshelf and jigsaw from the same order. Can you help with that? Also, I'd like to return the backpack that came with the vacuum cleaner. Could you change the address for my pending order to my default Chicago one and switch the item color to red? Lastly, could you provide the tracking number for my cancelled order? Thanks!",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3165,11 +3082,10 @@ TASKS_TEST = [
         ],
         outputs=["286422338955"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="lucas_brown_6720",
         instruction="You name is Lucas Brown and your email is lucas.brown9344@example.com. You are busy, happy, outgoing, messy, optimistic. You want to return the bookshelf and jigsaw you received in different orders. Make sure you mention at the beginning that you want to cancel these two things, and they are from different orders. You also want to return the backpack you received with the vacuum cleaner. You also want to change your pending order item to red, and address to your default Chicago home (you won't reveal it for private reasons but it's in your profile). You want to get the tracking number of your cancelled order. You like to say one thing at a time.",
-        prompt="My zip code is 60612. Hi, I'm Lucas Brown (lucas.brown9344@example.com). I'd like to cancel the bookshelf and jigsaw from different orders. Can I also return the backpack that came with the vacuum cleaner? Additionally, I'd like to change the color of my pending order item to red and have it sent to my default Chicago address. Could you provide the tracking number for my cancelled order? Thanks!",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3211,11 +3127,10 @@ TASKS_TEST = [
         ],
         outputs=["286422338955"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="aarav_anderson_8794",
         instruction="You name is Aarav Anderson and your zip code is 19031. You are cautious, messy, rigid. For #W4316152, exchange Tea Kettle {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'ceramic', 'stovetop compatibility': 'gas'}; Tea Kettle {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'capacity': '1.5 liters', 'stovetop compatibility': 'gas'}; ",
-        prompt="Hi, I'm Aarav Anderson from zip code 19031. Could you please help me exchange the tea kettle from order #W4316152 to a ceramic one compatible with gas stovetops, and another to a 1.5-liter capacity also for gas stovetops?",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3229,11 +3144,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sofia_thomas_1518",
         instruction="You name is Sofia Thomas and your email is sofia.thomas3019@example.com or sofia.thomas3069@example.com. You are dependent, pessimistic, direct. You want to exchange your T-Shirt because it is too big, one size smaller would be good. You like the cotten feeling. If multiple colors available, you prefer black.",
-        prompt="Hi, I'm Sofia Thomas (sofia.thomas3019@example.com). I'd like to exchange my T-shirt for a smaller size, preferably in black if available.",
+        prompt="Hi, my name is Sofia Thomas and my email is sofia.thomas3019@example.com (or sofia.thomas3069@example.com). I want to exchange my T-shirt because it’s too big. One size smaller would be good. I prefer cotton, and if there are multiple colors, please give me black.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3247,11 +3162,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yara_ito_8499",
         instruction="You name is Yara Ito and your zip code is 75284. You are happy, messy. Your received hiking boots but seem like already worn, you are unhappy about it and want to send for a new pair with the same specs. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level.",
-        prompt="Hi, I'm Yara Ito, zip code 75284. I received hiking boots that appear worn and would like to exchange them for a new pair with the same specs. Also, I'd like to exchange my jigsaw for one with a fancier theme and 500 fewer pieces, but with the same difficulty level.",
         actions=[
             Action(
                 name="exchange_delivered_order_items",
@@ -3274,11 +3188,11 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yusuf_gonzalez_8900",
         instruction="You name is Yusuf Gonzalez and your zip code is 91455. You want to return everything but a tablet in a recently delivered order. You want to know how much you can get back.",
-        prompt="Hi, I'm Yusuf Gonzalez, zip code 91455. I'd like to return everything except the tablet from my recent order. Could you let me know how much I'll be refunded?",
+        prompt="Hi, my name is Yusuf Gonzalez and my zip code is 91455. I’d like to return everything from my recent order except for the tablet. Could you tell me how much I will get back?",
         actions=[
             Action(
                 name="return_delivered_order_items",
@@ -3291,11 +3205,10 @@ TASKS_TEST = [
         ],
         outputs=["346.93"],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sophia_martin_8570",
         instruction="You name is Sophia Martin and your email is sophia.martin4832@example.com. You are organized and outgoing. You live on Elm Avenue in Houston, and recently you moved to a new house on the same street and bought a luggage set sent to there. But you realize you have another order sent to the old address, and you want to change your wrong order address to the new home, and also your user default address to the new home. You do not want to reveal your address but the agent should be able to look it up in orders You do not want to reveal your address and insist the agent should be able to look it up in orders. You also want to exchange your tablet to the cheapest one due to moving costs. Make sure to mention the two address changes then the exchange.",
-        prompt="My zip code is 77242. Hi, I'm Sophia Martin. Could you please update my default address to my new home on Elm Avenue and change the shipping address for my recent order to the same? Also, I'd like to exchange my tablet for the cheapest model due to moving costs. My email is sophia.martin4832@example.com. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -3333,11 +3246,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="sophia_martin_8570",
         instruction="You name is Sophia Martin and your email is sophia.martin4832@example.com. You are organized and outgoing. You live on Elm Avenue in Houston, and recently you moved to a new house on the same street and bought a tablet sent to there. But you realize you have another order sent to the old address, and you want to change your wrong order address to the new home, and also your user default address to the new home. You do not want to reveal your address and insist the agent should be able to look it up in orders. You also want to exchange your tablet to the cheapest one due to moving costs. Make sure to mention the two address changes then the exchange.",
-        prompt="My zip code is 77034. Hi, I'm Sophia Martin (sophia.martin4832@example.com). I recently moved to a new house on Elm Avenue in Houston and need to update my order and default address to the new location. Also, I'd like to exchange my tablet for the cheapest model due to moving costs. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_address",
@@ -3375,11 +3287,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yara_silva_7567",
         instruction="You name is Yara Silva and your zip code is 77159. You are sad and cautious. You want to modify the laptop order to your NYC address (you don't want to reveal it but should be in your orders profile). You also like to modify the laptop to be {'processor': 'i5', 'storage': '256GB SSD', 'color': 'space grey'};  You also want to exchange your watch to be black dial color but keep the leather strap. You like to say things together.",
-        prompt="My zip code is 10116. Hi, I'm Yara Silva, zip code 77159. Could you please update my laptop order to my NYC address on file and modify it to have an i5 processor, 256GB SSD, and space grey color? Also, I'd like to exchange my watch for one with a black dial while keeping the leather strap. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3414,11 +3325,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yara_silva_7567",
         instruction="You name is Yara Silva and your zip code is 77159. You are sad and cautious. You want to modify the laptop order to your NYC address (you don't want to reveal it but should be in your orders profile). You also like to modify the laptop to be 9844888101. You also want to exchange your watch to be black dial color but keep the leather strap. You like to say things piecewise.",
-        prompt="My zip code is 10116. Hi, I'm Yara Silva, zip code 77159. Could you please update my laptop order to the NYC address in my profile and change the model to 9844888101? Also, I'd like to exchange my watch for one with a black dial but keep the leather strap. Thank you!",
         actions=[
             Action(
                 name="modify_pending_order_items",
@@ -3453,11 +3363,10 @@ TASKS_TEST = [
         ],
         outputs=[],
     ),
-                Task(
+    Task(
         annotator="4",
         user_id="yara_muller_8652",
         instruction="You name is Yara Muller and your zip code is 85041. You are mysterious and want to cancel all pending orders. You don't want to reveal the reason until the agent asks. You'd say ordered by mistake if asked.",
-        prompt="Hi, I'm Yara Muller, zip code 85041. I'd like to cancel all my pending orders, please. My email is [your email].",
         actions=[
             Action(
                 name="cancel_pending_order",
@@ -3469,4 +3378,5 @@ TASKS_TEST = [
             ),
         ],
         outputs=[],
-    ),]
+    ),
+]

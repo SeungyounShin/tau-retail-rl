@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -76,21 +77,22 @@ class GetUserDetails(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data") or {}
-        if "users" not in data:
-            return "Error: data.users is missing", 0.0, {}
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
 
         users = data["users"]
 
         # Extract the user_id from parameters; accept either a string or an object with 'id'/'user_id'
         raw_user_id = parameters.get("user_id", None)
         if raw_user_id is None:
-            return "Error: parameter 'user_id' is required", 0.0, {}
+            return "Error: parameter 'user_id' is required", 0.0 + TOOL_ERROR_REWARD, {}
 
         if isinstance(raw_user_id, dict):
             raw_user_id = raw_user_id.get("id") or raw_user_id.get("user_id")
             if raw_user_id is None:
-                return "Error: parameter 'user_id' must be a string or an object with 'id'/'user_id'", 0.0, {}
+                return "Error: parameter 'user_id' must be a string or an object with 'id'/'user_id'", 0.0 + TOOL_ERROR_REWARD, {}
 
         user_id = str(raw_user_id)
 
@@ -98,16 +100,16 @@ class GetUserDetails(BaseTool):
         if isinstance(users, dict):
             user = users.get(user_id)
             if user is None:
-                return "Error: user not found", 0.0, {}
+                return "Error: user not found", 0.0 + TOOL_ERROR_REWARD, {}
             return json.dumps(user), 0.0, {}
 
         if isinstance(users, list):
             for u in users:
                 if isinstance(u, dict) and str(u.get("id") or u.get("user_id")) == user_id:
                     return json.dumps(u), 0.0, {}
-            return "Error: user not found", 0.0, {}
+            return "Error: user not found", 0.0 + TOOL_ERROR_REWARD, {}
 
-        return "Error: data.users must be a dict or a list", 0.0, {}
+        return "Error: data.users must be a dict or a list", 0.0 + TOOL_ERROR_REWARD, {}
 
 
     async def calc_reward(self, instance_id: str, **kwargs) -> float:

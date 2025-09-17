@@ -19,6 +19,7 @@ from typing import Any, Optional
 from uuid import uuid4
 import json
 
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
 
@@ -96,7 +97,10 @@ class ReturnDeliveredOrderItems(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         products, orders, users = data["products"], data["orders"], data["users"]
         order_id : str = parameters.get("order_id", "")
         item_ids : list[str] = parameters.get("item_ids", [])
@@ -104,25 +108,25 @@ class ReturnDeliveredOrderItems(BaseTool):
 
         # check order exists and is delivered
         if order_id not in orders:
-            return "Error: order not found", 0.0, {}
+            return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
         order = orders[order_id]
         if order["status"] != "delivered":
-            return "Error: non-delivered order cannot be exchanged", 0.0, {}
+            return "Error: non-delivered order cannot be exchanged", 0.0 + TOOL_ERROR_REWARD, {}
         
         # Check if the payment method exists and is either the original payment method or a gift card
         if payment_method_id not in data["users"][order["user_id"]]["payment_methods"]:
-            return "Error: payment method not found", 0.0, {}
+            return "Error: payment method not found", 0.0 + TOOL_ERROR_REWARD, {}
         if (
             "gift_card" not in payment_method_id
             and payment_method_id != order["payment_history"][0]["payment_method_id"]
         ):
-            return "Error: payment method should be either the original payment method or a gift card", 0.0, {}
+            return "Error: payment method should be either the original payment method or a gift card", 0.0 + TOOL_ERROR_REWARD, {}
 
         # Check if the items to be returned exist (there could be duplicate items in either list)
         all_item_ids = [item["item_id"] for item in order["items"]]
         for item_id in item_ids:
             if item_ids.count(item_id) > all_item_ids.count(item_id):
-                return "Error: some item not found", 0.0, {}
+                return "Error: some item not found", 0.0 + TOOL_ERROR_REWARD, {}
 
         # modify the order
         order["status"] = "return requested"

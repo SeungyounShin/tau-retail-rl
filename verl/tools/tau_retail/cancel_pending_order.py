@@ -18,6 +18,7 @@ import os
 from typing import Any, Optional
 from uuid import uuid4
 import json
+from verl.tools.tau_retail.config import TOOL_ERROR_REWARD
 
 from verl.utils.reward_score import tau_retail
 from verl.utils.rollout_trace import rollout_trace_op
@@ -89,20 +90,23 @@ class CancelPendingOrder(BaseTool):
 
     @rollout_trace_op
     async def execute(self, instance_id: str, parameters: dict[str, Any], **kwargs) -> tuple[str, float, dict]:
-        data = kwargs.get("data", {})
+        data = kwargs.get("data")
+        if not isinstance(data, dict) or not all(k in data for k in ("users", "orders", "products")):
+            from verl.interactions.tau_retail_data import load_data
+            data = load_data()
         order_id : str = parameters.get("order_id", "")
         reason : str = parameters.get("reason", "")
 
         orders = data["orders"]
         if order_id not in orders:
-            return "Error: order not found", 0.0, {}
+            return "Error: order not found", 0.0 + TOOL_ERROR_REWARD, {}
         order = orders[order_id]
         if order["status"] != "pending":
-            return "Error: non-pending order cannot be cancelled", 0.0, {}
+            return "Error: non-pending order cannot be cancelled", 0.0 + TOOL_ERROR_REWARD, {}
 
         # check reason
         if reason not in ["no longer needed", "ordered by mistake"]:
-            return "Error: invalid reason", 0.0, {}
+            return "Error: invalid reason", 0.0 + TOOL_ERROR_REWARD, {}
 
         # handle refund
         refunds = []
