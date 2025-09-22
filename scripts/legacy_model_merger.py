@@ -19,8 +19,8 @@ To merge FSDP checkpoints:
 ```sh
 python -m scripts.legacy_model_merger merge \
     --backend fsdp \
-    --local_dir checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_30/actor \
-    --target_dir checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_30/actor/huggingface
+    --local_dir checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_60/actor \
+    --target_dir checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_60/actor/huggingface
 ```
 
 To merge Megatron checkpoints:

@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import AutoPeftModelForCausalLM
 
 model_name_original = "Qwen/Qwen3-4B-Thinking-2507"
-model_name = "/home/robin/tau-retail-rl/checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_30/actor/huggingface"
+model_name = "/home/robin/tau-retail-rl/checkpoints/tau_retail_async_rl/qwen_tau_retail_multiturn_train_split/global_step_60/actor/huggingface"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name,

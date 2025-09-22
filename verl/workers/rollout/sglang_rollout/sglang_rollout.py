@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import traceback
 import multiprocessing as mp
 import os
 import time
@@ -717,29 +718,43 @@ class SGLangRollout(BaseRollout):
         # Update with any additional kwargs
         request_sampling_params.update(kwargs)
 
+        rollout_error = {"error": False}
         if self._tp_rank == 0:
-            loop = asyncio.get_event_loop()
-            output = loop.run_until_complete(
-                self._engine.async_generate(
-                    prompt=None,  # because we have already convert it to prompt token id
-                    sampling_params=request_sampling_params,
-                    return_logprob=True,
-                    input_ids=idx_list,
-                    image_data=image_list,
+            try:
+                loop = asyncio.get_event_loop()
+                output = loop.run_until_complete(
+                    self._engine.async_generate(
+                        prompt=None,  # because we have already convert it to prompt token id
+                        sampling_params=request_sampling_params,
+                        return_logprob=True,
+                        input_ids=idx_list,
+                        image_data=image_list,
+                    )
                 )
-            )
+            except Exception as e:
+                rollout_error = {
+                    "error": True,
+                    "etype": type(e).__name__,
+                    "emsg": str(e),
+                    "trace": traceback.format_exc(),
+                }
+                output = None
         else:
             output = None
 
-        # Most naive implementation, can extract tensor and send via gloo if too slow
-        dist.barrier()
-        [output] = broadcast_pyobj(
-            data=[output],
+        # Broadcast both status and payload to avoid hanging on failures.
+        [rollout_error, output] = broadcast_pyobj(
+            data=[rollout_error, output],
             rank=self._rank,
             dist_group=self._device_mesh_cpu["tp"].get_group(),
             src=self._device_mesh_cpu["tp"].mesh[0].item(),
             force_cpu_device=False,
         )
+        if rollout_error.get("error"):
+            raise RuntimeError(
+                f"SGLang async_generate failed on tp_rank 0: {rollout_error.get('etype')}: {rollout_error.get('emsg')}\n"
+                f"Traceback (from rank 0):\n{rollout_error.get('trace')}"
+            )
         out = _post_process_outputs(self.processing_class, output)
 
         response = out[0].to(idx.device)
@@ -1106,50 +1121,79 @@ class SGLangRollout(BaseRollout):
         do_sample = prompts.meta_info.get("do_sample", True)
         is_validate = prompts.meta_info.get("validate", False)
         tgt_device = prompts.batch["input_ids"].device
+        rollout_error = {"error": False}
         if self._tp_rank == 0:
-            req_list = self._preprocess_prompt_to_async_rollout_requests(
-                prompts,
-            )
-            loop = asyncio.get_event_loop()
-            # Optional tqdm progress bar for rollout
-            use_tqdm = True
-            if use_tqdm:
-                from tqdm import tqdm
-
-                async def _gather_with_tqdm(coros, pbar):
-                    results = []
-                    for fut in asyncio.as_completed(coros):
-                        res = await fut
-                        results.append(res)
-                        pbar.update(1)
-                    return results
-
-                pbar = tqdm(total=len(req_list), desc="Rollout (multi-turn)")
-                output_req_list = loop.run_until_complete(
-                    _gather_with_tqdm(
-                        [self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
-                        pbar,
-                    )
+            try:
+                req_list = self._preprocess_prompt_to_async_rollout_requests(
+                    prompts,
                 )
-                pbar.close()
-            else:
-                output_req_list = loop.run_until_complete(
-                    asyncio.gather(
-                        *[self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
+                loop = asyncio.get_event_loop()
+                # Optional tqdm progress bar for rollout
+                use_tqdm = True
+                if use_tqdm:
+                    from tqdm import tqdm
+
+                    async def _gather_with_tqdm(coros, pbar):
+                        results = []
+                        for fut in asyncio.as_completed(coros):
+                            res = await fut
+                            results.append(res)
+                            pbar.update(1)
+                        return results
+
+                    pbar = tqdm(total=len(req_list), desc="Rollout (multi-turn)")
+                    output_req_list = loop.run_until_complete(
+                        _gather_with_tqdm(
+                            [
+                                self._async_rollout_a_request(
+                                    req, do_sample, is_validate, **kwargs
+                                )
+                                for req in req_list
+                            ],
+                            pbar,
+                        )
                     )
+                    pbar.close()
+                else:
+                    output_req_list = loop.run_until_complete(
+                        asyncio.gather(
+                            *[
+                                self._async_rollout_a_request(
+                                    req, do_sample, is_validate, **kwargs
+                                )
+                                for req in req_list
+                            ],
+                        )
+                    )
+                sorted_output_req_list = sorted(
+                    output_req_list, key=lambda x: (x.batch_data_id, x.rollout_offset)
                 )
-            sorted_output_req_list = sorted(output_req_list, key=lambda x: (x.batch_data_id, x.rollout_offset))
+            except Exception as e:
+                # Capture full traceback and broadcast to all ranks so they fail consistently.
+                rollout_error = {
+                    "error": True,
+                    "etype": type(e).__name__,
+                    "emsg": str(e),
+                    "trace": traceback.format_exc(),
+                }
+                sorted_output_req_list = None
         else:
             sorted_output_req_list = None
 
-        dist.barrier()
-        [sorted_output_req_list] = broadcast_pyobj(
-            data=[sorted_output_req_list],
+        # Barrier is unnecessary if we always broadcast an error/success flag.
+        [rollout_error, sorted_output_req_list] = broadcast_pyobj(
+            data=[rollout_error, sorted_output_req_list],
             rank=self._rank,
             dist_group=self._device_mesh_cpu["tp"].get_group(),
             src=self._device_mesh_cpu["tp"].mesh[0].item(),
             force_cpu_device=False,
         )
+        if rollout_error.get("error"):
+            # Re-raise on all ranks with original traceback context included.
+            raise RuntimeError(
+                f"Async rollout failed on tp_rank 0: {rollout_error.get('etype')}: {rollout_error.get('emsg')}\n"
+                f"Traceback (from rank 0):\n{rollout_error.get('trace')}"
+            )
         # Construct the batch data
         prompt_ids, response_ids = [], []
         prompt_attention_mask, response_attention_mask = [], []

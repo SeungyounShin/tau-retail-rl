@@ -20,16 +20,19 @@ gen_tp=1
 # Fix: Use FSDP size=8 to match n_gpus_per_node=8
 fsdp_size=8
 
-actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 3))
-critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 3))
+actor_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 2))
+critic_max_token_len_per_gpu=$(( (max_prompt_length + max_response_length) * 2))
 
 python3 -m verl.trainer.main_ppo \
     --config-path="$CONFIG_PATH" \
     --config-name='tau_retail_multiturn_grpo_no_user_interaction' \
     algorithm.adv_estimator=grpo \
+    data.sampler.class_name="WriteActionCountCurriculumSampler" \
+    data.sampler.class_path="pkg://verl.experimental.dataset.write_action_curriculum" \
     trainer.val_before_train=True \
     algorithm.norm_adv_by_std_in_grpo=True \
     data.train_batch_size=64 \
+    data.dataloader_num_workers=0 \
     actor_rollout_ref.actor.ppo_mini_batch_size=64 \
     data.max_prompt_length=${max_prompt_length} \
     data.max_response_length=${max_response_length} \
@@ -58,7 +61,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.name=sglang \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.7 \
     actor_rollout_ref.rollout.n=5 \
-    actor_rollout_ref.rollout.multi_turn.max_assistant_turns=20 \
+    actor_rollout_ref.rollout.multi_turn.max_assistant_turns=22 \
     actor_rollout_ref.rollout.multi_turn.max_user_turns=0 \
     actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=1 \
     actor_rollout_ref.ref.fsdp_config.param_offload=${ref_offload} \
@@ -75,7 +78,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=5 \
     trainer.test_freq=5 \
     trainer.total_epochs=9 \
-    trainer.resume_mode=auto \
+    trainer.resume_mode=disable \
     actor_rollout_ref.actor.ppo_max_token_len_per_gpu=${actor_max_token_len_per_gpu} \
     actor_rollout_ref.rollout.log_prob_max_token_len_per_gpu=${actor_max_token_len_per_gpu} \
     actor_rollout_ref.ref.log_prob_max_token_len_per_gpu=${actor_max_token_len_per_gpu} \
