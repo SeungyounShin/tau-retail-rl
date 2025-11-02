@@ -80,24 +80,51 @@ class NaiveRewardManager(AbstractRewardManager):
 
             ground_truth = data_item.non_tensor_batch["reward_model"]["ground_truth"]
             data_source = data_item.non_tensor_batch[self.reward_fn_key]
-            extra_info = data_item.non_tensor_batch.get("extra_info", {})
-            num_turns = data_item.non_tensor_batch.get("__num_turns__", None)
-            extra_info["num_turns"] = num_turns
+            
+            # Check if reward_scores from multi-turn rollout exists
+            if "reward_scores" in data_item.non_tensor_batch:
+                reward_scores_dict = data_item.non_tensor_batch["reward_scores"]
+                # Use the last user_turn_reward as the final reward (already reward shaped!)
+                if "user_turn_rewards" in reward_scores_dict and len(reward_scores_dict["user_turn_rewards"]) > 0:
+                    reward = reward_scores_dict["user_turn_rewards"][-1]
+                else:
+                    # Fallback to compute_score
+                    extra_info = data_item.non_tensor_batch.get("extra_info", {})
+                    num_turns = data_item.non_tensor_batch.get("__num_turns__", None)
+                    extra_info["num_turns"] = num_turns
 
-            score = self.compute_score(
-                data_source=data_source,
-                solution_str=response_str,
-                ground_truth=ground_truth,
-                extra_info=extra_info,
-            )
+                    score = self.compute_score(
+                        data_source=data_source,
+                        solution_str=response_str,
+                        ground_truth=ground_truth,
+                        extra_info=extra_info,
+                    )
 
-            if isinstance(score, dict):
-                reward = score["score"]
-                # Store the information including original reward
-                for key, value in score.items():
-                    reward_extra_info[key].append(value)
+                    if isinstance(score, dict):
+                        reward = score["score"]
+                        for key, value in score.items():
+                            reward_extra_info[key].append(value)
+                    else:
+                        reward = score
             else:
-                reward = score
+                # Non-multi-turn case: compute reward normally
+                extra_info = data_item.non_tensor_batch.get("extra_info", {})
+                num_turns = data_item.non_tensor_batch.get("__num_turns__", None)
+                extra_info["num_turns"] = num_turns
+
+                score = self.compute_score(
+                    data_source=data_source,
+                    solution_str=response_str,
+                    ground_truth=ground_truth,
+                    extra_info=extra_info,
+                )
+
+                if isinstance(score, dict):
+                    reward = score["score"]
+                    for key, value in score.items():
+                        reward_extra_info[key].append(value)
+                else:
+                    reward = score
 
             reward_tensor[i, valid_response_length - 1] = reward
 

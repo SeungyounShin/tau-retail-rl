@@ -101,6 +101,17 @@ def default_compute_score(
         from . import search_r1_like_qa_em
 
         res = search_r1_like_qa_em.compute_score(solution_str, ground_truth)
+    elif data_source == "tau_retail":
+        from . import tau_retail
+
+        extra_info = extra_info or {}
+        res = tau_retail.compute_score(
+            solution_str=solution_str,
+            ground_truth=ground_truth,
+            data=extra_info.get("data"),
+            raw_data=extra_info.get("raw_data"),
+            actions=extra_info.get("actions"),
+        )
 
     else:
         raise NotImplementedError(f"Reward function is not implemented for {data_source=}")

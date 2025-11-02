@@ -29,6 +29,7 @@ import ray
 import sglang.srt.entrypoints.engine
 import torch
 import torch.distributed as dist
+from tqdm import tqdm
 from sglang.srt.managers.io_struct import (
     ReleaseMemoryOccupationReqInput,
     ResumeMemoryOccupationReqInput,
@@ -915,10 +916,8 @@ class SGLangRollout(BaseRollout):
                         _req.state = AsyncRolloutRequestStateEnum.TOOL_CALLING
                         try:
                             normed_content, tool_calls = self._function_call_parser.parse_non_stream(content)
-                        except JSONDecodeError:
-                            normed_content = content
-                            tool_calls = []
-                        except AttributeError:
+                        except (JSONDecodeError, AttributeError, TypeError):
+                            print(f"\33[91m <debug> Error parsing tool call: {content}\33[0m")
                             normed_content = content
                             tool_calls = []
                         parsed_tool_calls = []
@@ -971,7 +970,7 @@ class SGLangRollout(BaseRollout):
 
                 # Get interaction by name from interaction_kwargs
                 interaction_name = _req.interaction_kwargs.get(
-                    "name", "gsm8k"
+                    "name", "tau_retail"
                 )  # Default to gsm8k for backward compatibility
                 if interaction_name not in self.interaction_map:
                     raise ValueError(
@@ -1065,7 +1064,7 @@ class SGLangRollout(BaseRollout):
         if _req.interaction_kwargs and self.interaction_map:
             interaction_kwargs = _req.interaction_kwargs
             # Get interaction by name from interaction_kwargs
-            interaction_name = interaction_kwargs.get("name", "gsm8k")  # Default to gsm8k for backward compatibility
+            interaction_name = interaction_kwargs.get("name", "tau_retail")  # Default to gsm8k for backward compatibility
             if interaction_name not in self.interaction_map:
                 raise ValueError(
                     f"Interaction '{interaction_name}' not found in interaction_map. Available interactions: "
@@ -1074,6 +1073,14 @@ class SGLangRollout(BaseRollout):
 
             interaction = self.interaction_map[interaction_name]
             await interaction.start_interaction(_req.request_id, **interaction_kwargs)
+            if hasattr(interaction, "get_data") and _req.tool_schemas:
+                data_snapshot = interaction.get_data(_req.request_id)
+                if data_snapshot is not None:
+                    for schema in _req.tool_schemas:
+                        tool_name = schema.function.name
+                        tool_cfg = _req.tools_kwargs.setdefault(tool_name, {})
+                        execute_kwargs = tool_cfg.setdefault("execute_kwargs", {})
+                        execute_kwargs.setdefault("data", data_snapshot)
 
     @GPUMemoryLogger(role="sglang rollout", logger=logger)
     @torch.no_grad()
@@ -1097,12 +1104,26 @@ class SGLangRollout(BaseRollout):
             # distinguish training and validation
             if is_validate:
                 # Validation mode: process all requests without abort
-                loop = asyncio.get_event_loop()
-                output_req_list = loop.run_until_complete(
-                    asyncio.gather(
-                        *[self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list],
+                async def run_validation_with_progress():
+                    tasks = [self._async_rollout_a_request(req, do_sample, is_validate, **kwargs) for req in req_list]
+                    pbar = tqdm(
+                        total=len(tasks),
+                        desc=f"Validation Rollout Progress",
+                        unit="req",
+                        ncols=100,
+                        position=0,
+                        leave=True,
                     )
-                )
+                    results = []
+                    for coro in asyncio.as_completed(tasks):
+                        result = await coro
+                        results.append(result)
+                        pbar.update(1)
+                    pbar.close()
+                    return results
+                
+                loop = asyncio.get_event_loop()
+                output_req_list = loop.run_until_complete(run_validation_with_progress())
             else:
                 # add progress monitoring and abort function
                 total_requests = len(req_list)
@@ -1130,14 +1151,26 @@ class SGLangRollout(BaseRollout):
                         asyncio.create_task(rollout_a_request_with_cancellation_handler(req)) for req in req_list
                     ]
 
+                    # Create progress bar for rollout
+                    pbar = tqdm(
+                        total=target_completion,
+                        desc=f"Rollout Progress (target: {target_completion}/{total_requests})",
+                        unit="req",
+                        ncols=100,
+                        position=0,
+                        leave=True,
+                    )
+
                     # Wait for target_completion tasks to complete
                     try:
                         for completed_task in asyncio.as_completed(all_tasks):
                             await completed_task
                             completed_count += 1
+                            pbar.update(1)
                             if completed_count >= target_completion:
                                 break
                     finally:
+                        pbar.close()
                         # Cancel remaining tasks
                         for t in all_tasks:
                             if not t.done():

@@ -1,0 +1,1760 @@
+{
+  "3746317213": {
+    "name": "Hoodie",
+    "product_id": "3746317213",
+    "variants": {
+      "9697354961": {
+        "item_id": "9697354961",
+        "options": {
+          "size": "L",
+          "color": "white",
+          "material": "cotton"
+        },
+        "available": true,
+        "price": 44.1
+      },
+      "3342331444": {
+        "item_id": "3342331444",
+        "options": {
+          "size": "XXL",
+          "color": "green",
+          "material": "cotton"
+        },
+        "available": true,
+        "price": 48.75
+      },
+      "9703905715": {
+        "item_id": "9703905715",
+        "options": {
+          "size": "M",
+          "color": "red",
+          "material": "polyester"
+        },
+        "available": true,
+        "price": 63.57
+      },
+      "4460967357": {
+        "item_id": "4460967357",
+        "options": {
+          "size": "XL",
+          "color": "blue",
+          "material": "polyester"
+        },
+        "available": true,
+        "price": 78.29
+      }
+    }
+  },
+  "2445662585": {
+    "name": "Smart TV",
+    "product_id": "2445662585",
+    "variants": {
+      "5693307665": {
+        "item_id": "5693307665",
+        "options": {
+          "screen size": "32-inch",
+          "resolution": "4K",
+          "smart platform": "Tizen"
+        },
+        "available": false,
+        "price": 1319.27
+      }
+    }
+  },
+  "8429141456": {
+    "name": "Wireless Charger",
+    "product_id": "8429141456",
+    "variants": {
+      "3303082117": {
+        "item_id": "3303082117",
+        "options": {
+          "color": "white",
+          "power": "5W",
+          "connector type": "Micro USB"
+        },
+        "available": false,
+        "price": 92.83
+      },
+      "8995970241": {
+        "item_id": "8995970241",
+        "options": {
+          "color": "gray",
+          "power": "5W",
+          "connector type": "USB-C"
+        },
+        "available": true,
+        "price": 75.26
+      },
+      "5728765136": {
+        "item_id": "5728765136",
+        "options": {
+          "color": "white",
+          "power": "10W",
+          "connector type": "Micro USB"
+        },
+        "available": true,
+        "price": 80.99
+      }
+    }
+  },
+  "8173347748": {
+    "name": "Gaming Console",
+    "product_id": "8173347748",
+    "variants": {
+      "9896606039": {
+        "item_id": "9896606039",
+        "options": {
+          "storage capacity": "2TB",
+          "color": "black",
+          "bundled game": "Game B"
+        },
+        "available": false,
+        "price": 369.02
+      },
+      "6924716023": {
+        "item_id": "6924716023",
+        "options": {
+          "storage capacity": "1TB",
+          "color": "black",
+          "bundled game": "None"
+        },
+        "available": false,
+        "price": 561.51
+      },
+      "7017956955": {
+        "item_id": "7017956955",
+        "options": {
+          "storage capacity": "500GB",
+          "color": "black",
+          "bundled game": "Game B"
+        },
+        "available": false,
+        "price": 414.4
+      }
+    }
+  },
+  "8110054933": {
+    "name": "Blender",
+    "product_id": "8110054933",
+    "variants": {
+      "2970753705": {
+        "item_id": "2970753705",
+        "options": {
+          "power": "500W",
+          "capacity": "1.5L",
+          "color": "black"
+        },
+        "available": false,
+        "price": 200.85
+      },
+      "7801222128": {
+        "item_id": "7801222128",
+        "options": {
+          "power": "700W",
+          "capacity": "2L",
+          "color": "black"
+        },
+        "available": false,
+        "price": 249.17
+      }
+    }
+  },
+  "8217611860": {
+    "name": "Fitness Tracker",
+    "product_id": "8217611860",
+    "variants": {
+      "3561557300": {
+        "item_id": "3561557300",
+        "options": {
+          "color": "blue",
+          "battery life": "10 days",
+          "water resistance": "No"
+        },
+        "available": false,
+        "price": 195.66
+      },
+      "9639245200": {
+        "item_id": "9639245200",
+        "options": {
+          "color": "pink",
+          "battery life": "7 days",
+          "water resistance": "No"
+        },
+        "available": false,
+        "price": 101.03
+      },
+      "6555540744": {
+        "item_id": "6555540744",
+        "options": {
+          "color": "black",
+          "battery life": "10 days",
+          "water resistance": "Yes"
+        },
+        "available": false,
+        "price": 181.38
+      }
+    }
+  },
+  "4919706735": {
+    "name": "Standing Desk",
+    "product_id": "4919706735",
+    "variants": {
+      "3615507143": {
+        "item_id": "3615507143",
+        "options": {
+          "size": "48x24 inches",
+          "height range": "28-48 inches",
+          "color": "black"
+        },
+        "available": false,
+        "price": 431.45
+      },
+      "9592390865": {
+        "item_id": "9592390865",
+        "options": {
+          "size": "60x30 inches",
+          "height range": "28-48 inches",
+          "color": "black"
+        },
+        "available": true,
+        "price": 265.19
+      }
+    }
+  },
+  "8760038701": {
+    "name": "Water Purifier",
+    "product_id": "8760038701",
+    "variants": {
+      "2028439863": {
+        "item_id": "2028439863",
+        "options": {
+          "capacity": "4L",
+          "filter type": "RO",
+          "color": "white"
+        },
+        "available": true,
+        "price": 108.32
+      },
+      "4289233844": {
+        "item_id": "4289233844",
+        "options": {
+          "capacity": "4L",
+          "filter type": "RO",
+          "color": "black"
+        },
+        "available": false,
+        "price": 69.82
+      },
+      "7900268326": {
+        "item_id": "7900268326",
+        "options": {
+          "capacity": "8L",
+          "filter type": "UV",
+          "color": "black"
+        },
+        "available": false,
+        "price": 112.11
+      }
+    }
+  },
+  "1519709079": {
+    "name": "Floor Lamp",
+    "product_id": "1519709079",
+    "variants": {
+      "1965067727": {
+        "item_id": "1965067727",
+        "options": {
+          "height": "6 feet",
+          "color": "black",
+          "light type": "Halogen"
+        },
+        "available": false,
+        "price": 96.5
+      },
+      "1030884438": {
+        "item_id": "1030884438",
+        "options": {
+          "height": "5 feet",
+          "color": "black",
+          "light type": "LED"
+        },
+        "available": false,
+        "price": 131.75
+      }
+    }
+  },
+  "9894264595": {
+    "name": "Portable Speaker",
+    "product_id": "9894264595",
+    "variants": {
+      "6317189421": {
+        "item_id": "6317189421",
+        "options": {
+          "color": "red",
+          "battery life": "20 hours",
+          "waterproof": "Yes"
+        },
+        "available": false,
+        "price": 152.97
+      },
+      "7769777475": {
+        "item_id": "7769777475",
+        "options": {
+          "color": "black",
+          "battery life": "20 hours",
+          "waterproof": "No"
+        },
+        "available": true,
+        "price": 46.48
+      },
+      "7146318035": {
+        "item_id": "7146318035",
+        "options": {
+          "color": "blue",
+          "battery life": "20 hours",
+          "waterproof": "No"
+        },
+        "available": false,
+        "price": 39.21
+      },
+      "3775320897": {
+        "item_id": "3775320897",
+        "options": {
+          "color": "black",
+          "battery life": "10 hours",
+          "waterproof": "Yes"
+        },
+        "available": true,
+        "price": 106.26
+      }
+    }
+  },
+  "2811967841": {
+    "name": "Electric Shaver",
+    "product_id": "2811967841",
+    "variants": {
+      "6491309593": {
+        "item_id": "6491309593",
+        "options": {
+          "blade type": "Rotary",
+          "color": "black",
+          "battery life": "60 minutes"
+        },
+        "available": false,
+        "price": 132.72
+      },
+      "1420514789": {
+        "item_id": "1420514789",
+        "options": {
+          "blade type": "Rotary",
+          "color": "black",
+          "battery life": "40 minutes"
+        },
+        "available": true,
+        "price": 88.28
+      }
+    }
+  },
+  "1251837136": {
+    "name": "Smart Light Switch",
+    "product_id": "1251837136",
+    "variants": {
+      "2627677155": {
+        "item_id": "2627677155",
+        "options": {
+          "color": "black",
+          "compatibility": "Google Home",
+          "type": "Rocker"
+        },
+        "available": true,
+        "price": 61.8
+      }
+    }
+  },
+  "3090237817": {
+    "name": "Vacuum Sealer",
+    "product_id": "3090237817",
+    "variants": {
+      "6110572428": {
+        "item_id": "6110572428",
+        "options": {
+          "seal width": "11 inches",
+          "color": "silver",
+          "vacuum strength": "Normal"
+        },
+        "available": false,
+        "price": 58.57
+      },
+      "7803990970": {
+        "item_id": "7803990970",
+        "options": {
+          "seal width": "11 inches",
+          "color": "black",
+          "vacuum strength": "Normal"
+        },
+        "available": false,
+        "price": 135.45
+      },
+      "9760623742": {
+        "item_id": "9760623742",
+        "options": {
+          "seal width": "11 inches",
+          "color": "black",
+          "vacuum strength": "High"
+        },
+        "available": false,
+        "price": 80.64
+      }
+    }
+  },
+  "8370987661": {
+    "name": "Drone",
+    "product_id": "8370987661",
+    "variants": {
+      "6320115677": {
+        "item_id": "6320115677",
+        "options": {
+          "camera resolution": "4K",
+          "flight time": "20 minutes",
+          "range": "5 km"
+        },
+        "available": false,
+        "price": 511.5
+      },
+      "5018948187": {
+        "item_id": "5018948187",
+        "options": {
+          "camera resolution": "1080p",
+          "flight time": "30 minutes",
+          "range": "5 km"
+        },
+        "available": false,
+        "price": 996.49
+      },
+      "9904586976": {
+        "item_id": "9904586976",
+        "options": {
+          "camera resolution": "1080p",
+          "flight time": "40 minutes",
+          "range": "2 km"
+        },
+        "available": true,
+        "price": 414.11
+      },
+      "6344160868": {
+        "item_id": "6344160868",
+        "options": {
+          "camera resolution": "4K",
+          "flight time": "20 minutes",
+          "range": "2 km"
+        },
+        "available": false,
+        "price": 733.19
+      }
+    }
+  },
+  "9623534576": {
+    "name": "Action Figure",
+    "product_id": "9623534576",
+    "variants": {
+      "3849232839": {
+        "item_id": "3849232839",
+        "options": {
+          "character": "Hero A",
+          "size": "12 inches",
+          "material": "plastic"
+        },
+        "available": false,
+        "price": 67.12
+      },
+      "5962610986": {
+        "item_id": "5962610986",
+        "options": {
+          "character": "Hero B",
+          "size": "6 inches",
+          "material": "metal"
+        },
+        "available": true,
+        "price": 61.71
+      },
+      "7393195616": {
+        "item_id": "7393195616",
+        "options": {
+          "character": "Hero A",
+          "size": "6 inches",
+          "material": "metal"
+        },
+        "available": false,
+        "price": 32.2
+      },
+      "9503167458": {
+        "item_id": "9503167458",
+        "options": {
+          "character": "Hero A",
+          "size": "12 inches",
+          "material": "metal"
+        },
+        "available": false,
+        "price": 35.59
+      }
+    }
+  },
+  "3373077218": {
+    "name": "Sleeping Bag",
+    "product_id": "3373077218",
+    "variants": {
+      "2845919895": {
+        "item_id": "2845919895",
+        "options": {
+          "temperature rating": "0\u00b0F",
+          "material": "synthetic",
+          "length": "long",
+          "color": "blue"
+        },
+        "available": false,
+        "price": 55.21
+      }
+    }
+  },
+  "5736462531": {
+    "name": "Microwave Oven",
+    "product_id": "5736462531",
+    "variants": {
+      "4993808565": {
+        "item_id": "4993808565",
+        "options": {
+          "capacity": "0.7 cu ft",
+          "color": "white",
+          "wattage": "900W"
+        },
+        "available": true,
+        "price": 254.14
+      },
+      "9292791081": {
+        "item_id": "9292791081",
+        "options": {
+          "capacity": "1.6 cu ft",
+          "color": "stainless steel",
+          "wattage": "700W"
+        },
+        "available": true,
+        "price": 296.84
+      }
+    }
+  },
+  "5759234471": {
+    "name": "Pressure Cooker",
+    "product_id": "5759234471",
+    "variants": {
+      "4745927824": {
+        "item_id": "4745927824",
+        "options": {
+          "capacity": "6L",
+          "material": "stainless steel",
+          "color": "black"
+        },
+        "available": false,
+        "price": 116.03
+      },
+      "1977515194": {
+        "item_id": "1977515194",
+        "options": {
+          "capacity": "3L",
+          "material": "stainless steel",
+          "color": "red"
+        },
+        "available": true,
+        "price": 156.44
+      },
+      "6493800024": {
+        "item_id": "6493800024",
+        "options": {
+          "capacity": "8L",
+          "material": "aluminum",
+          "color": "silver"
+        },
+        "available": false,
+        "price": 163.62
+      }
+    }
+  },
+  "5033992825": {
+    "name": "Electric Scooter",
+    "product_id": "5033992825",
+    "variants": {
+      "9462806178": {
+        "item_id": "9462806178",
+        "options": {
+          "range": "15 miles",
+          "color": "blue",
+          "top speed": "20 mph"
+        },
+        "available": true,
+        "price": 677.26
+      },
+      "8672650595": {
+        "item_id": "8672650595",
+        "options": {
+          "range": "20 miles",
+          "color": "blue",
+          "top speed": "15 mph"
+        },
+        "available": false,
+        "price": 661.27
+      }
+    }
+  },
+  "2094024844": {
+    "name": "Robot Vacuum",
+    "product_id": "2094024844",
+    "variants": {
+      "8339176912": {
+        "item_id": "8339176912",
+        "options": {
+          "battery life": "60 minutes",
+          "suction power": "2000Pa",
+          "color": "gray"
+        },
+        "available": false,
+        "price": 1002.21
+      },
+      "6141226746": {
+        "item_id": "6141226746",
+        "options": {
+          "battery life": "90 minutes",
+          "suction power": "1000Pa",
+          "color": "gray"
+        },
+        "available": false,
+        "price": 748.52
+      },
+      "9160639027": {
+        "item_id": "9160639027",
+        "options": {
+          "battery life": "120 minutes",
+          "suction power": "1500Pa",
+          "color": "gray"
+        },
+        "available": false,
+        "price": 571.92
+      }
+    }
+  },
+  "1546696950": {
+    "name": "Air Fryer",
+    "product_id": "1546696950",
+    "variants": {
+      "9333798503": {
+        "item_id": "9333798503",
+        "options": {
+          "capacity": "8L",
+          "color": "red",
+          "wattage": "1200W"
+        },
+        "available": false,
+        "price": 115.14
+      },
+      "5296710795": {
+        "item_id": "5296710795",
+        "options": {
+          "capacity": "5.8L",
+          "color": "black",
+          "wattage": "1500W"
+        },
+        "available": false,
+        "price": 161.0
+      },
+      "6679017210": {
+        "item_id": "6679017210",
+        "options": {
+          "capacity": "5.8L",
+          "color": "white",
+          "wattage": "1800W"
+        },
+        "available": true,
+        "price": 140.98
+      },
+      "5659161352": {
+        "item_id": "5659161352",
+        "options": {
+          "capacity": "8L",
+          "color": "red",
+          "wattage": "1800W"
+        },
+        "available": false,
+        "price": 84.01
+      }
+    }
+  },
+  "2333241445": {
+    "name": "Smart Doorbell",
+    "product_id": "2333241445",
+    "variants": {
+      "4464161270": {
+        "item_id": "4464161270",
+        "options": {
+          "resolution": "720p",
+          "color": "black",
+          "storage": "Cloud"
+        },
+        "available": true,
+        "price": 195.03
+      }
+    }
+  },
+  "5607762160": {
+    "name": "Smart Lock",
+    "product_id": "5607762160",
+    "variants": {
+      "8285786023": {
+        "item_id": "8285786023",
+        "options": {
+          "lock type": "Lever",
+          "color": "black",
+          "compatibility": "Alexa"
+        },
+        "available": true,
+        "price": 237.52
+      },
+      "4803044105": {
+        "item_id": "4803044105",
+        "options": {
+          "lock type": "Lever",
+          "color": "silver",
+          "compatibility": "Alexa"
+        },
+        "available": false,
+        "price": 239.18
+      },
+      "2995226582": {
+        "item_id": "2995226582",
+        "options": {
+          "lock type": "Deadbolt",
+          "color": "silver",
+          "compatibility": "Google Home"
+        },
+        "available": true,
+        "price": 192.93
+      }
+    }
+  },
+  "8995059760": {
+    "name": "Electric Blanket",
+    "product_id": "8995059760",
+    "variants": {
+      "7228002201": {
+        "item_id": "7228002201",
+        "options": {
+          "size": "Full",
+          "color": "brown",
+          "heat settings": "5"
+        },
+        "available": false,
+        "price": 86.49
+      },
+      "3691864041": {
+        "item_id": "3691864041",
+        "options": {
+          "size": "Queen",
+          "color": "gray",
+          "heat settings": "3"
+        },
+        "available": false,
+        "price": 66.41
+      },
+      "6737421496": {
+        "item_id": "6737421496",
+        "options": {
+          "size": "Twin",
+          "color": "blue",
+          "heat settings": "3"
+        },
+        "available": true,
+        "price": 98.58
+      }
+    }
+  },
+  "4034047118": {
+    "name": "Digital Thermometer",
+    "product_id": "4034047118",
+    "variants": {
+      "5570828113": {
+        "item_id": "5570828113",
+        "options": {
+          "type": "rectal",
+          "response time": "3 seconds",
+          "accuracy": "\u00b10.2\u00b0C"
+        },
+        "available": false,
+        "price": 18.27
+      },
+      "7099469983": {
+        "item_id": "7099469983",
+        "options": {
+          "type": "infrared",
+          "response time": "5 seconds",
+          "accuracy": "\u00b10.1\u00b0C"
+        },
+        "available": false,
+        "price": 40.62
+      },
+      "6928691380": {
+        "item_id": "6928691380",
+        "options": {
+          "type": "oral",
+          "response time": "3 seconds",
+          "accuracy": "\u00b10.2\u00b0C"
+        },
+        "available": false,
+        "price": 44.14
+      }
+    }
+  },
+  "6242173772": {
+    "name": "Smart Mug",
+    "product_id": "6242173772",
+    "variants": {
+      "6237376063": {
+        "item_id": "6237376063",
+        "options": {
+          "capacity": "12 oz",
+          "color": "white",
+          "temperature range": "120\u00b0F-145\u00b0F"
+        },
+        "available": false,
+        "price": 96.82
+      },
+      "8722962486": {
+        "item_id": "8722962486",
+        "options": {
+          "capacity": "14 oz",
+          "color": "black",
+          "temperature range": "130\u00b0F-150\u00b0F"
+        },
+        "available": false,
+        "price": 118.65
+      },
+      "3294043548": {
+        "item_id": "3294043548",
+        "options": {
+          "capacity": "12 oz",
+          "color": "blue",
+          "temperature range": "120\u00b0F-145\u00b0F"
+        },
+        "available": true,
+        "price": 80.0
+      },
+      "9018065507": {
+        "item_id": "9018065507",
+        "options": {
+          "capacity": "10 oz",
+          "color": "black",
+          "temperature range": "130\u00b0F-150\u00b0F"
+        },
+        "available": false,
+        "price": 64.82
+      },
+      "6698759353": {
+        "item_id": "6698759353",
+        "options": {
+          "capacity": "12 oz",
+          "color": "white",
+          "temperature range": "130\u00b0F-150\u00b0F"
+        },
+        "available": true,
+        "price": 55.73
+      }
+    }
+  },
+  "9673185158": {
+    "name": "Massage Chair",
+    "product_id": "9673185158",
+    "variants": {
+      "3316787198": {
+        "item_id": "3316787198",
+        "options": {
+          "color": "brown",
+          "massage modes": "Shiatsu",
+          "material": "leather"
+        },
+        "available": false,
+        "price": 2099.74
+      }
+    }
+  },
+  "4239406957": {
+    "name": "Soundbar",
+    "product_id": "4239406957",
+    "variants": {
+      "5078551333": {
+        "item_id": "5078551333",
+        "options": {
+          "length": "30 inches",
+          "channels": "2.1",
+          "color": "black"
+        },
+        "available": true,
+        "price": 289.42
+      },
+      "5070585433": {
+        "item_id": "5070585433",
+        "options": {
+          "length": "40 inches",
+          "channels": "7.1",
+          "color": "silver"
+        },
+        "available": false,
+        "price": 167.12
+      },
+      "4518871744": {
+        "item_id": "4518871744",
+        "options": {
+          "length": "40 inches",
+          "channels": "2.1",
+          "color": "black"
+        },
+        "available": false,
+        "price": 330.32
+      },
+      "6906898409": {
+        "item_id": "6906898409",
+        "options": {
+          "length": "50 inches",
+          "channels": "2.1",
+          "color": "black"
+        },
+        "available": false,
+        "price": 432.23
+      }
+    }
+  },
+  "2043030161": {
+    "name": "Instant Pot",
+    "product_id": "2043030161",
+    "variants": {
+      "4459716271": {
+        "item_id": "4459716271",
+        "options": {
+          "capacity": "8L",
+          "color": "black",
+          "programs": "9-in-1"
+        },
+        "available": false,
+        "price": 136.15
+      },
+      "9886101513": {
+        "item_id": "9886101513",
+        "options": {
+          "capacity": "8L",
+          "color": "stainless steel",
+          "programs": "6-in-1"
+        },
+        "available": false,
+        "price": 182.23
+      },
+      "5748253283": {
+        "item_id": "5748253283",
+        "options": {
+          "capacity": "6L",
+          "color": "stainless steel",
+          "programs": "11-in-1"
+        },
+        "available": true,
+        "price": 117.61
+      }
+    }
+  },
+  "8088660633": {
+    "name": "Juicer",
+    "product_id": "8088660633",
+    "variants": {
+      "8622026979": {
+        "item_id": "8622026979",
+        "options": {
+          "type": "Masticating",
+          "color": "white",
+          "wattage": "1200W"
+        },
+        "available": false,
+        "price": 98.35
+      }
+    }
+  },
+  "5014170428": {
+    "name": "Camping Tent",
+    "product_id": "5014170428",
+    "variants": {
+      "2936179853": {
+        "item_id": "2936179853",
+        "options": {
+          "capacity": "4-person",
+          "season rating": "4-season",
+          "material": "polyester",
+          "color": "green"
+        },
+        "available": false,
+        "price": 151.25
+      },
+      "3094011037": {
+        "item_id": "3094011037",
+        "options": {
+          "capacity": "4-person",
+          "season rating": "4-season",
+          "material": "polyester",
+          "color": "orange"
+        },
+        "available": false,
+        "price": 245.3
+      },
+      "9633533290": {
+        "item_id": "9633533290",
+        "options": {
+          "capacity": "2-person",
+          "season rating": "3-season",
+          "material": "nylon",
+          "color": "gray"
+        },
+        "available": false,
+        "price": 259.54
+      },
+      "8261111839": {
+        "item_id": "8261111839",
+        "options": {
+          "capacity": "6-person",
+          "season rating": "4-season",
+          "material": "polyester",
+          "color": "green"
+        },
+        "available": true,
+        "price": 125.4
+      },
+      "3971203213": {
+        "item_id": "3971203213",
+        "options": {
+          "capacity": "4-person",
+          "season rating": "4-season",
+          "material": "polyester",
+          "color": "gray"
+        },
+        "available": true,
+        "price": 132.85
+      },
+      "6122110529": {
+        "item_id": "6122110529",
+        "options": {
+          "capacity": "2-person",
+          "season rating": "3-season",
+          "material": "nylon",
+          "color": "blue"
+        },
+        "available": false,
+        "price": 139.12
+      },
+      "7858164010": {
+        "item_id": "7858164010",
+        "options": {
+          "capacity": "2-person",
+          "season rating": "3-season",
+          "material": "polyester",
+          "color": "blue"
+        },
+        "available": false,
+        "price": 145.57
+      }
+    }
+  },
+  "5838636972": {
+    "name": "Smart Mirror",
+    "product_id": "5838636972",
+    "variants": {
+      "9824122054": {
+        "item_id": "9824122054",
+        "options": {
+          "size": "24x36 inches",
+          "color": "gold",
+          "smart features": "Voice Control"
+        },
+        "available": false,
+        "price": 501.12
+      },
+      "9642614082": {
+        "item_id": "9642614082",
+        "options": {
+          "size": "24x36 inches",
+          "color": "silver",
+          "smart features": "Touch Control"
+        },
+        "available": false,
+        "price": 243.75
+      },
+      "5515628633": {
+        "item_id": "5515628633",
+        "options": {
+          "size": "24x36 inches",
+          "color": "black",
+          "smart features": "Voice Control"
+        },
+        "available": false,
+        "price": 199.63
+      }
+    }
+  },
+  "1230249217": {
+    "name": "Electric Bike",
+    "product_id": "1230249217",
+    "variants": {
+      "2304963614": {
+        "item_id": "2304963614",
+        "options": {
+          "range": "30 miles",
+          "color": "black",
+          "motor power": "750W"
+        },
+        "available": false,
+        "price": 1459.48
+      },
+      "7539399243": {
+        "item_id": "7539399243",
+        "options": {
+          "range": "50 miles",
+          "color": "white",
+          "motor power": "500W"
+        },
+        "available": false,
+        "price": 2035.05
+      },
+      "3667292043": {
+        "item_id": "3667292043",
+        "options": {
+          "range": "75 miles",
+          "color": "blue",
+          "motor power": "250W"
+        },
+        "available": false,
+        "price": 861.68
+      },
+      "6201313620": {
+        "item_id": "6201313620",
+        "options": {
+          "range": "75 miles",
+          "color": "black",
+          "motor power": "250W"
+        },
+        "available": true,
+        "price": 1377.99
+      }
+    }
+  },
+  "1672302490": {
+    "name": "Humidifier",
+    "product_id": "1672302490",
+    "variants": {
+      "7049536909": {
+        "item_id": "7049536909",
+        "options": {
+          "capacity": "4L",
+          "color": "blue",
+          "type": "Warm Mist"
+        },
+        "available": true,
+        "price": 77.78
+      },
+      "8331319481": {
+        "item_id": "8331319481",
+        "options": {
+          "capacity": "4L",
+          "color": "black",
+          "type": "Cool Mist"
+        },
+        "available": false,
+        "price": 160.87
+      }
+    }
+  },
+  "5010075517": {
+    "name": "Wireless Mouse",
+    "product_id": "5010075517",
+    "variants": {
+      "2825957977": {
+        "item_id": "2825957977",
+        "options": {
+          "color": "red",
+          "DPI": "800",
+          "buttons": "7"
+        },
+        "available": true,
+        "price": 35.94
+      }
+    }
+  },
+  "1610900200": {
+    "name": "Tablet Stand",
+    "product_id": "1610900200",
+    "variants": {
+      "1256143439": {
+        "item_id": "1256143439",
+        "options": {
+          "material": "plastic",
+          "color": "white",
+          "adjustability": "Adjustable"
+        },
+        "available": false,
+        "price": 57.5
+      },
+      "7614170462": {
+        "item_id": "7614170462",
+        "options": {
+          "material": "plastic",
+          "color": "black",
+          "adjustability": "Fixed"
+        },
+        "available": false,
+        "price": 78.76
+      },
+      "7887897660": {
+        "item_id": "7887897660",
+        "options": {
+          "material": "aluminum",
+          "color": "black",
+          "adjustability": "Fixed"
+        },
+        "available": false,
+        "price": 126.88
+      },
+      "5083595988": {
+        "item_id": "5083595988",
+        "options": {
+          "material": "wood",
+          "color": "silver",
+          "adjustability": "Fixed"
+        },
+        "available": false,
+        "price": 34.02
+      }
+    }
+  },
+  "2194673401": {
+    "name": "Laptop Stand",
+    "product_id": "2194673401",
+    "variants": {
+      "8792122716": {
+        "item_id": "8792122716",
+        "options": {
+          "material": "aluminum",
+          "color": "silver",
+          "adjustability": "Adjustable"
+        },
+        "available": false,
+        "price": 85.68
+      },
+      "5985704790": {
+        "item_id": "5985704790",
+        "options": {
+          "material": "plastic",
+          "color": "white",
+          "adjustability": "Adjustable"
+        },
+        "available": true,
+        "price": 95.62
+      },
+      "3362646960": {
+        "item_id": "3362646960",
+        "options": {
+          "material": "plastic",
+          "color": "black",
+          "adjustability": "Adjustable"
+        },
+        "available": true,
+        "price": 29.27
+      },
+      "8613035386": {
+        "item_id": "8613035386",
+        "options": {
+          "material": "wood",
+          "color": "black",
+          "adjustability": "Adjustable"
+        },
+        "available": false,
+        "price": 35.01
+      }
+    }
+  },
+  "8543865915": {
+    "name": "Electric Guitar",
+    "product_id": "8543865915",
+    "variants": {
+      "7981077394": {
+        "item_id": "7981077394",
+        "options": {
+          "body type": "Stratocaster",
+          "color": "black",
+          "pickups": "Humbucker"
+        },
+        "available": false,
+        "price": 934.91
+      }
+    }
+  },
+  "8293928340": {
+    "name": "Noise Cancelling Headphones",
+    "product_id": "8293928340",
+    "variants": {
+      "1521521078": {
+        "item_id": "1521521078",
+        "options": {
+          "color": "blue",
+          "battery life": "40 hours",
+          "wireless": "Yes"
+        },
+        "available": false,
+        "price": 193.23
+      },
+      "9648665968": {
+        "item_id": "9648665968",
+        "options": {
+          "color": "silver",
+          "battery life": "20 hours",
+          "wireless": "Yes"
+        },
+        "available": false,
+        "price": 373.88
+      }
+    }
+  },
+  "4574027737": {
+    "name": "Portable Air Conditioner",
+    "product_id": "4574027737",
+    "variants": {
+      "8372755146": {
+        "item_id": "8372755146",
+        "options": {
+          "BTU": "12000 BTU",
+          "color": "gray",
+          "dehumidifier": "No"
+        },
+        "available": false,
+        "price": 393.0
+      },
+      "3028168523": {
+        "item_id": "3028168523",
+        "options": {
+          "BTU": "10000 BTU",
+          "color": "gray",
+          "dehumidifier": "Yes"
+        },
+        "available": false,
+        "price": 568.75
+      },
+      "4776677517": {
+        "item_id": "4776677517",
+        "options": {
+          "BTU": "8000 BTU",
+          "color": "black",
+          "dehumidifier": "No"
+        },
+        "available": true,
+        "price": 515.09
+      }
+    }
+  },
+  "5305985001": {
+    "name": "Electric Fireplace",
+    "product_id": "5305985001",
+    "variants": {
+      "8413332538": {
+        "item_id": "8413332538",
+        "options": {
+          "size": "43 inches",
+          "color": "wood",
+          "heat output": "6000 BTU"
+        },
+        "available": false,
+        "price": 338.88
+      },
+      "7608153267": {
+        "item_id": "7608153267",
+        "options": {
+          "size": "33 inches",
+          "color": "white",
+          "heat output": "6000 BTU"
+        },
+        "available": false,
+        "price": 521.77
+      },
+      "9301537234": {
+        "item_id": "9301537234",
+        "options": {
+          "size": "23 inches",
+          "color": "wood",
+          "heat output": "4000 BTU"
+        },
+        "available": false,
+        "price": 406.85
+      },
+      "8625905455": {
+        "item_id": "8625905455",
+        "options": {
+          "size": "23 inches",
+          "color": "white",
+          "heat output": "6000 BTU"
+        },
+        "available": false,
+        "price": 950.74
+      },
+      "6932342612": {
+        "item_id": "6932342612",
+        "options": {
+          "size": "43 inches",
+          "color": "wood",
+          "heat output": "4000 BTU"
+        },
+        "available": false,
+        "price": 249.62
+      }
+    }
+  },
+  "7829772942": {
+    "name": "Smart Ceiling Fan",
+    "product_id": "7829772942",
+    "variants": {
+      "4735334423": {
+        "item_id": "4735334423",
+        "options": {
+          "blade size": "52 inches",
+          "color": "white",
+          "smart features": "Remote Control"
+        },
+        "available": true,
+        "price": 198.83
+      },
+      "5165932723": {
+        "item_id": "5165932723",
+        "options": {
+          "blade size": "42 inches",
+          "color": "black",
+          "smart features": "Remote Control"
+        },
+        "available": true,
+        "price": 308.54
+      },
+      "3791027186": {
+        "item_id": "3791027186",
+        "options": {
+          "blade size": "52 inches",
+          "color": "brushed nickel",
+          "smart features": "Remote Control"
+        },
+        "available": false,
+        "price": 295.36
+      },
+      "3323646093": {
+        "item_id": "3323646093",
+        "options": {
+          "blade size": "60 inches",
+          "color": "white",
+          "smart features": "Voice Control"
+        },
+        "available": false,
+        "price": 354.19
+      },
+      "5283911723": {
+        "item_id": "5283911723",
+        "options": {
+          "blade size": "60 inches",
+          "color": "white",
+          "smart features": "Remote Control"
+        },
+        "available": false,
+        "price": 322.07
+      }
+    }
+  },
+  "5726642606": {
+    "name": "Automatic Soap Dispenser",
+    "product_id": "5726642606",
+    "variants": {
+      "1124327519": {
+        "item_id": "1124327519",
+        "options": {
+          "capacity": "500ml",
+          "color": "white",
+          "power source": "USB"
+        },
+        "available": true,
+        "price": 107.23
+      },
+      "1773338452": {
+        "item_id": "1773338452",
+        "options": {
+          "capacity": "250ml",
+          "color": "white",
+          "power source": "USB"
+        },
+        "available": false,
+        "price": 99.63
+      },
+      "1614685938": {
+        "item_id": "1614685938",
+        "options": {
+          "capacity": "500ml",
+          "color": "black",
+          "power source": "USB"
+        },
+        "available": false,
+        "price": 116.67
+      }
+    }
+  },
+  "3347621138": {
+    "name": "WiFi Range Extender",
+    "product_id": "3347621138",
+    "variants": {
+      "5612201744": {
+        "item_id": "5612201744",
+        "options": {
+          "speed": "600 Mbps",
+          "color": "black",
+          "range": "3000 sq ft"
+        },
+        "available": false,
+        "price": 78.32
+      },
+      "2297602688": {
+        "item_id": "2297602688",
+        "options": {
+          "speed": "600 Mbps",
+          "color": "black",
+          "range": "1000 sq ft"
+        },
+        "available": true,
+        "price": 70.03
+      }
+    }
+  },
+  "7763765757": {
+    "name": "Bluetooth Headset",
+    "product_id": "7763765757",
+    "variants": {
+      "2268006448": {
+        "item_id": "2268006448",
+        "options": {
+          "color": "blue",
+          "battery life": "15 hours",
+          "noise cancelling": "No"
+        },
+        "available": true,
+        "price": 179.76
+      },
+      "5181592277": {
+        "item_id": "5181592277",
+        "options": {
+          "color": "blue",
+          "battery life": "20 hours",
+          "noise cancelling": "No"
+        },
+        "available": false,
+        "price": 185.44
+      },
+      "8739238825": {
+        "item_id": "8739238825",
+        "options": {
+          "color": "black",
+          "battery life": "20 hours",
+          "noise cancelling": "Yes"
+        },
+        "available": false,
+        "price": 151.66
+      }
+    }
+  },
+  "4600630513": {
+    "name": "Smart Scale",
+    "product_id": "4600630513",
+    "variants": {
+      "3698305085": {
+        "item_id": "3698305085",
+        "options": {
+          "weight capacity": "300 lbs",
+          "color": "white",
+          "smart features": "Body Fat Percentage"
+        },
+        "available": true,
+        "price": 143.78
+      },
+      "1564409423": {
+        "item_id": "1564409423",
+        "options": {
+          "weight capacity": "400 lbs",
+          "color": "white",
+          "smart features": "Body Fat Percentage"
+        },
+        "available": true,
+        "price": 115.86
+      },
+      "9467483275": {
+        "item_id": "9467483275",
+        "options": {
+          "weight capacity": "400 lbs",
+          "color": "black",
+          "smart features": "Body Fat Percentage"
+        },
+        "available": false,
+        "price": 213.3
+      }
+    }
+  },
+  "9033293776": {
+    "name": "Smart Camera",
+    "product_id": "9033293776",
+    "variants": {
+      "4454152476": {
+        "item_id": "4454152476",
+        "options": {
+          "resolution": "2K",
+          "color": "white",
+          "storage": "Cloud"
+        },
+        "available": false,
+        "price": 106.4
+      }
+    }
+  },
+  "7688606771": {
+    "name": "Robot Dog",
+    "product_id": "7688606771",
+    "variants": {
+      "2694684834": {
+        "item_id": "2694684834",
+        "options": {
+          "color": "black",
+          "battery life": "120 minutes",
+          "features": "Barking"
+        },
+        "available": false,
+        "price": 419.13
+      },
+      "8182649048": {
+        "item_id": "8182649048",
+        "options": {
+          "color": "brown",
+          "battery life": "90 minutes",
+          "features": "Playing"
+        },
+        "available": false,
+        "price": 193.34
+      },
+      "6299224734": {
+        "item_id": "6299224734",
+        "options": {
+          "color": "white",
+          "battery life": "120 minutes",
+          "features": "Playing"
+        },
+        "available": true,
+        "price": 394.03
+      },
+      "3781645815": {
+        "item_id": "3781645815",
+        "options": {
+          "color": "black",
+          "battery life": "120 minutes",
+          "features": "Walking"
+        },
+        "available": true,
+        "price": 168.14
+      },
+      "5454792171": {
+        "item_id": "5454792171",
+        "options": {
+          "color": "black",
+          "battery life": "60 minutes",
+          "features": "Barking"
+        },
+        "available": true,
+        "price": 365.02
+      },
+      "6964188417": {
+        "item_id": "6964188417",
+        "options": {
+          "color": "black",
+          "battery life": "120 minutes",
+          "features": "Playing"
+        },
+        "available": false,
+        "price": 366.08
+      }
+    }
+  },
+  "4120719599": {
+    "name": "Facial Steamer",
+    "product_id": "4120719599",
+    "variants": {
+      "9097790557": {
+        "item_id": "9097790557",
+        "options": {
+          "capacity": "300ml",
+          "color": "white",
+          "steam type": "Cold"
+        },
+        "available": false,
+        "price": 162.69
+      }
+    }
+  },
+  "2201474778": {
+    "name": "Digital Piano",
+    "product_id": "2201474778",
+    "variants": {
+      "8259700175": {
+        "item_id": "8259700175",
+        "options": {
+          "keys": "61 keys",
+          "color": "white",
+          "pedals": "2"
+        },
+        "available": false,
+        "price": 884.36
+      },
+      "8239941612": {
+        "item_id": "8239941612",
+        "options": {
+          "keys": "88 keys",
+          "color": "wood",
+          "pedals": "2"
+        },
+        "available": true,
+        "price": 420.71
+      },
+      "5158416864": {
+        "item_id": "5158416864",
+        "options": {
+          "keys": "76 keys",
+          "color": "black",
+          "pedals": "3"
+        },
+        "available": true,
+        "price": 711.59
+      },
+      "5170814022": {
+        "item_id": "5170814022",
+        "options": {
+          "keys": "61 keys",
+          "color": "white",
+          "pedals": "1"
+        },
+        "available": false,
+        "price": 829.58
+      },
+      "1881351238": {
+        "item_id": "1881351238",
+        "options": {
+          "keys": "88 keys",
+          "color": "black",
+          "pedals": "3"
+        },
+        "available": true,
+        "price": 895.76
+      }
+    }
+  }
+}

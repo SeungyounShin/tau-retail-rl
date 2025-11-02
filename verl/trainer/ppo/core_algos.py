@@ -305,6 +305,15 @@ def compute_grpo_outcome_advantage(
         bsz = scores.shape[0]
         for i in range(bsz):
             id2score[index[i]].append(scores[i])
+        
+        # DEBUG: 각 그룹별 보상 분포 출력
+        import sys
+        debug_groups = list(id2score.keys())[:10]  # 처음 10개 그룹만 출력
+        for idx in debug_groups:
+            scores_list = [float(s.cpu()) for s in id2score[idx]]
+            print(f"[DEBUG GRPO] Group {idx}: n={len(scores_list)}, rewards={scores_list}", 
+                  file=sys.stderr, flush=True)
+        
         for idx in id2score:
             if len(id2score[idx]) == 1:
                 id2mean[idx] = torch.tensor(0.0)
